@@ -147,6 +147,9 @@ go
 create table Patients(
 PID int primary key identity(1,1),
 P_Name varchar(40) not null,
+P_Account varchar(20) not null,
+P_RegType int not null,
+P_Password varchar(20) not null,
 P_Sex int not null,
 P_Phone char(11) not null,
 P_IdNum varchar(20) not null,
