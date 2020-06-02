@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TA_DoctorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Adm_Offs">
+    <Key>
+      <PropertyRef Name="AOID" />
+    </Key>
+    <Property Name="AOID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HID" Type="int" Nullable="false" />
+    <Property Name="AO_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="AO_Location" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AO_Remark" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="AdvRea">
+    <Key>
+      <PropertyRef Name="ARID" />
+    </Key>
+    <Property Name="ARID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="AR_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="Aid" />
+    </Key>
+    <Property Name="Aid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="HDID" Type="int" Nullable="false" />
+    <Property Name="Ad_Sate" Type="int" Nullable="false" />
+    <Property Name="Ad_Reason" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="Ad_File" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AvaDate">
+    <Key>
+      <PropertyRef Name="ADID" />
+    </Key>
+    <Property Name="ADID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="AD_DateMan" Type="date" Nullable="false" />
+    <Property Name="AD_PerOfVal" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BodyParts">
+    <Key>
+      <PropertyRef Name="BPID" />
+    </Key>
+    <Property Name="BPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BP_Name" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProID" Type="int" Nullable="false" />
+    <Property Name="City_Name" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contrain">
+    <Key>
+      <PropertyRef Name="CtID" />
+    </Key>
+    <Property Name="CtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="CT_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="County">
+    <Key>
+      <PropertyRef Name="CouID" />
+    </Key>
+    <Property Name="CouID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="Cou_Name" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DrugDuc">
+    <Key>
+      <PropertyRef Name="DrID" />
+    </Key>
+    <Property Name="DrID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="M_OrienSym" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="M_Usage" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="M_Sperci" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="M_Depot" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="M_Manuf" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="M_Photos" Type="varchar" MaxLength="100" />
+    <Property Name="M_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HosDoctors">
+    <Key>
+      <PropertyRef Name="HDID" />
+    </Key>
+    <Property Name="HDID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AOID" Type="int" Nullable="false" />
+    <Property Name="HD_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="HD_Sex" Type="int" Nullable="false" />
+    <Property Name="HD_Phone" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="HD_Photo" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="HD_Age" Type="int" Nullable="false" />
+    <Property Name="HD_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+    <Property Name="HD_Money" Type="money" Nullable="false" />
+    <Property Name="HD_WorkYears" Type="int" Nullable="false" />
+    <Property Name="HD_VisitNum" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HosEquipments">
+    <Key>
+      <PropertyRef Name="HeID" />
+    </Key>
+    <Property Name="HeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HID" Type="int" Nullable="false" />
+    <Property Name="He_Name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="He_Remax" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hospitals">
+    <Key>
+      <PropertyRef Name="HID" />
+    </Key>
+    <Property Name="HID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProID" Type="int" Nullable="false" />
+    <Property Name="CityID" Type="int" Nullable="false" />
+    <Property Name="CouID" Type="int" Nullable="false" />
+    <Property Name="H_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="H_rate" Type="int" />
+    <Property Name="H_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="illness">
+    <Key>
+      <PropertyRef Name="illD" />
+    </Key>
+    <Property Name="illD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SymID" Type="int" Nullable="false" />
+    <Property Name="SDID" Type="int" Nullable="false" />
+    <Property Name="il_Name" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InterRecord">
+    <Key>
+      <PropertyRef Name="IRID" />
+    </Key>
+    <Property Name="IRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HID" Type="int" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="IR_H_talks" Type="varchar" MaxLength="400" />
+    <Property Name="IR_P_talks" Type="varchar" MaxLength="400" />
+    <Property Name="IR_Remark" Type="varchar" MaxLength="400" />
+  </EntityType>
+  <EntityType Name="MatNeetAt">
+    <Key>
+      <PropertyRef Name="MNID" />
+    </Key>
+    <Property Name="MNID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="MN_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medicines">
+    <Key>
+      <PropertyRef Name="MID" />
+    </Key>
+    <Property Name="MID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="M_Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MTID" Type="int" Nullable="false" />
+    <Property Name="M_link" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="MedRecordes">
+    <Key>
+      <PropertyRef Name="MRID" />
+    </Key>
+    <Property Name="MRID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PID" Type="int" Nullable="false" />
+    <Property Name="HID" Type="int" Nullable="false" />
+    <Property Name="AOID" Type="int" Nullable="false" />
+    <Property Name="HDID" Type="int" Nullable="false" />
+    <Property Name="MR_Time" Type="date" Nullable="false" />
+    <Property Name="MR_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MedType">
+    <Key>
+      <PropertyRef Name="MTID" />
+    </Key>
+    <Property Name="MTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MT_Name" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OutPatientDep">
+    <Key>
+      <PropertyRef Name="ODID" />
+    </Key>
+    <Property Name="ODID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AOID" Type="int" Nullable="false" />
+    <Property Name="OD_Location" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="PID" />
+    </Key>
+    <Property Name="PID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="P_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="P_Account" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="P_RegType" Type="int" Nullable="false" />
+    <Property Name="P_Password" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="P_Sex" Type="int" Nullable="false" />
+    <Property Name="P_Phone" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="P_IdNum" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="P_Birthday" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProQualif">
+    <Key>
+      <PropertyRef Name="PQID" />
+    </Key>
+    <Property Name="PQID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HID" Type="int" Nullable="false" />
+    <Property Name="HDID" Type="int" Nullable="false" />
+    <Property Name="PQ_Name" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Province">
+    <Key>
+      <PropertyRef Name="ProID" />
+    </Key>
+    <Property Name="ProID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pro_Name" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SpeSite">
+    <Key>
+      <PropertyRef Name="SSID" />
+    </Key>
+    <Property Name="SSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BPID" Type="int" Nullable="false" />
+    <Property Name="SS_Name" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SymDes">
+    <Key>
+      <PropertyRef Name="SDID" />
+    </Key>
+    <Property Name="SDID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SymID" Type="int" Nullable="false" />
+    <Property Name="SD_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Symptom">
+    <Key>
+      <PropertyRef Name="SymID" />
+    </Key>
+    <Property Name="SymID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BPID" Type="int" Nullable="false" />
+    <Property Name="Sym_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserCrowd">
+    <Key>
+      <PropertyRef Name="UCID" />
+    </Key>
+    <Property Name="UCID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MID" Type="int" Nullable="false" />
+    <Property Name="UC_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VisitTime">
+    <Key>
+      <PropertyRef Name="VTID" />
+    </Key>
+    <Property Name="VTID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HDID" Type="int" Nullable="false" />
+    <Property Name="VT_Time" Type="int" Nullable="false" />
+    <Property Name="DateVisit" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AD_MD">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AvaDate" Type="Self.AvaDate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="AvaDate">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Adm_Hos">
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Adm_Offs" Type="Self.Adm_Offs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospitals">
+        <PropertyRef Name="HID" />
+      </Principal>
+      <Dependent Role="Adm_Offs">
+        <PropertyRef Name="HID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AR_MD">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AdvRea" Type="Self.AdvRea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="AdvRea">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Aud_HD">
+    <End Role="HosDoctors" Type="Self.HosDoctors" Multiplicity="1" />
+    <End Role="Audit" Type="Self.Audit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HosDoctors">
+        <PropertyRef Name="HDID" />
+      </Principal>
+      <Dependent Role="Audit">
+        <PropertyRef Name="HDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Aud_Pat">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Audit" Type="Self.Audit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="Audit">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_City_Pro">
+    <End Role="Province" Type="Self.Province" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="City" Type="Self.City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="ProID" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="ProID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cou_City">
+    <End Role="City" Type="Self.City" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="County" Type="Self.County" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="County">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CT_MD">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Contrain" Type="Self.Contrain" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="Contrain">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DD_MD">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DrugDuc" Type="Self.DrugDuc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="DrugDuc">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doc_Adm">
+    <End Role="Adm_Offs" Type="Self.Adm_Offs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HosDoctors" Type="Self.HosDoctors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adm_Offs">
+        <PropertyRef Name="AOID" />
+      </Principal>
+      <Dependent Role="HosDoctors">
+        <PropertyRef Name="AOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_He_Hos">
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="HosEquipments" Type="Self.HosEquipments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospitals">
+        <PropertyRef Name="HID" />
+      </Principal>
+      <Dependent Role="HosEquipments">
+        <PropertyRef Name="HID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hos_City">
+    <End Role="City" Type="Self.City" Multiplicity="1" />
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="CityID" />
+      </Principal>
+      <Dependent Role="Hospitals">
+        <PropertyRef Name="CityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hos_Cou">
+    <End Role="County" Type="Self.County" Multiplicity="1" />
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="County">
+        <PropertyRef Name="CouID" />
+      </Principal>
+      <Dependent Role="Hospitals">
+        <PropertyRef Name="CouID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hos_Pro">
+    <End Role="Province" Type="Self.Province" Multiplicity="1" />
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Province">
+        <PropertyRef Name="ProID" />
+      </Principal>
+      <Dependent Role="Hospitals">
+        <PropertyRef Name="ProID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ill_SD">
+    <End Role="SymDes" Type="Self.SymDes" Multiplicity="1" />
+    <End Role="illness" Type="Self.illness" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SymDes">
+        <PropertyRef Name="SDID" />
+      </Principal>
+      <Dependent Role="illness">
+        <PropertyRef Name="SDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ill_Sym">
+    <End Role="Symptom" Type="Self.Symptom" Multiplicity="1" />
+    <End Role="illness" Type="Self.illness" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Symptom">
+        <PropertyRef Name="SymID" />
+      </Principal>
+      <Dependent Role="illness">
+        <PropertyRef Name="SymID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IR_Hos">
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1" />
+    <End Role="InterRecord" Type="Self.InterRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospitals">
+        <PropertyRef Name="HID" />
+      </Principal>
+      <Dependent Role="InterRecord">
+        <PropertyRef Name="HID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IR_PT">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
+    <End Role="InterRecord" Type="Self.InterRecord" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="InterRecord">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Md_MT">
+    <End Role="MedType" Type="Self.MedType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MedType">
+        <PropertyRef Name="MTID" />
+      </Principal>
+      <Dependent Role="Medicines">
+        <PropertyRef Name="MTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Med_Adm">
+    <End Role="Adm_Offs" Type="Self.Adm_Offs" Multiplicity="1" />
+    <End Role="MedRecordes" Type="Self.MedRecordes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adm_Offs">
+        <PropertyRef Name="AOID" />
+      </Principal>
+      <Dependent Role="MedRecordes">
+        <PropertyRef Name="AOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Med_Doc">
+    <End Role="HosDoctors" Type="Self.HosDoctors" Multiplicity="1" />
+    <End Role="MedRecordes" Type="Self.MedRecordes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HosDoctors">
+        <PropertyRef Name="HDID" />
+      </Principal>
+      <Dependent Role="MedRecordes">
+        <PropertyRef Name="HDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Med_Hos">
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1" />
+    <End Role="MedRecordes" Type="Self.MedRecordes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospitals">
+        <PropertyRef Name="HID" />
+      </Principal>
+      <Dependent Role="MedRecordes">
+        <PropertyRef Name="HID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Med_PT">
+    <End Role="Patients" Type="Self.Patients" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MedRecordes" Type="Self.MedRecordes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="PID" />
+      </Principal>
+      <Dependent Role="MedRecordes">
+        <PropertyRef Name="PID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MN_MD">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="MatNeetAt" Type="Self.MatNeetAt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="MatNeetAt">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OD_Adm">
+    <End Role="Adm_Offs" Type="Self.Adm_Offs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OutPatientDep" Type="Self.OutPatientDep" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adm_Offs">
+        <PropertyRef Name="AOID" />
+      </Principal>
+      <Dependent Role="OutPatientDep">
+        <PropertyRef Name="AOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PQ_Doc">
+    <End Role="HosDoctors" Type="Self.HosDoctors" Multiplicity="1" />
+    <End Role="ProQualif" Type="Self.ProQualif" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HosDoctors">
+        <PropertyRef Name="HDID" />
+      </Principal>
+      <Dependent Role="ProQualif">
+        <PropertyRef Name="HDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PQ_Hos">
+    <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="1" />
+    <End Role="ProQualif" Type="Self.ProQualif" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hospitals">
+        <PropertyRef Name="HID" />
+      </Principal>
+      <Dependent Role="ProQualif">
+        <PropertyRef Name="HID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SD_Sym">
+    <End Role="Symptom" Type="Self.Symptom" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SymDes" Type="Self.SymDes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Symptom">
+        <PropertyRef Name="SymID" />
+      </Principal>
+      <Dependent Role="SymDes">
+        <PropertyRef Name="SymID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SS_BP">
+    <End Role="BodyParts" Type="Self.BodyParts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SpeSite" Type="Self.SpeSite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BodyParts">
+        <PropertyRef Name="BPID" />
+      </Principal>
+      <Dependent Role="SpeSite">
+        <PropertyRef Name="BPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sym_BP">
+    <End Role="BodyParts" Type="Self.BodyParts" Multiplicity="1" />
+    <End Role="Symptom" Type="Self.Symptom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BodyParts">
+        <PropertyRef Name="BPID" />
+      </Principal>
+      <Dependent Role="Symptom">
+        <PropertyRef Name="BPID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UC_MD">
+    <End Role="Medicines" Type="Self.Medicines" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserCrowd" Type="Self.UserCrowd" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="MID" />
+      </Principal>
+      <Dependent Role="UserCrowd">
+        <PropertyRef Name="MID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VT_Doc">
+    <End Role="HosDoctors" Type="Self.HosDoctors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="VisitTime" Type="Self.VisitTime" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HosDoctors">
+        <PropertyRef Name="HDID" />
+      </Principal>
+      <Dependent Role="VisitTime">
+        <PropertyRef Name="HDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TA_DoctorModelStoreContainer">
+    <EntitySet Name="Adm_Offs" EntityType="Self.Adm_Offs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AdvRea" EntityType="Self.AdvRea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Audit" EntityType="Self.Audit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AvaDate" EntityType="Self.AvaDate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BodyParts" EntityType="Self.BodyParts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contrain" EntityType="Self.Contrain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="County" EntityType="Self.County" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DrugDuc" EntityType="Self.DrugDuc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HosDoctors" EntityType="Self.HosDoctors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HosEquipments" EntityType="Self.HosEquipments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hospitals" EntityType="Self.Hospitals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="illness" EntityType="Self.illness" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InterRecord" EntityType="Self.InterRecord" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MatNeetAt" EntityType="Self.MatNeetAt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Medicines" EntityType="Self.Medicines" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedRecordes" EntityType="Self.MedRecordes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MedType" EntityType="Self.MedType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OutPatientDep" EntityType="Self.OutPatientDep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProQualif" EntityType="Self.ProQualif" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SpeSite" EntityType="Self.SpeSite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SymDes" EntityType="Self.SymDes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Symptom" EntityType="Self.Symptom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserCrowd" EntityType="Self.UserCrowd" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VisitTime" EntityType="Self.VisitTime" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AD_MD" Association="Self.FK_AD_MD">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="AvaDate" EntitySet="AvaDate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adm_Hos" Association="Self.FK_Adm_Hos">
+      <End Role="Hospitals" EntitySet="Hospitals" />
+      <End Role="Adm_Offs" EntitySet="Adm_Offs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AR_MD" Association="Self.FK_AR_MD">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="AdvRea" EntitySet="AdvRea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Aud_HD" Association="Self.FK_Aud_HD">
+      <End Role="HosDoctors" EntitySet="HosDoctors" />
+      <End Role="Audit" EntitySet="Audit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Aud_Pat" Association="Self.FK_Aud_Pat">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Audit" EntitySet="Audit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_City_Pro" Association="Self.FK_City_Pro">
+      <End Role="Province" EntitySet="Province" />
+      <End Role="City" EntitySet="City" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cou_City" Association="Self.FK_Cou_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="County" EntitySet="County" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CT_MD" Association="Self.FK_CT_MD">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="Contrain" EntitySet="Contrain" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DD_MD" Association="Self.FK_DD_MD">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="DrugDuc" EntitySet="DrugDuc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doc_Adm" Association="Self.FK_Doc_Adm">
+      <End Role="Adm_Offs" EntitySet="Adm_Offs" />
+      <End Role="HosDoctors" EntitySet="HosDoctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_He_Hos" Association="Self.FK_He_Hos">
+      <End Role="Hospitals" EntitySet="Hospitals" />
+      <End Role="HosEquipments" EntitySet="HosEquipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hos_City" Association="Self.FK_Hos_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Hospitals" EntitySet="Hospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hos_Cou" Association="Self.FK_Hos_Cou">
+      <End Role="County" EntitySet="County" />
+      <End Role="Hospitals" EntitySet="Hospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hos_Pro" Association="Self.FK_Hos_Pro">
+      <End Role="Province" EntitySet="Province" />
+      <End Role="Hospitals" EntitySet="Hospitals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ill_SD" Association="Self.FK_ill_SD">
+      <End Role="SymDes" EntitySet="SymDes" />
+      <End Role="illness" EntitySet="illness" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ill_Sym" Association="Self.FK_ill_Sym">
+      <End Role="Symptom" EntitySet="Symptom" />
+      <End Role="illness" EntitySet="illness" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IR_Hos" Association="Self.FK_IR_Hos">
+      <End Role="Hospitals" EntitySet="Hospitals" />
+      <End Role="InterRecord" EntitySet="InterRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IR_PT" Association="Self.FK_IR_PT">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="InterRecord" EntitySet="InterRecord" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Md_MT" Association="Self.FK_Md_MT">
+      <End Role="MedType" EntitySet="MedType" />
+      <End Role="Medicines" EntitySet="Medicines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Med_Adm" Association="Self.FK_Med_Adm">
+      <End Role="Adm_Offs" EntitySet="Adm_Offs" />
+      <End Role="MedRecordes" EntitySet="MedRecordes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Med_Doc" Association="Self.FK_Med_Doc">
+      <End Role="HosDoctors" EntitySet="HosDoctors" />
+      <End Role="MedRecordes" EntitySet="MedRecordes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Med_Hos" Association="Self.FK_Med_Hos">
+      <End Role="Hospitals" EntitySet="Hospitals" />
+      <End Role="MedRecordes" EntitySet="MedRecordes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Med_PT" Association="Self.FK_Med_PT">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="MedRecordes" EntitySet="MedRecordes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MN_MD" Association="Self.FK_MN_MD">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="MatNeetAt" EntitySet="MatNeetAt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OD_Adm" Association="Self.FK_OD_Adm">
+      <End Role="Adm_Offs" EntitySet="Adm_Offs" />
+      <End Role="OutPatientDep" EntitySet="OutPatientDep" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PQ_Doc" Association="Self.FK_PQ_Doc">
+      <End Role="HosDoctors" EntitySet="HosDoctors" />
+      <End Role="ProQualif" EntitySet="ProQualif" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PQ_Hos" Association="Self.FK_PQ_Hos">
+      <End Role="Hospitals" EntitySet="Hospitals" />
+      <End Role="ProQualif" EntitySet="ProQualif" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SD_Sym" Association="Self.FK_SD_Sym">
+      <End Role="Symptom" EntitySet="Symptom" />
+      <End Role="SymDes" EntitySet="SymDes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SS_BP" Association="Self.FK_SS_BP">
+      <End Role="BodyParts" EntitySet="BodyParts" />
+      <End Role="SpeSite" EntitySet="SpeSite" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sym_BP" Association="Self.FK_Sym_BP">
+      <End Role="BodyParts" EntitySet="BodyParts" />
+      <End Role="Symptom" EntitySet="Symptom" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UC_MD" Association="Self.FK_UC_MD">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="UserCrowd" EntitySet="UserCrowd" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VT_Doc" Association="Self.FK_VT_Doc">
+      <End Role="HosDoctors" EntitySet="HosDoctors" />
+      <End Role="VisitTime" EntitySet="VisitTime" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

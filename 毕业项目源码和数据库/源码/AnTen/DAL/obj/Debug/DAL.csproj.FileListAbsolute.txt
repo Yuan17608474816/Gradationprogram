@@ -1,0 +1,14 @@
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\DAL.dll.config
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\DAL.dll
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\DAL.pdb
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\EntityFramework.dll
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\Models.dll
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\Models.pdb
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\Models.dll.config
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\EntityFramework.xml
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\obj\Debug\DAL.dll
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\DAL\obj\Debug\DAL.pdb

@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TA_DoctorModelStoreContainer" CdmEntityContainer="TA_DoctorEntities">
+    <EntitySetMapping Name="Adm_Offs">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Adm_Offs">
+        <MappingFragment StoreEntitySet="Adm_Offs">
+          <ScalarProperty Name="AOID" ColumnName="AOID" />
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="AO_Name" ColumnName="AO_Name" />
+          <ScalarProperty Name="AO_Location" ColumnName="AO_Location" />
+          <ScalarProperty Name="AO_Remark" ColumnName="AO_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdvRea">
+      <EntityTypeMapping TypeName="TA_DoctorModel.AdvRea">
+        <MappingFragment StoreEntitySet="AdvRea">
+          <ScalarProperty Name="ARID" ColumnName="ARID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="AR_Remark" ColumnName="AR_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Audit">
+        <MappingFragment StoreEntitySet="Audit">
+          <ScalarProperty Name="Aid" ColumnName="Aid" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="HDID" ColumnName="HDID" />
+          <ScalarProperty Name="Ad_Sate" ColumnName="Ad_Sate" />
+          <ScalarProperty Name="Ad_Reason" ColumnName="Ad_Reason" />
+          <ScalarProperty Name="Ad_File" ColumnName="Ad_File" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AvaDate">
+      <EntityTypeMapping TypeName="TA_DoctorModel.AvaDate">
+        <MappingFragment StoreEntitySet="AvaDate">
+          <ScalarProperty Name="ADID" ColumnName="ADID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="AD_DateMan" ColumnName="AD_DateMan" />
+          <ScalarProperty Name="AD_PerOfVal" ColumnName="AD_PerOfVal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BodyParts">
+      <EntityTypeMapping TypeName="TA_DoctorModel.BodyParts">
+        <MappingFragment StoreEntitySet="BodyParts">
+          <ScalarProperty Name="BPID" ColumnName="BPID" />
+          <ScalarProperty Name="BP_Name" ColumnName="BP_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="TA_DoctorModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrain">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Contrain">
+        <MappingFragment StoreEntitySet="Contrain">
+          <ScalarProperty Name="CtID" ColumnName="CtID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="CT_Remark" ColumnName="CT_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="County">
+      <EntityTypeMapping TypeName="TA_DoctorModel.County">
+        <MappingFragment StoreEntitySet="County">
+          <ScalarProperty Name="CouID" ColumnName="CouID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="Cou_Name" ColumnName="Cou_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrugDuc">
+      <EntityTypeMapping TypeName="TA_DoctorModel.DrugDuc">
+        <MappingFragment StoreEntitySet="DrugDuc">
+          <ScalarProperty Name="DrID" ColumnName="DrID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="M_OrienSym" ColumnName="M_OrienSym" />
+          <ScalarProperty Name="M_Usage" ColumnName="M_Usage" />
+          <ScalarProperty Name="M_Sperci" ColumnName="M_Sperci" />
+          <ScalarProperty Name="M_Depot" ColumnName="M_Depot" />
+          <ScalarProperty Name="M_Manuf" ColumnName="M_Manuf" />
+          <ScalarProperty Name="M_Photos" ColumnName="M_Photos" />
+          <ScalarProperty Name="M_Remark" ColumnName="M_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HosDoctors">
+      <EntityTypeMapping TypeName="TA_DoctorModel.HosDoctors">
+        <MappingFragment StoreEntitySet="HosDoctors">
+          <ScalarProperty Name="HDID" ColumnName="HDID" />
+          <ScalarProperty Name="AOID" ColumnName="AOID" />
+          <ScalarProperty Name="HD_Name" ColumnName="HD_Name" />
+          <ScalarProperty Name="HD_Sex" ColumnName="HD_Sex" />
+          <ScalarProperty Name="HD_Phone" ColumnName="HD_Phone" />
+          <ScalarProperty Name="HD_Photo" ColumnName="HD_Photo" />
+          <ScalarProperty Name="HD_Age" ColumnName="HD_Age" />
+          <ScalarProperty Name="HD_Remark" ColumnName="HD_Remark" />
+          <ScalarProperty Name="HD_Money" ColumnName="HD_Money" />
+          <ScalarProperty Name="HD_WorkYears" ColumnName="HD_WorkYears" />
+          <ScalarProperty Name="HD_VisitNum" ColumnName="HD_VisitNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HosEquipments">
+      <EntityTypeMapping TypeName="TA_DoctorModel.HosEquipments">
+        <MappingFragment StoreEntitySet="HosEquipments">
+          <ScalarProperty Name="HeID" ColumnName="HeID" />
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="He_Name" ColumnName="He_Name" />
+          <ScalarProperty Name="He_Remax" ColumnName="He_Remax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hospitals">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Hospitals">
+        <MappingFragment StoreEntitySet="Hospitals">
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="CityID" ColumnName="CityID" />
+          <ScalarProperty Name="CouID" ColumnName="CouID" />
+          <ScalarProperty Name="H_Name" ColumnName="H_Name" />
+          <ScalarProperty Name="H_rate" ColumnName="H_rate" />
+          <ScalarProperty Name="H_Remark" ColumnName="H_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="illness">
+      <EntityTypeMapping TypeName="TA_DoctorModel.illness">
+        <MappingFragment StoreEntitySet="illness">
+          <ScalarProperty Name="illD" ColumnName="illD" />
+          <ScalarProperty Name="SymID" ColumnName="SymID" />
+          <ScalarProperty Name="SDID" ColumnName="SDID" />
+          <ScalarProperty Name="il_Name" ColumnName="il_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterRecord">
+      <EntityTypeMapping TypeName="TA_DoctorModel.InterRecord">
+        <MappingFragment StoreEntitySet="InterRecord">
+          <ScalarProperty Name="IRID" ColumnName="IRID" />
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="IR_H_talks" ColumnName="IR_H_talks" />
+          <ScalarProperty Name="IR_P_talks" ColumnName="IR_P_talks" />
+          <ScalarProperty Name="IR_Remark" ColumnName="IR_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatNeetAt">
+      <EntityTypeMapping TypeName="TA_DoctorModel.MatNeetAt">
+        <MappingFragment StoreEntitySet="MatNeetAt">
+          <ScalarProperty Name="MNID" ColumnName="MNID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="MN_Remark" ColumnName="MN_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicines">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Medicines">
+        <MappingFragment StoreEntitySet="Medicines">
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="M_Name" ColumnName="M_Name" />
+          <ScalarProperty Name="MTID" ColumnName="MTID" />
+          <ScalarProperty Name="M_link" ColumnName="M_link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedRecordes">
+      <EntityTypeMapping TypeName="TA_DoctorModel.MedRecordes">
+        <MappingFragment StoreEntitySet="MedRecordes">
+          <ScalarProperty Name="MRID" ColumnName="MRID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="AOID" ColumnName="AOID" />
+          <ScalarProperty Name="HDID" ColumnName="HDID" />
+          <ScalarProperty Name="MR_Time" ColumnName="MR_Time" />
+          <ScalarProperty Name="MR_Remark" ColumnName="MR_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MedType">
+      <EntityTypeMapping TypeName="TA_DoctorModel.MedType">
+        <MappingFragment StoreEntitySet="MedType">
+          <ScalarProperty Name="MTID" ColumnName="MTID" />
+          <ScalarProperty Name="MT_Name" ColumnName="MT_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OutPatientDep">
+      <EntityTypeMapping TypeName="TA_DoctorModel.OutPatientDep">
+        <MappingFragment StoreEntitySet="OutPatientDep">
+          <ScalarProperty Name="ODID" ColumnName="ODID" />
+          <ScalarProperty Name="AOID" ColumnName="AOID" />
+          <ScalarProperty Name="OD_Location" ColumnName="OD_Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Patients">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="P_Name" ColumnName="P_Name" />
+          <ScalarProperty Name="P_Account" ColumnName="P_Account" />
+          <ScalarProperty Name="P_RegType" ColumnName="P_RegType" />
+          <ScalarProperty Name="P_Password" ColumnName="P_Password" />
+          <ScalarProperty Name="P_Sex" ColumnName="P_Sex" />
+          <ScalarProperty Name="P_Phone" ColumnName="P_Phone" />
+          <ScalarProperty Name="P_IdNum" ColumnName="P_IdNum" />
+          <ScalarProperty Name="P_Birthday" ColumnName="P_Birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProQualif">
+      <EntityTypeMapping TypeName="TA_DoctorModel.ProQualif">
+        <MappingFragment StoreEntitySet="ProQualif">
+          <ScalarProperty Name="PQID" ColumnName="PQID" />
+          <ScalarProperty Name="HID" ColumnName="HID" />
+          <ScalarProperty Name="HDID" ColumnName="HDID" />
+          <ScalarProperty Name="PQ_Name" ColumnName="PQ_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Province">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Province">
+        <MappingFragment StoreEntitySet="Province">
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpeSite">
+      <EntityTypeMapping TypeName="TA_DoctorModel.SpeSite">
+        <MappingFragment StoreEntitySet="SpeSite">
+          <ScalarProperty Name="SSID" ColumnName="SSID" />
+          <ScalarProperty Name="BPID" ColumnName="BPID" />
+          <ScalarProperty Name="SS_Name" ColumnName="SS_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SymDes">
+      <EntityTypeMapping TypeName="TA_DoctorModel.SymDes">
+        <MappingFragment StoreEntitySet="SymDes">
+          <ScalarProperty Name="SDID" ColumnName="SDID" />
+          <ScalarProperty Name="SymID" ColumnName="SymID" />
+          <ScalarProperty Name="SD_Remark" ColumnName="SD_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Symptom">
+      <EntityTypeMapping TypeName="TA_DoctorModel.Symptom">
+        <MappingFragment StoreEntitySet="Symptom">
+          <ScalarProperty Name="SymID" ColumnName="SymID" />
+          <ScalarProperty Name="BPID" ColumnName="BPID" />
+          <ScalarProperty Name="Sym_Remark" ColumnName="Sym_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserCrowd">
+      <EntityTypeMapping TypeName="TA_DoctorModel.UserCrowd">
+        <MappingFragment StoreEntitySet="UserCrowd">
+          <ScalarProperty Name="UCID" ColumnName="UCID" />
+          <ScalarProperty Name="MID" ColumnName="MID" />
+          <ScalarProperty Name="UC_Remark" ColumnName="UC_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitTime">
+      <EntityTypeMapping TypeName="TA_DoctorModel.VisitTime">
+        <MappingFragment StoreEntitySet="VisitTime">
+          <ScalarProperty Name="VTID" ColumnName="VTID" />
+          <ScalarProperty Name="HDID" ColumnName="HDID" />
+          <ScalarProperty Name="VT_Time" ColumnName="VT_Time" />
+          <ScalarProperty Name="DateVisit" ColumnName="DateVisit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
