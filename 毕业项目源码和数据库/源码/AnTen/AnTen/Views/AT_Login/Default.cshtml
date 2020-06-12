@@ -16,15 +16,8 @@
     <script src="~/Scripts/common/mousewheel.js"></script>
     <link rel="stylesheet" type="text/css" href="~/Content/Public/mCustomScrollbar.css">
     <link rel="stylesheet" type="text/css" href="~/Content/Public/animate.css">
-    <script src="~/Scripts/common/mCustomScrollbar.js"></script>
-    <script src="~/Scripts/common/slick.js"></script>
-
-
-    <style>
-        * {
-            behavior: url(../PIE.htc);
-        }
-    </style>
+    <script type="text/javascript" src="~/Scripts/common/mCustomScrollbar.js"></script>
+    <script  type="text/javascript"  src="~/Scripts/common/slick.js"></script>
 
 </head>
 
@@ -35,11 +28,12 @@
             <div class="logo" edit_params="width%3D1920%26height%3D1079%26width2%3D156%26height2%3D133%26showAlt%3D1">
                 <style>
                     .guide .bg {
-                        background-image: url(/Uploads/Picture/2017/12/05/s5a2674ee01c24.jpg);
+                        background-image: url('../../image/bg.jpg');
                     }
                 </style>
-                <a href="/"><img title="logo" alt="logo" src="/Uploads/Picture/2017/12/05/s5a2674f6df585.png"></a>
-            </div>    <ul class="tools">
+                <a href="/"><img title="logo"  src="~/image/logo3.png" style="width:25em;margin-left:-100px;margin-top:-30px"></a>
+            </div>  
+            <!----><ul class="tools">
                 <style>
                     #ycyx .s1, #ycyx img, #ycyx a {
                         display: block;
@@ -151,39 +145,44 @@
                         background: #01763a;
                     }
                 </style>
-                <li class="l1"><a target="_blank" href="/register.html">预约挂号</a></li>
-                <li class="l2"><div class="code"><img title="百年协和" alt="百年协和" src="/Uploads/Picture/2018/01/12/s5a588b710cb4b.jpg"></div></li>
-                <li class="l3"><div class="code"><img title="协和微信" alt="协和微信" src="/Uploads/Picture/2019/12/04/s5de730b6b91ef.jpg"></div></li>
-                <li class="l4"><div class="code"><img title="协和微博" alt="协和微博" src="/Uploads/Picture/2018/01/12/s5a5872d1944bf.jpg"></div></li>
-                <li class="l5" id="ycyx" style="background-image:url(/Public/static/themes/WechatIMG17.png)">
+                <li class="l1">
+            <a target="_blank" href="/register.html">预约挂号</a>
+                </li>
+                <li class="l3">
+            <div class="code">
+                    <img title="微信登录" alt="微信登录" src="/Uploads/Picture/2019/12/04/s5de730b6b91ef.jpg"></div>
+                </li>
+            <!--
+                <li class="l5" id="ycyx" style="background-image:url(../../image/hosicon.png)">
                     <a target="_blank" href="http://telemedicine.pumch.cn/#/login" class="s1">&nbsp;</a>
                     <a target="_blank" href="http://telemedicine.pumch.cn/#/login" class="s2" style="margin-left:15px;margin-top:8px;">远程医学</a>
                 </li>
-                <li class="l6" id="rczp" style="background-image:url(/Public/static/themes/rczp0602.png)">
+                <li class="l6" id="rczp" style="background-image:url(../../image/usericon.png)">
                     <a target="_blank" href="http://jobs.pumch.cn/" class="s1">&nbsp;</a>
-                    <a target="_blank" href="http://jobs.pumch.cn/" class="s2" style="margin-left:15px;margin-top:8px;">人才招聘</a>
+                    <a target="_blank" href="http://jobs.pumch.cn/" class="s2" style="margin-left:15px;margin-top:8px;">症状自诊</a>
                 </li>
+            -->
             </ul>
             <ul class="links">
                 <li class="l1" edit_params="width%3D78%26height%3D76%26title1Show%3D1%26title1Max%3D4%26showLink%3D1%26backgroundColor%3D1">
-                    <span class="ico animated"><img title="" alt="" src="/Uploads/Picture/2017/12/15/s5a3387951465a.png"></span>
+                    <span class="ico animated"><img title="" alt="" src="~/image/患者.png" /></span>
                     <p class="p">患者版</p>
-                    <a href="/patient.html" class="link">点击进入</a>
+                    <a href="/patient.html" class="link">登录</a>
                 </li>
                 <li class="l2" edit_params="width%3D78%26height%3D76%26title1Show%3D1%26title1Max%3D4%26showLink%3D1%26backgroundColor%3D1">
-                    <span class="ico animated"><img title="" alt="" src="/Uploads/Picture/2017/12/05/s5a2675b3410f6.png"></span>
-                    <p class="p">学术版</p>
-                    <a href="/learning.html" class="link">点击进入</a>
+                    <span class="ico animated"><img title="" alt="" src="~/image/hosicon.png"></span>
+                    <p class="p">医生版</p>
+                    <a href="/learning.html" class="link">登录</a>
                 </li>
                 <li class="l3" edit_params="width%3D78%26height%3D76%26title1Show%3D1%26title1Max%3D4%26showLink%3D1%26backgroundColor%3D1">
-                    <span class="ico animated"><img title="" alt="" src="/Uploads/Picture/2017/12/05/s5a2675d0037cd.png"></span>
-                    <p class="p">员工版</p>
+                    <span class="ico animated"><img title="" alt="" src="~/image/usericon.png"></span>
+                    <p class="p">症状自诊</p>
                     <a href="/staff.html" class="link">点击进入</a>
                 </li>
                 <li class="l4" edit_params="width%3D78%26height%3D76%26title1Show%3D1%26title1Max%3D8%26showLink%3D1%26backgroundColor%3D1">
-                    <span class="ico animated"><img title="" alt="" src="/Uploads/Picture/2017/12/05/s5a2675dc095b4.png"></span>
-                    <p class="p">english</p>
-                    <a href="/en.html" class="link">Enter</a>
+                    <span class="ico animated"><img title="" alt="" src="~/image/预约挂号.png"></span>
+                    <p class="p">预约挂号</p>
+                    <a href="/en.html" class="link">点击进入</a>
                 </li>
             </ul>
         </div>

@@ -1,0 +1,467 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8 lt9 lt10"><![endif]-->
+<!--[if IE 9]><html class="ie ie9 lt10"><![endif]-->
+<!--[if (gt IE 9) | !(IE)]><!-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="www.fractal-technology.com">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="referrer" content="no-referrer" />
+
+    <meta name="keywords" content="协和医院,北京协和医院,協和醫院,北京协和医院首页,北京协和医院电话,协和,協和,医院,醫院,北京協和醫院,北京协和医院妇科,北京协和医院地址,挂号" />
+    <meta name="description" content="北京协和医院是北京协和医学院的临床学院。中国医学科学院的临床医学研究所，是卫生部指定的全国疑难重症诊治指导中心之一。医院学科齐全、技术力量雄厚，医、教、研、管全面发展，以多学科的综合优势享誉海内外。" />
+    <!-- <title>患者版 - 北京协和医院 - 协和医院,北京协和医院,協和醫院,北京协和医院首页,北京协和医院电话,协和,協和,医院,醫院,北京協和醫院,北京协和医院妇科,北京协和医院地址,挂号</title> -->
+    <title>北京协和医院</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="~/Content/PMain/global.css" />
+    <link href="~/Content/PMain/lyc.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/PMain/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/PMain/page.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/PMain/slick.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
+    <script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="~/Content/PMain/myaglobal.css"  />
+    <div id="myalert-shadow" class="myalert-shadow"></div>
+    <div id="myalert" class="dev-alert">
+        <div id="my_alert" class="inner">
+            <h1></h1>
+            <div class="btns"><a id="my_ok" href="javascript:void(0);" class="button ok">确定</a></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        function my_alert(title, url) {
+            $('#myalert, #myalert-shadow').show();
+            $('#myalert .inner h1').html(title);
+            if (url) {
+                $('#my_ok').click(function () {
+                    if (typeof (url) == 'function') {
+                        url();
+                        return false;
+                    } else {
+                        window.location.href = url;
+                    }
+
+                });
+            } else {
+                $('#my_ok').click(function () {
+                    $('#myalert, #myalert-shadow').hide();
+                });
+            }
+        }
+        function myalert_hide() {
+            $('#myalert, #myalert-shadow').hide();
+        }
+    </script>
+    <div class="rightNav">
+        <ul>
+            <li>
+                <a href="/register.html" target="_blank">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/12/15/s5a3391c2731ce.png" title="" alt="">
+                    </span>
+                    <span class="s2">预约挂号</span>
+                </a>
+            </li>
+            <li>
+                <a href="/visitinfo.html" target="_blank">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f10b7c2f1.png" title="" alt="">
+                    </span>
+                    <span class="s2">门诊出诊</span>
+                </a>
+            </li>
+            <li>
+                <a href="/characteristic.html#part2" target="_blank">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f377cf196.png" title="" alt="">
+                    </span>
+                    <span class="s2">特色科室</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://telemedicine.pumch.cn/#/login" target="_blank">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2019/08/15/s5d551e15a425b.png" title="" alt="">
+                    </span>
+                    <span class="s2">远程医学</span>
+                </a>
+            </li>
+            <li>
+                <a href="/reportquery.html" target="_blank">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2018/03/22/s5ab35182e9b81.png" title="" alt="">
+                    </span>
+                    <span class="s2">报告查询</span>
+                </a>
+            </li>
+            <li class="w li4">
+                <a href="javascript:;">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f3d214f87.png" title="" alt="">
+                    </span>
+                    <span class="s3">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f3d316bea.png" title="" alt="">
+                    </span>
+                </a>
+                <div class="r_ewm">
+                    <i></i>
+                    <img title="" src="/Uploads/Picture/2017/11/21/s5a13f3f0555b4.jpg" title="" alt="">
+                </div>
+            </li>
+            <li class="w">
+                <a href="javascript:;">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f42c76838.png" title="" alt="">
+                    </span>
+                    <span class="s3">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f42d6591f.png" title="" alt="">
+                    </span>
+                </a>
+                <div class="r_ewm">
+                    <i></i>
+                    <img title="" src="/Uploads/Picture/2018/01/12/s5a588a95819b9.jpg" title="" alt="">
+                </div>
+            </li>
+            <li class="w">
+                <a href="javascript:;">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f487774a6.png" title="" alt="">
+                    </span>
+                    <span class="s3">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f4885951b.png" title="" alt="">
+                    </span>
+                </a>
+                <div class="r_ewm">
+                    <i></i>
+                    <img title="" src="/Uploads/Picture/2018/01/12/s5a588aafcbb35.jpg" title="" alt="">
+                </div>
+            </li>
+
+            <li class="goto">
+                <a href="javascript:;">
+                    <span class="s1">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f67f86b3d.png" title="" alt="">
+                    </span>
+                    <span class="s3">
+                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f68083622.png" title="" alt="">
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div><div class="header">
+        <a href="javascript:;" class="menu_h"><span>Menu</span></a>
+        <div class="top">
+            <div class="wrap">
+                <a href="http://www.pumch.cn/en.html" class="en ">en</a>            <a href="http://www.pumch.cn/staff.html">员工版</a>            <a href="http://www.pumch.cn/learning.html">学术版</a>            <a href="http://www.pumch.cn/patient.html" class="on">患者版</a>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="wrap cf">
+                <div class="logo" edit_params="width%3D102%26height%3D86%26showAlt%3D1">
+                    <a href="http://www.pumch.cn/patient">
+                        <img title="北京协和医院" alt="" src="/Uploads/Picture/2017/12/09/s5a2b951e74258.png">
+                    </a>
+                </div>        <div class="navList">
+                    <ul class="cf">
+                        <li>
+                            <a href="/register.html" class="one">预约挂号<span class="open">+</span></a>
+                            <div class="secondNav">
+                                <a href="/register.html">APP预约</a><a href="/register.html?tab=电话预约">电话预约</a><a href="/register.html?tab=国际医疗部预约">国际医疗部预约</a><a href="/register.html?tab=网上预约">网上预约</a><a href="/register.html?tab=银行卡预约">银行卡预约</a><a href="/register.html?tab=自助机预约">自助机预约</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/characteristic.html" class="one">特色诊疗<span class="open">+</span></a>
+                            <div class="secondNav">
+                                <a href="/characteristic.html">疑难病会诊中心</a><a href="http://telemedicine.pumch.cn/#/login">远程医学中心</a><a href="/characteristic.html#part2">特色科室</a><a href="/characteristic.html#part3">专科专病</a><a href="/characteristic.html#part4">诊疗新技术</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/doctors.html" class="one">医生介绍</a>
+                        </li>
+                        <li>
+                            <a href="/department.html" class="one">科室导航</a>
+                        </li>
+                        <li>
+                            <a href="/visitinfo.html" class="one">就医指南<span class="open">+</span></a>
+                            <div class="secondNav">
+                                <a href="/visitinfo.html">门诊出诊表</a><a href="/regulations.html">规章制度</a><a href="/medical_notice.html">就医须知</a><a href="/medical_guide.html">医保指南</a><a href="/nosocomial.html">医院位置</a><a href="/azimuth.html">院内导航</a><a href="/community.html">社区转诊</a><a href="/price_publicity.html">价格公示</a><a href="/query_service.html">查询服务</a><a href="/letter_thanks.html">感谢信</a><a href="/department_ims/guide/feedback.html">意见反馈</a><a href="/reportquery.html">报告查询</a><a href="/patientQA.html">患者问答</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/pnotice.html" class="one">医院公告</a>
+                        </li>
+                        <li>
+                            <a href="/bignews.html" class="one">新闻中心<span class="open">+</span></a>
+                            <div class="secondNav">
+                                <a href="/bignews.html">重大新闻</a><a href="/tends.html">医院动态</a><a href="/fronts.html">医学前沿</a><a href="/medias.html">媒体聚焦</a><a href="/humanities.html">人文关怀</a><a href="/newspapers.html">协和院报</a><a href="/videos.html">视频新闻</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/popular.html" class="one">健康科普</a>
+                        </li>
+                    </ul>
+                    <ul style="padding-top:0">
+                        <li class="pc_displayNone"><a href="http://mjpumch.cbpt.cnki.net/WKC3/WebPublication/index.aspx?mid=xhyx" target="_blank" class="one">协和医学杂志</a></li>
+                        <li class="pc_displayNone"><a href="http://paper.pumch.cn/" target="_blank" class="one">协和院报</a></li>
+                        <li class="pc_displayNone"><a href="/Uploads/blz360/index.html" target="_blank" class="one">病历展</a></li>
+                        <li class="pc_displayNone"><a href="http://www.pumch.cn/Uploads/quanjing/" target="_blank" class="one">院史馆</a></li>
+                    </ul>
+                </div>
+                <div class="shareNav cf">
+                    <a href="http://mjpumch.cbpt.cnki.net/WKC3/WebPublication/index.aspx?mid=xhyx" target="_blank" class="a1">协和医学杂志</a>
+                    <a href="http://paper.pumch.cn/" target="_blank" class="a1">协和院报</a>
+                    <a href="/Uploads/blz360/index.html" target="_blank" class="a1">病历展</a>
+                    <a href="http://www.pumch.cn/Uploads/quanjing/" target="_blank" class="a1">院史馆</a>
+                    <a href="javascript:;" class="seachBtn" title="搜索"></a>
+                    <div class="seach_w">
+                        <div class="inp">
+                            <input id="keywords" type="text" placeholder="请输入搜索内容" />
+                        </div>
+                        <a href="javascript:;" class="btn_sea"></a>
+                    </div>
+                    <a href="javascript:;" class="shareBtn" title="分享"></a>
+                    <div class="share_w">
+                        <div class="bdsharebuttonbox">
+                            <a href="#" title="分享到微信" class="popup_wx" data-cmd="weixin"></a>
+                            <a href="#" title="分享到qq好友" class="popup_sqq" data-cmd="sqq"></a>
+                            <a href="#" title="分享到新浪微博" class="bds_tsina" data-cmd="tsina"></a>
+                            <a href="#" title="分享到qq空间" class="popup_qzone" data-cmd="qzone"></a>
+                            <a href="#" title="分享到腾讯微博" class="popup_tqf" data-cmd="tqf"></a>
+                        </div>
+                    </div>
+
+                    <script>
+                        $(function () {
+                            $('.btn_sea').on('click', function () {
+                                var keywords = $('#keywords').val();
+                                if ($.trim(keywords) == '' || keywords == '请输入搜索内容') {
+                                    return false;
+                                }
+
+                                window.location.href = "/searchs/patient/" + keywords + ".html";
+                            });
+
+                            $('#keywords').on('keyup', function (e) {
+                                if (e.keyCode == 13) {
+                                    $('.btn_sea').click();
+                                }
+                            });
+                        })
+                    </script>
+
+                    <script>
+                        window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "24" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/Public/static/baiduShare/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div><input type="hidden" id="catebynav" value="/patient" />
+    <script>
+        $(function () {
+            var now = ($('#catebynav').val() && $('#catebynav').val() != 'javascript:void(0);') ? $('#catebynav').val() : window.location.pathname;
+            var href = '';
+            var hrefOver = '';
+            $('.header .navList ul li').each(function (index) {
+                var _this = $(this);
+                href = _this.children('a').attr('href');
+                hrefOver = href.replace(now, '');
+                if (!hrefOver) {
+                    hrefOver = '.html';
+                }
+                if (href.indexOf(now) > -1 && hrefOver == '.html') {
+                    _this.addClass('on');
+                    return false;
+                } else {
+                    if (_this.find('.secondNav a').size() > 0) {
+                        _this.find('.secondNav a').each(function (i) {
+                            href = $(this).attr('href');
+                            hrefOver = href.replace(now, '');
+                            if (!hrefOver) {
+                                hrefOver = '.html';
+                            }
+                            if (href.indexOf(now) > -1 && hrefOver == '.html') {
+                                _this.addClass('on');
+                                return false;
+                            }
+                        })
+                    }
+                }
+            })
+        })
+    </script>
+    <div>
+        @RenderBody()
+    </div>
+    <script>
+        $(function () {
+            $('.ind_banner').slick({
+                dots: true,
+                autoplay: true,
+                infinite: true,
+                speed: 1000,
+                autoplaySpeed: 5000,
+                fade: false,
+                slide: '.index_1',
+                onAfterChange: function (a, idx) {
+                    $('.ind_banner .index_1.slick-active').addClass("on").siblings().removeClass("on");
+                }
+            });
+
+            setTimeout(function () {
+                if ($('.ind_banner .index_1').size() > 1) {
+                    $('.ind_banner .index_1').eq(1).addClass("on")
+                } else {
+                    $('.ind_banner .index_1').addClass("on")
+                }
+            }, 300)
+
+            $(window).scroll(function () {
+                scorllAnimate(".index_2");
+            })
+        })
+        $(function () {
+            $(".tabClick .a1").on("click", function () {
+                var i = $(this).index();
+                $(this).addClass("on").siblings().removeClass("on");
+                $(".i4-list .child").eq(i).addClass("on").siblings().removeClass("on");
+                $(".i4-list .child").eq(i).find("li").eq(0).find("a").mouseover()
+            });
+            $(".tabClick .a2").on("click", function () {
+                var i = $(this).index();
+                $(this).addClass("on").siblings().removeClass("on");
+                $(".i4-list .child").eq(i).addClass("on").siblings().removeClass("on");
+                $(".i4-list .child").eq(i).find("li").eq(0).find("a").mouseover()
+            })
+            $(".tabClick .a3").on("click", function () {
+                var i = $(this).index();
+                $(this).addClass("on").siblings().removeClass("on");
+                $(".i4-list .child").eq(i).addClass("on").siblings().removeClass("on");
+                $(".i4-list .child").eq(i).find("li").eq(0).find("a").mouseover()
+            });
+
+
+
+            $(document).on("mouseover", ".i4-list li a", function (e) {
+                //e.preventDefault();
+                var i = $(this).closest("li").index();
+                $(this).closest("li").addClass("on").siblings().removeClass("on");
+
+                var _title = $(this).data("title");
+                var _alt = $(this).data("alt");
+                var _h = $(this).data("h");
+                var _p = $(this).data("p");
+                var _src = $(this).data("src");
+                var _href = $(this).attr("href");
+
+                $(".ind_4_cont .img .a").attr({ "href": _href });
+                $(".ind_4_cont .img img").attr({ "src": _src });
+                $(".ind_4_cont .img img").attr({ "title": _title });
+                $(".ind_4_cont .img img").attr({ "alt": _alt });
+                $(".ind_4_cont .img .con h2").html(_h);
+                $(".ind_4_cont .img .con p").html(_p);
+
+            });
+            $(".tabClick .a1").click();
+        })
+    </script>
+
+    <div class="footer">
+        <div class="link">
+            <div class="wrap cf">
+                <span class="l">友情链接：</span>
+                <div class="a">
+                    <a href="http://www.nhc.gov.cn/" target="_blank">中华人民共和国国家卫生健康委员会</a><a href="http://wjw.beijing.gov.cn/" target="_blank">北京市卫生健康委员会</a><a href="http://www.cams.ac.cn/" target="_blank">中国医学科学院</a><a href="http://www.pumf.org/" target="_blank">北京协和医学基金会</a><a href="http://www.xiehekjkf.com/" target="_blank">协和科技开发有限责任公司</a><a class="last" href="http://www.xiehejx.com/" target="_blank">协和化妆品</a>
+                </div>
+            </div>
+        </div>    <div class="copy">
+            <div class="wrap cf">
+                <div class="left">
+                    <div class="siteMap">
+                        <a href="/sitemap.html">网站地图</a><a href="/research/gudie.html">关于我们</a>
+                    </div>
+                    <p class="cf address"><span>地　　址：</span><span class="div"><b>（东单院区）北京市东城区帅府园一号，100730；</b><b>（西单院区）北京市西城区大木仓胡同41号，100032</b></span></p>
+                    <p>服务热线： 010-69156114</p>
+                </div>
+                <div class="right">
+                    <p>Copyright 北京协和医院 All Rights Reserved. 本站内容仅供参考，不作为诊断及医疗依据            <br /> 京ICP 备 05067313号-1 文保网安备案号：1101010023 京卫网审字【2014】第39号</p>
+                    <p><a href="http://www.fractal-technology.com" target="_blank">网站建设</a>：<a href="http://www.fractal-technology.com" target="_blank">北京分形科技</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            if ($(window).width() < 1262) {
+                anchor();
+                //监听触发操作
+                function hashChangeFire() {
+                    var hh = 10;
+                    if ($('.header').css("position") === "fixed") {
+                        hh = hh + $('.header').height();
+                    }
+                    var id = window.location.href.split('#');
+                    id = '#' + id[id.length - 1];
+                    try {
+                        $('html,body').animate({ scrollTop: $(id).offset().top - hh });
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+                //url变化监听器
+                if (('onhashchange' in window) && ((typeof document.documentMode === 'undefined') || document.documentMode == 8)) {
+                    // 浏览器支持onhashchange事件
+                    window.onhashchange = hashChangeFire;  // TODO，对应新的hash执行的操作函数
+                } else {
+                    // 不支持则用定时器检测的办法
+                    setInterval(function () {
+                        // 检测hash值或其中某一段是否更改的函数， 在低版本的iE浏览器中通过window.location.hash取出的指和其它的浏览器不同，要注意
+                        var ischanged = isHashChanged();
+                        if (ischanged) {
+                            hashChangeFire();  // TODO，对应新的hash执行的操作函数
+                        }
+                    }, 150);
+                }
+            }
+        }
+    </script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e433a0b553c50c4663c2ef927781bc71";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fa06b5d83a50d14d11bd70f117d24063";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1272450198'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1272450198%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</body>
+</html>
+
+</body>
+</html>

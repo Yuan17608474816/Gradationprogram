@@ -757,24 +757,24 @@
 
         .guide .tools .l1 {
             width: 205px;
-            background-image: url(../image/xf/icon1.png);
+            background-image: url(../../image/icon1.png);
             text-indent: 86px;
         }
 
         .guide .tools .l2 {
-            background-image: url(../image/xf/icon2.png);
+            background-image: url(../../image/Appicon.png);
         }
 
         .guide .tools .l3 {
-            background-image: url(../image/xf/icon3.png);
+            background-image: url(../../image/weixinicon.png);
         }
 
         .guide .tools .l4 {
-            background-image: url(../image/xf/icon4.png);
+            background-image: url(../../image/hosicon.png);
         }
 
         .guide .tools .l5 {
-            background-image: url(../image/xf/WechatIMG17.png);
+            background-image: url(../../image/usericon.png);
         }
 
             .guide .tools .l5 .over {
@@ -825,10 +825,14 @@
 
         .guide .tools .l3 .code {
             background: url(../image/xf/png1-1.png) no-repeat center;
-            width: 246px;
+            width: 120px;
+            height: 138px;
+            padding: 21px 30px 40px;
+            margin-left: -90px;
+            /*width: 246px;
             height: 139px;
             padding: 21px 30px 40px;
-            margin-left: -220px;
+            margin-left: -220px;*/
         }
 
         .guide .tools .l4 .code {
@@ -884,7 +888,7 @@
             width: 291px;
             height: 265px;
             margin-right: 183px;
-            background-image: url(../image/xf/png2.png);
+            background-image: url(../../image/usebg.png);
         }
 
             .guide .links .l1 .p {
@@ -905,7 +909,7 @@
             width: 281px;
             height: 261px;
             margin-right: -62px;
-            background-image: url(../image/xf/png3.png);
+            background-image: url(../../image/png3.png);
         }
 
             .guide .links .l2 .p {
@@ -926,7 +930,7 @@
             width: 241px;
             height: 261px;
             margin-left: 21px;
-            background-image: url(../image/xf/png4.png);
+            background-image: url(../../image/png4.png);
             color: #333;
         }
 
@@ -950,7 +954,7 @@
             width: 251px;
             height: 263px;
             margin-left: 221px;
-            background-image: url(../image/xf/png5.png);
+            background-image: url(../../image/png5.png);
         }
 
             .guide .links .l4 .p {
