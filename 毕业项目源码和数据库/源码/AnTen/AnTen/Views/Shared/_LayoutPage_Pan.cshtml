@@ -14,15 +14,11 @@
     <meta name="author" content="www.fractal-technology.com">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta name="referrer" content="no-referrer" />
+    <title>十安医生</title>
 
-    <meta name="keywords" content="协和医院,北京协和医院,協和醫院,北京协和医院首页,北京协和医院电话,协和,協和,医院,醫院,北京協和醫院,北京协和医院妇科,北京协和医院地址,挂号" />
-    <meta name="description" content="北京协和医院是北京协和医学院的临床学院。中国医学科学院的临床医学研究所，是卫生部指定的全国疑难重症诊治指导中心之一。医院学科齐全、技术力量雄厚，医、教、研、管全面发展，以多学科的综合优势享誉海内外。" />
-    <!-- <title>患者版 - 北京协和医院 - 协和医院,北京协和医院,協和醫院,北京协和医院首页,北京协和医院电话,协和,協和,医院,醫院,北京協和醫院,北京协和医院妇科,北京协和医院地址,挂号</title> -->
-    <title>北京协和医院</title>
-    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-    <link rel="stylesheet" type="text/css" href="~/Content/PMain/global.css" />
-    <link href="~/Content/PMain/lyc.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/PMain/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="~/Content/PMain/global.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/PMain/lyc.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/PMain/jquery.mCustomScrollbar.css" />
     <link type="text/css" href="~/Content/PMain/page.css" rel="stylesheet" />
     <link type="text/css" href="~/Content/PMain/slick.css" rel="stylesheet" />
     <script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
@@ -30,6 +26,9 @@
     <script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
 </head>
 <body>
     <link rel="stylesheet" type="text/css" href="~/Content/PMain/myaglobal.css"  />
@@ -41,7 +40,6 @@
         </div>
     </div>
     <script type="text/javascript">
-
         function my_alert(title, url) {
             $('#myalert, #myalert-shadow').show();
             $('#myalert .inner h1').html(title);
@@ -70,7 +68,7 @@
             <li>
                 <a href="/register.html" target="_blank">
                     <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/12/15/s5a3391c2731ce.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_1.png" title="" alt="">
                     </span>
                     <span class="s2">预约挂号</span>
                 </a>
@@ -78,7 +76,7 @@
             <li>
                 <a href="/visitinfo.html" target="_blank">
                     <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f10b7c2f1.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_2.png" title="" alt="">
                     </span>
                     <span class="s2">门诊出诊</span>
                 </a>
@@ -86,7 +84,7 @@
             <li>
                 <a href="/characteristic.html#part2" target="_blank">
                     <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f377cf196.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_3.png" title="" alt="">
                     </span>
                     <span class="s2">特色科室</span>
                 </a>
@@ -94,7 +92,7 @@
             <li>
                 <a href="http://telemedicine.pumch.cn/#/login" target="_blank">
                     <span class="s1">
-                        <img title="" src="/Uploads/Picture/2019/08/15/s5d551e15a425b.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_4.png" title="" alt="">
                     </span>
                     <span class="s2">远程医学</span>
                 </a>
@@ -102,77 +100,25 @@
             <li>
                 <a href="/reportquery.html" target="_blank">
                     <span class="s1">
-                        <img title="" src="/Uploads/Picture/2018/03/22/s5ab35182e9b81.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_5.png" title="" alt="">
                     </span>
                     <span class="s2">报告查询</span>
                 </a>
             </li>
-            <li class="w li4">
-                <a href="javascript:;">
-                    <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f3d214f87.png" title="" alt="">
-                    </span>
-                    <span class="s3">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f3d316bea.png" title="" alt="">
-                    </span>
-                </a>
-                <div class="r_ewm">
-                    <i></i>
-                    <img title="" src="/Uploads/Picture/2017/11/21/s5a13f3f0555b4.jpg" title="" alt="">
-                </div>
-            </li>
-            <li class="w">
-                <a href="javascript:;">
-                    <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f42c76838.png" title="" alt="">
-                    </span>
-                    <span class="s3">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f42d6591f.png" title="" alt="">
-                    </span>
-                </a>
-                <div class="r_ewm">
-                    <i></i>
-                    <img title="" src="/Uploads/Picture/2018/01/12/s5a588a95819b9.jpg" title="" alt="">
-                </div>
-            </li>
-            <li class="w">
-                <a href="javascript:;">
-                    <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f487774a6.png" title="" alt="">
-                    </span>
-                    <span class="s3">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f4885951b.png" title="" alt="">
-                    </span>
-                </a>
-                <div class="r_ewm">
-                    <i></i>
-                    <img title="" src="/Uploads/Picture/2018/01/12/s5a588aafcbb35.jpg" title="" alt="">
-                </div>
-            </li>
-
-            <li class="goto">
-                <a href="javascript:;">
-                    <span class="s1">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f67f86b3d.png" title="" alt="">
-                    </span>
-                    <span class="s3">
-                        <img title="" src="/Uploads/Picture/2017/11/21/s5a13f68083622.png" title="" alt="">
-                    </span>
-                </a>
-            </li>
+         
         </ul>
     </div><div class="header">
         <a href="javascript:;" class="menu_h"><span>Menu</span></a>
         <div class="top">
             <div class="wrap">
-                <a href="http://www.pumch.cn/en.html" class="en ">en</a>            <a href="http://www.pumch.cn/staff.html">员工版</a>            <a href="http://www.pumch.cn/learning.html">学术版</a>            <a href="http://www.pumch.cn/patient.html" class="on">患者版</a>
+                <a href="http://www.pumch.cn/en.html" class="en ">我的</a>            <a href="http://www.pumch.cn/staff.html">医院版</a>            <a href="http://www.pumch.cn/learning.html">游客版</a>            <a href="http://www.pumch.cn/patient.html" class="on">患者版</a>
             </div>
         </div>
         <div class="nav">
             <div class="wrap cf">
                 <div class="logo" edit_params="width%3D102%26height%3D86%26showAlt%3D1">
                     <a href="http://www.pumch.cn/patient">
-                        <img title="北京协和医院" alt="" src="/Uploads/Picture/2017/12/09/s5a2b951e74258.png">
+                        <img title="十安医生"   src="~/image/Logo3.png"  style="height:120px;width:200px"/>
                     </a>
                 </div>        <div class="navList">
                     <ul class="cf">
@@ -189,7 +135,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/doctors.html" class="one">医生介绍</a>
+                            <a href="/doctors.html" class="one">找医生</a>
                         </li>
                         <li>
                             <a href="/department.html" class="one">科室导航</a>
@@ -201,12 +147,12 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/pnotice.html" class="one">医院公告</a>
+                            <a href="/pnotice.html" class="one">找医院</a>
                         </li>
                         <li>
                             <a href="/bignews.html" class="one">新闻中心<span class="open">+</span></a>
                             <div class="secondNav">
-                                <a href="/bignews.html">重大新闻</a><a href="/tends.html">医院动态</a><a href="/fronts.html">医学前沿</a><a href="/medias.html">媒体聚焦</a><a href="/humanities.html">人文关怀</a><a href="/newspapers.html">协和院报</a><a href="/videos.html">视频新闻</a>
+                                <a href="/bignews.html">重大新闻</a><a href="/tends.html">医院动态</a><a href="/fronts.html">医学前沿</a><a href="/medias.html">媒体聚焦</a><a href="/humanities.html">人文关怀</a><a href="/newspapers.html">十安报</a><a href="/videos.html">视频新闻</a>
                             </div>
                         </li>
                         <li>
@@ -214,18 +160,20 @@
                         </li>
                     </ul>
                     <ul style="padding-top:0">
-                        <li class="pc_displayNone"><a href="http://mjpumch.cbpt.cnki.net/WKC3/WebPublication/index.aspx?mid=xhyx" target="_blank" class="one">协和医学杂志</a></li>
-                        <li class="pc_displayNone"><a href="http://paper.pumch.cn/" target="_blank" class="one">协和院报</a></li>
+                        <li class="pc_displayNone"><a href="http://mjpumch.cbpt.cnki.net/WKC3/WebPublication/index.aspx?mid=xhyx" target="_blank" class="one">十安医学杂志</a></li>
+                        <li class="pc_displayNone"><a href="http://paper.pumch.cn/" target="_blank" class="one">十安院报</a></li>
                         <li class="pc_displayNone"><a href="/Uploads/blz360/index.html" target="_blank" class="one">病历展</a></li>
                         <li class="pc_displayNone"><a href="http://www.pumch.cn/Uploads/quanjing/" target="_blank" class="one">院史馆</a></li>
                     </ul>
                 </div>
                 <div class="shareNav cf">
-                    <a href="http://mjpumch.cbpt.cnki.net/WKC3/WebPublication/index.aspx?mid=xhyx" target="_blank" class="a1">协和医学杂志</a>
-                    <a href="http://paper.pumch.cn/" target="_blank" class="a1">协和院报</a>
+                    <a href="http://mjpumch.cbpt.cnki.net/WKC3/WebPublication/index.aspx?mid=xhyx" target="_blank" class="a1">十安医学杂志</a>
+                    <a href="http://paper.pumch.cn/" target="_blank" class="a1">十安院报</a>
                     <a href="/Uploads/blz360/index.html" target="_blank" class="a1">病历展</a>
                     <a href="http://www.pumch.cn/Uploads/quanjing/" target="_blank" class="a1">院史馆</a>
-                    <a href="javascript:;" class="seachBtn" title="搜索"></a>
+                    <a href="javascript:;" class="seachBtn" title="搜索" style="  background: url(../../image/head_sea.png) no-repeat center;
+        height: 32px;
+        width: 32px;"></a>
                     <div class="seach_w">
                         <div class="inp">
                             <input id="keywords" type="text" placeholder="请输入搜索内容" />
@@ -269,39 +217,7 @@
             </div>
         </div>
     </div><input type="hidden" id="catebynav" value="/patient" />
-    <script>
-        $(function () {
-            var now = ($('#catebynav').val() && $('#catebynav').val() != 'javascript:void(0);') ? $('#catebynav').val() : window.location.pathname;
-            var href = '';
-            var hrefOver = '';
-            $('.header .navList ul li').each(function (index) {
-                var _this = $(this);
-                href = _this.children('a').attr('href');
-                hrefOver = href.replace(now, '');
-                if (!hrefOver) {
-                    hrefOver = '.html';
-                }
-                if (href.indexOf(now) > -1 && hrefOver == '.html') {
-                    _this.addClass('on');
-                    return false;
-                } else {
-                    if (_this.find('.secondNav a').size() > 0) {
-                        _this.find('.secondNav a').each(function (i) {
-                            href = $(this).attr('href');
-                            hrefOver = href.replace(now, '');
-                            if (!hrefOver) {
-                                hrefOver = '.html';
-                            }
-                            if (href.indexOf(now) > -1 && hrefOver == '.html') {
-                                _this.addClass('on');
-                                return false;
-                            }
-                        })
-                    }
-                }
-            })
-        })
-    </script>
+    
     <div>
         @RenderBody()
     </div>
@@ -378,7 +294,7 @@
         })
     </script>
 
-    <div class="footer">
+    <div class="footer " style="border:1px solid red;background-color:#3a3a3a">
         <div class="link">
             <div class="wrap cf">
                 <span class="l">友情链接：</span>
@@ -392,12 +308,12 @@
                     <div class="siteMap">
                         <a href="/sitemap.html">网站地图</a><a href="/research/gudie.html">关于我们</a>
                     </div>
-                    <p class="cf address"><span>地　　址：</span><span class="div"><b>（东单院区）北京市东城区帅府园一号，100730；</b><b>（西单院区）北京市西城区大木仓胡同41号，100032</b></span></p>
+                    <p class="cf address"><span>地　　址：</span><span class="div"><b>（信息学院）湖南省长沙市长沙县湖南工程职业技术学院，100730；
                     <p>服务热线： 010-69156114</p>
                 </div>
                 <div class="right">
-                    <p>Copyright 北京协和医院 All Rights Reserved. 本站内容仅供参考，不作为诊断及医疗依据            <br /> 京ICP 备 05067313号-1 文保网安备案号：1101010023 京卫网审字【2014】第39号</p>
-                    <p><a href="http://www.fractal-technology.com" target="_blank">网站建设</a>：<a href="http://www.fractal-technology.com" target="_blank">北京分形科技</a></p>
+                    <p>Copyright 十安在线医生 All Rights Reserved. 本站内容仅供参考，不作为诊断及医疗依据         
+                    <p><a href="http://www.fractal-technology.com" target="_blank">网站参考</a>：<a href="http://www.fractal-technology.com" target="_blank">北京分形科技北京协和医院</a></p>
                 </div>
             </div>
         </div>
@@ -460,8 +376,5 @@
         var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1272450198'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1272450198%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
     </script>
-</body>
-</html>
-
 </body>
 </html>

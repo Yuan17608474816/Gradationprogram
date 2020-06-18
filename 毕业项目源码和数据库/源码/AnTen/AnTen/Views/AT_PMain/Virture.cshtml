@@ -1,0 +1,96 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+    <div id="container" style="height: 600px ; width:600px"></div>
+
+
+    <script type="text/javascript" src="~/Content/EpidMap/echarts.min.js"></script>
+    <script type="text/javascript" src="~/Content/EpidMap/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="~/Content/EpidMap/china.js"></script>
+
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(document.getElementById("container"));
+
+
+
+        var data = [
+            { name: '海门', value: 9 },
+            { name: '鄂尔多斯', value: 12 },
+        ];
+
+        var geoCoordMap = {
+            '海门': [121.15, 31.89],
+            '鄂尔多斯': [109.781327, 39.608266],
+        };
+
+        //函数用于将数据保存成ehcarts地图需要的数据格式  [name:'地点',value:[地图坐标,数据]]   [121.48, 31.22, "2239"]
+        var convertData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({   //push是添加数组后面的长度，以及内容
+                        name: data[i].name,
+                        value: geoCoord.concat(data[i].value) //concat是连接数组的意思
+                    });
+                }
+            }
+            return res;
+        };
+        mapOption = {
+            title: {
+                text: '各城市"大数据"相关职位招聘数量',
+                x: 'center',
+                //modified 0523
+                textStyle: {
+                    //文字颜色
+                    color: '#f30008',
+                    //字体风格,'normal','italic','oblique'
+                    // fontStyle:'oblique',
+                    fontStyle: 'italic',
+                    //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+                    fontWeight: 'bold',
+                    //字体系列
+                    fontFamily: 'FangSong'
+                    //fontFamily: 'KaiTi'
+                    //字体大小
+                    //fontSize:18
+                }
+
+                //modiefied end
+            },
+            tooltip: {
+                //       trigger: 'item',
+                formatter: function (params) {      // 鼠标移动到地图  显示： 地点：数值
+                    return params.name + ' : ' + params.value[2];
+                }
+            },
+            visualMap: {
+                min: 0,
+                max: 100,          //设置热力图的最小最大热力值
+                calculable: true,  //设置热力图的滑动图示器
+            },
+            geo: {
+                map: 'china',
+            },
+            series: [
+                {
+                    type: 'scatter',
+                    coordinateSystem: 'geo',    //加载地图参数
+                    data: convertData(data)
+                }
+            ]
+        };
+        myChart.setOption(mapOption);
+    </script>
+</body>
+</html>

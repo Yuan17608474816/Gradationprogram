@@ -1,0 +1,574 @@
+﻿
+@{
+    ViewBag.Title = "Pan_InqDoc";
+    Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
+}
+
+<div class="body_box department dorctorlist1">
+    <div class="position">
+        <div class="block">
+            您现在的位置：
+            <a href="/patient.html">首页</a>
+            &gt; <a href="/doctors.html">医生介绍</a>
+        </div>
+    </div>
+    <div class="part1">
+        <div class="block">
+            <div class="title1">医生介绍</div>
+            <div class="box clearfix">
+                <div class="deleft">
+                    <a href="#m1" class="a1">非手术科室</a>
+                    <a href="#m2" class="a2">手术科室</a>
+                    <a href="#m3" class="a3">诊断相关科室</a>
+                </div>
+                <div class="search-box">
+                    <div class="block">
+                        <span class="label">出诊信息查询</span>
+                        <div class="input">
+                            <input id="techang" value="疾病名称" type="text">
+                        </div>
+                        <div class="input">
+                            <input id="keshiname" value="科室名称" type="text">
+                        </div>
+                        <div class="input">
+                            <input id="title" value="医师名称" type="text">
+                        </div>
+                        <a href="javascript:;" id="search-btn" class="butn1">查询</a>
+                    </div>
+                </div>
+                <script>
+                    $('#techang,#keshiname,#title').on('keyup', function (e) {
+                        if (e.keyCode == 13) {
+                            $('#search-btn').click();
+                        }
+                    });
+
+                    $('#search-btn').click(function () {
+                        var techang = $('#techang').val();
+                        var keshiname = $('#keshiname').val();
+                        var title = $('#title').val();
+
+                        techang = (techang != '疾病名称') ? techang : '';
+                        keshiname = (keshiname != '科室名称') ? keshiname : '';
+                        title = (title != '医师名称') ? title : '';
+
+                        if (keshiname == '国际医疗' || keshiname == '国际医疗部' || keshiname == '国际医疗部门诊') {
+                            var _url = '/visitinfo.html' + '?searctabs=' + keshiname;
+                            window.location.href = _url;
+                        } else {
+                            var _url = '/visitsearch.html';
+                            _url = _url + '?techang=' + encodeURI(techang) + '&keshiname=' + encodeURI(keshiname) + '&title=' + encodeURI(title);
+
+                            window.location.href = _url;
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <assign name="empty" value="<a></a><a>暂无数据</a>" />
+    <div class="part2 p1" id="m1">
+        <div class="block">
+            <div class="caption">非手术科室</div>
+            <div class="box clearfix">
+                <div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_neikxx/doctor.html">内科学系</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/12930.html">张奉春</a><a class="ellipsis" target="_blank" href="/detail/22893.html">夏维波</a><a class="ellipsis" target="_blank" href="/detail/19296.html">刘晓清</a><a class="ellipsis" target="_blank" href="/detail/14229.html">严晓伟</a><a class="ellipsis" target="_blank" href="/detail/14105.html">方全</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xinnk/doctor.html">心内科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/22446.html">荆志成</a><a class="ellipsis" target="_blank" href="/detail/4120.html">方理刚</a><a class="ellipsis" target="_blank" href="/detail/4121.html">沈珠军</a><a class="ellipsis" target="_blank" href="/detail/4113.html">刘震宇</a><a class="ellipsis" target="_blank" href="/detail/4105.html">陈未</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_huxnk/doctor.html">呼吸与危重症医学科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4169.html">罗慰慈</a><a class="ellipsis" target="_blank" href="/detail/4168.html">朱元珏</a><a class="ellipsis" target="_blank" href="/detail/4160.html">黄席珍</a><a class="ellipsis" target="_blank" href="/detail/4161.html">林耀广</a><a class="ellipsis" target="_blank" href="/detail/4167.html">李龙芸</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xiaohnk/doctor.html">消化内科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4202.html">杨爱明</a><a class="ellipsis" target="_blank" href="/detail/4194.html">李景南</a><a class="ellipsis" target="_blank" href="/detail/4189.html">费贵军</a><a class="ellipsis" target="_blank" href="/detail/4181.html">吴东</a><a class="ellipsis" target="_blank" href="/detail/4175.html">李骥</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_shennk/doctor.html">肾内科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4234.html">毕增祺</a><a class="ellipsis" target="_blank" href="/detail/4233.html">李学旺</a><a class="ellipsis" target="_blank" href="/detail/4232.html">郑法雷</a><a class="ellipsis" target="_blank" href="/detail/4220.html">于晓初</a><a class="ellipsis" target="_blank" href="/detail/4228.html">李雪梅</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xueynk/doctor.html">血液内科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4259.html">武永吉</a><a class="ellipsis" target="_blank" href="/detail/4258.html">沈悌</a><a class="ellipsis" target="_blank" href="/detail/4257.html">单渊东</a><a class="ellipsis" target="_blank" href="/detail/4256.html">赵永强</a><a class="ellipsis" target="_blank" href="/detail/4255.html">周道斌</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_fengsmyk/doctor.html">风湿免疫科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4297.html">董怡</a><a class="ellipsis" target="_blank" href="/detail/4295.html">唐福林</a><a class="ellipsis" target="_blank" href="/detail/4294.html">于孟学</a><a class="ellipsis" target="_blank" href="/detail/4078.html">张奉春</a><a class="ellipsis" target="_blank" href="/detail/4293.html">曾小峰</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_ganrnk/doctor.html">感染内科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4319.html">李太生</a><a class="ellipsis" target="_blank" href="/detail/13870.html">王爱霞</a><a class="ellipsis" target="_blank" href="/detail/4321.html">盛瑞媛</a><a class="ellipsis" target="_blank" href="/detail/4320.html">邓国华</a><a class="ellipsis" target="_blank" href="/detail/4316.html">刘正印</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_putnk/doctor.html">全科医学科（普通内科）</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/12996.html">曾学军</a><a class="ellipsis" target="_blank" href="/detail/4331.html">陈嘉林</a><a class="ellipsis" target="_blank" href="/detail/4328.html">黄晓明</a><a class="ellipsis" target="_blank" href="/detail/4333.html">沙悦</a><a class="ellipsis" target="_blank" href="/detail/4329.html">王玉</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_zhonglnk/doctor.html">肿瘤内科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4350.html">白春梅</a><a class="ellipsis" target="_blank" href="/detail/4349.html">陈书长</a><a class="ellipsis" target="_blank" href="/detail/4348.html">赵林</a><a class="ellipsis" target="_blank" href="/detail/4347.html">周建凤</a><a class="ellipsis" target="_blank" href="/detail/4346.html">应红艳</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_micu/doctor.html">MICU</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4356.html">杜斌</a><a class="ellipsis" target="_blank" href="/detail/4355.html">翁利</a><a class="ellipsis" target="_blank" href="/detail/4353.html">胡小芸</a><a class="ellipsis" target="_blank" href="/detail/4352.html">彭劲民</a><a class="ellipsis" target="_blank" href="/detail/4351.html">王春耀</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_laonsfbf/doctor.html">老年医学科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4652.html">刘晓红</a><a class="ellipsis" target="_blank" href="/detail/4191.html">孙晓红</a><a class="ellipsis" target="_blank" href="/detail/4647.html">康琳</a><a class="ellipsis" target="_blank" href="/detail/4651.html">宁晓红</a><a class="ellipsis" target="_blank" href="/detail/4650.html">吴瑾</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_neifmk/doctor.html">内分泌科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4392.html">夏维波</a><a class="ellipsis" target="_blank" href="/detail/4390.html">朱惠娟</a><a class="ellipsis" target="_blank" href="/detail/4386.html">李玉秀</a><a class="ellipsis" target="_blank" href="/detail/4388.html">李梅</a><a class="ellipsis" target="_blank" href="/detail/4393.html">邢小平</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_zhongzylk/doctor.html">重症医学科（ICU）</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4421.html">隆云</a><a class="ellipsis" target="_blank" href="/detail/4422.html">刘大为</a><a class="ellipsis" target="_blank" href="/detail/4418.html">周翔</a><a class="ellipsis" target="_blank" href="/detail/4412.html">王小亭</a><a class="ellipsis" target="_blank" href="/detail/4407.html">何怀武</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_erk/doctor.html">儿科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4445.html">宋红梅</a><a class="ellipsis" target="_blank" href="/detail/4444.html">肖娟</a><a class="ellipsis" target="_blank" href="/detail/4443.html">李正红</a><a class="ellipsis" target="_blank" href="/detail/4442.html">鲍秀兰</a><a class="ellipsis" target="_blank" href="/detail/4440.html">魏珉</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_shenjk/doctor.html">神经科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4509.html">崔丽英</a><a class="ellipsis" target="_blank" href="/detail/4498.html">彭斌</a><a class="ellipsis" target="_blank" href="/detail/4496.html">朱以诚</a><a class="ellipsis" target="_blank" href="/detail/4508.html">郭玉璞</a><a class="ellipsis" target="_blank" href="/detail/13575.html">李舜伟</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xinlyxk/doctor.html">心理医学科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4501.html">李舜伟</a><a class="ellipsis" target="_blank" href="/detail/4518.html">魏镜</a><a class="ellipsis" target="_blank" href="/detail/4517.html">洪霞</a><a class="ellipsis" target="_blank" href="/detail/4516.html">史丽丽</a><a class="ellipsis" target="_blank" href="/detail/4515.html">赵晓晖</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_pifk/doctor.html">皮肤科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4560.html">晋红中</a><a class="ellipsis" target="_blank" href="/detail/4551.html">马东来</a><a class="ellipsis" target="_blank" href="/detail/4553.html">郑和义</a><a class="ellipsis" target="_blank" href="/detail/4552.html">孙秋宁</a><a class="ellipsis" target="_blank" href="/detail/4550.html">刘跃华</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_biantfyk/doctor.html">变态反应科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4573.html">尹佳</a><a class="ellipsis" target="_blank" href="/detail/4572.html">王良录</a><a class="ellipsis" target="_blank" href="/detail/4569.html">支玉香</a><a class="ellipsis" target="_blank" href="/detail/4570.html">孙劲旅</a><a class="ellipsis" target="_blank" href="/detail/4571.html">李宏</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_jizk/doctor.html">急诊科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4607.html">于学忠</a><a class="ellipsis" target="_blank" href="/detail/4606.html">朱华栋</a><a class="ellipsis" target="_blank" href="/detail/4603.html">刘继海</a><a class="ellipsis" target="_blank" href="/detail/4591.html">徐军</a><a class="ellipsis" target="_blank" href="/detail/4605.html">李毅</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_zhongyk/doctor.html">中医科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4641.html">梁晓春</a><a class="ellipsis" target="_blank" href="/detail/4637.html">田国庆</a><a class="ellipsis" target="_blank" href="/detail/4635.html">朴元林</a><a class="ellipsis" target="_blank" href="/detail/4629.html">吴群励</a><a class="ellipsis" target="_blank" href="/detail/4643.html">郭赛珊</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_wulyxkfk/doctor.html">物理医学康复科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5439.html">陈丽霞</a><a class="ellipsis" target="_blank" href="/detail/5437.html">华桂茹</a><a class="ellipsis" target="_blank" href="/detail/5438.html">刘颖</a><a class="ellipsis" target="_blank" href="/detail/5436.html">王燕</a><a class="ellipsis" target="_blank" href="/detail/5435.html">刘淑芬</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_yingyb/doctor.html">临床营养科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5223.html">于康</a><a class="ellipsis" target="_blank" href="/detail/4405.html">陈伟</a><a class="ellipsis" target="_blank" href="/detail/5224.html">刘燕萍</a><a class="ellipsis" target="_blank" href="/detail/5458.html">刘鹏举</a><a class="ellipsis" target="_blank" href="/detail/5222.html">马方</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part2 p2" id="m2">
+        <div class="block">
+            <div class="caption">手术科室</div>
+            <div class="box clearfix">
+                <div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_waikxx/doctor.html">外科学系</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/15000.html">李汉忠</a><a class="ellipsis" target="_blank" href="/detail/19298.html">翁习生</a><a class="ellipsis" target="_blank" href="/detail/15002.html">林进</a><a class="ellipsis" target="_blank" href="/detail/19299.html">易杰</a><a class="ellipsis" target="_blank" href="/detail/15001.html">廖泉</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_jibwk/doctor.html">基本外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4712.html">赵玉沛</a><a class="ellipsis" target="_blank" href="/detail/4708.html">吴文铭</a><a class="ellipsis" target="_blank" href="/detail/4711.html">何小东</a><a class="ellipsis" target="_blank" href="/detail/4655.html">廖泉</a><a class="ellipsis" target="_blank" href="/detail/4709.html">张太平</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_guk/doctor.html">骨科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4760.html">邱贵兴</a><a class="ellipsis" target="_blank" href="/detail/4759.html">王以朋</a><a class="ellipsis" target="_blank" href="/detail/4753.html">仉建国</a><a class="ellipsis" target="_blank" href="/detail/4758.html">翁习生</a><a class="ellipsis" target="_blank" href="/detail/4756.html">沈建雄</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xinwk/doctor.html">心外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4766.html">苗齐</a><a class="ellipsis" target="_blank" href="/detail/4765.html">刘兴荣</a><a class="ellipsis" target="_blank" href="/detail/4764.html">张超纪</a><a class="ellipsis" target="_blank" href="/detail/4763.html">马国涛</a><a class="ellipsis" target="_blank" href="/detail/4762.html">刘剑州</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xiongwk/doctor.html">胸外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4786.html">李单青</a><a class="ellipsis" target="_blank" href="/detail/4785.html">刘洪生</a><a class="ellipsis" target="_blank" href="/detail/4782.html">张志庸</a><a class="ellipsis" target="_blank" href="/detail/4781.html">崔玉尚</a><a class="ellipsis" target="_blank" href="/detail/4784.html">梁乃新</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_minwk/doctor.html">泌尿外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4821.html">李汉忠</a><a class="ellipsis" target="_blank" href="/detail/4820.html">纪志刚</a><a class="ellipsis" target="_blank" href="/detail/4819.html">严维刚</a><a class="ellipsis" target="_blank" href="/detail/4818.html">张玉石</a><a class="ellipsis" target="_blank" href="/detail/4817.html">李宏军</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_shenjwk/doctor.html">神经外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4846.html">王任直</a><a class="ellipsis" target="_blank" href="/detail/4845.html">马文斌</a><a class="ellipsis" target="_blank" href="/detail/4844.html">李永宁</a><a class="ellipsis" target="_blank" href="/detail/4843.html">任祖渊</a><a class="ellipsis" target="_blank" href="/detail/4842.html">苏长保</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_xuegwk/doctor.html">血管外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4858.html">管珩</a><a class="ellipsis" target="_blank" href="/detail/4857.html">刘昌伟</a><a class="ellipsis" target="_blank" href="/detail/4856.html">郑月宏</a><a class="ellipsis" target="_blank" href="/detail/4849.html">刘暴</a><a class="ellipsis" target="_blank" href="/detail/4855.html">叶炜</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_zhengxmrwk/doctor.html">整形美容外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4873.html">王晓军</a><a class="ellipsis" target="_blank" href="/detail/4872.html">黄渭清</a><a class="ellipsis" target="_blank" href="/detail/4871.html">赵茹</a><a class="ellipsis" target="_blank" href="/detail/4870.html">王友彬</a><a class="ellipsis" target="_blank" href="/detail/4869.html">刘志飞</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_ruxwk/doctor.html">乳腺外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4890.html">黄汉源</a><a class="ellipsis" target="_blank" href="/detail/4889.html">孙强</a><a class="ellipsis" target="_blank" href="/detail/4888.html">周易冬</a><a class="ellipsis" target="_blank" href="/detail/4884.html">沈松杰</a><a class="ellipsis" target="_blank" href="/detail/4887.html">茅枫</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_ganzwk/doctor.html">肝脏外科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/4902.html">钟守先</a><a class="ellipsis" target="_blank" href="/detail/4901.html">黄洁夫</a><a class="ellipsis" target="_blank" href="/detail/4900.html">桑新亭</a><a class="ellipsis" target="_blank" href="/detail/4899.html">毛一雷</a><a class="ellipsis" target="_blank" href="/detail/4898.html">卢欣</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_mazk/doctor.html">麻醉科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/14275.html">赵俊</a><a class="ellipsis" target="_blank" href="/detail/14276.html">罗来葵</a><a class="ellipsis" target="_blank" href="/detail/4952.html">罗爱伦</a><a class="ellipsis" target="_blank" href="/detail/4951.html">任洪智</a><a class="ellipsis" target="_blank" href="/detail/4950.html">叶铁虎</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_fuchank/doctor.html">妇产科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5080.html">郎景和</a><a class="ellipsis" target="_blank" href="/detail/5079.html">沈铿</a><a class="ellipsis" target="_blank" href="/detail/5076.html">向阳</a><a class="ellipsis" target="_blank" href="/detail/5074.html">郁琦</a><a class="ellipsis" target="_blank" href="/detail/5077.html">朱兰</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_yank/doctor.html">眼科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5124.html">赵家良</a><a class="ellipsis" target="_blank" href="/detail/5128.html">钟勇</a><a class="ellipsis" target="_blank" href="/detail/5127.html">陈有信</a><a class="ellipsis" target="_blank" href="/detail/5126.html">张美芬</a><a class="ellipsis" target="_blank" href="/detail/5110.html">张顺华</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_erbhk/doctor.html">耳鼻喉科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5162.html">高志强</a><a class="ellipsis" target="_blank" href="/detail/5161.html">陈晓巍</a><a class="ellipsis" target="_blank" href="/detail/5160.html">杨华</a><a class="ellipsis" target="_blank" href="/detail/5159.html">吕威</a><a class="ellipsis" target="_blank" href="/detail/5157.html">李五一</a>
+                        </div>
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_kouqk/doctor.html">口腔科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5211.html">赵继志</a><a class="ellipsis" target="_blank" href="/detail/5210.html">赖钦声</a><a class="ellipsis" target="_blank" href="/detail/5209.html">万阔</a><a class="ellipsis" target="_blank" href="/detail/5204.html">张韬</a><a class="ellipsis" target="_blank" href="/detail/5207.html">宿玉成</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part2 p3" id="m3">
+        <div class="block">
+            <div class="caption">诊断相关科室</div>
+            <div class="box clearfix">
+                <div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_chaoszdk/doctor.html">超声医学科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5274.html">姜玉新</a><a class="ellipsis" target="_blank" href="/detail/5273.html">李建初</a><a class="ellipsis" target="_blank" href="/detail/5272.html">夏宇</a><a class="ellipsis" target="_blank" href="/detail/5213.html">吕珂</a><a class="ellipsis" target="_blank" href="/detail/5271.html">张青</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_binglk/doctor.html">病理科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5309.html">陈杰</a><a class="ellipsis" target="_blank" href="/detail/5308.html">崔全才</a><a class="ellipsis" target="_blank" href="/detail/5307.html">梁智勇</a><a class="ellipsis" target="_blank" href="/detail/5306.html">卢朝辉</a><a class="ellipsis" target="_blank" href="/detail/5279.html">吴焕文</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_jianyk/doctor.html">检验科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5336.html">徐英春</a><a class="ellipsis" target="_blank" href="/detail/5339.html">邱玲</a><a class="ellipsis" target="_blank" href="/detail/19347.html">李永哲</a><a class="ellipsis" target="_blank" href="/detail/5333.html">杨启文</a><a class="ellipsis" target="_blank" href="/detail/5311.html">秦绪珍</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_fangsk/doctor.html">放射科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5387.html">金征宇</a><a class="ellipsis" target="_blank" href="/detail/5386.html">冯逢</a><a class="ellipsis" target="_blank" href="/detail/5385.html">潘杰</a><a class="ellipsis" target="_blank" href="/detail/5384.html">薛华丹</a><a class="ellipsis" target="_blank" href="/detail/5361.html">王怡宁</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_fangszlk/doctor.html">放射治疗科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5430.html">张福泉</a><a class="ellipsis" target="_blank" href="/detail/5428.html">胡克</a><a class="ellipsis" target="_blank" href="/detail/5429.html">邱杰</a><a class="ellipsis" target="_blank" href="/detail/5414.html">杨波</a><a class="ellipsis" target="_blank" href="/detail/5425.html">侯晓荣</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_heyxk/doctor.html">核医学科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5455.html">李方</a><a class="ellipsis" target="_blank" href="/detail/5453.html">霍力</a><a class="ellipsis" target="_blank" href="/detail/5454.html">林岩松</a><a class="ellipsis" target="_blank" href="/detail/5452.html">朱朝晖</a><a class="ellipsis" target="_blank" href="/detail/5449.html">崔瑞雪</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_yaojk/doctor.html">药剂科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5474.html">李大魁</a><a class="ellipsis" target="_blank" href="/detail/5473.html">张继春</a><a class="ellipsis" target="_blank" href="/detail/5472.html">梅丹</a><a class="ellipsis" target="_blank" href="/detail/5471.html">朱珠</a><a class="ellipsis" target="_blank" href="/detail/5466.html">张波</a>
+                        </div>
+
+                    </div>
+                </div><div class="item">
+                    <div class="inner">
+                        <div class="h2"><a href="/department_bingakjbflzx/doctor.html">病案科</a></div>
+                        <div class="inner-box clearfix">
+                            <a class="ellipsis" target="_blank" href="/detail/5477.html">王怡</a><a class="ellipsis" target="_blank" href="/detail/5479.html">马家润</a><a class="ellipsis" target="_blank" href="/detail/5478.html">刘爱民</a><a class="ellipsis" target="_blank" href="/detail/5476.html">董景五</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part1">
+        <div class="block">
+            <div class="box2 clearfix">
+                <div class="item" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
+                    <img title="" alt="" src="/Uploads/Picture/2017/12/11/s5a2e1f6f126a7.jpg">
+                    <a href="http://ims.pumch.cn/" target="_blank" class="vertical"> 国际医疗部</a>
+                </div><div class="item" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
+                    <img title="健康医学部（体检中心）" alt="健康医学部（体检中心）" src="/Uploads/Picture/2017/12/21/s5a3b1ac931c29.jpg">
+                    <a href="/department_tijzx.html" target="_blank" class="vertical">健康医学部（体检中心）</a>
+                </div><div class="item" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
+                    <img title="临床药理研究中心" alt="临床药理研究中心" src="/Uploads/Picture/2017/12/21/s5a3b1b212cae3.jpg">
+                    <a href="/department_lincylzx.html" target="_blank" class="vertical">临床药理研究中心</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pubc-box">
+        <style>
+            .pubc-box .list .item.i1 .img {
+                background: url(/Uploads/Picture/2017/12/15/s5a3388c78ca06.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i1:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d090c0cdaf.png)
+            }
+        </style>
+        <style>
+            .pubc-box .list .item.i2 .img {
+                background: url(/Uploads/Picture/2017/12/15/s5a338807c130a.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i2:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d090d196cd.png)
+            }
+        </style>
+        <style>
+            .pubc-box .list .item.i3 .img {
+                background: url(/Uploads/Picture/2017/11/25/s5a193a55cdad1.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i3:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d090e27cea.png)
+            }
+        </style>
+        <style>
+            .pubc-box .list .item.i4 .img {
+                background: url(/Uploads/Picture/2017/11/25/s5a193a56b7374.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i4:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d090f300ab.png)
+            }
+        </style>
+        <style>
+            .pubc-box .list .item.i5 .img {
+                background: url(/Uploads/Picture/2017/11/25/s5a193a57bd3f3.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i5:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d0910575e2.png)
+            }
+        </style>
+        <style>
+            .pubc-box .list .item.i6 .img {
+                background: url(/Uploads/Picture/2017/11/25/s5a193a58be013.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i6:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d09115fcf4.png)
+            }
+        </style>
+        <style>
+            .pubc-box .list .item.i7 .img {
+                background: url(/Uploads/Picture/2017/11/25/s5a193a59b8256.png) center no-repeat;
+            }
+
+            .pubc-box .list .item.i7:hover .img {
+                background-image: url(/Uploads/Picture/2017/11/28/s5a1d091268852.png)
+            }
+        </style>
+        <div class="block">
+            <div class="title1">了解这些有可能对您的就诊有所帮助</div>
+            <div class="list clearfix">
+                <div class="item i1">
+                    <a class="vertical" href="/visitinfo.html">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">门诊出诊表</div>
+                        </div>
+                    </a>
+                </div><div class="item i2">
+                    <a class="vertical" href="/medical_notice.html">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">就医须知</div>
+                        </div>
+                    </a>
+                </div><div class="item i3">
+                    <a class="vertical" href="/azimuth.html">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">方位指南</div>
+                        </div>
+                    </a>
+                </div><div class="item i4">
+                    <a class="vertical" href="/characteristic.html#part3">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">专科专病</div>
+                        </div>
+                    </a>
+                </div><div class="item i5">
+                    <a class="vertical" target="_blank" href="http://ims.pumch.cn/">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">国际医疗部</div>
+                        </div>
+                    </a>
+                </div><div class="item i6">
+                    <a class="vertical" href="/department_tijzx.html">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">健康体检</div>
+                        </div>
+                    </a>
+                </div><div class="item i7">
+                    <a class="vertical" href="/popular.html">
+                        <div class="icon-box">
+                            <div class="img">
+                            </div>
+                            <div class="h2">健康科普</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

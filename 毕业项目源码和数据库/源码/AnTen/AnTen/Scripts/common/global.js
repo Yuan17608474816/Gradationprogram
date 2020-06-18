@@ -1,6 +1,5 @@
 ﻿
 $(function () {
-
 	$(".body_box").css({ "minHeight": $(window).height() - $(".footer").innerHeight() - $(".header").innerHeight() });
 	$(window).resize(function () {
 		$(".body_box").css({ "minHeight": $(window).height() - $(".footer").innerHeight() - $(".header").innerHeight() });
@@ -12,7 +11,6 @@ $(function () {
 		$(".header .navList").slideToggle(300);
 		$(".header .navList li").removeClass("on");
 		$('.header .navList li .open').text('+');
-
 	});
 
 	$(".shareBtn").on("click", function (e) {

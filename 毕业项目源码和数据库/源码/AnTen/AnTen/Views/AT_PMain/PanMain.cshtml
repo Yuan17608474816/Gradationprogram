@@ -3,90 +3,135 @@
     ViewBag.Title = "PanMain";
     Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
 }
-<link href="~/Content/PMain/jquery.mCustomScrollbar.css" rel="stylesheet" />
+<!--引用样式-->
+<link type="text/css" rel="stylesheet" href="~/Content/PMain/jquery.mCustomScrollbar.css" />
 <link type="text/css" href="~/Content/PMain/page.css" rel="stylesheet" />
 <link type="text/css" href="~/Content/PMain/slick.css" rel="stylesheet" />
-<script type="text/javascript"  src="~/Scripts/PMain/global.js"></script>
-<script  type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
-<script type="text/javascript"  src="~/Scripts/PMain/jquery.min.js"></script>
-<script  type="text/javascript"  src="~/Scripts/PMain/jquery.mousewheel.js"></script>
-<script  type="text/javascript"  src="~/Scripts/PMain/slick.js"></script>
+<script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
+<script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
+<script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
 
 <div class="body_box">
-    <div class="ind_banner cf">
-        <div class="index_1" style="background:url(/Uploads/Picture/2020/04/21/s5e9e949082206.jpg) no-repeat center">
-            <a href="http://www.pumch.cn/detail/23219.html" style="display: block; height: 100%;">
-                <div class="wrap">
-                    <div class="tit">
-                        <h2></h2>
-                        <p></p>
-                    </div>
-                </div>
-            </a>
-        </div><div class="index_1" style="background:url(/Uploads/Picture/2020/02/11/s5e4203f7b643e.jpg) no-repeat center">
-            <a href="http://www.pumch.cn/detail/22213.html" style="display: block; height: 100%;">
-                <div class="wrap">
-                    <div class="tit">
-                        <h2></h2>
-                        <p></p>
-                    </div>
-                </div>
-            </a>
-        </div><div class="index_1" style="background:url(/Uploads/Picture/2020/02/11/s5e4203e4e8946.jpg) no-repeat center">
-            <a href="javascript:void(0);" style="display: block; height: 100%;">
-                <div class="wrap">
-                    <div class="tit">
-                        <h2></h2>
-                        <p></p>
-                    </div>
-                </div>
-            </a>
-        </div><div class="index_1" style="background:url(/Uploads/Picture/2020/02/11/s5e4203cb5578e.jpg) no-repeat center">
-            <a href="javascript:void(0);" style="display: block; height: 100%;">
-                <div class="wrap">
-                    <div class="tit">
-                        <h2>
-                            以人民为中心<br />
-                            一切为了患者
-                        </h2>
-                        <p>北京协和医院是集医疗、教学、科研于一体的现代化综合三级甲等医院，是国家卫生健康委指定的全国疑难重症诊治指导中心。</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>	<div class="wrap">
+    <!--疫情可视化-->
+    <div class="ind_banner cf ">
+        <div id="container" style="height: 650% ; width:80%; margin:0px auto;"></div>
+        <script src="~/Content/EpidMap/echarts.min.js"></script>
+        <script src="~/Content/EpidMap/jquery-3.4.1.min.js"></script>
+        <script src="~/Content/EpidMap/china.js"></script>
+        <script type="text/javascript">
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(document.getElementById("container"));
+            var data = [
+                { name: '海门', value: 9 },
+                { name: '鄂尔多斯', value: 12 },
+            ];
+
+            var geoCoordMap = {
+                '海门': [121.15, 31.89],
+                '鄂尔多斯': [109.781327, 39.608266],
+            };
+
+            //函数用于将数据保存成ehcarts地图需要的数据格式  [name:'地点',value:[地图坐标,数据]]   [121.48, 31.22, "2239"]
+            var convertData = function (data) {
+                var res = [];
+                for (var i = 0; i < data.length; i++) {
+                    var geoCoord = geoCoordMap[data[i].name];
+                    if (geoCoord) {
+                        res.push({   //push是添加数组后面的长度，以及内容
+                            name: data[i].name,
+                            value: geoCoord.concat(data[i].value) //concat是连接数组的意思
+                        });
+                    }
+                }
+                return res;
+            };
+            mapOption = {
+                title: {
+                    text: '中国疫情,关系你我',
+                    x: 'center',
+                    //modified 0523
+                    textStyle: {
+                        //文字颜色
+                        color: '#f30008',
+                        //字体风格,'normal','italic','oblique'
+                        // fontStyle:'oblique',
+                        fontStyle: 'italic',
+                        //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+                        fontWeight: 'bold',
+                        //字体系列
+                        fontFamily: 'FangSong'
+                        //fontFamily: 'KaiTi'
+                        //字体大小
+                        //fontSize:18
+                    }
+
+                    //modiefied end
+                },
+                tooltip: {
+                    //       trigger: 'item',
+                    formatter: function (params) {      // 鼠标移动到地图  显示： 地点：数值
+                        return params.name + ' : ' + params.value[2];
+                    }
+                },
+                visualMap: {
+                    min: 0,
+                    max: 100,          //设置热力图的最小最大热力值
+                    calculable: true,  //设置热力图的滑动图示器
+                },
+                geo: {
+                    map: 'china',
+                },
+                series: [
+                    {
+                        type: 'scatter',
+                        coordinateSystem: 'geo',    //加载地图参数
+                        data: convertData(data)
+                    }
+                ]
+            };
+            myChart.setOption(mapOption);
+        </script>
+    </div>
+
+    <!--患者界面-->
+    <div class="wrap">
+        <!--患者就医-->
         <ul class="index_2 cf">
-            <li class="li_1" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
+            <li class="li_1" style="    background: url(../image/门诊.jpg) no-repeat center;" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
                 <a href="/visitinfo.html" target="_blank" class="a">
-                    <div class="ico"><img src="/Uploads/Picture/2017/12/15/s5a3387ca565d2.png"></div>
+                    <div class="ico"><img src="~/image/门诊icon.png" /></div>
                     <h3>门诊出诊表</h3>
+
                 </a>
             </li>
             <li class="li_2" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
                 <a href="/medical_notice.html" target="_blank" class="a">
-                    <div class="ico"><img src="/Uploads/Picture/2017/12/01/s5a210cd9912ba.png"></div>
+                    <div class="ico"><img src="~/image/就医须知.png"></div>
                     <h3>就医须知</h3>
                 </a>
             </li>
-            <li class="li_3" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
+            <li class="li_3" style="    background: url(../image/医院地址.jpg) no-repeat center;" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
                 <a href="/nosocomial.html" target="_blank" class="a">
-                    <div class="ico"><img src="/Uploads/Picture/2017/12/01/s5a210cfd381b9.png"></div>
+                    <div class="ico"><img src="~/image/医院地址.png"></div>
                     <h3>医院位置</h3>
                 </a>
             </li>
             <li class="li_4" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
                 <a href="/characteristic.html#part3" target="_blank" class="a">
-                    <div class="ico"><img src="/Uploads/Picture/2017/12/01/s5a210d082ac32.png"></div>
+                    <div class="ico"><img src="~/image/专科专病.png"></div>
                     <h3>专科专病</h3>
                 </a>
             </li>
         </ul>
+        <!--医院新闻-->
         <div class="index_3 cf">
             <div class="li">
                 <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
                     <div class="img">
                         <a href="javascript:void(0);" class="tran_scale">
-                            <img title="1" alt="1" src="/Uploads/Picture/2020/01/23/s5e294d6288aa5_802_454_458_0.jpg">
+                            <img title="1" alt="1" src="~/image/医院公告.jpg">
                         </a>
                     </div>
                 </div>	            				<div class="con">
@@ -104,7 +149,7 @@
                 <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
                     <div class="img">
                         <a href="javascript:void(0);" class="tran_scale">
-                            <img title="" alt="" src="/Uploads/Picture/2020/01/23/s5e294d762d1e4.JPG">
+                            <img title="" alt="" src="~/image/重大新闻.jpg">
                         </a>
                     </div>
                 </div>								<div class="con">
@@ -122,7 +167,7 @@
                 <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
                     <div class="img">
                         <a href="javascript:void(0);" class="tran_scale">
-                            <img title="" alt="" src="/Uploads/Picture/2020/01/23/s5e294d81f200e.png">
+                            <img title="" alt="" src="~/image/十安医院说.png">
                         </a>
                     </div>
                 </div>	            				<div class="con">
@@ -137,19 +182,18 @@
                 </div>
             </div>
         </div>
-
+        <!--科室导航-->
         <div class="index_4">
             <h2 class="title_h2">科室导航</h2>
             <div class="ind_4_cont cf">
                 <div class="img ratio-img" data-ratio="0.735">
-                    <a href="#" target="_blank" class="tan_scale a">
-                        <img title="" src="" title="" title="" alt="">
-                        <div class="tit">
-                            <div class="con">
-                                <h2></h2>
-                                <p></p>
-                            </div>
+                    <img src="~/image/科室导航.jpg" />
+                    <div class="tit">
+                        <div class="con">
+                            <h2></h2>
+                            <p></p>
                         </div>
+                    </div>
                     </a>
                 </div>
 
@@ -164,37 +208,37 @@
                         <div class="child cf">
                             <ul>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2018/01/05/s5a4f5e33408e3.jpg" href="/department_neikxx.html" data-title="" data-alt="" data-h="内科学系" data-p="北京协和医院内科学系自1921年建院之初即成立。经过近百年的传承及发展，目前内科学系下属包括了心脏内科、呼吸内..."><i></i>内科学系</a>
+                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_neikxx.html" data-title="" data-alt="" data-h="内科学系" data-p="北京协和医院内科学系自1921年建院之初即成立。经过近百年的传承及发展，目前内科学系下属包括了心脏内科、呼吸内..."><i></i>内科学系</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2020/03/10/s5e67516507458.jpg" href="/department_xinnk.html" data-title="心内科" data-alt="心内科" data-h="心内科" data-p="      协和医院心内科具有悠久的历史。早在中华人民共和国成立初期，由黄宛教授和方圻教授组建了协和医院内科心..."><i></i>心内科</a>
+                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xinnk.html" data-title="心内科" data-alt="心内科" data-h="心内科" data-p="      协和医院心内科具有悠久的历史。早在中华人民共和国成立初期，由黄宛教授和方圻教授组建了协和医院内科心..."><i></i>心内科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/06/s5a27d10e6e1d5.jpg" href="/department_huxnk.html" data-title="呼吸内科" data-alt="" data-h="呼吸与危重症医学科" data-p="      北京协和医院呼吸内科是由我国已故著名呼吸病学专家——朱贵卿教授创建的、具有悠久历史的学科专业。作为..."><i></i>呼吸与危重症医学科</a>
+                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_huxnk.html" data-title="呼吸内科" data-alt="" data-h="呼吸与危重症医学科" data-p="      北京协和医院呼吸内科是由我国已故著名呼吸病学专家——朱贵卿教授创建的、具有悠久历史的学科专业。作为..."><i></i>呼吸与危重症医学科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b1fa71aadf.jpg" href="/department_xiaohnk.html" data-title="" data-alt="" data-h="消化内科" data-p="      消化内科是北京协和医院成立最早的专科之一，由我国现代内科学泰斗张孝骞教授和著名消化病专家陈敏章教授..."><i></i>消化内科</a>
+                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xiaohnk.html" data-title="" data-alt="" data-h="消化内科" data-p="      消化内科是北京协和医院成立最早的专科之一，由我国现代内科学泰斗张孝骞教授和著名消化病专家陈敏章教授..."><i></i>消化内科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a3793ae0388a.jpg" href="/department_shennk.html" data-title="" data-alt="" data-h="肾内科" data-p="      1979年，肾脏病学在中国作为一个崭新的学科才刚刚起步,毕增祺教授有远见的创立了北京协和医院内科肾..."><i></i>肾内科</a>
+                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_shennk.html" data-title="" data-alt="" data-h="肾内科" data-p="      1979年，肾脏病学在中国作为一个崭新的学科才刚刚起步,毕增祺教授有远见的创立了北京协和医院内科肾..."><i></i>肾内科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/06/s5a27a8b15b2ee.jpeg" href="/department_xueynk.html" data-title="2016年血液内科全科合影" data-alt="" data-h="血液内科" data-p="      北京协和医院血液科具有悠久的历史，是我国现代血液学的先驱者，也是我国培养血液学专业人才的最早基地。..."><i></i>血液内科</a>
+                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xueynk.html" data-title="2016年血液内科全科合影" data-alt="" data-h="血液内科" data-p="      北京协和医院血液科具有悠久的历史，是我国现代血液学的先驱者，也是我国培养血液学专业人才的最早基地。..."><i></i>血液内科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/10/s5a2d1c9d55aad.jpg" href="/department_fengsmyk.html" data-title="" data-alt="" data-h="风湿免疫科" data-p="      北京协和医院风湿免疫科作为我国风湿学病专业发展与人才培养的最早基地之一，自1980年建科历经三十七..."><i></i>风湿免疫科</a>
+                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_fengsmyk.html" data-title="" data-alt="" data-h="风湿免疫科" data-p="      北京协和医院风湿免疫科作为我国风湿学病专业发展与人才培养的最早基地之一，自1980年建科历经三十七..."><i></i>风湿免疫科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2227481d4.png" href="/department_ganrnk.html" data-title="" data-alt="" data-h="感染内科" data-p="      北京协和医院感染科是北京协和医院最早成立的科室之一，在老一批传染病专家的传承带领下，感染科历届主任..."><i></i>感染内科</a>
+                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_ganrnk.html" data-title="" data-alt="" data-h="感染内科" data-p="      北京协和医院感染科是北京协和医院最早成立的科室之一，在老一批传染病专家的传承带领下，感染科历届主任..."><i></i>感染内科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2018/01/05/s5a4f2c85bf147.jpg" href="/department_putnk.html" data-title="" data-alt="" data-h="全科医学科（普通内科）" data-p="      北京协和医院全科医学科（普通内科）的建立起始于美国纽约中华医学基金会项目“面向21世纪建设高质量、..."><i></i>全科医学科（普通内科）</a>
+                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_putnk.html" data-title="" data-alt="" data-h="全科医学科（普通内科）" data-p="      北京协和医院全科医学科（普通内科）的建立起始于美国纽约中华医学基金会项目“面向21世纪建设高质量、..."><i></i>全科医学科（普通内科）</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a379305a0a78.jpg" href="/department_zhonglnk.html" data-title="科室医生合影" data-alt="" data-h="肿瘤内科" data-p="      北京协和医院肿瘤内科是国家卫计委临床重点专科建设项目科室。现有教授2名、副教授6名、主治医师8名、..."><i></i>肿瘤内科</a>
+                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_zhonglnk.html" data-title="科室医生合影" data-alt="" data-h="肿瘤内科" data-p="      北京协和医院肿瘤内科是国家卫计委临床重点专科建设项目科室。现有教授2名、副教授6名、主治医师8名、..."><i></i>肿瘤内科</a>
                                 </li>
                                 <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a30c591e580f.JPG" href="/department_micu.html" data-title="" data-alt="" data-h="MICU" data-p="      北京协和医院MICU成立于2005年，隶属于协和医院内科，为一个主要收治各种内科重症患者的综合性I..."><i></i>MICU</a>
+                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_micu.html" data-title="" data-alt="" data-h="MICU" data-p="      北京协和医院MICU成立于2005年，隶属于协和医院内科，为一个主要收治各种内科重症患者的综合性I..."><i></i>MICU</a>
                                 </li>
                                 <li>
                                     <a class="ellipsis" data-src="/Uploads/Picture/2019/03/20/s5c91e0571370a_402_295_0_28.jpg" href="/department_laonsfbf.html" data-title="" data-alt="" data-h="老年医学科" data-p="　　老年医学科隶属于大内科，其临床医生均有7年以上的临床经验，均完成了内科各专业组和急诊的轮转学习。现有主任医..."><i></i>老年医学科</a>
@@ -324,32 +368,33 @@
                 </div>
             </div>
         </div>
+        <!--便民举措-->
         <ul class="index_5 cf">
             <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
                 <a href="/department_ims.html" target="_blank" class="tran_scale">
-                    <img title="国际医疗部1" alt="国际医疗部2" src="/Uploads/Picture/2019/05/10/s5cd52962e3e9f_1607_723_224_0.JPG">
+                    <img title="国际医疗部1" alt="国际医疗部2" src="~/image/ln3-1.jpg">
                     <h2>国际医疗部</h2>
                 </a>
             </li>
             <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
                 <a href="/department_tijzx.html" target="_blank" class="tran_scale">
-                    <img title="健康医学部（体检中心）" alt="健康医学部（体检中心）" src="/Uploads/Picture/2017/11/29/s5a1e35bc71548.jpg">
+                    <img title="健康医学部（体检中心）" alt="健康医学部（体检中心）" src="~/image/ln3-2.jpg">
                     <h2>健康医学部（体检中心）</h2>
                 </a>
             </li>
             <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
                 <a href="/department_lincylzx.html" target="_blank" class="tran_scale">
-                    <img title="临床药理中心" alt="临床药理中心" src="/Uploads/Picture/2020/01/02/s5e0d3bb450a0b_1570_704_0_0.png">
+                    <img title="临床药理中心" alt="临床药理中心" src="~/image/ln3-3.png">
                     <h2>临床药理中心</h2>
                 </a>
             </li>
         </ul>
-
+        <!--软件特色-->
         <div class="index_6">
             <h2 class="title_h2" edit_params="title1Show%3D1%26title1Max%3D15">特色诊疗</h2>			<ul class="list cf">
                 <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
                     <a href="/characteristic.html#1" target="_blank">
-                        <img src="/Uploads/Picture/2017/12/01/s5a211445d365b.jpg">
+                        <img src="~/image/ln4-1.jpg">
                         <div class="tit">
                             <h3>
                                 中国医院最佳专科<br />
@@ -362,7 +407,7 @@
                 </li>
                 <li class="li_2" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
                     <a href="/characteristic.html#2" target="_blank">
-                        <img src="/Uploads/Picture/2017/12/01/s5a21148eb9877.jpg">
+                        <img src="~/image/ln4-2.jpg">
                         <div class="tit">
                             <h3>
                                 国家重点学科及重点<br />
@@ -375,7 +420,7 @@
                 </li>
                 <li class="li_1 li_3" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
                     <a href="/characteristic.html#3" target="_blank">
-                        <img src="/Uploads/Picture/2018/09/18/s5ba0767e87a67_802_709_97_0.jpg">
+                        <img src="~/image/ln4-3.jpg">
                         <div class="tit">
                             <h3>
                                 国家卫生健康委<br />
@@ -386,11 +431,11 @@
                         </div>
                     </a>
                 </li>
-                <li class="li_1 li_4 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="" alt="" src="/Uploads/Picture/2018/09/18/s5ba075487d97a_1207_1067_0_369.jpg"></a></li>
-                <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="2" alt="22" src="/Uploads/Picture/2018/09/18/s5ba0774a100af_841_742_78_0.jpg"></a></li>
+                <li class="li_1 li_4 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="" alt="" src="~/image/ln4-4.jpg"></a></li>
+                <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="2" alt="22" src="~/image/ln4-5.jpg"></a></li>
                 <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1%26descriptionShow%3D1%26descriptionMax%3D160%26showLink%3D1">
                     <a href="http://telemedicine.pumch.cn/#/login" target="_blank">
-                        <img src="/Uploads/Picture/2018/09/18/s5ba077868b2c9_1210_1068_0_117.jpg">
+                        <img src="~/image/ln4-6.jpg">
                         <div class="tit">
                             <h3>远程医学中心</h3>
                             <i></i>
@@ -400,7 +445,7 @@
                 </li>
                 <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
                     <a href="/characteristic.html#4" target="_blank">
-                        <img src="/Uploads/Picture/2017/12/14/s5a321a27e71e9.jpg">
+                        <img src="~/image/ln4-7.jpg">
                         <div class="tit">
                             <h3>
                                 国家级省部级<br />
@@ -413,7 +458,7 @@
                 </li>
                 <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
                     <a href="/characteristic.html#5" target="_blank">
-                        <img src="/Uploads/Picture/2017/12/14/s5a321a331d8b7.jpg">
+                        <img src="~/image/ln4-8.jpg">
                         <div class="tit">
                             <h3>
                                 北京市<br />
@@ -428,4 +473,3 @@
         </div>
     </div>
 </div>
-

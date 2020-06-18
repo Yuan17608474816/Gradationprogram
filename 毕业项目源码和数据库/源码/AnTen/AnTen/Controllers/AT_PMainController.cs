@@ -13,7 +13,19 @@ namespace AnTen.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// 患者首页
+        /// </summary>
+        /// <returns></returns>
         public ActionResult PanMain()
+        {
+            return View();
+        }
+        public ActionResult Pan_InqDoc()
+        {
+            return View();
+        }
+        public ActionResult Virture()
         {
             return View();
         }

@@ -62,11 +62,11 @@
         float: left;
         width: 300px;
         height: 207px;
-        background: url(../image/ind_2.jpg) no-repeat center;
+        background-image: url('../../image/门诊.jpg');
+        background: url(../image/门诊.jpg) no-repeat center;
         text-align: center;
         -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        behavior: url(css/PIE.htc);
     }
 
         .index_2 li .a {
@@ -97,7 +97,7 @@
     }
 
     .index_2 .li_3 {
-        background: url(../image/ind_3.jpg) no-repeat center;
+        background: url(../image/医院地址.jpg) no-repeat center;
         margin-left: 10px;
     }
 
