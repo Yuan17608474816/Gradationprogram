@@ -1,0 +1,289 @@
+﻿
+@{
+    ViewBag.Title = "PoScHe";
+    Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
+}
+
+    <div class="body_box science" style="min-height: 567px;">
+        <div class="position">
+            <div class="block">
+                您现在的位置：
+                <a href="/patient.html">首页</a>
+                &gt; <a href="/popular.html">健康科普</a>
+            </div>
+        </div>
+        <div class="part1">
+            <div class="block">
+                <div class="title1">健康科普</div>
+                <!-- <div class="box1 clearfix">
+                                <div class="left-b clearfix">
+                                    </div>
+                <div class="right-b">
+                    <div class="frame">
+                                            </div>
+                    <a href="javascript:;" class="a1 prev"></a>
+                    <a href="javascript:;" class="a1 next"></a>
+                </div>
+            </div> -->
+            </div>
+        </div>
+        <div class="part2">
+            <div class="block">
+                <div class="title1"></div>
+                <div id="list">
+                    <div class="box clearfix">
+                        <div class="item fr">
+                            <a href="/detail/23476.html" target="_blank">
+                                <div class="img ">
+                                    <img title="" alt="" src="~/image/爱眼日.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="h2">爱眼日 | 协和眼科专家送给青少年的一份护眼攻略...</div>
+                                    <div class="au">作者：徐冬冬 </div>		                <div class="date">发布时间：2020.06.08</div>
+                                </div>
+                            </a>
+                        </div><div class="item ">
+                            <a href="/detail/23465.html" target="_blank">
+                                <div class="img ">
+                                    <img title="" alt="" src="~/image/健康饮食.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="h2">健康饮食 | 喝汤和喝水，哪个对吃饭更有利？协和...</div>
+                                    <div class="au">作者：林国乐 </div>		                 <div class="date">发布时间：2020.06.05</div>
+                                </div>
+                            </a>
+                        </div><div class="item fr">
+                            <a href="/detail/23453.html" target="_blank">
+                                <div class="img ">
+                                    <img title="" alt="" src="~/image/乐享童年.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="h2">健康过六一 | 协和儿科专家带来“干货满满”的婴...</div>
+                                    <div class="au">作者：王晨 </div>		                <div class="date">发布时间：2020.06.02</div>
+                                </div>
+                            </a>
+                        </div><div class="item ">
+                            <a href="/detail/23448.html" target="_blank">
+                                <div class="img ">
+                                    <img title="" alt="" src="~/image/世界无烟日.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="h2">世界无烟日| 协和医生说戒烟</div>
+                                    <div class="date">发布时间：2020.06.01</div>
+                                </div>
+                            </a>
+                        </div><div class="item fr">
+                            <a href="/detail/23406.html" target="_blank">
+                                <div class="img ">
+                                    <img title="" alt="" src="~/image/营养光行.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="h2">全民营养周 | 营养与癌症之间不得不说的事儿</div>
+                                    <div class="au">作者：李海龙 </div>		                <div class="date">发布时间：2020.05.20</div>
+                                </div>
+                            </a>
+                        </div><div class="item ">
+                            <a href="/detail/23400.html" target="_blank">
+                                <div class="img ">
+                                    <img title="" alt="" src="~/image/合理膳食.jpg">
+                                </div>
+                                <div class="text">
+                                    <div class="h2">全民营养周 | 协和临床营养科说免疫力</div>
+                                    <div class="date">发布时间：2020.05.19</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <a class="now" href="javascript:void(0);">1</a><a href="/searchs/popular/category_id/32/p/2.html">2</a><a href="/searchs/popular/category_id/32/p/3.html">3</a><a href="/searchs/popular/category_id/32/p/4.html">4</a><a href="/searchs/popular/category_id/32/p/5.html">5</a>	    <a href="javascript:void(0)" class="more">...</a>	    <a href="/searchs/popular/category_id/32/p/67.html">67</a>	    <a href="/searchs/popular/category_id/32/p/2.html" class="next"></a>	    <span class="go">
+                            <input onkeyup="this.value=this.value.replace(/[^\d]/g,'');" type="text" placeholder="">
+                            <input id="jump" value="GO" data-max="67" type="submit" onclick="return false;">
+                        </span>
+                    </div>
+                    <script>
+	var current = "1";
+	var total_pages = "67";
+	if ( total_pages < 2 ) {
+		$('.loading').addClass('hide');
+	} else {
+		if ( current != total_pages ) {
+			$('.loading').removeClass('hide');
+		}
+	}
+                    </script>
+                </div>
+                <div class="loading">
+                    <a href="javascript:void(0);">加载更多</a>
+                </div>
+            </div>
+        </div>
+        <div class="pubc-box">
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/12/15/s5a3388c78ca06.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090c0cdaf.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/12/15/s5a338807c130a.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090d196cd.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a55cdad1.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090e27cea.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a56b7374.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090f300ab.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a57bd3f3.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d0910575e2.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a58be013.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d09115fcf4.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a59b8256.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d091268852.png)
+                }
+            </style><div class="block">
+                <div class="title1">了解这些有可能对您的就诊有所帮助</div>
+                <div class="search-box pubc-boxs-s">
+                    <div class="block">
+                        <span class="label">出诊信息查询</span>
+                        <div class="input jbmc">
+                            <input id="techang" type="text" value="疾病名称">
+                        </div>
+                        <div class="input ksmc">
+                            <input id="keshiname" type="text" value="科室名称">
+                        </div>
+                        <div class="input ysmc">
+                            <input id="title" type="text" value="医师名称">
+                        </div>
+                        <a href="javascript:;" id="search-btn" class="butn1">查询</a>
+                    </div>
+                </div>
+                <div class="list clearfix">
+                    <div class="item i1">
+                        <a class="vertical" href="/visitinfo.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">门诊出诊表</div>
+                            </div>
+                        </a>
+                    </div><div class="item i2">
+                        <a class="vertical" href="/medical_notice.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">就医须知</div>
+                            </div>
+                        </a>
+                    </div><div class="item i3">
+                        <a class="vertical" href="/azimuth.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">方位指南</div>
+                            </div>
+                        </a>
+                    </div><div class="item i4">
+                        <a class="vertical" href="/characteristic.html#part3">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">专科专病</div>
+                            </div>
+                        </a>
+                    </div><div class="item i5">
+                        <a class="vertical" target="_blank" href="http://ims.pumch.cn/">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">国际医疗部</div>
+                            </div>
+                        </a>
+                    </div><div class="item i6">
+                        <a class="vertical" href="/department_tijzx.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">健康体检</div>
+                            </div>
+                        </a>
+                    </div><div class="item i7">
+                        <a class="vertical" href="/popular.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">健康科普</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <script>
+$('#techang,#keshiname,#title').on('keyup', function(e){
+    if(e.keyCode==13){
+        $('#search-btn').click();
+    }
+});
+
+$('#search-btn').click(function(){
+    var techang = $('#techang').val();
+    var keshiname = $('#keshiname').val();
+    var title = $('#title').val();
+
+    techang = (techang != '疾病名称') ? techang : '';
+    keshiname = (keshiname != '科室名称') ? keshiname : '';
+    title = (title != '医师名称') ? title : '';
+
+    if( keshiname == '国际医疗' || keshiname == '国际医疗部' || keshiname == '国际医疗部门诊' ) {
+        var _url = '/visitinfo.html' + '?searctabs=' + keshiname;
+        window.location.href = _url;
+    }else{
+        var _url = '/visitsearch.html';
+        _url = _url + '?techang=' + encodeURI(techang) + '&keshiname=' + encodeURI(keshiname) + '&title=' + encodeURI(title);
+
+        window.location.href = _url;
+    }
+});
+            </script>
+        </div>
+    </div>
+

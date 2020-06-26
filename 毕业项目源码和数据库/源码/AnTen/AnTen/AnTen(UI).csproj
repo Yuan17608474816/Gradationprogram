@@ -159,6 +159,12 @@
     <Content Include="Content\Public\mCustomScrollbar.css" />
     <Content Include="Content\Public\page.css" />
     <Content Include="Content\Public\slick.css" />
+    <Content Include="Content\SeaDoc\base.css" />
+    <Content Include="Content\SeaDoc\clinic.css" />
+    <Content Include="Content\SeaDoc\DisKnow.css" />
+    <Content Include="Content\SeaDoc\FinHos.css" />
+    <Content Include="Content\SeaDoc\SeaByDis.css" />
+    <Content Include="Content\SeaDoc\SeaByHos.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -168,6 +174,7 @@
     <Content Include="image\hosicon.png" />
     <Content Include="image\icon1.png" />
     <Content Include="image\lb4.jpg" />
+    <Content Include="image\Left-img2.png" />
     <Content Include="image\ln3-1.jpg" />
     <Content Include="image\ln3-2.jpg" />
     <Content Include="image\ln3-3.png" />
@@ -193,15 +200,28 @@
     <Content Include="image\usericon.png" />
     <Content Include="image\weixinicon.png" />
     <Content Include="image\专科专病.png" />
+    <Content Include="image\乐享童年.jpg" />
+    <Content Include="image\价格公示.png" />
+    <Content Include="image\健康饮食.jpg" />
     <Content Include="image\北京协和.png" />
+    <Content Include="image\医保指南.png" />
     <Content Include="image\医院公告.jpg" />
     <Content Include="image\医院地址.jpg" />
     <Content Include="image\医院地址.png" />
+    <Content Include="image\医院地址2.png" />
     <Content Include="image\十安医院说.png" />
+    <Content Include="image\合理膳食.jpg" />
     <Content Include="image\就医须知.png" />
     <Content Include="image\患者.png" />
     <Content Include="image\ln4-7.jpg" />
+    <Content Include="image\患者问答.png" />
+    <Content Include="image\意见反馈1.png" />
+    <Content Include="image\感谢信.png" />
+    <Content Include="image\世界无烟日.jpg" />
+    <Content Include="image\查询服务.png" />
+    <Content Include="image\爱眼日.jpg" />
     <Content Include="image\科室导航.jpg" />
+    <Content Include="image\营养光行.jpg" />
     <Content Include="image\重大新闻.jpg" />
     <Content Include="image\门诊.jpg" />
     <Content Include="image\门诊icon.png" />
@@ -257,6 +277,8 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\SeaDoc\clinic.js" />
+    <Content Include="Scripts\SeaDoc\common.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -356,9 +378,23 @@
     <Content Include="Views\AT_PMain\Index.cshtml" />
     <Content Include="Views\AT_PMain\Pan_InqDoc.cshtml" />
     <Content Include="Views\AT_PMain\Virture.cshtml" />
+    <Content Include="Views\AT_PMain\SelDiaOfSym.cshtml" />
+    <Content Include="Views\AT_PMain\SeaDoc.cshtml" />
+    <Content Include="Views\AT_PMain\SeaDocL.cshtml" />
+    <Content Include="Views\AT_PMain\SeaDocH.cshtml" />
+    <Content Include="Views\AT_PMain\FindHos.cshtml" />
+    <Content Include="Views\AT_PMain\DisKnDa.cshtml" />
+    <Content Include="Views\AT_PMain\OutVisFor.cshtml" />
+    <Content Include="Views\AT_PMain\InqSer.cshtml" />
+    <Content Include="Views\AT_PMain\ThNoto.cshtml" />
+    <Content Include="Views\AT_PMain\PatQueAnR.cshtml" />
+    <Content Include="Views\AT_PMain\PoScHe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\PMain\SelDia\" />
+    <Folder Include="Scripts\SeaDocL\" />
+    <Folder Include="Scripts\SelDia\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

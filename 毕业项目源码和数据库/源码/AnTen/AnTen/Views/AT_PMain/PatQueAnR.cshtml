@@ -1,0 +1,1209 @@
+﻿
+@{
+    ViewBag.Title = "PatQueAnR";
+    Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
+}
+
+    <div class="body_box apppage" style="min-height: 567px;">
+        <div class="position">
+            <div class="block">
+                您现在的位置：
+                <a href="/patient.html">首页</a>
+                &gt; <a href="javascript:void(0);">就医指南</a>		 &gt; <a href="/patientQA.html">患者问答</a>
+            </div>
+        </div>
+        <div class="foucs">
+            <div class="block">
+                <div class="title1">就医指南</div>
+                <!-- <div class="button">
+        <a href="javascript:;" class="prev"></a>
+        <a href="javascript:;" class="next"></a>
+    </div> -->
+                <div class="frame cf slick-initialized slick-slider">
+                    <div class="slick-list draggable" tabindex="0">
+                        <div class="slick-track" style="opacity: 1; width: 2136px; transform: translate3d(0px, 0px, 0px);">
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">门诊出诊表</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">就医须知</a>
+                            </div>
+                            <div class="child  slick-slide slick-active " style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">查询服务</a>
+                            </div>
+                            <div class="child  slick-slide slick-active " style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">感谢信</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/department_ims/guide/feedback.html" onclick="return false;" data-href="/department_ims/guide/feedback.html">意见反馈</a>
+                            </div>
+                            <div class="child  slick-slide slick-active now" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">患者问答</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/reportquery.html" onclick="return false;" data-href="/reportquery.html">报告查询</a>
+                            </div>
+                        </div>
+                    </div>            <button type="button" class="slick-prev" style="display: block;">Previous</button><button type="button" class="slick-next slick-disabled" style="display: block;">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="tabs_box" id="datalist">
+            <div class="block">
+                <style>
+                    .search_cur {
+                        display: none;
+                    }
+
+                    .qa_search .list1 .title2 i, .qa_search .list1 .desc i {
+                        background: #ffff00;
+                    }
+                </style>
+                <div class="tbleft">
+                    <div class="part1">
+                        <div class="inner">
+                            <div class="scroll mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                                <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+                                    <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                        <div class="item now"> <a href="javascript:void(0);">服务类信息</a> </div><div class="item"> <a href="javascript:void(0);">位置类信息</a> </div>                    <div class="form1">
+                                            <div class="item">
+                                                <span>搜 索：</span>
+                                                <div class="input">
+                                                    <input id="qa_search_text" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="button">
+                                                <a id="qa_search" href="javascript:;">搜 索</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div class="inner">
+                            <div class="caption">出诊信息查询</div>
+                            <div class="from">
+                                <div class="item">
+                                    <!-- <span>疾病名称</span> -->
+                                    <div class="input">
+                                        <input id="techang" type="text" value="疾病名称">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- <span>科室名称</span> -->
+                                    <div class="input">
+                                        <input id="keshiname" type="text" value="科室名称">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- <span>医师名称</span> -->
+                                    <div class="input">
+                                        <input id="title" type="text" value="医师名称">
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="javascript:;" id="search-btn">选好了，去查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+$('#techang,#keshiname,#title').on('keyup', function(e){
+    if(e.keyCode==13){
+        $('#search-btn').click();
+    }
+});
+/*出诊信息查询*/
+var val,ibox,val1;
+$(".apppage .tabs_box .tbleft .part2 .item").hover(function(){
+	ibox = $(this).find('input');
+	val = ibox.val();
+	val1 = ibox.attr("value");
+	if(ibox.val() == "" || ibox.val() == val1){
+	   ibox.val("");
+	}else{
+		ibox.focus();
+	}
+
+	ibox.select();
+});
+
+$(".apppage .tabs_box .tbleft .part2 .item input").bind('blur',function(){
+	var val = $(this).val();
+	if(val=="" || val==$(this).attr("value")){
+		$(this).val($(this).attr("value"));
+	}
+});
+$('#search-btn').click(function(){
+    var techang = $('#techang').val();
+    var keshiname = $('#keshiname').val();
+    var title = $('#title').val();
+
+    techang = (techang != '疾病名称') ? techang : '';
+    keshiname = (keshiname != '科室名称') ? keshiname : '';
+    title = (title != '医师名称') ? title : '';
+
+    var _url = '/department_ims/visitsearch.html';
+    _url = _url + '?techang=' + encodeURI(techang) + '&keshiname=' + encodeURI(keshiname) + '&title=' + encodeURI(title);
+
+    window.location.href = _url;
+});
+                    </script>
+
+                </div>
+                <div class="tbright">
+                    <div class="inner" style="">
+                        <div class="scroll mCustomScrollbar _mCS_2">
+                            <div id="mCSB_2" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+                                <div id="mCSB_2_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
+                                    <div class="list1">
+                                        <div class="item">
+                                            <div class="title2"><span>Q:</span><p>我不知道挂哪个科？</p></div>
+                                            <div class="desc"><span>A:</span><p>请点击【门诊出诊表】快捷方式，通过输入疾病名称搜索挂哪个科哪位医生。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>星期天有门诊吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>星期天上午有门诊</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>邮寄病历</p></div>
+                                            <div class="desc"><span>A:</span><p>在内科楼一层复印病历室的旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>邮寄中药</p></div>
+                                            <div class="desc"><span>A:</span><p>在内科楼一层复印病历室的旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>验血单没带怎么办？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼二层或者五层重新预约</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>血压高挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>心内科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>甲状腺结节挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>内分泌科或基本外科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>MR增强需要家属陪同吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>需要家属陪同</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>乳腺疾病挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>协和西院乳腺外科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>甲状腺挂什么科？/甲状腺粗大挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>内分泌科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>买药需要挂号吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>需要</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>神经科开药挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>请挂“外院送检门诊”</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>坐骨神经疼挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>骨科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>面瘫挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>神经科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>甲状腺手术挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>基本外科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>看颈椎挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>骨科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>流行性感冒挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>呼吸内科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>医院几点下班？</p></div>
+                                            <div class="desc"><span>A:</span><p>上午是8:00-12:00；下午是13:30-17:30</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>拉肚子挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>短期或偶尔的挂肠道门诊，长期的挂消化内科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>中风挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>神经科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>痛风挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>普通内科，在西院周一、周四有痛风专病门诊</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>饭费怎么充值？</p></div>
+                                            <div class="desc"><span>A:</span><p>在内科楼或外科楼一层的住院处，办理住院的饭费充值</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>基因筛查在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>产科可以做遗传基因筛查，在门诊楼三层产科就诊</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>儿童药房和成人药房是在一起吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>是的，在门诊楼一层取药</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>没带医保卡可以看病吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>北京市医保病人看病时必须出示医保卡，否则看病是自费的</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>核磁报告几天可以取？</p></div>
+                                            <div class="desc"><span>A:</span><p>4-5个工作日，具体时间请阅读您的检查预约单</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>穴位贴敷治疗在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层外科门诊治疗室</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>六、日可以抽血吗？/周末可以抽血吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>周六和周日上午半天可以抽血</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>明天的号，今天可以取吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>114及挂号网的预约号须就诊当日按通知时间到自助机上取号，其他途径不限</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>喉咙痛/喉咙疼/嗓子疼/嗓子不舒服/嗓子痛挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>可以看普通内科、呼吸内科或耳鼻喉科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>小孩怎么挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>在手机APP上挂号，或门诊楼4层儿科诊区内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>颈动脉斑块挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>看神经科或血管外科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>几点放号？</p></div>
+                                            <div class="desc"><span>A:</span><p>放号时间为：app和银行网点每天下午16:00，自助机每天下午17:00，114每天上午8:30。建议您到银行或在手机APP上挂号，如果银行和APP没有号了，医院的自助机上也就没有号了。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>大腿淋巴结挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>建议挂基本外科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>手麻脚麻挂什么科？/手脚麻木挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>建议挂神经科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>去哪取病号服？</p></div>
+                                            <div class="desc"><span>A:</span><p>内科楼病人在内科楼一层接诊室，外科楼病人在各病房取衣服，门诊手术的病人到内科楼一层接诊室领取病号服</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肠胃镜挂什么科？</p></div>
+                                            <div class="desc"><span>A:</span><p>消化内科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>去哪吃饭/食堂在哪里？</p></div>
+                                            <div class="desc"><span>A:</span><p>在医院东三门（明日大厦门洞）西侧有一个对外食堂</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪注册建档？</p></div>
+                                            <div class="desc"><span>A:</span><p>持身份证在自助机上注册建档</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>预约的号取不出来怎么办？</p></div>
+                                            <div class="desc"><span>A:</span><p>如果是加号请持身份证或就医凭证在自助机上点击“诊间预约取号”，其他方式预约的号则点击“补打挂号条”</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>宝宝没有身份证能挂到号吗?</p></div>
+                                            <div class="desc"><span>A:</span><p>宝宝没有身份证，可持户口本或出生证明到收费窗口办理就医凭证，然后在院内自助机预约挂号，也可在四层儿科收费窗口挂当日剩余号源。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>本院开出的药物如需到外院输液，如何办理手续？</p></div>
+                                            <div class="desc"><span>A:</span><p>看病时，请医生开具诊断证明并注明用药的方法。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>拆零药品如何获取药品说明书？</p></div>
+                                            <div class="desc"><span>A:</span><p>可到门诊一层东南侧电梯旁的药师咨询室咨询。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>窗口能不能挂到明天的号？</p></div>
+                                            <div class="desc"><span>A:</span><p>医院窗口没有挂号功能。需挂明天的号，可于下午4点在手机APP当日挂号界面上挂明天的剩余号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>挂错号了怎么办？</p></div>
+                                            <div class="desc"><span>A:</span><p>持患者有效证件，于就诊日的开诊前，到医院窗口退号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>挂了内分泌科的号，可以吃饭吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>就诊当日需要根据您的检查项目才能知道是否需要空腹。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>化验结果能保留多长时间？</p></div>
+                                            <div class="desc"><span>A:</span><p>通过自助机打印化验单，可保留6个月，但在6个月内只能打印一次化验单。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>患者如何借用门诊轮椅？</p></div>
+                                            <div class="desc"><span>A:</span><p>借用轮椅请到门诊一层综合服务台办理。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>自助机上办理注册建档需要身份证吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>需要</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>检查现在做不了，下午做要不要重新挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>请咨询各科分诊台。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>简易门诊有的药为什么不给开？</p></div>
+                                            <div class="desc"><span>A:</span><p>简易门诊只开近3个月在我院开过的药物，未经过医生诊治的、无我院用药记录的不能开药</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>科室转科室还需要挂号吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>每一次就诊都需要挂号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>可以预约挂号吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>可以提前7天在手机APP或银行、114电话、自助机上挂预约号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>跨省做手术报不报销？</p></div>
+                                            <div class="desc"><span>A:</span><p>关于医保报销或外省市患者的报销问题，请到官网【就诊指南】下的【医保指南】详细了解。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>离休干部在哪里挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>如果是我院卫干患者，请到门诊4层窗口挂号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>未注册建档怎么办？</p></div>
+                                            <div class="desc"><span>A:</span><p>持患者本人二代身份证在院内自助机办理注册建档，持护照、 港澳台通行证及户口本（限儿童）的患者可在收费窗口办理注册建档。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>门诊病假单是否可以代开？</p></div>
+                                            <div class="desc"><span>A:</span><p>我院看病实行实名制管理，需患者本人就诊，医生根据病情决定是否开具病休证明。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>门诊灌肠治疗在哪里？需要做哪些准备？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊没有灌肠治疗。急症病人可在急诊行灌肠治疗。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>门诊几点挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊窗口不挂号，挂号请在手机APP、银行、114或院内自助机上预约挂号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>门诊医生几点上班？</p></div>
+                                            <div class="desc"><span>A:</span><p>医生除门诊诊疗，还兼有抢救、会诊、查房等工作，如想了解具体某个医生的出诊时间，请咨询各科分诊台。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>名字和身份证号码错了可以改吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>患者信息输入错误不可以更改，需持本人二代身份证件到收费窗口重新注册建档。如有变更曾用名的患者请持本人二代身份证及户口本（变更页）到收费窗口办理信息变更业务。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>明天的号预约不上怎么办？</p></div>
+                                            <div class="desc"><span>A:</span><p>如果需挂明天的号，可于下午4点在手机APP当日挂号界面上挂明天的剩余号。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪报到；怎么报到？</p></div>
+                                            <div class="desc"><span>A:</span><p>在自助机上，点击就诊报到界面，刷身份证或就医凭证或插医保卡即可报到。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>如何补打项目清单？</p></div>
+                                            <div class="desc"><span>A:</span><p>持身份证或就医凭证到自助机补打导诊单</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>如何补打导诊单？</p></div>
+                                            <div class="desc"><span>A:</span><p>持身份证或就医凭证到自助机补打导诊单</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么退号？</p></div>
+                                            <div class="desc"><span>A:</span><p>请咨询各科护士分诊台</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>出生证明在哪儿办？</p></div>
+                                            <div class="desc"><span>A:</span><p>内科楼八层产二病房</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>我想开药，怎么挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>就诊前请咨询各科护士分诊台</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>我要看病了，怎么取我的大病历？</p></div>
+                                            <div class="desc"><span>A:</span><p>就诊前请咨询各科护士分诊台</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>我到哪儿可以接热水？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼每个楼层的大厅西侧都设有茶水间，可以提供热水</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>病历在哪儿复印？</p></div>
+                                            <div class="desc"><span>A:</span><p>住院病历复印在内科楼一层；门诊病历复印在门诊楼八层病案科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>东院门诊楼可以停车吗？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下二层至地下三层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>过敏应该看哪个科？</p></div>
+                                            <div class="desc"><span>A:</span><p>过敏首先看变态反应科，在门诊楼六层北侧，含特需专家门诊</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>拆线在哪儿拆？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层东北角外科治疗室</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么注册建档？</p></div>
+                                            <div class="desc"><span>A:</span><p>患者本人持身份证在自助机上注册建档；持护照或医保卡的患者，以及持户口本的儿童患者可收费窗口办理</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>持银行卡在自助机上挂号；或通过手机APP、银行、114电话预约挂号</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么收费/缴费？</p></div>
+                                            <div class="desc"><span>A:</span><p>可在自助机缴费，或在各楼层收费窗口缴费</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪里盖章？</p></div>
+                                            <div class="desc"><span>A:</span><p>诊断证明在门诊楼一层接待室盖章；病假条在各楼层分诊台护士盖章</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>24小时尿怎么留？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧尿便留取处</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么退卡？</p></div>
+                                            <div class="desc"><span>A:</span><p>患者可持就诊卡到收费窗口办理退卡业务。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么打发票/补发票？</p></div>
+                                            <div class="desc"><span>A:</span><p>任何一个收费窗口都可以打印发票</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么打条子/补打条子？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层北侧2-5号窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么退钱/退费？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层门诊接待室审核办理，然后去收费窗口退费</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么查医生的出诊时间？</p></div>
+                                            <div class="desc"><span>A:</span><p>官网首页-患者版-出诊时间表可以查询</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>怎么预约挂号？</p></div>
+                                            <div class="desc"><span>A:</span><p>预约挂号在手机APP、银行网点、院内自助机或114电话预约；可预约七天内的号源</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>诊断证明/诊断书怎么开？</p></div>
+                                            <div class="desc"><span>A:</span><p>要找大夫挂号，然后开具诊断证明书</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>打单子/取血化验报告/验血报告/取检查结果怎么取？</p></div>
+                                            <div class="desc"><span>A:</span><p>各楼层自助机</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>特需门诊取号怎么取？</p></div>
+                                            <div class="desc"><span>A:</span><p>各楼层自助机</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>医保换号在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>各楼层自助机</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>如何打印检验结果?</p></div>
+                                            <div class="desc"><span>A:</span><p>各楼层自助机</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>病理会诊/外院病理标本接收怎么做？</p></div>
+                                            <div class="desc"><span>A:</span><p>普通病理是4层专病门诊内，特需病理是8层病理科，皮肤科的病理在门诊楼5层北侧的皮肤科护士分诊台</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>超声报到、超声取号怎么办理？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼三层的自助机上刷卡报到并取号条</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>如何打印病历、打印门诊病历</p></div>
+                                            <div class="desc"><span>A:</span><p>一层在外科诊区内的西侧自助机；2-7层在自动售本机旁的自助机；8层在特需门诊诊区的南北侧自助机</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>我想下载协和APP（app）如何操作？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层综合服务台有驻场工程师为您服务</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>协和APP怎么操作？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层综合服务台有驻场工程师为您服务</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>验血结果怎么取？</p></div>
+                                            <div class="desc"><span>A:</span><p>在各楼层的自助机上打印结果，或注册手机app可以自助查询</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>TCT结果/TCT/阴试子结果/妇科阴试子怎么取结果？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层西北侧检验结果查询窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>外院脑脊液标本怎么接收？</p></div>
+                                            <div class="desc"><span>A:</span><p>外院脑脊液标本送检，请到门诊三层南侧神经科护士台办理</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>什么时候取验血结果、多长时间取验血结果</p></div>
+                                            <div class="desc"><span>A:</span><p>请详细阅读导诊单</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>诊疗费是否单独出具明细？</p></div>
+                                            <div class="desc"><span>A:</span><p>持社保卡就医患者使用定额票据，不单独出具明细。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>患者跨年退费如何操作？</p></div>
+                                            <div class="desc"><span>A:</span><p>退费冲减原待遇，新交易按结算时间计算待遇。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>由于住院、过敏或其他原因导致患者退费，退的费用是现金还是入个人账户？</p></div>
+                                            <div class="desc"><span>A:</span><p>退现金，改待遇，系统自动计算，退费操作必须在网络连通条件下才能办理。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>如果病人来退费，药品目录或价格已经发生更改怎么办？</p></div>
+                                            <div class="desc"><span>A:</span><p>医保系统会自动按退费交易原发生时点的目录和价格进行退费计算。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>急诊留观转住院，是否需要先结算再转院？</p></div>
+                                            <div class="desc"><span>A:</span><p>需要先结算急诊留观费用，接收医院按转入院办理入院手续。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>卡结算后，急诊留观转住院的，在急诊留观时已扣除起付线，转入院以后是否需再交纳起付线？</p></div>
+                                            <div class="desc"><span>A:</span><p>如为转入院的，视为一次住院，结算周期连续计算；如为新入院，需重新收取起付线。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>一次急诊留观结束后不到24小时，患者又再次在本院或其他医院急诊留观或住院，是否再扣除一次起付线？</p></div>
+                                            <div class="desc"><span>A:</span><p>急诊留观按住院政策执行，包括起付线和结算周期。一次急诊留观结束后完成结算，再次收入急诊留观后按新入院办理，需再交纳一次起付线，与留观结束后再次返回医院的时间无关。</p></div>
+                                        </div>
+                                    </div>
+                                </div>   </div>
+                        </div>
+                    </div><div class="inner" style="display: none;">
+                        <div class="scroll mCustomScrollbar _mCS_3 mCS_no_scrollbar">
+                            <div id="mCSB_3" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 566px;" tabindex="0">
+                                <div id="mCSB_3_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                    <div class="list1">
+                                        <div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪充电？/手机充电在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层药房右侧以及四层卫干门诊对面都有充电处</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪取片？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层扶梯旁，具体请看导诊单上的地址</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>骨扫描在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层收费处旁边先预约骨扫描</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>外科楼在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>外科楼在门诊楼主街西侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>骨密度在哪做？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层的放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>住院部在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>内科疾病和妇产科住院在内科楼，外科疾病住院在外科楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>外科CT在哪做？</p></div>
+                                            <div class="desc"><span>A:</span><p>在外科楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>CT室在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪预约气管镜？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼五层西北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>体检中心在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼九层至十一层东南角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>化疗门诊在哪？/在哪做化疗？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼二层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪打发票？/在哪打收据</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼各楼层收费窗口均可以</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>药剂科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层东南角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>用药咨询在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层南侧药房的1号窗口处</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肌电图报告在哪取？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼三层南侧神经科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>脑电图报告在哪取？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼三层南侧神经科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>取结果在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼各层自助机上均可以</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>检验门诊在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层北侧3号窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪取报告？</p></div>
+                                            <div class="desc"><span>A:</span><p>验血报告在门诊楼一层西侧和北侧自助机上，其他报告请咨询一层东侧综合服务台</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>膀胱镜在哪做？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层东北角外科门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>胃镜在哪？/在哪做胃镜？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼五层西北侧内镜中心</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>化疗科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层治疗室</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>验血报告单在哪取？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层西侧和北侧自助机上均可以</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>磁共振在哪检查？/核磁共振在哪检查？/在哪做核磁共振？/在哪做磁共振？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层放射科核磁室</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>财务科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在内科楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>血库在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>外科楼地下二层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>乳腺外科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>乳腺外科的门诊在协和医院西院，病房在外科楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>PICC在哪做？</p></div>
+                                            <div class="desc"><span>A:</span><p>埋管在内科楼地下一层，洗管在门诊楼二层治疗室</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>输血科在哪？/在哪输血？</p></div>
+                                            <div class="desc"><span>A:</span><p>主街通道乘坐6号电梯，在急诊楼三层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>中医科病房在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼16楼二层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>PET在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼8楼一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>国际医疗病房在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在外科楼九至十一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>生殖中心在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼7楼一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>儿科病房在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼8楼一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>HOT在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼二层东北角内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>血库在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>主街通道乘坐6号电梯，在急诊楼三层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>尿常规在哪做？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼二层北侧检验科服务台</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪核磁预约？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>CT结果在哪取？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>门诊注射室在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼二层东南角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪建档？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层北侧建大病历窗口处</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>电子镜在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼五层西北侧内镜中心</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>核磁的片子在哪取？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼地下一层自助机上</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>在哪做穿刺？</p></div>
+                                            <div class="desc"><span>A:</span><p>前列腺穿刺需先在泌尿外科挂号看病；甲状腺穿刺在基本外科；胸水穿刺在呼吸内科或胸外科。穿刺时的具体地址，在看病缴费后由导诊单提示</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>疼痛科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>脑血管专科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼三层北侧神经科内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>感染科在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼二层北侧内科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>发热门诊在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在急诊大门的东侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肝炎门诊在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在急诊大门的东侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肠道门诊在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>在急诊大门的东侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>细菌室在哪？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼七层西北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>东院在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>东单王府井帅府园1号</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>洗手间/卫生间/厕所在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼每个楼层主走廊两边走到头，都设有洗手间</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>特需门诊怎么去？</p></div>
+                                            <div class="desc"><span>A:</span><p>特需门诊在门诊楼八层，变态反应科、神经科、耳鼻喉科、儿科的特需门诊在本科室内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>病理科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼八层西北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>放射科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>CT室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>骨密度在哪儿检查？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>介入治疗在哪儿做？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>核磁在哪儿做？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>乳腺钼靶在哪儿做？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>X线在哪儿做？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼地下一层放射科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>消化内科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>普通内科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>感染内科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>血液内科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>呼吸内科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>心内科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>老年医学科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>抽血/取血/抽血/采血区/化验肿瘤在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层南侧或门诊楼五层西北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>打针/输液/扎针/注射在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>穿刺/腰穿/骨穿/胸穿在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层南侧中心治疗室</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肾病科在几层？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>中心治疗区/中心治疗室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层南侧，采血、注射、输液、穿刺在此楼层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>内科诊室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>体检中心/健康医学部/健康体检在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼九层至十一层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>眼科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼六层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>变态反应科/变态过敏反应科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼六层北侧，含特需专家门诊</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>耳鼻喉科在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼六层北侧，含特需专家门诊</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>检验科在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼六层西北侧、七层西北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>口腔门诊/口腔科在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼七层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>中医科在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼七层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>物理医学康复科/做理疗/康复科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼七层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>风湿免疫科实验室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼七层西北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>预约B超/做B超/b超/超声医学科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>妇产科/妇科/产科/产检在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>神经科/神经科特需门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>专家会诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>专病门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>介入科/介入治疗/介入门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>核医学科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>营养科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>卫干门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>儿科/儿科特需门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>心理医学科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>疑难病会诊中心在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>病理会诊去哪儿做？</p></div>
+                                            <div class="desc"><span>A:</span><p>普通病理会诊在门诊楼四层北侧专病门诊内，特需病理会诊在门诊楼八层西北侧病理科</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>核医学科门诊/核医学科/核医学复查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>营养科咨询门诊/营养科/营养咨询在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>放疗科门诊/放疗科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>麻醉科疼痛门诊/麻醉科门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肠外肠内营养门诊/肠外肠内营养科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼四层北侧专病门诊内</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>急诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼往西区域</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>皮肤科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼五层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>内分泌科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼五层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>消化内镜/支气管镜/喉镜/小肠镜在哪儿做？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼五层西北侧内镜中心</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>内镜中心在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼五层西北侧内镜中心</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>心外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>血管外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>基本外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>神经外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>泌尿外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>乳腺外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>胸外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>骨科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肝外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>整形美容外科在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层外科东北角</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>药房/取药在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>综合服务台在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>检验结果查询在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层西北角的检验结果查询窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>自助服务区在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>各楼层都有自助服务区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>建大病历/大病例的地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层西北角建大病历的窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>买维生素在哪儿买？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层北侧靠近急诊区域的便利店</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>便利店/小卖部/超市在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层北侧靠近急诊区域的便利店</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>内科楼怎么去？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层主街通道第一个玻璃门往南</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>老楼怎么去？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层主街通道第二个玻璃门往南</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>医保办公室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层北侧一号收费窗口靠西边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>化验/检验门诊/化验门诊/外院标本/外院血尿标本在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼一层西北角检验门诊窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>入院手续/办理住院在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>内科及妇产科疾病在内科楼，其他疾病在外科楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>国际医疗部在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>内科楼南侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>特需门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>视具体科室，请阅读挂号条</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>专家门诊在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>视具体科室，请阅读挂号条</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>报到/取号在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>各楼层自助机，手机APP也可以报到。</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>取病理结果在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼8层病理科，皮肤科的病理报告在门诊楼5层北侧的皮肤科护士分诊台领取</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>取活检结果在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>在门诊楼一层西北侧的查询窗口</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>外科大楼/外科楼/外科手术楼在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼主街往西200米</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肺功能检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区；变态反应科的肺功能检查在门诊楼六层北侧</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>心电图检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>超声心动图检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>心脏彩超/心脏超声在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>平板运动检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>动态心电图检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>动态血压监测在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>动态心电监测在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>24小时心电图检查在哪儿查？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肺通气检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>骨髓检查室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>通气检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼二层东北角的内科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肌电图检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层南侧神经科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>脑电图检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层南侧神经科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>癫痫中心在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层南侧神经科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>TCD检查在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊楼三层南侧神经科检查区</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>医保办公室/医保办在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>医保办公室在门诊楼一层西北侧，1号收费窗口旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>骨扫描在哪儿预约？</p></div>
+                                            <div class="desc"><span>A:</span><p>预约地点在门诊楼一层西北侧，1号收费窗口旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>核医学在哪儿预约？</p></div>
+                                            <div class="desc"><span>A:</span><p>预约地点在门诊楼一层西北侧，1号收费窗口旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>pet-CT在哪儿预约？</p></div>
+                                            <div class="desc"><span>A:</span><p>预约地点在门诊楼一层西北侧，1号收费窗口旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>肾血流图在哪儿预约？</p></div>
+                                            <div class="desc"><span>A:</span><p>预约地点在门诊楼一层西北侧，1号收费窗口旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>门诊办公室/门办/门诊部在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>门诊办公室在门诊楼一层东南角，1号药房窗口旁边</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>医务处怎么走？</p></div>
+                                            <div class="desc"><span>A:</span><p>医务处办公室在老楼10号楼一层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>护理部怎么走？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>宣传处怎么走？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>工会怎么走？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>人事处/人力资源处在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>科研处在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>纪委办公室在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>在教学楼9层</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>审计办公室/审计处在哪儿？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>协和医学杂志怎么走？</p></div>
+                                            <div class="desc"><span>A:</span><p>在老楼西门旁的12号楼</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>采血预约、预约采血地点</p></div>
+                                            <div class="desc"><span>A:</span><p>请到门诊二层南侧或五层西北侧的采血登记处预约</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>采血报到地点</p></div>
+                                            <div class="desc"><span>A:</span><p>请到门诊二层南侧或五层西北侧采血区域内的自助机上扫描预约单上的条形码</p></div>
+                                        </div><div class="item">
+                                            <div class="title2"><span>Q:</span><p>西院在什么地方？</p></div>
+                                            <div class="desc"><span>A:</span><p>北京市西城区大木仓胡同41号</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+            <script>
+$(function () {
+    $('.mCustomScrollbar').mCustomScrollbar();
+    $('.apppage .tbleft .item').click(function(){
+        if(!$(this).find('a').size()){
+            return false;
+        }
+        var _index = $(this).index();
+        $(this).addClass('now').siblings().removeClass('now');
+        $(".apppage .tabs_box .tbright .inner").eq(_index).show().siblings().hide();
+        $('#qa_search_text').val('');
+    })
+    $('.apppage .tbleft .item:first').click();
+    $(".apppage .tabs_box .tbright .scroll .list1 .title2").bind('click',function(){
+        if($(this).parent().hasClass('now')){
+           $(this).parent().removeClass("now");
+        }else{
+            $(this).parent().addClass("now");
+        }
+
+    });
+    $('#qa_search').click(function(){
+        var keywords = $.trim($('#qa_search_text').val());
+        var _index = $('.tbleft .item.now').index();
+        if(!keywords){
+            $('.tbright .inner').eq(_index).show().siblings().hide();
+            return false;
+        }
+        keywords = keywords.split(' ');
+        $('.qa_search .list1').html('');
+        $('.tbright .scroll .list1 .item').each(function(index){
+            var _clone = '';
+            for (var i = 0; i < keywords.length; i++) {
+                if( ! keywords[i]){
+                    continue;
+                }
+                if($(this).text().indexOf(keywords[i]) >= 0){
+                    $('.qa_search .list1').append($(this).clone(true));
+                    break;
+                }
+            }
+        })
+        for (var i = 0; i < keywords.length; i++) {
+            if( ! keywords[i]){
+                continue;
+            }
+            var reg = new RegExp(keywords[i],'g');
+            var _html = $('.qa_search .list1').html().replace(reg, '<i>'+keywords[i]+'</i>');
+            $('.qa_search .list1').html(_html);
+        }
+
+        $(".apppage .tabs_box .tbright .inner.qa_search").show().siblings().hide();
+        if(!$(".apppage .tabs_box .tbright .inner.qa_search .list1 .item").size()){
+            $('.qa_search .list1').append('<div class="item" style="text-align:center;">暂无相关数据</div>');
+        }
+        $(".apppage .tabs_box .tbright .qa_search .list1 .title2").bind('click',function(){
+            if($(this).parent().hasClass('now')){
+               $(this).parent().removeClass("now");
+            }else{
+                $(this).parent().addClass("now");
+            }
+        });
+    })
+    $('#qa_search_text').on('keyup', function(e){
+        if(e.keyCode==13){
+            $('#qa_search').click();
+        }
+    });
+})
+            </script>
+        </div>
+        <div class="pubc-box">
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/12/15/s5a3388c78ca06.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090c0cdaf.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i2 .img {
+                    background: url(/Uploads/Picture/2017/12/15/s5a338807c130a.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i2:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090d196cd.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i3 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a55cdad1.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i3:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090e27cea.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i4 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a56b7374.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i4:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090f300ab.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i5 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a57bd3f3.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i5:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d0910575e2.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i6 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a58be013.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i6:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d09115fcf4.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i7 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a59b8256.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i7:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d091268852.png)
+                }
+            </style>
+            <div class="block">
+                <div class="title1">了解这些有可能对您的就诊有所帮助</div>
+                <div class="list clearfix">
+                    <div class="item i1">
+                        <a class="vertical" href="/visitinfo.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">门诊出诊表</div>
+                            </div>
+                        </a>
+                    </div><div class="item i2">
+                        <a class="vertical" href="/medical_notice.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">就医须知</div>
+                            </div>
+                        </a>
+                    </div><div class="item i3">
+                        <a class="vertical" href="/azimuth.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">方位指南</div>
+                            </div>
+                        </a>
+                    </div><div class="item i4">
+                        <a class="vertical" href="/characteristic.html#part3">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">专科专病</div>
+                            </div>
+                        </a>
+                    </div><div class="item i5">
+                        <a class="vertical" target="_blank" href="http://ims.pumch.cn/">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">国际医疗部</div>
+                            </div>
+                        </a>
+                    </div><div class="item i6">
+                        <a class="vertical" href="/department_tijzx.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">健康体检</div>
+                            </div>
+                        </a>
+                    </div><div class="item i7">
+                        <a class="vertical" href="/popular.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">健康科普</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

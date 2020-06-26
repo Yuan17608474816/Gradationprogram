@@ -1,0 +1,400 @@
+﻿
+@{
+    ViewBag.Title = "ThNoto";
+    Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
+}
+    <div class="body_box apppage" style="min-height: 567px;">
+        <div class="position">
+            <div class="block">
+                您现在的位置：
+                <a href="/patient.html">首页</a>
+                &gt; <a href="javascript:void(0);">就医指南</a>		 &gt; <a href="/letter_thanks.html">感谢信</a>
+            </div>
+        </div>
+        <div class="foucs">
+            <div class="block">
+                <div class="title1">就医指南</div>
+                <!-- <div class="button">
+        <a href="javascript:;" class="prev"></a>
+        <a href="javascript:;" class="next"></a>
+    </div> -->
+                <div class="frame cf slick-initialized slick-slider">
+                    <div class="slick-list draggable" tabindex="0">
+                        <div class="slick-track" style="opacity: 1; width: 2136px; transform: translate3d(0px, 0px, 0px);">
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">门诊出诊表</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">就医须知</a>
+                            </div>
+                            <div class="child  slick-slide slick-active " style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">查询服务</a>
+                            </div>
+                            <div class="child  slick-slide slick-active now" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">感谢信</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/department_ims/guide/feedback.html" onclick="return false;" data-href="/department_ims/guide/feedback.html">意见反馈</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/patientQA.html" onclick="return false;" data-href="/patientQA.html">患者问答</a>
+                            </div>
+                            <div class="child  slick-slide slick-active" style="width: 178px;">
+                                <a href="/reportquery.html" onclick="return false;" data-href="/reportquery.html">报告查询</a>
+                            </div>
+                        </div>
+                    </div>            <button type="button" class="slick-prev" style="display: block;">Previous</button><button type="button" class="slick-next slick-disabled" style="display: block;">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="tabs_box" id="datalist">
+            <div class="block">
+                <div class="tbleft">
+                    <div class="part1">
+                        <div class="inner">
+                            <div class="scroll mCustomScrollbar _mCS_1 mCS_no_scrollbar">
+                                <div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0">
+                                    <div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                                        <div class="item now"> <a href="javascript:void(0);">发布感谢信</a> </div>
+                                        <div class="item"> <a href="/sufferer_voice.html">感谢信列表</a> </div>
+                                    </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <div class="inner">
+                            <div class="caption">出诊信息查询</div>
+                            <div class="from">
+                                <div class="item">
+                                    <!-- <span>疾病名称</span> -->
+                                    <div class="input">
+                                        <input id="techang" type="text" value="疾病名称">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- <span>科室名称</span> -->
+                                    <div class="input">
+                                        <input id="keshiname" type="text" value="科室名称">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <!-- <span>医师名称</span> -->
+                                    <div class="input">
+                                        <input id="title" type="text" value="医师名称">
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <a href="javascript:;" id="search-btn">选好了，去查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+$('#techang,#keshiname,#title').on('keyup', function(e){
+    if(e.keyCode==13){
+        $('#search-btn').click();
+    }
+});
+/*出诊信息查询*/
+var val,ibox,val1;
+$(".apppage .tabs_box .tbleft .part2 .item").hover(function(){
+	ibox = $(this).find('input');
+	val = ibox.val();
+	val1 = ibox.attr("value");
+	if(ibox.val() == "" || ibox.val() == val1){
+	   ibox.val("");
+	}else{
+		ibox.focus();
+	}
+
+	ibox.select();
+});
+
+$(".apppage .tabs_box .tbleft .part2 .item input").bind('blur',function(){
+	var val = $(this).val();
+	if(val=="" || val==$(this).attr("value")){
+		$(this).val($(this).attr("value"));
+	}
+});
+$('#search-btn').click(function(){
+    var techang = $('#techang').val();
+    var keshiname = $('#keshiname').val();
+    var title = $('#title').val();
+
+    techang = (techang != '疾病名称') ? techang : '';
+    keshiname = (keshiname != '科室名称') ? keshiname : '';
+    title = (title != '医师名称') ? title : '';
+
+    var _url = '/department_ims/visitsearch.html';
+    _url = _url + '?techang=' + encodeURI(techang) + '&keshiname=' + encodeURI(keshiname) + '&title=' + encodeURI(title);
+
+    window.location.href = _url;
+});
+                    </script>
+
+                </div>
+                <div class="tbright">
+                    <script src="/Public/static/guestbook.js"></script><form id="form_6ffca1556ea960c63636c86dd243d25b" data-action="/guestbook/message/letter.html">
+                        <div class="inner">
+                            <div class="part1">
+                                <div class="input">
+                                    <input type="text" name="form_6ffca1556ea960c63636c86dd243d25b_department" value="感谢科室">
+                                </div>
+                                <div class="input">
+                                    <input type="text" name="form_6ffca1556ea960c63636c86dd243d25b_doctor" value="感谢人员">
+                                </div>
+                                <div class="input">
+                                    <input type="text" name="form_6ffca1556ea960c63636c86dd243d25b_name" value="患者姓名">
+                                </div>
+                            </div>
+                            <div class="part2">
+                                <div class="textare">
+                                    <textarea name="form_6ffca1556ea960c63636c86dd243d25b_content" value="感谢信内容">感谢信内容</textarea>
+                                </div>
+                            </div>
+                            <div class="button" id="submit">
+                                <a href="javascript:void(0);">确认提交</a>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+new Guestbook({"department":{"fieldname":"department","fieldtype":"text","itemname":"感谢科室","strlen":"0,20","valid":"1","valdefault":"","preg":null,"token":"form_6ffca1556ea960c63636c86dd243d25b_department"},"doctor":{"fieldname":"doctor","fieldtype":"text","itemname":"感谢人员","strlen":"0,20","valid":"1","valdefault":"","preg":null,"token":"form_6ffca1556ea960c63636c86dd243d25b_doctor"},"name":{"fieldname":"name","fieldtype":"text","itemname":"患者姓名","strlen":"0,20","valid":"1","valdefault":"","preg":null,"token":"form_6ffca1556ea960c63636c86dd243d25b_name"},"content":{"fieldname":"content","fieldtype":"textarea","itemname":"感谢信内容","strlen":"0,1000","valid":"1","valdefault":"","preg":null,"token":"form_6ffca1556ea960c63636c86dd243d25b_content"}}, 'form_6ffca1556ea960c63636c86dd243d25b', {
+  // 绑定验证事件, 主要使用于非弹窗信息提示; 友情提示：弹窗提示时使用可能会存在小瑕疵
+  validate: function(gb, trigger) {
+  },
+  // 绑定提交事件
+  trigger:function(gb,trigger){
+    document.getElementById('submit').onclick = trigger;
+  },
+  // 验证规则, true: 返回全部错误信息, false: 返回第一条错误信息
+  allError: false,
+  // 数据处理
+  parse: {
+    'department': function(gb) {
+      var vals = '';
+      var eles = gb.getEleByName('department')[0];
+      vals = eles.value;
+      if(vals == "感谢科室"){
+          vals = '';
+      }
+
+      return vals;
+    },
+    'doctor': function(gb) {
+      var vals = '';
+      var eles = gb.getEleByName('doctor')[0];
+      vals = eles.value;
+      if(vals == "感谢人员"){
+          vals = '';
+      }
+      return vals;
+    },
+    'name': function(gb) {
+      var vals = '';
+      var eles = gb.getEleByName('name')[0];
+      vals = eles.value;
+      if(vals == "患者姓名"){
+          vals = '';
+      }
+      return vals;
+    },
+    'content': function(gb) {
+      var vals = '';
+      var eles = gb.getEleByName('content')[0];
+      vals = eles.value;
+      if(vals == "感谢信内容"){
+          vals = '';
+      }
+      return vals;
+    },
+  },
+  // 提交成功回调方法
+  onSuccess: function(success) {
+        // {status: 1, 'info': "成功信息", field: "字段名"}
+        my_alert('信息已提交',function(){
+            $('#form_6ffca1556ea960c63636c86dd243d25b')[0].reset();
+            window.location.reload();
+        });
+
+
+  },
+  // 提交失败回调方法
+  onError: function(error) {
+      // {status: 0, 'info': "错误信息", field: "字段名"}
+      my_alert(error.info);
+  }
+}, function(valid, gb){
+  // 验证失败返回错误信息
+  if (valid !== true) {
+    for(i in valid){
+      my_alert(valid[i]);
+    }
+    return false; // 不提交
+  }
+
+  return true; // 提交表单
+});
+                        </script>
+                    </form>
+                </div>
+            </div>
+            <script>
+    $(function(){
+        $(".apppage .tabs_box .tbright .part1 .input").each(function(i){
+            $(this).find("input").focus(function(){
+                if($(this).val()==$(this).attr("value")){
+                   $(this).val("");
+                }
+            });
+            $(this).find("input").blur(function(){
+                if($(this).val()==""){
+                   $(this).val($(this).attr("value"));
+                }
+            });
+        });
+
+        $(".apppage .tabs_box .tbright .part2 .textare textarea").focus(function(){
+            var atr = $(this).attr("value");
+            if($(this).val()==atr){
+               $(this).val("");
+            }
+        });
+         $(".apppage .tabs_box .tbright .part2 .textare textarea").blur(function(){
+            var atr = $(this).attr("value");
+            if($(this).val()=="" || $(this).val()==atr){
+               $(this).val(atr);
+            }
+        });
+    })
+            </script>
+        </div>
+        <div class="pubc-box">
+            <style>
+                .pubc-box .list .item.i1 .img {
+                    background: url(/Uploads/Picture/2017/12/15/s5a3388c78ca06.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i1:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090c0cdaf.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i2 .img {
+                    background: url(/Uploads/Picture/2017/12/15/s5a338807c130a.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i2:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090d196cd.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i3 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a55cdad1.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i3:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090e27cea.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i4 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a56b7374.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i4:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d090f300ab.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i5 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a57bd3f3.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i5:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d0910575e2.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i6 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a58be013.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i6:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d09115fcf4.png)
+                }
+            </style>
+            <style>
+                .pubc-box .list .item.i7 .img {
+                    background: url(/Uploads/Picture/2017/11/25/s5a193a59b8256.png) center no-repeat;
+                }
+
+                .pubc-box .list .item.i7:hover .img {
+                    background-image: url(/Uploads/Picture/2017/11/28/s5a1d091268852.png)
+                }
+            </style>
+            <div class="block">
+                <div class="title1">了解这些有可能对您的就诊有所帮助</div>
+                <div class="list clearfix">
+                    <div class="item i1">
+                        <a class="vertical" href="/visitinfo.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">门诊出诊表</div>
+                            </div>
+                        </a>
+                    </div><div class="item i2">
+                        <a class="vertical" href="/medical_notice.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">就医须知</div>
+                            </div>
+                        </a>
+                    </div><div class="item i3">
+                        <a class="vertical" href="/azimuth.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">方位指南</div>
+                            </div>
+                        </a>
+                    </div><div class="item i4">
+                        <a class="vertical" href="/characteristic.html#part3">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">专科专病</div>
+                            </div>
+                        </a>
+                    </div><div class="item i5">
+                        <a class="vertical" target="_blank" href="http://ims.pumch.cn/">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">国际医疗部</div>
+                            </div>
+                        </a>
+                    </div><div class="item i6">
+                        <a class="vertical" href="/department_tijzx.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">健康体检</div>
+                            </div>
+                        </a>
+                    </div><div class="item i7">
+                        <a class="vertical" href="/popular.html">
+                            <div class="icon-box">
+                                <div class="img">
+                                </div>
+                                <div class="h2">健康科普</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

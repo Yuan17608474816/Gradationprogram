@@ -1,0 +1,1012 @@
+﻿
+@{
+    ViewBag.Title = "SeaDoc";
+    Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
+}
+<link href="~/Content/SeaDoc/clinic.css" rel="stylesheet" />
+<link href="~/Content/SeaDoc/base.css" rel="stylesheet" />
+
+<script type="text/javascript" src="~/Scripts/SeaDoc/common.js"></script>
+<script type="text/javascript" src="~/Scripts/SeaDoc/clinic.js"></script>
+<div class="ui-grid ui-main clearfix">
+    <!--一级科室 regonof -->
+
+    <ul class="tab-type-one first-clinic j-tab-wrap">
+        <label>一级<br>科室：</label>
+        <li class="tab-item  cur">
+            <a href="/pc/doctors/0-0-0">
+                全部科室
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-1/">
+                妇科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-2/">
+                儿科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-3/">
+                内科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-4/">
+                皮肤性病科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-6/">
+                营养科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-7/">
+                骨伤科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-8/">
+                男科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-9/">
+                外科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-11/">
+                肿瘤及防治科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-12/">
+                中医科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-13/">
+                口腔颌面科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-14/">
+                耳鼻咽喉科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-15/">
+                眼科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-16/">
+                整形美容科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-17/">
+                精神心理科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-21/">
+                产科
+            </a>
+        </li>
+
+        <li class="tab-item ">
+            <a href="/pc/doctors/0-0-22/">
+                报告解读科
+            </a>
+        </li>
+
+    </ul>
+    <!--二级科室-->
+    <div class="sider-wrap dropdown-wrap">
+        <label>二级<br>科室：</label>
+
+        <ul class="tab-type-one tab-type-free slider-item cur">
+            <li class="tab-item  cur">
+                <a href="/pc/doctors/0-0-0/">
+                    全部科室
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <!--城市筛选项-->
+    <div class="select-wrap">
+        <label class="title">选择地区：</label>
+        <select name="" class="province-select city-select" onchange="window.location=this.value">
+            <option value="/pc/doctors/0-0-0/">
+                全国
+            </option>
+
+            <option value="/pc/doctors/110000-0-0/">
+                北京
+            </option>
+
+            <option value="/pc/doctors/120000-0-0/">
+                天津
+            </option>
+
+            <option value="/pc/doctors/130000-0-0/">
+                河北
+            </option>
+
+            <option value="/pc/doctors/140000-0-0/">
+                山西
+            </option>
+
+            <option value="/pc/doctors/150000-0-0/">
+                内蒙古自治区
+            </option>
+
+            <option value="/pc/doctors/210000-0-0/">
+                辽宁
+            </option>
+
+            <option value="/pc/doctors/220000-0-0/">
+                吉林
+            </option>
+
+            <option value="/pc/doctors/230000-0-0/">
+                黑龙江
+            </option>
+
+            <option value="/pc/doctors/310000-0-0/">
+                上海
+            </option>
+
+            <option value="/pc/doctors/320000-0-0/">
+                江苏
+            </option>
+
+            <option value="/pc/doctors/330000-0-0/">
+                浙江
+            </option>
+
+            <option value="/pc/doctors/340000-0-0/">
+                安徽
+            </option>
+
+            <option value="/pc/doctors/350000-0-0/">
+                福建
+            </option>
+
+            <option value="/pc/doctors/360000-0-0/">
+                江西
+            </option>
+
+            <option value="/pc/doctors/370000-0-0/">
+                山东
+            </option>
+
+            <option value="/pc/doctors/410000-0-0/">
+                河南
+            </option>
+
+            <option value="/pc/doctors/420000-0-0/">
+                湖北
+            </option>
+
+            <option value="/pc/doctors/430000-0-0/">
+                湖南
+            </option>
+
+            <option value="/pc/doctors/440000-0-0/">
+                广东
+            </option>
+
+            <option value="/pc/doctors/450000-0-0/">
+                广西壮族自治区
+            </option>
+
+            <option value="/pc/doctors/460000-0-0/">
+                海南
+            </option>
+
+            <option value="/pc/doctors/500000-0-0/">
+                重庆
+            </option>
+
+            <option value="/pc/doctors/510000-0-0/">
+                四川
+            </option>
+
+            <option value="/pc/doctors/520000-0-0/">
+                贵州
+            </option>
+
+            <option value="/pc/doctors/530000-0-0/">
+                云南
+            </option>
+
+            <option value="/pc/doctors/540000-0-0/">
+                西藏自治区
+            </option>
+
+            <option value="/pc/doctors/610000-0-0/">
+                陕西
+            </option>
+
+            <option value="/pc/doctors/620000-0-0/">
+                甘肃
+            </option>
+
+            <option value="/pc/doctors/630000-0-0/">
+                青海
+            </option>
+
+            <option value="/pc/doctors/640000-0-0/">
+                宁夏回族自治区
+            </option>
+
+            <option value="/pc/doctors/650000-0-0/">
+                新疆维吾尔自治区
+            </option>
+
+            <option value="/pc/doctors/710000-0-0/">
+                台湾
+            </option>
+
+        </select>
+
+    </div>
+    <!--筛选结果-->
+    <div class="select-wrap chosen" id="clinicTitle">
+        <label class="title">已选择:</label>
+        <ul id="chosen-list">
+
+
+
+            <li>全地区</li>
+
+
+        </ul>
+
+        <a href="/pc/doctors/0-0-0/?is_available=1&page=1">
+            <label class="available-switch">仅显示可咨询医生</label>
+        </a>
+
+    </div>
+    <!--医生列表-->
+    <h3 class="clinci-title">
+        全地区医生列表
+    </h3>
+    <div class="doctor-list">
+
+
+        <div class="doctor-info-item
+
+
+	 first">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_fa2e2aadbeb99583/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/c05e/bbdb0a34f052?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_fa2e2aadbeb99583/" target="_blank">
+                        <span class="name">钱瑞琴&nbsp;</span>
+                        <span class="clinic">中医内科&nbsp;</span>
+                        <span class="grade">主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+                        北京大学第三医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">2886</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：子宫内膜异位症、月子病、高尿酸血症、心火上炎、神经衰弱症、性冷淡</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item odd">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_ec2731815f00638f/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2017/08/21/851550602290_w300_h300_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_ec2731815f00638f/" target="_blank">
+                        <span class="name">赫英东&nbsp;</span>
+                        <span class="clinic">产科&nbsp;</span>
+                        <span class="grade">副主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/4d6ff71dc4fff5a6/" target="_blank">
+                        北京大学第一医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">9882</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：胎儿发育异常、妊娠期高血压、高危妊娠、胎儿生长受限、先兆流产、早产</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_99ff11ac4e173f2d/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2017/06/02/f013c304d465_w400_h400_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_99ff11ac4e173f2d/" target="_blank">
+                        <span class="name">吴晞&nbsp;</span>
+                        <span class="clinic">内分泌与代谢科&nbsp;</span>
+                        <span class="grade">副主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/ac00f9b2a2ad5d4e/" target="_blank">
+                        复旦大学附属华山医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">4670</i></span>
+                    <span class="half-item">好评率（%）<i>99.5</i></span>
+                </div>
+                <p class="des">擅长：肾上腺疾病、骨质疏松症、甲状腺炎、1型糖尿病、矮小症、肥胖症</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_92f8d6a5579f09c8/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/74c6/e7039ef3e441?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_92f8d6a5579f09c8/" target="_blank">
+                        <span class="name">杜娟&nbsp;</span>
+                        <span class="clinic">皮肤科&nbsp;</span>
+                        <span class="grade">主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/c49efeabf7e81e6d/" target="_blank">
+                        北京大学人民医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">1803</i></span>
+                    <span class="half-item">好评率（%）<i>99.6</i></span>
+                </div>
+                <p class="des">擅长：疥疮、手足癣、皮炎、脂溢性角化、艾滋病、痘疮</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_97254335d31c97c6/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2017/07/14/147f9faf3bd2_w526_h529_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_97254335d31c97c6/" target="_blank">
+                        <span class="name">尹铁伦&nbsp;</span>
+                        <span class="clinic">神经内科&nbsp;</span>
+                        <span class="grade">副主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+                        北京大学第三医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">13464</i></span>
+                    <span class="half-item">好评率（%）<i>99.7</i></span>
+                </div>
+                <p class="des">擅长：周围神经损害、帕金森、癫痫、动脉粥样硬化、运动神经元病、面瘫</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/eefb06980854ed8dfedc/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/7ad3/89cf6c6a9c25?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/eefb06980854ed8dfedc/" target="_blank">
+                        <span class="name">金荣杰&nbsp;</span>
+                        <span class="clinic">心血管内科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/0ffa82b555c3b892/" target="_blank">
+                        解放军总医院（301医院）
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">1359</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：心肌病、冠心病、高血压、先心病、心律失常、心衰</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/1f7f20d25586e42f1244/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/262e/0700c875fb09?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/1f7f20d25586e42f1244/" target="_blank">
+                        <span class="name">陈文姬&nbsp;</span>
+                        <span class="clinic">风湿免疫科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/0ffa82b555c3b892/" target="_blank">
+                        解放军总医院（301医院）
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">602</i></span>
+                    <span class="half-item">好评率（%）<i>99.7</i></span>
+                </div>
+                <p class="des">擅长：皮肌炎、脊柱关节炎、强直性脊柱炎、骨关节炎、硬皮病、系统性红斑狼疮</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_231d1995c4abf76f/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2017/06/25/bf39b9df6e4e_w192_h181_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_231d1995c4abf76f/" target="_blank">
+                        <span class="name">冯嘉旭&nbsp;</span>
+                        <span class="clinic">心血管内科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/jfjxjyy/" target="_blank">
+                        空军军医大学西京医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">6758</i></span>
+                    <span class="half-item">好评率（%）<i>99.7</i></span>
+                </div>
+                <p class="des">擅长：胃肠道功能紊乱、萎缩性胃炎、食物中毒、三尖瓣反流、胸痹、糖尿病和高血压</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_fe7de4514fc672a5/" target="_blank">
+
+                    <img src="https://resourced.chunyu.mobi/kREAALF9_a7bjEgV-c4b6780f-1915-43a2-93d2-e491834584ef_w550_h550_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_fe7de4514fc672a5/" target="_blank">
+                        <span class="name">刘孟国&nbsp;</span>
+                        <span class="clinic">皮肤科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/ac00f9b2a2ad5d4e/" target="_blank">
+                        复旦大学附属华山医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">6905</i></span>
+                    <span class="half-item">好评率（%）<i>99.3</i></span>
+                </div>
+                <p class="des">擅长：痤疮、色素痣、黄褐斑、太田痣、色素性皮肤病、毛囊炎</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_b404d817508e52a5/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2016/12/27/4b68466377af_w274_h264_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_b404d817508e52a5/" target="_blank">
+                        <span class="name">隋盈盈&nbsp;</span>
+                        <span class="clinic">小儿科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+                        北京大学第三医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">19145</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：佝偻病、疱疹性咽峡炎、新生儿溶血、肠套叠、性早熟、川崎病</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/50000d3cfdac3c025e78/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2017/12/22/676ac3b1bad6_w454_h454_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/50000d3cfdac3c025e78/" target="_blank">
+                        <span class="name">吴安健&nbsp;</span>
+                        <span class="clinic">普外科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/0ffa82b555c3b892/" target="_blank">
+                        解放军总医院（301医院）
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">4955</i></span>
+                    <span class="half-item">好评率（%）<i>98.6</i></span>
+                </div>
+                <p class="des">擅长：软组织损伤、鳞状细胞癌、脾脏肿大、甲状腺钙化、肠套叠、尿道炎</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/aa3261cd2e83d07a30e7/" target="_blank">
+
+                    <img src="https://resourced.chunyu.mobi/kWgAAL7W4NCbm20V-cc8f0c14-3203-4d34-9935-753791a9a5b2_w240_h240_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/aa3261cd2e83d07a30e7/" target="_blank">
+                        <span class="name">张捷&nbsp;</span>
+                        <span class="clinic">小儿科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/4d6ff71dc4fff5a6/" target="_blank">
+                        北京大学第一医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">1140</i></span>
+                    <span class="half-item">好评率（%）<i>99.8</i></span>
+                </div>
+                <p class="des">擅长：疱疹性咽峡炎、肠套叠、川崎病、蚕豆病、红屁股、抽动症</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/a11d4b3db71be47a2843/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/bb82/8fb3fb753d92?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/a11d4b3db71be47a2843/" target="_blank">
+                        <span class="name">夏永华&nbsp;</span>
+                        <span class="clinic">口腔颌面科&nbsp;</span>
+                        <span class="grade">主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/a676293cfeea28be/" target="_blank">
+                        哈尔滨医科大学第一医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">4108</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：游走性舌炎、牙体缺损、牙隐裂、粘液腺囊肿、牙周脓肿、蛀牙</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/2fe6e8324a50945831ee/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2018/01/31/e06df253a44e_w415_h411_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/2fe6e8324a50945831ee/" target="_blank">
+                        <span class="name">应作霖&nbsp;</span>
+                        <span class="clinic">皮肤科&nbsp;</span>
+                        <span class="grade">副主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/fwzxotj53ma7idqc/" target="_blank">
+                        上海市第一人民医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">4536</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：脱发、痤疮、生殖器疱疹、湿疹、尿道炎、病毒感染</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_c511c49e632a6564/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2016/01/15/0c69959c27d3_w671_h671_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_c511c49e632a6564/" target="_blank">
+                        <span class="name">陈旭&nbsp;</span>
+                        <span class="clinic">妇科&nbsp;</span>
+                        <span class="grade">副主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/ac00f9b2a2ad5d4e/" target="_blank">
+                        复旦大学附属华山医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">4294</i></span>
+                    <span class="half-item">好评率（%）<i>97.3</i></span>
+                </div>
+                <p class="des">擅长：子宫内膜异位症、人工流产、鳞状细胞癌、完全流产、生殖器疱疹、外痔</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/e9f718c0f45bc588e478/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/3cec/b6293b8c2683?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/e9f718c0f45bc588e478/" target="_blank">
+                        <span class="name">徐舒翔&nbsp;</span>
+                        <span class="clinic">产科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/8dbb5f7d0c0820ef/" target="_blank">
+                        复旦大学附属华山医院北院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">3065</i></span>
+                    <span class="half-item">好评率（%）<i>98.1</i></span>
+                </div>
+                <p class="des">擅长：人工流产、食物中毒、肌肉劳损、胎儿生长受限、乳糖不耐受、胎记</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/305ba079aa476af604c0/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/200d/8d3fcce4a076?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/305ba079aa476af604c0/" target="_blank">
+                        <span class="name">冼文彪&nbsp;</span>
+                        <span class="clinic">神经内科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/15f79de2c09ed0e9/" target="_blank">
+                        中山大学附属第一医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">1184</i></span>
+                    <span class="half-item">好评率（%）<i>98.7</i></span>
+                </div>
+                <p class="des">擅长：脱髓鞘疾病、肌张力障碍、多系统萎缩、帕金森、帕金森病、运动神经元病</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_aba9864f57dd4553/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2017/07/14/2155e48f2b55_w162_h162_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_aba9864f57dd4553/" target="_blank">
+                        <span class="name">赵极峰&nbsp;</span>
+                        <span class="clinic">小儿科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+                        北京大学第三医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">18346</i></span>
+                    <span class="half-item">好评率（%）<i>99.9</i></span>
+                </div>
+                <p class="des">擅长：发育、幼儿急疹、手足口病、疱疹性咽峡炎、呼吸道感染、腹泻</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+
+
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/clinic_web_183c6ae479b6f24c/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2016/11/07/4b711d1001e2_w150_h150_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/clinic_web_183c6ae479b6f24c/" target="_blank">
+                        <span class="name">杨力&nbsp;</span>
+                        <span class="clinic">妇科&nbsp;</span>
+                        <span class="grade">主治医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/f0158d48cd797047/" target="_blank">
+                        北京大学第三医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">18711</i></span>
+                    <span class="half-item">好评率（%）<i>98.4</i></span>
+                </div>
+                <p class="des">擅长：子宫内膜异位症、宫颈腺癌、尿道炎、人工流产、子宫后位、术后感染</p>
+            </div>
+        </div>
+
+        <div class="doctor-info-item
+	 odd
+	 last
+	">
+            <div class="avatar-wrap">
+                <a href="/pc/doctor/6824f9074b433fae/" target="_blank">
+
+                    <img src="https://resource.chunyu.mobi//media/images/2018/06/28/b2b6/e43496fad528_w150_h150_.jpg?imageMogr2/thumbnail/150x">
+
+                </a>
+
+                <span class="available">可咨询</span>
+
+            </div>
+            <div class="detail">
+                <div class="des-item">
+                    <a class="name-wrap" href="/pc/doctor/6824f9074b433fae/" target="_blank">
+                        <span class="name">张淞文&nbsp;</span>
+                        <span class="clinic">妇科&nbsp;</span>
+                        <span class="grade">主任医师</span>
+                    </a>
+                </div>
+                <div class="des-item">
+                    <a class="hospital" href="/pc/hospital/d908b22ced2151b8/" target="_blank">
+                        北京妇产医院
+                    </a>
+                </div>
+                <div class="des-item">
+                    <span class="half-item">服务人次 <i class="color-black">8627</i></span>
+                    <span class="half-item">好评率（%）<i>100.0</i></span>
+                </div>
+                <p class="des">擅长：阴道炎、老年性阴道炎、HPV感染、卵巢囊肿、不孕症、更年期功能性子宫出血</p>
+            </div>
+        </div>
+
+
+    </div>
+    <!--分页器-->
+
+
+
+    <div class="pagebar">
+
+        <a class="prev disabled" href="javascript:void(0)">上一页</a>
+
+        <a class="page" href="javascript:void(0)">1</a>
+
+        <a class="next" href="/pc/doctors/?page=2">下一页</a>
+
+    </div>
+
+
+
+</div>
+
+

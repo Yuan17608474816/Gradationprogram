@@ -329,7 +329,22 @@ a:hover {
         position: relative;
         z-index: 10;
     }
-
+header .cityname {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: bold;
+    text-align: left;
+    float: left;
+}
+.citynav {
+    width: 60px;
+    height: 30px;
+    background-color: #00a8e7;
+    cursor: pointer;
+    float: left;
+}
         .header .top a {
             padding: 0 14px;
             float: right;
