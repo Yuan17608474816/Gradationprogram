@@ -62,11 +62,11 @@
         float: left;
         width: 300px;
         height: 207px;
-        background: url(../image/ind_2.jpg) no-repeat center;
+        background-image: url('../../image/门诊.jpg');
+        background: url(../image/门诊.jpg) no-repeat center;
         text-align: center;
         -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        behavior: url(css/PIE.htc);
     }
 
         .index_2 li .a {
@@ -97,7 +97,7 @@
     }
 
     .index_2 .li_3 {
-        background: url(../image/ind_3.jpg) no-repeat center;
+        background: url(../image/医院地址.jpg) no-repeat center;
         margin-left: 10px;
     }
 
@@ -757,24 +757,24 @@
 
         .guide .tools .l1 {
             width: 205px;
-            background-image: url(../../image/icon1.png);
+            background-image: url(../image/xf/icon1.png);
             text-indent: 86px;
         }
 
         .guide .tools .l2 {
-            background-image: url(../../image/Appicon.png);
+            background-image: url(../image/xf/icon2.png);
         }
 
         .guide .tools .l3 {
-            background-image: url(../../image/weixinicon.png);
+            background-image: url(../image/xf/icon3.png);
         }
 
         .guide .tools .l4 {
-            background-image: url(../../image/hosicon.png);
+            background-image: url(../image/xf/icon4.png);
         }
 
         .guide .tools .l5 {
-            background-image: url(../../image/usericon.png);
+            background-image: url(../image/xf/WechatIMG17.png);
         }
 
             .guide .tools .l5 .over {
@@ -825,14 +825,10 @@
 
         .guide .tools .l3 .code {
             background: url(../image/xf/png1-1.png) no-repeat center;
-            width: 120px;
-            height: 138px;
-            padding: 21px 30px 40px;
-            margin-left: -90px;
-            /*width: 246px;
+            width: 246px;
             height: 139px;
             padding: 21px 30px 40px;
-            margin-left: -220px;*/
+            margin-left: -220px;
         }
 
         .guide .tools .l4 .code {
@@ -888,7 +884,7 @@
             width: 291px;
             height: 265px;
             margin-right: 183px;
-            background-image: url(../../image/usebg.png);
+            background-image: url(../image/xf/png2.png);
         }
 
             .guide .links .l1 .p {
@@ -909,7 +905,7 @@
             width: 281px;
             height: 261px;
             margin-right: -62px;
-            background-image: url(../../image/png3.png);
+            background-image: url(../image/xf/png3.png);
         }
 
             .guide .links .l2 .p {
@@ -930,7 +926,7 @@
             width: 241px;
             height: 261px;
             margin-left: 21px;
-            background-image: url(../../image/png4.png);
+            background-image: url(../image/xf/png4.png);
             color: #333;
         }
 
@@ -954,7 +950,7 @@
             width: 251px;
             height: 263px;
             margin-left: 221px;
-            background-image: url(../../image/png5.png);
+            background-image: url(../image/xf/png5.png);
         }
 
             .guide .links .l4 .p {
@@ -1988,6 +1984,8 @@
 /*	2017.12.05 - lyc	start*/
 
 .header .nav .logo {
+    margin-top: -45px;
+    margin-left: -30px;
     padding-right: 10px;
 }
 

@@ -3,14 +3,1460 @@
     ViewBag.Title = "SelDiaOfSym";
     Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
 }
-<!--症状自诊主体-->
-<div class="body_box">
-    <!--人体模型-->
-    <div class="HuBodyModel">
+<link href="~/Content/SelSym/Selmain.css" rel="stylesheet" />
+<link href="~/Content/SelSym/jbk_took.css" rel="stylesheet" />
+<script type="text/javascript" src="~/Scripts/SelSym/jquery_min.js"></script>
+<script type="text/javascript" src="~/Scripts/SelSym/index.js"></script>
+<script type="text/javascript" src="~/scripts/selsym/cityswitch.js"></script>
+<script type="text/javascript" src="~/Scripts/SelSym/layer_min.js"></script>
+<script type="text/javascript" src="~/Scripts/SelSym/common.js"></script>
+<script type="text/javascript" src="~/Scripts/SelSym/jbk_tool.js"></script>
+<script  type="text/javascript" src="~/Scripts/SelSym/hm.js"></script>
+<script   type="text/javascript" src="~/Scripts/SelSym/hm2204.js"></script>
+<script type="text/javascript" src="~/Scripts/SelSym/regnay.js"></script>
+<link href="~/Content/SelSym/disstor.css" rel="stylesheet" />
+<link href="~/Content/SelSym/supporbtn.css" rel="stylesheet" />
+<script>
+    var ROOT = "";
 
-    </div>
-    <!--症状列表-->
-    <div class="SymList">
+    $(function () {
+        if (!
 
+            0) return;
+        var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+        var i = e.length;
+        while (i--) {
+            document.createElement(e[i])
+        }
+    });
+
+
+
+    function ezsoSearch() {
+        var sinfo = $("#searchinfo").val();
+        if ($.trim(sinfo) == "") {
+            noticeBox({ info: "请输入您要查询的医院名称/医生名称/科室名称", isback: 2, logo: 5, title: "提示信息" });
+            return false;
+        }
+        if (sinfo == "请输入医院名称/医生名称/科室名称") {
+            noticeBox({ info: "请输入您要查询的医院名称/医生名称/科室名称", isback: 2, logo: 5, title: "提示信息" });
+            return false;
+        }
+        $("button").click(function () {
+            $("li").each(function () {
+                alert($(this).text())
+            });
+        });
+        $("#searchinfo").val(stripscript(sinfo));
+        $("#ezsoform").submit();
+    }
+
+    function stripscript(s) {
+        var pattern = new RegExp("[%--`~#^&*()=|{}':;',\\[\\].<>/?~！#￥……&*（）——|{}【】‘；：”“'。，、？]");
+        var rs = "";
+        for (var i = 0; i < s.length; i++) {
+            rs = rs + s.substr(i, 1).replace(pattern, '');
+        }
+        return rs;
+    }
+
+    /**
+    *	用户退出
+    **/
+    function loginOut() {
+        location.href = '/Home/User/userLoginOut.html';
+    }
+
+    /**按医院找**/
+    function goFindHos() {
+        window.location.href = "/Home/Find/findHos.html";
+    }
+
+    /**按科室找**/
+    function goDep() {
+        window.location.href = "/Home/Find/findDep.html";
+    }
+
+    function getUrlParam(name) {
+        var url = window.location.href;
+        if (url.indexOf("cityid") != -1) {
+            var urlarr = url.split("cityid/");
+            var cityidarr = urlarr[1].split(".");
+            return cityidarr[0];
+        }
+        return null;
+    }
+
+</script>
+
+
+<script type="text/javascript">
+    document.write('<script src="\/\/assets-cdn.kf5.com\/supportbox\/main.js?' + (new Date).getDay() + '" id="kf5-provide-supportBox" kf5-domain="eztcn.kf5.com" charset="utf-8"><\/script>');
+</script>
+
+<link href="~/Content/SelSym/disstor.css" rel="stylesheet" />
+<script type="text/javascript" src="/Public/Js/jbk_tool_2014.js"></script>
+<article>
+    <style type="text/css">
+        .aletters {
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .alettershover {
+            background: #00a8e8;
+            color: #fff;
+            width: 100%;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+            .alettershover:hover {
+                padding-left: 3px;
+                padding-right: 3px;
+                color: #fff;
+            }
+    </style>
+    <div class="map"><a href="/Home/index.html" target="_self">首页</a> > <a href="javascript:void(0);" target="_self">症状自查</a></div>
+    <div class="sym_main1">
+        <section>
+            <div class="area">
+                <div class="title"><div class="text">热门症状查询</div><div class="more"></div></div>
+                <div class="con">
+                    <li><a href="/Home/Symptom/symptomcon/symptom/659.html">子宫压痛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/999.html">气短</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1106.html">口臭</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1120.html">胃痉挛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1172.html">手震颤</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1204.html">阴囊瘙痒</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1556.html">流鼻血</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1683.html">咳痰</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1957.html">脱发</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2000.html">上肢水肿</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2584.html">白带异常</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2993.html">耳鸣</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2995.html">眩晕</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3175.html">头痛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3271.html">便秘</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3342.html">岔气</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3587.html">眼干</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3728.html">腹泻</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3760.html">咽痛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3913.html">鼻塞</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/4011.html">咳嗽</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/4505.html">阴茎损伤</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/4559.html">红眼</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5120.html">皮肤瘙痒</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5156.html">血压高</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5172.html">鼻出血</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5236.html">肥胖</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5319.html">胃痛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5429.html">心悸</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/6348.html">关节肿大</a></li>
+                </div>
+            </div>
+            <div class="area">
+                <div class="title"><div class="text">按字母查询</div><div class="more"><a href="/Home/Symptom/SymptomLetter/bytypeall.html">更多>></a></div></div>
+                <div class="letters">
+                    <span id="A"><a href="javascript:void(0)" class="alettershover" onClick="lettersjs('A')">A</a></span>
+                    <span id="B"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('B')">B</a></span>
+                    <span id="C"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('C')">C</a></span>
+                    <span id="D"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('D')">D</a></span>
+                    <span id="E"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('E')">E</a></span>
+                    <span id="F"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('F')">F</a></span>
+                    <span id="G"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('G')">G</a></span>
+                    <span id="H"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('H')">H</a></span>
+                    <span id="I"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('I')">I</a></span>
+                    <span id="J"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('J')">J</a></span>
+                    <span id="K"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('K')">K</a></span>
+                    <span id="L"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('L')">L</a></span>
+                    <span id="M"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('M')">M</a></span>
+                    <span id="N"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('N')">N</a></span>
+                    <span id="O"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('O')">O</a></span>
+                    <span id="P"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('P')">P</a></span>
+                    <span id="Q"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('Q')">Q</a></span>
+                    <span id="R"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('R')">R</a></span>
+                    <span id="S"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('S')">S</a></span>
+                    <span id="T"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('T')">T</a></span>
+                    <span id="U"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('U')">U</a></span>
+                    <span id="V"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('V')">V</a></span>
+                    <span id="W"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('W')">W</a></span>
+                    <span id="X"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('X')">X</a></span>
+                    <span id="Y"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('Y')">Y</a></span>
+                    <span id="Z"><a href="javascript:void(0)" class="aletters" onClick="lettersjs('Z')">Z</a></span>
+                </div>
+                <script type="text/javascript">
+                    function lettersjs(a) {
+                        $('#' + a).children().addClass('alettershover').children().removeClass('aletters');
+                        $('#' + a).siblings().children().removeClass('alettershover').siblings().children().addClass('aletters');
+                        $('#typelistjs').html("<img src='/Public/Images/loading51.gif' style='width: 43px; margin-left: 265px;' />");
+                        var data = { bytype: a };
+                        $.post('/Home/Symptom/getSymptomLetter', data, function (josn) {
+                            $('#typelistjs').html(josn);
+                        });
+                    }
+                </script>
+                <div class="con" style="margin-top: 23px;" id="typelistjs">
+                    <li><a href="/Home/Symptom/symptomcon/symptom/187.html">鞍鼻</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/593.html">Asperger综合征</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1527.html">凹甲</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1583.html">癌症晚期胃肠道</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1977.html">阿罗瞳孔</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2437.html">癌性发热</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3389.html">癌细胞逆行播散</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/4449.html">安静腹</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/4745.html">氨基酸尿症</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5473.html">阿司匹林过敏</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5860.html">凹陷性疤痕</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5917.html">癌性输尿管狭窄</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/6460.html">凹陷瘢痕</a></li>
+                </div>
+            </div>
+            <div class="area">
+                <div class="title"><div class="text">按部位查询</div><div class="more"><a href="/Home/Symptom/SymptomPosit/Posit/head.html">更多>></a></div></div>
+                <script type="text/javascript">
+                    function setTab(name, cursel, n) {
+                        for (i = 1; i <= n; i++) {
+                            var menu = document.getElementById(name + i);
+                            var con = document.getElementById("con_" + name + "_" + i);
+                            menu.className = i == cursel ? "hover" : "";
+                            con.style.display = i == cursel ? "block" : "none";
+                        }
+                        if (name == 'two' && cursel == '2' && n == '2') {
+                            onClick = setTab('woman', 1, 2);
+                        } else if (name == 'two' && cursel == '1' && n == '2') {
+                            onClick = setTab('man', 1, 2);
+                        } else if (name == 'man' && cursel == '2' && n == '2') {
+                            $('#maleMapBack a').eq(0).trigger("click");
+                        } else if (name == 'woman' && cursel == '2' && n == '2') {
+                            $('#femaleMapBack a').eq(0).trigger("click");
+                        } else if (name == 'woman' && cursel == '1' && n == '2') {
+                            $('#femaleMapFront a').eq(0).trigger("click");
+                        } else if (name == 'man' && cursel == '1' && n == '2') {
+                            $('#maleMapFront a').eq(0).trigger("click");
+                        };
+                    }
+                </script>
+                <div id="sym_Tab">
+                    <div class="sym_Menubox">
+                        <div class="sym_mar">
+                            <li id="two1" onClick="setTab('two',1,2)" class="hover">男</li>
+                            <li id="two2" onClick="setTab('two',2,2)">女</li>
+                        </div>
+                    </div>
+                    <div class="sym_Contentbox">
+                        <div id="con_two_1">
+                            <div id="man_Tab" style="width:230px;">
+                                <div class="man_Contentbox">
+                                    <div id="con_man_1">
+                                        <div class="man_z" id="maleMapFront">
+                                            <!-- 男正面 -->
+                                            <a href="javascript:void(0);" target="_self" class="mz1" title="头" v="头部"></a>
+                                            <a href="javascript:void(0);" target="_self" class="mz2" title="胸" v="胸部"></a>
+                                            <a href="javascript:void(0);" target="_self" class="mz3" title="腹部" v="腹部"></a>
+                                            <a href="javascript:void(0);" target="_self" class="mz4" title="上肢" v="上肢"></a>
+                                            <a href="javascript:void(0);" target="_self" class="mz5" title="下肢" v="下肢"></a>
+                                            <a href="javascript:void(0);" target="_self" class="mz6" title="男性生殖" v="男性生殖" t="男性生殖部位" rel="男性股沟"></a>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div id="con_man_2" style="display:none">
+                                        <div class="man_b" id="maleMapBack">
+                                            <a href="javascript:void(0)" target="_self" class="mb1" title="颈" v="颈部" rel="颈部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="mb2" title="盆腔" v="盆腔"></a>
+                                            <a href="javascript:void(0)" target="_self" class="mb3" title="臀部" v="臀部" rel="排泄部位"></a>
+                                            <a href="javascript:void(0)" target="_self" class="mb4" title="腰部" v="腰部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="mb5" title=" 骨骼" v="骨" t="骨骼"></a>
+                                            <a href="javascript:void(0)" target="_self" class="mb6" title="背部" v="背部" rel="皮肤"></a>
+                                            <a href="javascript:void(0)" target="_self" class="mb7" title="全身" v="全身"></a>
+                                            <i></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="jdk_con" style="display:none">
+                                        <!-- 病症 -->
+                                    </div>
+                                    <div class="man_Menubox" style="width:160px;">
+                                        <li id="man1" onClick="setTab('man',1,2)" class="hover">正面</li>
+                                        <li id="man2" onClick="setTab('man',2,2)">背面</li>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="con_two_2" style="display:none">
+                            <div id="woman_Tab" style="width:230px;">
+                                <div class="woman_Contentbox">
+                                    <div id="con_woman_1">
+                                        <div class="woman_z" id="femaleMapFront">
+                                            <a href="javascript:void(0)" target="_self" class="wmz1" title="头" v="头部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmz2" title="胸" v="胸部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmz3" title="腹" v="腹部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmz4" title="上肢" v="上肢"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmz5" title="下肢" v="下肢"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmz6" title="女性生殖" v="女性生殖" t="女性生殖部位" rel="女性盆骨"></a>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div id="con_woman_2" style="display:none">
+                                        <div class="woman_b" id="femaleMapBack">
+                                            <a href="javascript:void(0)" target="_self" class="wmb1" title="颈" v="颈部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb2" title="盆腔" v="盆腔"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb3" title="臀" v="臀部" rel="排泄部位"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb4" title="腰" v="腰部"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb5" title="骨骼" v="骨" t="骨骼"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb6" title="背部" v="背部" rel="皮肤"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb7" title="全身" v="全身"></a>
+                                            <a href="javascript:void(0)" target="_self" class="wmb71" title="全身" v="全身"></a>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                    <div class="woman_Menubox" style="width:160px;">
+                                        <li id="woman1" onClick="setTab('woman',1,2)" class="hover">正面</li>
+                                        <li id="woman2" onClick="setTab('woman',2,2)">背面</li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sym_con" id="manPosit">
+                        <div id="mancon">
+                            <!-- 男性正面 -->
+                            <div id="man_one_1">
+                                <div class='depttitle'>眼部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3587.html'>眼干</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4559.html'>红眼</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2619.html'>视力障碍</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/42.html'>对光反应消失</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/140.html'>视野缺损</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3485.html'>视网膜出血</a>
+                                    </li>
+                                </div>
+                                <div class='depttitle'>耳部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2993.html'>耳鸣</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3215.html'>听力减退</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/279.html'>耳内发胀</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/429.html'>耳痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1241.html'>耳冻伤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1508.html'>耳屎多</a>
+                                    </li>
+                                </div>
+                                <div class='depttitle'>口部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1106.html'>口臭</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3760.html'>咽痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3524.html'>小儿流口水</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/143.html'>唇外翻</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1532.html'>咬嘴唇或舌</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2136.html'>口角生疮</a>
+                                    </li>
+                                </div>
+                                <div class='depttitle'>鼻部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1556.html'>流鼻血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3913.html'>鼻塞</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5172.html'>鼻出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/267.html'>红鼻头</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/410.html'>打鼾</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/994.html'>指鼻不准</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_2" style="display:none">
+                                <div class='depttitle'>胸部(不区分男女) </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/999.html'>气短</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1683.html'>咳痰</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3342.html'>岔气</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4011.html'>咳嗽</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5429.html'>心悸</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5843.html'>乳房胀痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3053.html'>肺部感染</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3673.html'>肺部啰音</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4468.html'>胸闷憋气</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4740.html'>烧心</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_3" style="display:none">
+                                <div class='depttitle'>腹部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1120.html'>胃痉挛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3728.html'>腹泻</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5319.html'>胃痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/169.html'>经期小腹坠痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3120.html'>婴儿吐奶</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/371.html'>反胃</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1128.html'>肝部疼痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3183.html'>腹内压升高</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3406.html'>腹腔感染</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4096.html'>腹痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4833.html'>肠痉挛</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_4" style="display:none">
+                                <div class='depttitle'>上肢</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1172.html'>手震颤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2000.html'>上肢水肿</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/639.html'>上肢半屈状</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1742.html'>网球肘</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1922.html'>上肢无力</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2235.html'>上肢麻木</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2502.html'>臂痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5853.html'>肩关节痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6078.html'>前臂旋转痛</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_5" style="display:none">
+                                <div class='depttitle'>下肢</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/522.html'>下肢无力</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/543.html'>步态不稳</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/709.html'>小腿发胀</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/926.html'>不能屈膝</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1979.html'>下肢外展</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2751.html'>膝关节肿大</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3395.html'>膝盖扭伤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3893.html'>八字脚步态</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5385.html'>膝腱反射消失</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_6" style="display:none">
+                                <div class='depttitle'>男性生殖</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1204.html'>阴囊瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4505.html'>阴茎损伤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2576.html'>精液发黄</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2929.html'>遗精</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5273.html'>隐睾</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6257.html'>阴囊潮湿</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/662.html'>痛性阴茎勃起</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1297.html'>阴囊肿胀</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1352.html'>尿道口疼</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2982.html'>包皮粘连</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4492.html'>阴囊肿大</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4953.html'>阴茎异常</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5642.html'>阴囊下坠</a>
+                                    </li>
+                                </div>
+                            </div>
+
+                            <!-- 男性背面 -->
+                            <div id="man_one_7" style="display:none">
+                                <div class='depttitle'>颈部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/161.html'>食道病变</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/765.html'>会厌炎</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1080.html'>颈部呈僵直状</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1315.html'>颈部缺血性跳痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2716.html'>咽喉部充血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3359.html'>甲状腺机能亢进</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3435.html'>声音嘶哑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4170.html'>嗓音粗</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4264.html'>肩背痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4523.html'>气道变窄</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_8" style="display:none">
+                                <div class='depttitle'>盆腔</div>
+                                <div class='deptcon'>
+
+                                    <li style="width: 215px; margin-top: 121px; margin-left: 119px; margin-bottom: 147px;">
+                                        <a href='/Home/Symptom/symptomcon/symptom/4523.html'>暂无信息！</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_9" style="display:none">
+                                <div class='depttitle'>臀部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3271.html'>便秘</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/883.html'>儿童尿床</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3482.html'>外阴瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/395.html'>痔出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/424.html'>直肠危象</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/449.html'>膀胱痉挛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1860.html'>肛门瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2317.html'>膀胱刺激征</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3379.html'>尿频</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4137.html'>直肠狭窄</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4208.html'>膀胱排空不全</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4339.html'>肛门疼痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6002.html'>肛门松弛</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_10" style="display:none">
+                                <div class='depttitle'>腰部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4524.html'>椎间盘脱出</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/588.html'>腰痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1091.html'>腰部包块</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1637.html'>腰椎不稳</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1901.html'>腰膝酸软</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2813.html'>肾区钝痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3423.html'>腰椎退化</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3603.html'>胸腰驼背</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5128.html'>腰骶疼痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5322.html'>腰酸</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_11" style="display:none">
+                                <div class='depttitle'>骨骼</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/659.html'>子宫压痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2584.html'>白带异常</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1462.html'>多囊卵巢</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1894.html'>阴道分泌物增多</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2373.html'>白带增多</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3842.html'>月经不调</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6164.html'>痛经</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/121.html'>会阴部撕裂感</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/967.html'>外阴压痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1777.html'>慢性盆腔痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3911.html'>产后出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4220.html'>女性不孕</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4856.html'>骨盆痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5563.html'>流产</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_12" style="display:none">
+                                <div class='depttitle'>背部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5120.html'>皮肤瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1747.html'>婴儿湿疹</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1418.html'>鳞屑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1974.html'>皮疹</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2076.html'>皮肤黑斑</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_13" style="display:none">
+                                <div class='depttitle'>全身</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5120.html'>皮肤瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5156.html'>血压高</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5236.html'>肥胖</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/630.html'>血糖升高</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1187.html'>血脂异常</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1644.html'>骨质疏松</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3337.html'>小儿上火</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4314.html'>儿童偏食</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5119.html'>小儿发热</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5392.html'>入睡困难</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1418.html'>鳞屑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1552.html'>不明原因发热</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1974.html'>皮疹</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2076.html'>皮肤黑斑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4718.html'>乏力</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5965.html'>烦躁不安</a>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="womancon">
+                            <!-- 女性正面 -->
+                            <div id="man_one_1" style="display:none">
+                                <div class='depttitle'>眼部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3587.html'>眼干</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4559.html'>红眼</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2619.html'>视力障碍</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/42.html'>对光反应消失</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/140.html'>视野缺损</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3485.html'>视网膜出血</a>
+                                    </li>
+                                </div>
+                                <div class='depttitle'>耳部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2993.html'>耳鸣</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3215.html'>听力减退</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/279.html'>耳内发胀</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/429.html'>耳痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1241.html'>耳冻伤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1508.html'>耳屎多</a>
+                                    </li>
+                                </div>
+                                <div class='depttitle'>口部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1106.html'>口臭</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3760.html'>咽痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3524.html'>小儿流口水</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/143.html'>唇外翻</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1532.html'>咬嘴唇或舌</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2136.html'>口角生疮</a>
+                                    </li>
+                                </div>
+                                <div class='depttitle'>鼻部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1556.html'>流鼻血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3913.html'>鼻塞</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5172.html'>鼻出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/267.html'>红鼻头</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/410.html'>打鼾</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/994.html'>指鼻不准</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_2" style="display:none">
+                                <div class='depttitle'>胸部(不区分男女) </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/999.html'>气短</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1683.html'>咳痰</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3342.html'>岔气</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4011.html'>咳嗽</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5429.html'>心悸</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5843.html'>乳房胀痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3053.html'>肺部感染</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3673.html'>肺部啰音</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4468.html'>胸闷憋气</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4740.html'>烧心</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_3" style="display:none">
+                                <div class='depttitle'>腹部 </div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1120.html'>胃痉挛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3728.html'>腹泻</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5319.html'>胃痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/169.html'>经期小腹坠痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3120.html'>婴儿吐奶</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/371.html'>反胃</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1128.html'>肝部疼痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3183.html'>腹内压升高</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3406.html'>腹腔感染</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4096.html'>腹痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4833.html'>肠痉挛</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_4" style="display:none">
+                                <div class='depttitle'>上肢</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1172.html'>手震颤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2000.html'>上肢水肿</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/639.html'>上肢半屈状</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1742.html'>网球肘</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1922.html'>上肢无力</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2235.html'>上肢麻木</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2502.html'>臂痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5853.html'>肩关节痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6078.html'>前臂旋转痛</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_5" style="display:none">
+                                <div class='depttitle'>下肢</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/522.html'>下肢无力</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/543.html'>步态不稳</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/709.html'>小腿发胀</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/926.html'>不能屈膝</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1979.html'>下肢外展</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2751.html'>膝关节肿大</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3395.html'>膝盖扭伤</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3893.html'>八字脚步态</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5385.html'>膝腱反射消失</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_6" style="display:none">
+                                <div class='depttitle'>女性生殖</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/659.html'>子宫压痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2584.html'>白带异常</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1462.html'>多囊卵巢</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1894.html'>阴道分泌物增多</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2373.html'>白带增多</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3842.html'>月经不调</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6164.html'>痛经</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/121.html'>会阴部撕裂感</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/967.html'>外阴压痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1777.html'>慢性盆腔痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3911.html'>产后出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4220.html'>女性不孕</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4856.html'>骨盆痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5563.html'>流产</a>
+                                    </li>
+                                </div>
+                            </div>
+
+                            <!-- 女性背面 -->
+                            <div id="man_one_7" style="display:none">
+                                <div class='depttitle'>颈部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/161.html'>食道病变</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/765.html'>会厌炎</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1080.html'>颈部呈僵直状</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1315.html'>颈部缺血性跳痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2716.html'>咽喉部充血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3359.html'>甲状腺机能亢进</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3435.html'>声音嘶哑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4170.html'>嗓音粗</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4264.html'>肩背痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4523.html'>气道变窄</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_8" style="display:none">
+                                <div class='depttitle'>盆腔</div>
+                                <div class='deptcon'>
+
+                                    <li style="width: 215px; margin-top: 121px; margin-left: 119px; margin-bottom: 147px;">
+                                        <a href='/Home/Symptom/symptomcon/symptom/4523.html'>暂无信息！</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_9" style="display:none">
+                                <div class='depttitle'>臀部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3271.html'>便秘</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/883.html'>儿童尿床</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3482.html'>外阴瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/395.html'>痔出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/424.html'>直肠危象</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/449.html'>膀胱痉挛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1860.html'>肛门瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2317.html'>膀胱刺激征</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3379.html'>尿频</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4137.html'>直肠狭窄</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4208.html'>膀胱排空不全</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4339.html'>肛门疼痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6002.html'>肛门松弛</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_10" style="display:none">
+                                <div class='depttitle'>腰部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4524.html'>椎间盘脱出</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/588.html'>腰痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1091.html'>腰部包块</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1637.html'>腰椎不稳</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1901.html'>腰膝酸软</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2813.html'>肾区钝痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3423.html'>腰椎退化</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3603.html'>胸腰驼背</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5128.html'>腰骶疼痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5322.html'>腰酸</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_11" style="display:none">
+                                <div class='depttitle'>骨骼</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/659.html'>子宫压痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2584.html'>白带异常</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1462.html'>多囊卵巢</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1894.html'>阴道分泌物增多</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2373.html'>白带增多</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3842.html'>月经不调</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/6164.html'>痛经</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/121.html'>会阴部撕裂感</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/967.html'>外阴压痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1777.html'>慢性盆腔痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3911.html'>产后出血</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4220.html'>女性不孕</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4856.html'>骨盆痛</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5563.html'>流产</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_12" style="display:none">
+                                <div class='depttitle'>背部</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5120.html'>皮肤瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1747.html'>婴儿湿疹</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1418.html'>鳞屑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1974.html'>皮疹</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2076.html'>皮肤黑斑</a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div id="man_one_13" style="display:none">
+                                <div class='depttitle'>全身</div>
+                                <div class='deptcon'>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5120.html'>皮肤瘙痒</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5156.html'>血压高</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5236.html'>肥胖</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/630.html'>血糖升高</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1187.html'>血脂异常</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1644.html'>骨质疏松</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/3337.html'>小儿上火</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4314.html'>儿童偏食</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5119.html'>小儿发热</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5392.html'>入睡困难</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1418.html'>鳞屑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1552.html'>不明原因发热</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/1974.html'>皮疹</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/2076.html'>皮肤黑斑</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/4718.html'>乏力</a>
+                                    </li>
+                                    <li>
+                                        <a href='/Home/Symptom/symptomcon/symptom/5965.html'>烦躁不安</a>
+                                    </li>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="area">
+                <div class="title"><div class="text">常见症状</div></div>
+                <div class="list">
+                    <div class="symtitle">男性症状</div>
+                    <div class="con">
+                        <li><a href="/Home/Symptom/symptomcon/symptom/1204.html">阴囊瘙痒</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/4505.html">阴茎损伤</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/1899.html">前列腺增生</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/2576.html">精液发黄</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/2929.html">遗精</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/4099.html">前列腺肥大</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/4388.html">包皮过长</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/5273.html">隐睾</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/6257.html">阴囊潮湿</a></li>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="symtitle">女性症状</div>
+                    <div class="con">
+                        <li><a href="/Home/Symptom/symptomcon/symptom/659.html">子宫压痛</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/2584.html">白带异常</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/169.html">经期小腹坠痛</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/1462.html">多囊卵巢</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/1894.html">阴道分泌物增多</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/2373.html">白带增多</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/3482.html">外阴瘙痒</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/3842.html">月经不调</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/5843.html">乳房胀痛</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/6164.html">痛经</a></li>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="symtitle">老人症状</div>
+                    <div class="con">
+                        <li><a href="/Home/Symptom/symptomcon/symptom/1644.html">骨质疏松</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/4524.html">椎间盘脱出</a></li>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="symtitle">幼儿症状</div>
+                    <div class="con">
+                        <li><a href="/Home/Symptom/symptomcon/symptom/883.html">儿童尿床</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/1178.html">婴儿枕秃</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/3120.html">婴儿吐奶</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/3337.html">小儿上火</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/3524.html">小儿流口水</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/4314.html">儿童偏食</a></li>
+                        <li><a href="/Home/Symptom/symptomcon/symptom/5119.html">小儿发热</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="area">
+                <div class="title"><div class="text">本季节高发</div></div>
+                <div class="con">
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3913.html">鼻塞</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5120.html">皮肤瘙痒</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/1556.html">流鼻血</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3175.html">头痛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/5429.html">心悸</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3587.html">眼干</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3271.html">便秘</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/3760.html">咽痛</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2995.html">眩晕</a></li>
+                    <li><a href="/Home/Symptom/symptomcon/symptom/2993.html">耳鸣</a></li>
+                </div>
+            </div>
+        </aside>
     </div>
-</div>
+    <div class="clear"></div>
+    <script type="text/javascript">
+        $(function () {
+            //男性
+            $('#maleMapFront a').click(function () {
+                var kk = $(this).index();
+                $('#mancon').children('div').eq(kk).show().siblings().hide();
+                $('#womancon').children('div').hide();
+            });
+            $('#maleMapBack a').click(function () {
+                var kk = $(this).index();
+                $('#mancon').children('div').eq(kk + 6).show().siblings().hide();
+                $('#womancon').children('div').hide();
+            });
+
+
+            $('#femaleMapFront a').click(function () {
+                var kk = $(this).index();
+                $('#womancon').children('div').eq(kk).show().siblings().hide();
+                $('#mancon').children('div').hide();
+            });
+            $('#femaleMapBack a').click(function () {
+                var kk = $(this).index();
+                $('#womancon').children('div').eq(kk + 6).show().siblings().hide();
+                $('#mancon').children('div').hide();
+            });
+
+
+        });
+    </script>
+</article>

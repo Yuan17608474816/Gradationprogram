@@ -7,6 +7,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,23 +16,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta name="referrer" content="no-referrer" />
     <title>十安医生</title>
-
-    <link type="text/css" rel="stylesheet" href="~/Content/PMain/global.css" />
-    <link type="text/css" rel="stylesheet" href="~/Content/PMain/lyc.css" />
+   <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/global.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/lyc.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/PMain/slick.css" />
-    <link type="text/css" rel="stylesheet" href="~/Content/PMain/page.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/page.css" />
     <script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
-    <link type="text/css" rel="stylesheet" href="~/Content/PMain/jquery.mCustomScrollbar.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/jquery.mCustomScrollbar.css" />
+
+    <script type="text/javascript" src="~/scripts/selsym/cityswitch.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
-   <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
+    <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
 </head>
 <body>
-    <link rel="stylesheet" type="text/css" href="~/Content/PMain/myaglobal.css"  />
+    <link rel="stylesheet" type="text/css" href="~/Content/LayoutPage/myaglobal.css" />
     <div id="myalert-shadow" class="myalert-shadow"></div>
     <div id="myalert" class="dev-alert">
         <div id="my_alert" class="inner">
@@ -68,7 +70,7 @@
             <li>
                 <a href="/register.html" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_1.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_1.png" >
                     </span>
                     <span class="s2">预约挂号</span>
                 </a>
@@ -76,7 +78,7 @@
             <li>
                 <a href="/visitinfo.html" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_2.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_2.png">
                     </span>
                     <span class="s2">门诊出诊</span>
                 </a>
@@ -84,7 +86,7 @@
             <li>
                 <a href="#" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_3.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_3.png" >
                     </span>
                     <span class="s2">快速购药</span>
                 </a>
@@ -92,7 +94,7 @@
             <li>
                 <a href="#" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_4.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_4.png" >
                     </span>
                     <span class="s2">远程医学</span>
                 </a>
@@ -100,16 +102,28 @@
             <li>
                 <a href="/reportquery.html" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_5.png" title="" alt="">
+                        <img title="" src="~/image/Rlist_5.png">
                     </span>
                     <span class="s2">报告查询</span>
                 </a>
             </li>
-         
+
         </ul>
     </div><div class="header">
+
         <a href="#" class="menu_h"><span>Menu</span></a>
         <div class="top">
+            <div class="cityname" id="cityname">
+                长沙
+            </div>
+            <div class="citynav" id="citynav">
+                <p class="cityset">[切换城市]</p>
+                <ul class="citynew" style="display: none;">
+                    <div class="citylist">
+                        <li id="2">天津</li>
+                    </div>
+                </ul>
+            </div>
             <div class="wrap">
                 <a href="#" class="en ">我的</a>            <a href="#">医院版</a>            <a href="#">游客版</a>            <a href="#" class="on">患者版</a>
             </div>
@@ -118,42 +132,42 @@
             <div class="wrap cf">
                 <div class="logo" edit_params="width%3D102%26height%3D86%26showAlt%3D1">
                     <a href="#">
-                        <img title="十安医生"   src="~/image/Logo3.png"  style="height:120px;width:200px"/>
+                        <img title="十安医生" src="~/image/Logo3.png"/>
                     </a>
                 </div>        <div class="navList">
                     <ul class="cf">
                         <li>
-                            <a href="/register.html" class="one">预约挂号<span class="open">+</span></a>
-                            
+                            <a href="/AT_PMain/AppReg" class="one">预约挂号<span class="open">+</span></a>
+
                         </li>
                         <li>
-                            <a href="/characteristic.html" class="one">症状自诊<span class="open">+</span></a>
-   
+                            <a href="/AT_PMain/SelDiaOfSym" class="one">症状自诊<span class="open">+</span></a>
+
                         </li>
                         <li>
-                            <a href="/doctors.html" class="one">找医生</a>
+                            <a href="/AT_PMain/SeaDoc" class="one">找医生</a>
                             <div class="secondNav">
-                                <a href="/characteristic.html">按科室</a><a href="#">按疾病</a><a href="/characteristic.html#part2">按医院</a>
+                                <a href="/AT_PMain/SeaDoc">按科室</a><a href="/AT_PMain/SeaDocL">按疾病</a><a href="/AT_PMain/SeaDocH">按医院</a>
                             </div>
                         </li>
                         <li>
                             <a href="/department.html" class="one">快速购药</a>
                         </li>
                         <li>
-                            <a href="/visitinfo.html" class="one">就医指南<span class="open">+</span></a>
+                            <a href="/AT_PMain/OutVisFor" class="one">就医指南<span class="open">+</span></a>
                             <div class="secondNav">
-                                <a href="/visitinfo.html">门诊出诊表</a><a href="/query_service.html">查询服务</a><a href="/letter_thanks.html">感谢信</a><a href="/department_ims/guide/feedback.html">意见反馈</a><a href="/reportquery.html">报告查询</a><a href="/patientQA.html">患者问答</a>
+                                <a href="/AT_PMain/OutVisFor">门诊出诊表</a><a href="/AT_PMain/InqSer">查询服务</a><a href="/AT_PMain/ThNoto">感谢信</a><a href="/department_ims/guide/feedback.html">意见反馈</a><a href="/reportquery.html">报告查询</a><a href="/AT_PMain/PatQueAnR">患者问答</a>
                             </div>
                         </li>
                         <li>
-                            <a href="/pnotice.html" class="one">找医院</a>
+                            <a href="/AT_PMain/FindHos" class="one">找医院</a>
                         </li>
                         <li>
-                            <a href="/bignews.html" class="one">疾病知识库<span class="open">+</span></a>
+                            <a href="/AT_PMain/DisKnDa" class="one">疾病知识库<span class="open">+</span></a>
 
                         </li>
                         <li>
-                            <a href="/popular.html" class="one">健康科普</a>
+                            <a href="/AT_PMain/PoScHe" class="one">健康科普</a>
                         </li>
                     </ul>
                     <ul style="padding-top:0">
@@ -214,10 +228,11 @@
             </div>
         </div>
     </div><input type="hidden" id="catebynav" value="/patient" />
-    
+
     <div>
         @RenderBody()
     </div>
+
     <script>
         $(function () {
             $('.ind_banner').slick({
@@ -305,11 +320,11 @@
                     <div class="siteMap">
                         <a href="/sitemap.html">网站地图</a><a href="/research/gudie.html">关于我们</a>
                     </div>
-                    <p class="cf address"><span>地　　址：</span><span class="div"><b>（信息学院）湖南省长沙市长沙县湖南工程职业技术学院，100730；
+                    <p class="cf address"><span>地　　址：</span><span class="div"><b>（信息学院）湖南省长沙市长沙县湖南工程职业技术学院，100730；</b></span>
                     <p>服务热线： 010-69156114</p>
                 </div>
                 <div class="right">
-                    <p>Copyright 十安在线医生 All Rights Reserved. 本站内容仅供参考，不作为诊断及医疗依据         
+                    <p>Copyright 十安在线医生 All Rights Reserved. 本站内容仅供参考，不作为诊断及医疗依据
                     <p><a href="#" target="_blank">网站参考</a>：<a href="#" target="_blank">北京分形科技北京协和医院</a></p>
                 </div>
             </div>

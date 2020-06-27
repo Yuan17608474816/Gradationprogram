@@ -22,6 +22,14 @@ namespace AnTen.Controllers
             return View();
         }
         /// <summary>
+        /// 预约挂号
+        /// </summary>
+        /// <returns></returns>
+        public  ActionResult AppReg()
+        {
+            return View();
+        }
+        /// <summary>
         /// 科室导航
         /// </summary>
         /// <returns></returns>

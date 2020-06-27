@@ -1984,6 +1984,8 @@
 /*	2017.12.05 - lyc	start*/
 
 .header .nav .logo {
+    margin-top: -45px;
+    margin-left: -30px;
     padding-right: 10px;
 }
 

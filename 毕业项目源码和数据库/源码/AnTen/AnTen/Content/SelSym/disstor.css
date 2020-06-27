@@ -1,0 +1,2088 @@
+﻿@charset "utf-8";
+/* 智能导诊 */
+
+/* 按字母找 */
+
+.diss_main {
+    width: 1000px;
+    height: auto !important;
+    float: left;
+}
+
+    .diss_main section {
+        width: 600px;
+        height: auto !important;
+        margin-right: 20px;
+        _margin-right: 10px;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 50px;
+        float: left;
+    }
+
+    .diss_main aside {
+        width: 340px;
+        height: auto !important;
+        float: left;
+    }
+
+        .diss_main aside .area {
+            width: 300px;
+            height: auto !important;
+            border: 1px solid #eaeaea;
+            padding: 19px;
+            margin-bottom: 25px;
+            float: left;
+        }
+
+            .diss_main aside .area .title {
+                width: 300px;
+                height: 30px;
+                border-bottom: 1px solid #e7e7e7;
+                float: left;
+            }
+
+                .diss_main aside .area .title .text {
+                    widht: auto;
+                    height: 30px;
+                    font-size: 18px;
+                    color: #00a8e8;
+                    text-align: left;
+                    line-height: 20px;
+                    border-bottom: 1px solid #00a8e8;
+                    float: left;
+                }
+
+        .diss_main aside .dissarea {
+            width: 300px;
+            height: auto !important;
+            float: left;
+        }
+
+            .diss_main aside .dissarea li {
+                width: 300px;
+                height: auto !important;
+                border-bottom: 1px dotted #c2c2c2;
+                padding: 20px 0px 20px 0px;
+                float: left;
+            }
+
+                .diss_main aside .dissarea li .photo {
+                    width: 80px;
+                    height: 80px;
+                    padding: 2px;
+                    border: 1px solid #cccccc;
+                    margin-right: 14px;
+                    float: left;
+                }
+
+                .diss_main aside .dissarea li .con {
+                    width: 200px;
+                    height: 86px;
+                    float: left;
+                }
+
+                    .diss_main aside .dissarea li .con .name {
+                        width: 200px;
+                        height: 30px;
+                        font-size: 12px;
+                        color: #666;
+                        line-height: 30px;
+                        text-align: left;
+                        float: left;
+                    }
+
+                        .diss_main aside .dissarea li .con .name span {
+                            font-size: 16px;
+                            margin-right: 10px;
+                        }
+
+                            .diss_main aside .dissarea li .con .name span a:link {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                            .diss_main aside .dissarea li .con .name span a:visited {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                            .diss_main aside .dissarea li .con .name span a:hover {
+                                text-decoration: none;
+                                color: #00a8e8;
+                            }
+
+                            .diss_main aside .dissarea li .con .name span a:active {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                    .diss_main aside .dissarea li .con .name1 {
+                        width: 200px;
+                        height: 22px;
+                        font-size: 12px;
+                        color: #666;
+                        line-height: 22px;
+                        text-align: left;
+                        float: left;
+                    }
+
+                        .diss_main aside .dissarea li .con .name1 span {
+                            font-size: 16px;
+                            margin-right: 10px;
+                        }
+
+                            .diss_main aside .dissarea li .con .name1 span a:link {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                            .diss_main aside .dissarea li .con .name1 span a:visited {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                            .diss_main aside .dissarea li .con .name1 span a:hover {
+                                text-decoration: none;
+                                color: #00a8e8;
+                            }
+
+                            .diss_main aside .dissarea li .con .name1 span a:active {
+                                text-decoration: none;
+                                color: #000;
+                            }
+
+                    .diss_main aside .dissarea li .con .hos {
+                        width: 200px;
+                        height: 28px;
+                        font-size: 12px;
+                        color: #666;
+                        line-height: 28px;
+                        text-align: left;
+                        float: left;
+                    }
+
+                        .diss_main aside .dissarea li .con .hos span {
+                            color: #00a8e8;
+                        }
+
+                    .diss_main aside .dissarea li .con .hos1 {
+                        width: 200px;
+                        height: 36px;
+                        font-size: 12px;
+                        color: #666;
+                        line-height: 18px;
+                        text-align: left;
+                        overflow: hidden;
+                        float: left;
+                    }
+
+                .diss_main aside .dissarea li .msg {
+                    width: 300px;
+                    height: 50px;
+                    font-size: 12px;
+                    color: #666;
+                    line-height: 25px;
+                    text-align: left;
+                    margin: 5px 0px 5px 0px;
+                    float: left;
+                }
+
+                    .diss_main aside .dissarea li .msg a:link {
+                        text-decoration: none;
+                        color: #aacd06;
+                        float: right;
+                    }
+
+                    .diss_main aside .dissarea li .msg a:visited {
+                        text-decoration: none;
+                        color: #aacd06;
+                        float: right;
+                    }
+
+                    .diss_main aside .dissarea li .msg a:hover {
+                        text-decoration: none;
+                        color: #000;
+                        float: right;
+                    }
+
+                    .diss_main aside .dissarea li .msg a:active {
+                        text-decoration: none;
+                        color: #aacd06;
+                        float: right;
+                    }
+
+                .diss_main aside .dissarea li .button {
+                    width: 100px;
+                    height: 25px;
+                    font-size: 12px;
+                    background-color: #00a8e8;
+                    color: #FFF;
+                    line-height: 25px;
+                    text-align: center;
+                    cursor: pointer;
+                    float: left;
+                }
+
+    /* .diss_main section .letters{width:600px; height:53px; font-size:14px; color:#00a8e8; line-height:24px; margin:12px; text-align:left; float:left;} */
+    .diss_main section .letters {
+        border: 1px solid #00a8e8;
+        background-color: rgba(255,255,255,1);
+        width: auto;
+        font-size: 14px;
+        color: #00a8e8;
+        line-height: 24px;
+        padding: 12px;
+    }
+/* .diss_main section .letters span{margin:0px 3px 0px 3px; cursor:pointer;} */
+.lspan {
+    cursor: pointer;
+    padding: 0px 3px 0px 3px;
+}
+
+.diss_main section .list {
+    width: 600px;
+    height: auto !important;
+    border-bottom: 1px dotted #c2c2c2;
+    padding: 20px 0px 20px 0px;
+    float: left;
+}
+
+    .diss_main section .list .let {
+        width: 30px;
+        height: 30px;
+        margin-right: 28px;
+        border: 1px solid #00a8e8;
+        font-size: 14px;
+        color: #00a8e8;
+        line-height: 30px;
+        text-align: center;
+        float: left;
+    }
+
+    .diss_main section .list .letmain {
+        width: 540px;
+        height: auto !important;
+        float: left;
+    }
+
+        .diss_main section .list .letmain li {
+            width: auto;
+            height: 20px;
+            border-right: 1px solid #eaeaea;
+            font-size: 12px;
+            color: #666;
+            line-height: 20px;
+            text-align: center;
+            padding: 0px 20px 0px 20px;
+            margin-bottom: 15px;
+            float: left;
+        }
+
+/* 按疾病/科室找 */
+
+.diss_main1 {
+    width: 1000px;
+    height: auto !important;
+    float: left;
+}
+
+    .diss_main1 section {
+        width: 690px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 50px;
+        float: left;
+    }
+
+    .diss_main1 aside {
+        width: 210px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        float: left;
+    }
+
+        .diss_main1 aside .title {
+            width: 210px;
+            height: 30px;
+            border-bottom: 1px solid #e7e7e7;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+            .diss_main1 aside .title .text {
+                widht: auto;
+                height: 30px;
+                font-size: 18px;
+                color: #00a8e8;
+                text-align: left;
+                line-height: 20px;
+                border-bottom: 1px solid #00a8e8;
+                float: left;
+            }
+
+        .diss_main1 aside .list {
+            width: 170px;
+            height: 50px;
+            background: url(../../Images/dissdot2.jpg) no-repeat;
+            padding-left: 30px;
+            font-size: 18px;
+            color: #666;
+            text-align: left;
+            line-height: 50px;
+            cursor: pointer;
+            float: left;
+        }
+
+            .diss_main1 aside .list:hover {
+                background: url(../../Images/dissdot1.jpg) no-repeat;
+                color: #00a8e8;
+            }
+
+    .diss_main1 section .dissmain {
+        width: 690px;
+        height: auto !important;
+        float: left;
+    }
+
+    .diss_main1 section .title {
+        width: 690px;
+        height: 30px;
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 10px;
+        float: left;
+    }
+
+        .diss_main1 section .title .text {
+            widht: auto;
+            height: 30px;
+            font-size: 18px;
+            color: #00a8e8;
+            text-align: left;
+            line-height: 20px;
+            border-bottom: 1px solid #00a8e8;
+            float: left;
+        }
+
+        .diss_main1 section .title .more {
+            widht: auto;
+            height: 30px;
+            font-size: 12px;
+            color: #00a8e8;
+            text-align: right;
+            line-height: 15px;
+            float: right;
+        }
+
+            .diss_main1 section .title .more a:link {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+            .diss_main1 section .title .more a:visited {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+            .diss_main1 section .title .more a:hover {
+                text-decoration: none;
+                color: #666666;
+            }
+
+            .diss_main1 section .title .more a:active {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+    .diss_main1 section .disslist {
+        width: 690px;
+        height: auto !important;
+        margin-bottom: 30px;
+        padding-top: 10px;
+        float: left;
+    }
+
+        .diss_main1 section .disslist li {
+            width: 118px;
+            height: 20px;
+            font-size: 12px;
+            color: #666;
+            line-height: 20px;
+            text-align: left;
+            padding: 0px 20px 0px 0px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            float: left;
+        }
+
+/* 疾病页面 */
+
+.diss_main2 {
+    width: 1000px;
+    height: auto !important;
+    float: left;
+}
+
+    .diss_main2 section {
+        width: 730px;
+        height: auto !important;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .diss_main2 aside {
+        width: 210px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        padding-bottom: 100px;
+        float: left;
+    }
+
+    .diss_main2 section .dissmain {
+        width: 690px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .diss_main2 section .dissmain1 {
+        width: 610px;
+        height: auto !important;
+        padding: 19px 59px 19px 59px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .diss_main2 section .title {
+        width: 690px;
+        height: 30px;
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 10px;
+        float: left;
+    }
+
+        .diss_main2 section .title .text {
+            widht: auto;
+            height: 30px;
+            font-size: 18px;
+            color: #00a8e8;
+            text-align: left;
+            line-height: 20px;
+            border-bottom: 1px solid #00a8e8;
+            float: left;
+        }
+
+    .diss_main2 aside .title {
+        width: 210px;
+        height: auto !important;
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 10px;
+        float: left;
+    }
+
+        .diss_main2 aside .title .text {
+            widht: auto;
+            height: auto !important;
+            font-size: 18px;
+            color: #00a8e8;
+            text-align: left;
+            line-height: 30px;
+            border-bottom: 1px solid #00a8e8;
+            float: left;
+        }
+
+    .diss_main2 aside .area {
+        width: 210px;
+        height: auto !important;
+        margin-top: 20px;
+        font-size: 12px;
+        text-align: left;
+        line-height: 25px;
+        color: #666;
+        float: left;
+    }
+
+        .diss_main2 aside .area a:link {
+            text-decoration: none;
+            color: #aacd06;
+        }
+
+        .diss_main2 aside .area a:visited {
+            text-decoration: none;
+            color: #aacd06;
+        }
+
+        .diss_main2 aside .area a:hover {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .diss_main2 aside .area a:active {
+            text-decoration: none;
+            color: #aacd06;
+        }
+
+        .diss_main2 aside .area .con {
+            width: 210px;
+            height: auto !important;
+            float: left;
+        }
+
+            .diss_main2 aside .area .con span {
+                color: #b0b0b0;
+                margin: 0px 10px 0px 10px;
+            }
+
+            .diss_main2 aside .area .con a:link {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+            .diss_main2 aside .area .con a:visited {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+            .diss_main2 aside .area .con a:hover {
+                text-decoration: none;
+                color: #666;
+            }
+
+            .diss_main2 aside .area .con a:active {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+.deptlist {
+    width: 690px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    border-bottom: 1px solid #eaeaea;
+    padding: 30px 0;
+    float: left;
+}
+
+    .deptlist:hover {
+        background-color: rgba(0,0,0,0.02);
+    }
+
+    .deptlist .hosname {
+        width: 210px;
+        height: 30px;
+        color: #666;
+        margin-right: 20px;
+        text-align: left;
+        overflow: hidden;
+        float: left;
+    }
+
+    .deptlist .hosdept {
+        width: 65px;
+        height: 30px;
+        color: #666;
+        margin-right: 20px;
+        text-align: left;
+        overflow: hidden;
+        float: left;
+    }
+
+    .deptlist .prv {
+        width: 110px;
+        height: 30px;
+        color: #8dc11f;
+        margin-right: 20px;
+        text-align: right;
+        overflow: hidden;
+        float: left;
+    }
+
+    .deptlist .docnub {
+        width: 60px;
+        height: 30px;
+        color: #666;
+        margin-right: 20px;
+        text-align: right;
+        overflow: hidden;
+        float: left;
+    }
+
+    .deptlist .reg {
+        width: 50px;
+        height: 30px;
+        color: #666;
+        margin-right: 40px;
+        text-align: right;
+        overflow: hidden;
+        float: left;
+    }
+
+    .deptlist .button {
+        width: 60px;
+        height: 30px;
+        background-color: #00a8e8;
+        font-size: 12px;
+        color: #FFF;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+    }
+
+/* 疾病详情 */
+
+.diss_main section .dissname {
+    width: 600px;
+    height: 30px;
+    font-size: 20px;
+    color: #00a8e8;
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.diss_main section .disscon {
+    width: 600px;
+    height: auto !important;
+    margin: 0px 0px 30px 0px;
+    float: left;
+}
+
+    .diss_main section .disscon li {
+        width: 180px;
+        height: 30px;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        line-height: 30px;
+        margin-right: 20px;
+        float: left;
+    }
+
+        .diss_main section .disscon li span {
+            color: #000;
+        }
+
+#diss_Tab {
+    width: 600px;
+    height: auto !important;
+    float: left;
+}
+
+.diss_Menubox {
+    width: 600px;
+    height: 40px;
+    border-bottom: 2px solid #dadada;
+    float: left;
+}
+
+    .diss_Menubox li {
+        width: auto;
+        height: 40px;
+        font-size: 16px;
+        color: #666666;
+        text-align: center;
+        line-height: 40px;
+        padding: 0px 25px 0px 25px;
+        cursor: pointer;
+        float: left;
+    }
+
+        .diss_Menubox li.hover {
+            width: auto;
+            height: 40px;
+            font-size: 16px;
+            color: #00a8e8;
+            text-align: center;
+            line-height: 40px;
+            padding: 0px 25px 0px 25px;
+            border-bottom: 2px solid #00a8e8;
+            cursor: pointer;
+            float: left;
+        }
+
+.diss_Contentbox {
+    width: 580px;
+    height: auto !important;
+    padding: 10px;
+    _padding: 0px;
+    float: left;
+}
+
+    .diss_Contentbox .area {
+        width: 580px;
+        height: auto !important;
+        border-bottom: 1px dotted #c4c4c4;
+        padding: 20px 0px 20px 0px;
+        float: left;
+    }
+
+        .diss_Contentbox .area .title {
+            width: 580px;
+            height: 30px;
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+            text-align: left;
+            line-height: 30px;
+            float: left;
+        }
+
+        .diss_Contentbox .area .con {
+            width: 580px;
+            height: auto !important;
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            line-height: 25px;
+            text-indent: 2em;
+            float: left;
+        }
+
+/* 症状页面 */
+
+.diss_main3 {
+    width: 1000px;
+    height: auto !important;
+    float: left;
+}
+
+    .diss_main3 section {
+        width: 730px;
+        height: auto !important;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .diss_main3 aside {
+        width: 250px;
+        height: auto !important;
+        margin-right: 20px;
+        margin-bottom: 50px;
+        float: left;
+    }
+
+        .diss_main3 aside .asidearea {
+            width: 210px;
+            height: auto !important;
+            padding: 19px;
+            border: 1px solid #eaeaea;
+            margin-bottom: 30px;
+            float: left;
+        }
+
+            .diss_main3 aside .asidearea .title {
+                width: 210px;
+                height: auto !important;
+                border-bottom: 1px solid #e7e7e7;
+                margin-bottom: 10px;
+                float: left;
+            }
+
+                .diss_main3 aside .asidearea .title .text {
+                    widht: auto;
+                    height: auto !important;
+                    font-size: 18px;
+                    color: #00a8e8;
+                    text-align: left;
+                    line-height: 30px;
+                    border-bottom: 1px solid #00a8e8;
+                    float: left;
+                }
+
+            .diss_main3 aside .asidearea .area {
+                width: 210px;
+                height: auto !important;
+                margin-top: 20px;
+                font-size: 12px;
+                text-align: left;
+                line-height: 25px;
+                color: #666;
+                float: left;
+            }
+
+                .diss_main3 aside .asidearea .area .con {
+                    width: 210px;
+                    height: auto !important;
+                    float: left;
+                }
+
+                    .diss_main3 aside .asidearea .area .con span a:link {
+                        text-decoration: none;
+                        color: #00a8e8;
+                    }
+
+                    .diss_main3 aside .asidearea .area .con span a:visited {
+                        text-decoration: none;
+                        color: #00a8e8;
+                    }
+
+                    .diss_main3 aside .asidearea .area .con span a:hover {
+                        text-decoration: none;
+                        color: #666;
+                    }
+
+                    .diss_main3 aside .asidearea .area .con span a:active {
+                        text-decoration: none;
+                        color: #00a8e8;
+                    }
+
+                .diss_main3 aside .asidearea .area a:link {
+                    text-decoration: none;
+                    color: #aacd06;
+                }
+
+                .diss_main3 aside .asidearea .area a:visited {
+                    text-decoration: none;
+                    color: #aacd06;
+                }
+
+                .diss_main3 aside .asidearea .area a:hover {
+                    text-decoration: none;
+                    color: #000;
+                }
+
+                .diss_main3 aside .asidearea .area a:active {
+                    text-decoration: none;
+                    color: #aacd06;
+                }
+
+            .diss_main3 aside .asidearea .area1 {
+                width: 210px;
+                height: auto !important;
+                margin-top: 10px;
+                font-size: 12px;
+                text-align: left;
+                line-height: 25px;
+                color: #666;
+                float: left;
+            }
+
+                .diss_main3 aside .asidearea .area1 li {
+                    width: 60px;
+                    height: 30px;
+                    font-size: 12px;
+                    text-align: left;
+                    line-height: 30px;
+                    color: #00a8e8;
+                    margin: 0px 5px 0px 5px;
+                    _margin: 0px 3px 0px 3px;
+                    overflow: hidden;
+                    float: left;
+                }
+
+                    .diss_main3 aside .asidearea .area1 li a:link {
+                        text-decoration: none;
+                        color: #6e6e6e;
+                    }
+
+                    .diss_main3 aside .asidearea .area1 li a:visited {
+                        text-decoration: none;
+                        color: #6e6e6e;
+                    }
+
+                    .diss_main3 aside .asidearea .area1 li a:hover {
+                        text-decoration: none;
+                        color: #00a8e8;
+                    }
+
+                    .diss_main3 aside .asidearea .area1 li a:active {
+                        text-decoration: none;
+                        color: #6e6e6e;
+                    }
+
+    .diss_main3 section .dissmain {
+        width: 690px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+    .diss_main3 section .title {
+        width: 690px;
+        height: 30px;
+        border-bottom: 1px solid #e7e7e7;
+        margin-bottom: 10px;
+        float: left;
+    }
+
+        .diss_main3 section .title .text {
+            widht: auto;
+            height: 30px;
+            font-size: 18px;
+            color: #00a8e8;
+            text-align: left;
+            line-height: 20px;
+            border-bottom: 1px solid #00a8e8;
+            float: left;
+        }
+
+.symmain {
+    width: 690px;
+    height: auto !important;
+    float: left;
+}
+
+.symlist {
+    width: 690px;
+    height: 85px;
+    border-bottom: 1px dotted #cdcdcd;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+    .symlist .symname {
+        width: 540px;
+        height: 35px;
+        font-size: 18px;
+        color: #666;
+        text-align: left;
+        line-height: 35px;
+        margin-right: 20px;
+        overflow: hidden;
+        float: left;
+    }
+
+        .symlist .symname a:link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .symlist .symname a:visited {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .symlist .symname a:hover {
+            text-decoration: none;
+            color: #00a8e8;
+        }
+
+        .symlist .symname a:active {
+            text-decoration: none;
+            color: #000;
+        }
+
+    .symlist .symlink {
+        width: 130px;
+        height: 35px;
+        font-size: 12px;
+        color: #6e6e6e;
+        text-align: right;
+        line-height: 35px;
+        float: left;
+    }
+
+        .symlist .symlink a:link {
+            text-decoration: none;
+            color: #6e6e6e;
+        }
+
+        .symlist .symlink a:visited {
+            text-decoration: none;
+            color: #6e6e6e;
+        }
+
+        .symlist .symlink a:hover {
+            text-decoration: none;
+            color: #00a8e8;
+        }
+
+        .symlist .symlink a:active {
+            text-decoration: none;
+            color: #6e6e6e;
+        }
+
+    .symlist .symcon {
+        width: 690px;
+        height: 50px;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        line-height: 25px;
+        overflow: hidden;
+        float: left;
+    }
+
+        .symlist .symcon a:link {
+            text-decoration: none;
+            color: #aacd06;
+            margin-left: 10px;
+        }
+
+        .symlist .symcon a:visited {
+            text-decoration: none;
+            color: #aacd06;
+            margin-left: 10px;
+        }
+
+        .symlist .symcon a:hover {
+            text-decoration: none;
+            color: #000;
+            margin-left: 10px;
+        }
+
+        .symlist .symcon a:active {
+            text-decoration: none;
+            color: #aacd06;
+            margin-left: 10px;
+        }
+
+/* 症状按字母查 */
+
+.sym_main {
+    width: 960px;
+    height: auto !important;
+    padding: 19px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 60px;
+    float: left;
+}
+
+    .sym_main .letters {
+        width: 960px;
+        height: 50px;
+        font-size: 14px;
+        color: #00a8e8;
+        line-height: 50px;
+        text-align: left;
+        float: left;
+    }
+
+        .sym_main .letters span {
+            margin: 0px 10px 0px 10px;
+            cursor: pointer;
+        }
+
+    .sym_main .list {
+        width: 960px;
+        height: auto !important;
+        border-bottom: 1px dotted #c2c2c2;
+        padding: 20px 0px 20px 0px;
+        float: left;
+    }
+
+        .sym_main .list .let {
+            width: 30px;
+            height: 30px;
+            margin-right: 28px;
+            border: 1px solid #00a8e8;
+            font-size: 14px;
+            color: #00a8e8;
+            line-height: 30px;
+            text-align: center;
+            float: left;
+        }
+
+        .sym_main .list .letmain {
+            width: 900px;
+            height: auto !important;
+            float: left;
+        }
+
+            .sym_main .list .letmain li {
+                width: auto;
+                height: 20px;
+                border-right: 1px solid #eaeaea;
+                font-size: 12px;
+                color: #666;
+                line-height: 20px;
+                text-align: center;
+                padding: 0px 20px 0px 20px;
+                margin-bottom: 15px;
+                float: left;
+            }
+
+/* 症状主页 */
+
+.sym_main1 {
+    width: 1000px;
+    height: auto !important;
+    float: left;
+}
+
+    .sym_main1 section {
+        width: 640px;
+        height: auto !important;
+        margin-right: 20px;
+        float: left;
+    }
+
+    .sym_main1 aside {
+        width: 340px;
+        height: auto !important;
+        float: left;
+    }
+
+    .sym_main1 section .area {
+        width: 600px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+        .sym_main1 section .area .title {
+            width: 600px;
+            height: 30px;
+            border-bottom: 1px solid #e7e7e7;
+            float: left;
+        }
+
+            .sym_main1 section .area .title .text {
+                widht: auto;
+                height: 30px;
+                font-size: 18px;
+                color: #00a8e8;
+                text-align: left;
+                line-height: 30px;
+                border-bottom: 1px solid #00a8e8;
+                float: left;
+            }
+
+            .sym_main1 section .area .title .more {
+                widht: auto;
+                height: 30px;
+                font-size: 12px;
+                color: #6e6e6e;
+                text-align: left;
+                line-height: 30px;
+                float: right;
+            }
+
+                .sym_main1 section .area .title .more a:link {
+                    text-decoration: none;
+                    color: #6e6e6e;
+                }
+
+                .sym_main1 section .area .title .more a:visited {
+                    text-decoration: none;
+                    color: #6e6e6e;
+                }
+
+                .sym_main1 section .area .title .more a:hover {
+                    text-decoration: none;
+                    color: #00a8e8;
+                }
+
+                .sym_main1 section .area .title .more a:active {
+                    text-decoration: none;
+                    color: #6e6e6e;
+                }
+
+    .sym_main1 aside .area {
+        width: 300px;
+        height: auto !important;
+        padding: 19px;
+        border: 1px solid #eaeaea;
+        margin-bottom: 20px;
+        float: left;
+    }
+
+        .sym_main1 aside .area .title {
+            width: 300px;
+            height: 30px;
+            border-bottom: 1px solid #e7e7e7;
+            float: left;
+        }
+
+            .sym_main1 aside .area .title .text {
+                widht: auto;
+                height: 30px;
+                font-size: 18px;
+                color: #00a8e8;
+                text-align: left;
+                line-height: 30px;
+                border-bottom: 1px solid #00a8e8;
+                float: left;
+            }
+
+    .sym_main1 section .area .con {
+        width: 600px;
+        height: auto !important;
+        margin-top: 10px;
+        float: left;
+    }
+
+        .sym_main1 section .area .con li {
+            width: 80px;
+            height: 30px;
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            line-height: 30px;
+            padding: 5px 20px 5px 0px;
+            overflow: hidden;
+            float: left;
+        }
+
+    .sym_main1 section .letters {
+        width: 600px;
+        height: 30px;
+        font-size: 14px;
+        color: #00a8e8;
+        line-height: 30px;
+        text-align: left;
+        margin-top: 20px;
+        float: left;
+    }
+
+        .sym_main1 section .letters span {
+            padding-left: 0px;
+            padding-right: 0px;
+            border: 1px solid #FFF;
+            margin-left: 1px;
+            cursor: pointer;
+        }
+
+            .sym_main1 section .letters span:hover {
+                padding-left: 0px;
+                padding-right: 0px;
+                border: 1px solid #00a8e8;
+                margin-left: 1px;
+                cursor: pointer;
+            }
+
+    .sym_main1 aside .area .con {
+        width: 300px;
+        height: auto !important;
+        margin-top: 10px;
+        float: left;
+    }
+
+        .sym_main1 aside .area .con li {
+            width: 90px;
+            height: 30px;
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            line-height: 30px;
+            padding: 5px 10px 5px 0px;
+            overflow: hidden;
+            float: left;
+        }
+
+    .sym_main1 aside .area .list {
+        width: 300px;
+        height: auto !important;
+        margin-top: 20px;
+        float: left;
+    }
+
+        .sym_main1 aside .area .list .symtitle {
+            width: 300px;
+            height: 20px;
+            font-size: 16px;
+            color: #00a8e8;
+            line-height: 20px;
+            text-align: left;
+            float: left;
+        }
+
+#sym_Tab {
+    width: 600px;
+    height: auto !important;
+    margin-top: 20px;
+    float: left;
+}
+
+.sym_Menubox {
+    width: 600px;
+    height: 51px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.sym_mar {
+    width: 170px;
+    height: 30px;
+    margin: auto;
+    border-bottom: 1px solid #eaeaea;
+    padding: 0px 50px 10px 50px;
+}
+
+.sym_Menubox li {
+    width: 80px;
+    height: 28px;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    float: left;
+}
+
+    .sym_Menubox li.hover {
+        width: 80px;
+        height: 28px;
+        font-size: 16px;
+        color: #00a8e8;
+        text-align: center;
+        line-height: 28px;
+        border: 1px solid #00a8e8;
+        cursor: pointer;
+        float: left;
+    }
+
+.sym_Contentbox {
+    width: 230px;
+    height: auto !important;
+    float: left;
+}
+
+.sym_con {
+    width: 350px;
+    height: auto !important;
+    padding: 10px 0px 10px 20px;
+    background-color: #fbfbfb;
+    float: left;
+}
+
+.sym_left {
+    width: 230px;
+    height: 370px;
+    float: left;
+}
+
+#symman_Tab {
+    width: 230px;
+    height: 370px;
+    float: left;
+}
+
+.symman_Menubox {
+    width: 100px;
+    height: 30px;
+    padding-left: 70px;
+    _padding-left: 60px;
+    float: left;
+}
+
+    .symman_Menubox li {
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+        color: #666666;
+        text-align: center;
+        line-height: 30px;
+        background-color: #f8f8f8;
+        cursor: pointer;
+        float: left;
+    }
+
+        .symman_Menubox li.hover {
+            width: 50px;
+            height: 30px;
+            font-size: 14px;
+            color: #FFF;
+            text-align: center;
+            line-height: 30px;
+            background-color: #63c32e;
+            cursor: pointer;
+            float: left;
+        }
+
+.symman_Contentbox {
+    width: 230px;
+    height: 330px;
+    float: left;
+}
+
+#symwoman_Tab {
+    width: 230px;
+    height: 370px;
+    float: left;
+}
+
+.symwoman_Menubox {
+    width: 100px;
+    height: 30px;
+    padding-left: 70px;
+    _padding-left: 60px;
+    float: left;
+}
+
+    .symwoman_Menubox li {
+        width: 50px;
+        height: 30px;
+        font-size: 14px;
+        color: #666666;
+        text-align: center;
+        line-height: 30px;
+        background-color: #f8f8f8;
+        cursor: pointer;
+        float: left;
+    }
+
+        .symwoman_Menubox li.hover {
+            width: 50px;
+            height: 30px;
+            font-size: 14px;
+            color: #FFF;
+            text-align: center;
+            line-height: 30px;
+            background-color: #63c32e;
+            cursor: pointer;
+            float: left;
+        }
+
+.symwoman_Contentbox {
+    width: 230px;
+    height: 330px;
+    float: left;
+}
+
+.sym_con .depttitle {
+    width: 350px;
+    height: 25px;
+    font-size: 14px;
+    color: #17afea;
+    text-align: left;
+    line-height: 25px;
+    float: left;
+}
+
+.sym_con .deptcon {
+    width: 350px;
+    height: auto !important;
+    margin-bottom: 10px;
+    float: left;
+}
+
+    .sym_con .deptcon li {
+        width: 90px;
+        height: 25px;
+        margin-right: 13px;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        line-height: 25px;
+        padding-left: 8px;
+        background: url(../../Images/dot1.jpg) no-repeat;
+        overflow: hidden;
+        float: left;
+    }
+
+/* 疾病主页 */
+
+.sym_main1 section .area1 {
+    width: 630px;
+    height: auto !important;
+    padding: 4px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.index_focus {
+    position: relative;
+    width: 630px;
+    height: 220px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+    .index_focus .bd li {
+        width: 630px;
+        height: 220px;
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .index_focus .bd ul {
+        width: 630px;
+        height: 220px;
+        padding: 0px;
+        margin: 0px;
+        float: left;
+    }
+
+.index_focus_post {
+    z-index: 10;
+}
+
+.index_focus .slide_nav {
+    position: absolute;
+    left: 35%;
+    bottom: 2%;
+}
+
+    .index_focus .slide_nav a {
+        cursor: pointer;
+        float: left;
+        font-size: 28px;
+        _font-size: 14px;
+        font-family: arial;
+        color: #fff;
+        padding: 5px 10px;
+    }
+
+    .index_focus .slide_nav li:hover, .index_focus .slide_nav .on {
+        text-decoration: none;
+        color: #9c0;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+    }
+
+.index_focus_pre, .index_focus_next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -36px;
+    width: 72px;
+    height: 72px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 10;
+    background: url(../../Images/ico_sliding.png) no-repeat;
+    _background: url(../../Images/ico_sliding.gif) no-repeat;
+}
+
+.index_focus_pre {
+    left: 30px;
+    background-position: 0 0;
+}
+
+    .index_focus_pre:hover {
+        background-position: 0 -144px;
+    }
+
+.index_focus_next {
+    right: 30px;
+    background-position: 0 -72px;
+}
+
+    .index_focus_next:hover {
+        background-position: 0 -216px;
+    }
+
+.index_focus_info {
+    position: absolute;
+    left: 10%;
+    bottom: 12%;
+    width: 800px;
+    height: 200px;
+    padding-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "\5fae\8f6f\96c5\9ed1";
+    -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    background: url("../../Images/index_focus_bg.png") no-repeat;
+    _background: none;
+}
+
+    .index_focus_info h3 {
+        font-size: 36px;
+        line-height: 70px;
+        font-family: \5fae\8f6f\96c5\9ed1, \u9ed1\u4f53, "Lucida Grande";
+        display: none;
+    }
+
+    .index_focus_info .text {
+        width: 500px;
+        line-height: 24px;
+        font-size: 14px;
+        word-wrap: break-word;
+        overflow: hidden;
+        display: none;
+    }
+
+.diss_con {
+    width: 350px;
+    height: auto !important;
+    min-height: 370px;
+    border-left: 1px dotted #eaeaea;
+    cursor: pointer;
+    float: left;
+}
+
+    .diss_con .disslist {
+        width: 333px;
+        height: auto;
+        border-bottom: 1px dotted #eaeaea;
+        padding: 20px 18px 10px 18px;
+        _padding: 20px 10px 10px 10px;
+        float: left;
+    }
+
+        .diss_con .disslist .disstitle {
+            width: 283px;
+            height: 20px;
+            font-size: 14px;
+            text-align: left;
+            line-height: 20px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .diss_con .disslist .dissmore {
+            width: 50px;
+            height: 20px;
+            font-size: 12px;
+            color: #00a8e8;
+            text-align: left;
+            line-height: 20px;
+            overflow: hidden;
+            margin-right: -17px;
+            float: right;
+        }
+
+            .diss_con .disslist .dissmore a:link {
+                text-decoration: none;
+                color: #6e6e6e;
+            }
+
+            .diss_con .disslist .dissmore a:visited {
+                text-decoration: none;
+                color: #6e6e6e;
+            }
+
+            .diss_con .disslist .dissmore a:hover {
+                text-decoration: none;
+                color: #00a8e8;
+            }
+
+            .diss_con .disslist .dissmore a:active {
+                text-decoration: none;
+                color: #6e6e6e;
+            }
+
+        .diss_con .disslist .disscon {
+            width: 333px;
+            height: 50px;
+            float: left;
+        }
+
+            .diss_con .disslist .disscon li {
+                width: 90px;
+                height: 25px;
+                margin-right: 13px;
+                font-size: 12px;
+                color: #666;
+                text-align: left;
+                line-height: 25px;
+                padding-left: 8px;
+                background: url(../../Images/dot.gif) no-repeat;
+                overflow: hidden;
+                float: left;
+            }
+
+#disscloud_Tab {
+    width: 600px;
+    height: 362px;
+    float: left;
+}
+
+.disscloud_Menubox {
+    width: 600px;
+    height: 40px;
+    border-bottom: 2px solid #eaeaea;
+    float: left;
+}
+
+    .disscloud_Menubox li {
+        width: auto;
+        height: 40px;
+        font-size: 16px;
+        color: #666666;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        padding: 0px 20px 0px 20px;
+        float: left;
+    }
+
+        .disscloud_Menubox li.hover {
+            width: auto;
+            height: 40px;
+            font-size: 16px;
+            color: #00a8e8;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 2px solid #00a8e8;
+            cursor: pointer;
+            padding: 0px 20px 0px 20px;
+            float: left;
+        }
+
+.disscloud_Contentbox {
+    width: 600px;
+    height: 320px;
+    float: left;
+}
+
+#tagscloud {
+    width: 600px;
+    height: 260px;
+    position: relative;
+    font-size: 12px;
+    color: #333;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+    #tagscloud a {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: #333;
+        font-family: Arial;
+        text-decoration: none;
+        margin: 0 10px 15px 0;
+        line-height: 18px;
+        text-align: center;
+        font-size: 12px;
+        padding: 1px 5px;
+        display: inline-block;
+        border-radius: 3px;
+    }
+
+        #tagscloud a.tagc {
+            background: #00a8e8;
+            color: #fff;
+        }
+
+        #tagscloud a:hover {
+            color: #fff;
+            background: #00a8e8;
+        }
+
+.dissdept {
+    width: 960px;
+    height: auto !important;
+    padding: 19px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 30px;
+    float: left;
+}
+
+    .dissdept .title {
+        width: 960px;
+        height: 30px;
+        font-size: 18px;
+        color: #17afea;
+        text-align: left;
+        line-height: 30px;
+        border-bottom: 1px solid #eaeaea;
+        float: left;
+    }
+
+        .dissdept .title .text {
+            width: auto;
+            height: 30px;
+            border-bottom: 1px solid #00a8e8;
+            float: left;
+        }
+
+    .dissdept .con {
+        width: 960px;
+        height: auto !important;
+        margin-top: 20px;
+        float: left;
+    }
+
+        .dissdept .con li {
+            width: 90px;
+            height: 30px;
+            margin-right: 13px;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            line-height: 30px;
+            overflow: hidden;
+            float: left;
+        }
+
+.sym_main1 aside .area .rtcon1 {
+    width: 300px;
+    height: auto !important;
+    margin-top: 10px;
+    float: left;
+}
+
+.sym_main1 aside .area .rtcon2 {
+    width: 300px;
+    height: auto !important;
+    margin-top: 10px;
+    float: left;
+}
+
+.sym_main1 aside .area .rtcon3 {
+    width: 300px;
+    height: auto !important;
+    margin-top: 10px;
+    float: left;
+}
+
+.sym_main1 aside .area .rtcon1 li {
+    width: 300px;
+    height: 35px;
+    float: left;
+}
+
+    .sym_main1 aside .area .rtcon1 li .dot {
+        width: 20px;
+        height: 20px;
+        margin: 7px 10px 7px 0px;
+        font-size: 12px;
+        color: #FFF;
+        text-align: center;
+        line-height: 20px;
+        background-color: #00a8e8;
+        float: left;
+    }
+
+    .sym_main1 aside .area .rtcon1 li .wdot {
+        width: 20px;
+        height: 20px;
+        margin: 7px 10px 7px 0px;
+        font-size: 12px;
+        color: #FFF;
+        text-align: center;
+        line-height: 20px;
+        background-color: #ccc;
+        float: left;
+    }
+
+    .sym_main1 aside .area .rtcon1 li .word {
+        width: 270px;
+        height: 35px;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        line-height: 35px;
+        float: left;
+    }
+
+.sym_main1 aside .area .rtcon3 .rtlist {
+    width: 300px;
+    height: auto !important;
+    border-bottom: 1px dotted #eaeaea;
+    cursor: pointer;
+    float: left;
+}
+
+    .sym_main1 aside .area .rtcon3 .rtlist .over {
+        width: 300px;
+        height: 96px;
+        padding: 10px 0px 10px 0px;
+        background: #fcfcfc;
+        float: left;
+    }
+
+        .sym_main1 aside .area .rtcon3 .rtlist .over .hosphoto {
+            width: 90px;
+            height: 90px;
+            padding: 2px;
+            border: 1px solid #cccccc;
+            margin-right: 14px;
+            float: left;
+        }
+
+        .sym_main1 aside .area .rtcon3 .rtlist .over .hoscon {
+            width: 190px;
+            height: 96px;
+            float: left;
+        }
+
+        .sym_main1 aside .area .rtcon3 .rtlist .over .hosname {
+            width: 190px;
+            height: 26px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #666;
+            text-align: left;
+            line-height: 26px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .sym_main1 aside .area .rtcon3 .rtlist .over .hosmsg {
+            width: 190px;
+            height: 23px;
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            line-height: 23px;
+            overflow: hidden;
+            float: left;
+        }
+
+            .sym_main1 aside .area .rtcon3 .rtlist .over .hosmsg span {
+                color: #00a8e8;
+                margin-left: 10px;
+            }
+
+    .sym_main1 aside .area .rtcon3 .rtlist .out {
+        width: 300px;
+        height: 40px;
+        padding: 10px 0px 10px 0px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #666;
+        text-align: left;
+        line-height: 40px;
+        float: left;
+    }
+
+.sym_main1 aside .area .rtcon2 .rtarea {
+    width: 300px;
+    height: auto !important;
+    float: left;
+}
+
+    .sym_main1 aside .area .rtcon2 .rtarea .letter {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        float: left;
+    }
+
+    .sym_main1 aside .area .rtcon2 .rtarea .letterover {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+        font-size: 12px;
+        color: #FFF;
+        background-color: #00a8e8;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        float: left;
+    }
+
+    .sym_main1 aside .area .rtcon2 .rtarea .letter:hover {
+        width: 18px;
+        height: 18px;
+        margin: 5px;
+        font-size: 12px;
+        color: #00a8e8;
+        text-align: center;
+        line-height: 18px;
+        cursor: pointer;
+        border: 1px solid #00a8e8;
+        float: left;
+    }
+
+    .sym_main1 aside .area .rtcon2 .rtarea .letmain {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        color: #00a8e8;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 10px;
+        float: left;
+    }
+
+    .sym_main1 aside .area .rtcon2 .rtarea .letcon {
+        width: 260px;
+        height: auto !important;
+        float: left;
+    }
+
+        .sym_main1 aside .area .rtcon2 .rtarea .letcon li {
+            width: auto;
+            height: 30px;
+            padding: 0px 10px 0px 10px;
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            line-height: 30px;
+            float: left;
+        }
+
+            .sym_main1 aside .area .rtcon2 .rtarea .letcon li span a:link {
+                text-decoration: none;
+                text-align: right;
+                color: #00a8e8;
+            }
+
+            .sym_main1 aside .area .rtcon2 .rtarea .letcon li span a:visited {
+                text-decoration: none;
+                text-align: right;
+                color: #00a8e8;
+            }
+
+            .sym_main1 aside .area .rtcon2 .rtarea .letcon li span a:hover {
+                text-decoration: none;
+                text-align: right;
+                color: #000;
+            }
+
+            .sym_main1 aside .area .rtcon2 .rtarea .letcon li span a:active {
+                text-decoration: none;
+                text-align: right;
+                color: #00a8e8;
+            }
+
+
+/* rotate */
+#rotate1 {
+    height: 300px;
+    width: 550px;
+    position: relative;
+    margin-left: 36px;
+    margin-top: 15px
+}
+
+    #rotate1 a {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: #6e6e6e;
+        padding: 3px 6px;
+        font-size: 14px;
+        font-family: "微软雅黑";
+    }
+
+        #rotate1 a:hover {
+            border: 1px solid #eee;
+            background: #00a8e7;
+            border-radius: 5px;
+            color: #FFF
+        }
+
+
+.zimulist {
+    float: right;
+    margin-top: 10px;
+}
+
+    .zimulist a {
+        color: #00a8e8;
+        text-decoration: none;
+    }
+
+        .zimulist a:link {
+            color: #6e6e6e;
+            cursor: pointer;
+            text-decoration: none;
+        }
