@@ -523,24 +523,24 @@ img[data-v-2aed525b] {
 }
 
 .home .bottom[data-v-7a25ad46] {
-    margin-top:200px
 }
 
 .home .bottom .left[data-v-7a25ad46] {
     float: left;
-    width: calc(100% - 700px);
+    width: calc(100% - 490px);
     margin-top: -20px;
-    margin-left:250px;
+    margin-left: 120px;
 }
 
 .home .bottom .right[data-v-7a25ad46] {
     width: 200px;
     float: right;
-    margin-right: 200px;
+    margin-right: 150px;
     position: -webkit-sticky;
     position: sticky;
     top: 20px
 }
+
 
 .home .bottom .right .space[data-v-7a25ad46] {
     margin-top: 40px

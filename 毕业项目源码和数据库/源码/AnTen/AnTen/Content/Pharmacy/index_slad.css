@@ -1,0 +1,5535 @@
+﻿@import "//at.alicdn.com/t/font_266863_1kvfehjmiai.css";
+
+.bold {
+    font-weight: bold;
+}
+
+.iconfont {
+    font-family: "iconfont";
+    font-size: 16px;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex_item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+
+.text1 {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #b8d2e3;
+    padding: 0 10px;
+}
+
+.confirm_btn1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #e33b3e;
+    width: 220px;
+    height: 48px;
+    line-height: 50px;
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .confirm_btn1 i {
+        display: inline-block;
+        vertical-align: middle;
+        margin: -4px 5px 0 0;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .confirm_btn1:hover {
+        background: #f35d60;
+        color: #fff;
+    }
+
+/*****  header *****/
+.siteNav {
+    height: 30px;
+    background: #f1f1f1;
+    z-index: 9999;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+    .siteNav .site_nav_bd {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .siteNav .site_nav_bd .site_nav_bd_l {
+            float: left;
+            position: relative;
+            line-height: 30px;
+        }
+
+            .siteNav .site_nav_bd .site_nav_bd_l strong {
+                display: inline-block;
+                position: relative;
+                line-height: 31px;
+                width: 120px;
+                height: 31px;
+                text-align: center;
+                z-index: 10;
+                font-size: 12px;
+            }
+
+                .siteNav .site_nav_bd .site_nav_bd_l strong b {
+                    color: #0a5c5a;
+                    display: inline-block;
+                    padding: 0 10px 0 15px;
+                }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .address {
+                width: 610px;
+                padding: 10px;
+            }
+
+                .siteNav .site_nav_bd .site_nav_bd_l .address a {
+                    display: inline-block;
+                    padding: 0 10px;
+                    width: 36px;
+                    text-align: center;
+                    margin-bottom: 2px;
+                    font-size: 12px;
+                }
+
+                .siteNav .site_nav_bd .site_nav_bd_l .address .cur {
+                    background: #e53b46;
+                    color: #fff;
+                }
+
+            .siteNav .site_nav_bd .site_nav_bd_l:hover strong {
+                background: #fff;
+            }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .hd {
+                height: 30px;
+                line-height: 30px;
+                background: #f4f4f4;
+                padding: 0 20px;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+            }
+
+                .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .hd ul {
+                    float: left;
+                    position: absolute;
+                    left: 20px;
+                    top: -1px;
+                    height: 32px;
+                }
+
+                    .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .hd ul li {
+                        float: left;
+                        padding: 0 15px;
+                        cursor: pointer;
+                        color: #4095d4;
+                        font-weight: bold;
+                    }
+
+                        .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .hd ul li.on {
+                            height: 30px;
+                            background: #fff;
+                            border: 1px solid #ddd;
+                            border-bottom: 2px solid #fff;
+                        }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd ul {
+                padding: 5px;
+                zoom: 1;
+                overflow: hidden;
+            }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd li {
+                line-height: 24px;
+                float: left;
+            }
+
+                .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd li a {
+                    width: 170px !important;
+                    text-align: left;
+                }
+
+                    .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd li a:hover {
+                        color: #4095d4;
+                        text-decoration: underline;
+                    }
+
+            .siteNav .site_nav_bd .site_nav_bd_l a:hover {
+                color: #4095d4;
+            }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd .bd_city {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+                .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd .bd_city i {
+                    color: #4095d4;
+                }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd .bd_fd {
+                font-size: 15px;
+                line-height: 30px;
+                font-weight: bold;
+                color: #4095d4;
+                position: relative;
+                left: 18px;
+                height: 30px;
+            }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd dl {
+                position: relative;
+                left: 10px;
+            }
+
+                .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd dl dt {
+                    font-size: 13px;
+                }
+
+            .siteNav .site_nav_bd .site_nav_bd_l .slideTxtBox .bd li .date {
+                float: right;
+                color: #999;
+            }
+
+    .siteNav .site_nav_bd_r {
+        float: right;
+    }
+
+        .siteNav .site_nav_bd_r ul li {
+            float: left;
+            position: relative;
+            line-height: 30px;
+            margin-right: 5px;
+        }
+
+            .siteNav .site_nav_bd_r ul li a {
+                display: block;
+                padding: 0 10px;
+                font-size: 12px;
+            }
+
+                .siteNav .site_nav_bd_r ul li a:hover {
+                    color: #4095d4;
+                    text-decoration: none;
+                }
+
+            .siteNav .site_nav_bd_r ul li :hover {
+                background: #fff;
+            }
+
+                .siteNav .site_nav_bd_r ul li :hover strong {
+                    height: 31px;
+                    border: 1px solid #eee;
+                }
+
+            .siteNav .site_nav_bd_r ul li strong {
+                display: inline-block;
+                position: relative;
+                line-height: 31px;
+                padding: 0 5px;
+                height: 31px;
+                z-index: 10;
+                font-size: 12px;
+            }
+
+            .siteNav .site_nav_bd_r ul li.icp {
+                color: #999;
+                font-size: 12px;
+            }
+
+                .siteNav .site_nav_bd_r ul li.icp i {
+                    display: inline-block;
+                    *display: inline;
+                    *zoom: 1;
+                    vertical-align: middle;
+                    color: #bc871f;
+                    margin-right: 5px;
+                }
+
+                .siteNav .site_nav_bd_r ul li.icp :hover {
+                    background: none;
+                }
+
+.site_nav_bd_r .topmenu #my_username_header span:hover {
+    color: #4095d4;
+    cursor: pointer;
+}
+
+.siteNav .hidebox {
+    position: absolute;
+    display: none;
+    background: #fff;
+    border: 1px solid #eee;
+    border-top: 0;
+    top: 30px;
+    z-index: 999;
+}
+
+.siteNav .myyaofangwang {
+    width: 85px;
+    padding: 5px 0 10px 0;
+}
+
+    .siteNav .myyaofangwang a {
+        line-height: 25px;
+    }
+
+.siteNav .mobEdi {
+    width: 170px;
+    padding: 10px 15px;
+}
+
+    .siteNav .mobEdi dl {
+        margin-bottom: 10px;
+    }
+
+        .siteNav .mobEdi dl dt {
+            font-size: 12px;
+            line-height: 35px;
+        }
+
+            .siteNav .mobEdi dl dt span {
+                color: #e53b46;
+                font-size: 14px;
+                margin-right: 20px;
+            }
+
+        .siteNav .mobEdi dl dd {
+            text-align: center;
+        }
+
+.siteNav .siteNav {
+    width: 720px;
+    height: 185px;
+    left: -640px;
+    padding: 20px 0;
+}
+
+    .siteNav .siteNav dl {
+        width: 245px;
+        float: left;
+        padding: 0 40px;
+        border-right: 1px solid #eee;
+    }
+
+        .siteNav .siteNav dl dt {
+            font-size: 16px;
+            color: #0c69ae;
+            margin-bottom: 10px;
+        }
+
+        .siteNav .siteNav dl dd a {
+            display: block;
+            width: 32%;
+            line-height: 30px;
+            float: left;
+            padding: 0;
+        }
+
+            .siteNav .siteNav dl dd a.right {
+                text-align: right;
+            }
+
+            .siteNav .siteNav dl dd a.center {
+                text-align: center;
+            }
+
+        .siteNav .siteNav dl.two {
+            width: 200px;
+        }
+
+            .siteNav .siteNav dl.two dd a {
+                width: 32%;
+            }
+
+                .siteNav .siteNav dl.two dd a.auto {
+                    width: 100%;
+                }
+
+        .siteNav .siteNav dl.last {
+            width: 70px;
+            border-right: 0;
+            padding-right: 0;
+        }
+
+            .siteNav .siteNav dl.last dd a {
+                width: 100%;
+            }
+
+.siteNav i.iconfont {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+    .siteNav i.iconfont.icon-xiala {
+        margin-top: -4px;
+    }
+
+.site_head {
+    clear: both;
+    height: 120px;
+    min-width: 1190px;
+    _width: 1190px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+    /*****  hotwords *****/
+    .site_head .logo {
+        float: left;
+        background: url("//img.yaofang.cn/pc/logo.png?v=201701") no-repeat;
+        width: 390px;
+        height: 50px;
+        margin: 35px 0 0 0;
+    }
+        /*
+    .site_head .logo a {
+      display: block;
+      width: 339px;
+      height: 50px; }
+     */
+        .site_head .logo a {
+            display: block;
+            width: 200px;
+            height: 50px;
+            float: left;
+        }
+
+        .site_head .logo .advertisement {
+            width: auto !important;
+            height: 58px;
+            float: right;
+        }
+
+            .site_head .logo .advertisement img {
+                width: 144px;
+                height: 58px;
+                float: right;
+            }
+
+    .site_head .logo_other {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 1000;
+    }
+    /*
+  .site_head .mod_search {
+    float: left;
+    margin: 35px 0 0 45px; }
+   */
+    .site_head .mod_search {
+        float: left;
+        margin: 35px 0 0 20px;
+    }
+
+    .site_head .searchForm {
+        position: relative;
+        width: 500px;
+        height: 33px;
+        border: 3px solid #0c69ae;
+    }
+
+    .site_head .search-wrapper {
+        float: left;
+        width: 420px;
+        background: #fff;
+    }
+
+    .site_head .wrap-search {
+        width: 445px;
+        height: 33px;
+        line-height: 33px;
+        padding-left: 12px;
+        color: #666;
+    }
+
+    .site_head .search-button {
+        float: left;
+        width: 80px;
+        height: 34px;
+        line-height: 34px;
+        overflow: hidden;
+        background: #0c69ae;
+        text-align: center;
+    }
+
+    .site_head .search-btn {
+        font-size: 16px;
+        line-height: 31px;
+        cursor: pointer;
+        color: #fff;
+        font-family: "microsoft yahei";
+    }
+
+    .site_head .search-more span {
+        color: #999;
+        margin-right: 6px;
+    }
+
+    .site_head .search-more a {
+        margin-right: 8px;
+        color: #999;
+        line-height: 25px;
+        font-size: 12px;
+    }
+
+        .site_head .search-more a:hover {
+            color: #d60035;
+        }
+
+    .site_head .s-m-more {
+        color: #F00 !important;
+    }
+
+    .site_head .float_search_logo {
+        float: left;
+        margin-top: 5px;
+        width: 340px;
+    }
+
+    .site_head .search_logo_css {
+        display: block;
+        width: 190px;
+        background: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+    }
+
+        .site_head .search_logo_css :hover {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+    .site_head .phone {
+        float: right;
+        margin-top: 38px;
+    }
+
+        .site_head .phone ul li {
+            float: left;
+            margin-right: 0;
+            color: #999;
+            font-size: 12px;
+        }
+
+            .site_head .phone ul li i {
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                vertical-align: middle;
+                margin: 0 5px 0 0;
+                float: left;
+                text-align: center;
+                font-size: 36px;
+                color: #4095d4;
+            }
+
+            .site_head .phone ul li span b {
+                display: block;
+                font-weight: normal;
+                color: #4095d4;
+            }
+
+            .site_head .phone ul li.last {
+                width: 150px;
+                margin-right: 20px;
+            }
+
+                .site_head .phone ul li.last i {
+                    color: #bc8720;
+                }
+
+                .site_head .phone ul li.last span b {
+                    color: #bc8720;
+                    font-size: 16px;
+                }
+
+    .site_head .hotwords {
+        position: absolute;
+        top: 35px;
+        left: -3px;
+        z-index: 995;
+        background: #fff;
+        width: 420px;
+        border: 1px solid #0c69ae;
+        line-height: 30px;
+        display: none;
+    }
+
+        .site_head .hotwords table {
+            line-height: 30px;
+        }
+
+        .site_head .hotwords ul li {
+            height: 30px;
+        }
+
+            .site_head .hotwords ul li a {
+                display: block;
+                padding: 0 10px;
+                color: #0c69ae;
+            }
+
+                .site_head .hotwords ul li a h1 {
+                    font-size: 12px;
+                    float: left;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    -moz-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 320px;
+                }
+
+                .site_head .hotwords ul li a span, .site_head .hotwords ul li a i {
+                    display: block;
+                    float: right;
+                    color: #999;
+                    font-size: 12px;
+                }
+
+                .site_head .hotwords ul li a i {
+                    display: none;
+                }
+
+        .site_head .hotwords li.on {
+            background: #fcf5e6;
+        }
+
+        .site_head .hotwords p {
+            text-align: right;
+            border-top: 1px solid #e9e9e9;
+            clear: both;
+            padding: 0 10px;
+            font-size: 12px;
+        }
+
+.header-wrapper {
+    border-bottom: 2px solid #0c69ae;
+    *height: 1%;
+}
+
+    .header-wrapper:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .header-wrapper .headerNavMain {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-wrapper .nav-all {
+        float: left;
+        background: #0c69ae;
+        width: 205px;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+    }
+
+        .header-wrapper .nav-all span {
+            width: 190px;
+            font-size: 17px;
+            color: #fff;
+            display: inline-block;
+            cursor: default;
+        }
+
+    .header-wrapper .header_links {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+    }
+
+        .header-wrapper .header_links ul li {
+            float: left;
+            margin-left: 30px;
+            position: relative;
+        }
+
+            .header-wrapper .header_links ul li a {
+                font-size: 16px;
+                display: block;
+            }
+
+                .header-wrapper .header_links ul li a:hover {
+                    color: #4095d4;
+                }
+
+            .header-wrapper .header_links ul li ul {
+                position: absolute;
+                background: #fff;
+                border: 1px solid #e9e9e9;
+                width: 90px;
+                text-align: center;
+                padding: 10px 0;
+                top: 40px;
+                left: -8px;
+                display: none;
+                z-index: 2;
+            }
+
+                .header-wrapper .header_links ul li ul li {
+                    margin: 0;
+                    float: inherit;
+                    line-height: 30px;
+                }
+
+                    .header-wrapper .header_links ul li ul li a {
+                        font-size: 12px;
+                    }
+
+            .header-wrapper .header_links ul li .hot_icon {
+                position: absolute;
+                width: 27px;
+                height: 17px;
+                right: -22px;
+                top: -3px;
+            }
+
+.yHeader {
+    width: 100%;
+    text-align: left;
+}
+
+    .yHeader .yNavIndex {
+        width: 1190px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .yHeader .pullDown {
+        z-index: 1;
+        position: absolute;
+    }
+
+    .yHeader .pullDownList {
+        width: 205px;
+        height: 405px;
+        background: #1978be;
+        position: relative;
+        z-index: 2;
+        padding: 10px 0;
+    }
+
+        .yHeader .pullDownList li {
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #fefcfc;
+            padding-left: 10px;
+            position: relative;
+        }
+
+            .yHeader .pullDownList li i {
+                color: #fff;
+                font-size: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                margin: -4px 5px 0 0;
+            }
+
+            .yHeader .pullDownList li a {
+                color: #fefcfc;
+                font-size: 13px;
+            }
+
+                .yHeader .pullDownList li a:hover {
+                    text-decoration: underline;
+                    font-size: 13px;
+                }
+
+            .yHeader .pullDownList li.menuliselected {
+                background: #fff;
+            }
+
+                .yHeader .pullDownList li.menuliselected span {
+                    top: 14px;
+                    right: 7px;
+                    border-left: 4px solid transparent;
+                    border-top: 4px solid #fff;
+                    border-right: 4px solid transparent;
+                    border-bottom: 0;
+                }
+
+                .yHeader .pullDownList li.menuliselected a {
+                    color: #1d8bd7;
+                }
+
+                .yHeader .pullDownList li.menuliselected i {
+                    color: #1d8bd7;
+                }
+
+            .yHeader .pullDownList li.menulihover {
+                background: #fff;
+                color: #1d8bd7;
+            }
+
+                .yHeader .pullDownList li.menulihover a, .yHeader .pullDownList li.menulihover i {
+                    color: #1d8bd7;
+                }
+
+    .yHeader .yMenuListCon {
+        width: 995px;
+        height: 424px;
+        position: absolute;
+        z-index: 2;
+        top: 2px;
+        left: 205px;
+        overflow: hidden;
+        clear: both;
+        background: #fff;
+    }
+
+        .yHeader .yMenuListCon .yMenuListConin .left {
+            float: left;
+            width: 730px;
+            padding-top: 20px;
+        }
+
+            .yHeader .yMenuListCon .yMenuListConin .left dl {
+                line-height: 25px;
+                margin-bottom: 10px;
+                *height: 1%;
+            }
+
+                .yHeader .yMenuListCon .yMenuListConin .left dl:after {
+                    clear: both;
+                    content: '.';
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    overflow: hidden;
+                }
+
+                .yHeader .yMenuListCon .yMenuListConin .left dl dt {
+                    width: 120px;
+                    text-align: right;
+                    float: left;
+                    margin-right: 5px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+
+                    .yHeader .yMenuListCon .yMenuListConin .left dl dt i {
+                        font-size: 12px;
+                        margin-left: 5px;
+                    }
+
+                .yHeader .yMenuListCon .yMenuListConin .left dl dd {
+                    float: left;
+                    width: 600px;
+                }
+
+                    .yHeader .yMenuListCon .yMenuListConin .left dl dd a {
+                        font-size: 12px;
+                    }
+
+                        .yHeader .yMenuListCon .yMenuListConin .left dl dd a:after {
+                            background: #ccc;
+                            height: 10px;
+                            width: 1px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin: -2px 2px 0 5px;
+                            content: " ";
+                        }
+
+            .yHeader .yMenuListCon .yMenuListConin .left .cate_see_more {
+                position: absolute;
+                right: 260px;
+                bottom: 5px;
+                width: 90px;
+                display: inline-block;
+            }
+
+                .yHeader .yMenuListCon .yMenuListConin .left .cate_see_more dd {
+                    display: inline-block;
+                    font-size: 12px;
+                    font-weight: bold;
+                    width: 74px;
+                    height: 21px;
+                    line-height: 21px;
+                    text-align: center;
+                    background: #bbbcbb;
+                }
+
+                    .yHeader .yMenuListCon .yMenuListConin .left .cate_see_more dd i {
+                        font-size: 12px;
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        display: inline-block;
+                        background: #a9a9a9;
+                        position: relative;
+                        left: 2px;
+                    }
+
+        .yHeader .yMenuListCon .yMenuListConin .right {
+            border-left: 1px solid #e9e9e9;
+            margin-top: 25px;
+            float: right;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+            .yHeader .yMenuListCon .yMenuListConin .right ul {
+                padding-left: 10px;
+            }
+
+                .yHeader .yMenuListCon .yMenuListConin .right ul li {
+                    text-align: center;
+                    margin-bottom: 10px;
+                    border-bottom: 1px solid #e9e9e9;
+                }
+
+                    .yHeader .yMenuListCon .yMenuListConin .right ul li img {
+                        width: 210px;
+                        height: 165px;
+                    }
+
+/*****  right menu *****/
+.toolbar-wrap {
+    width: 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    height: 100%;
+}
+
+    .toolbar-wrap .toolbar {
+        width: 40px;
+        height: 100%;
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        background: #4d4d4c;
+    }
+
+    .toolbar-wrap ul i {
+        font-size: 22px;
+        margin-left: -2px;
+    }
+
+    .toolbar-wrap ul a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        position: relative;
+        font-size: 20px;
+        left: 0;
+        *left: -15px;
+        z-index: 1;
+        padding: 0;
+        text-align: center;
+    }
+
+    .toolbar-wrap ul .mp_tooltip {
+        height: 40px;
+        line-height: 40px;
+        width: 92px;
+        position: absolute;
+        z-index: 2;
+        left: -121px;
+        top: 0;
+        background: #444851;
+        color: #d8d8d8;
+        text-align: center;
+        display: block;
+        visibility: hidden;
+    }
+
+    .toolbar-wrap ul .mp_qrcode {
+        padding: 10px;
+        width: 89px;
+        height: 89px;
+        top: -72px;
+        background: #fff;
+        z-index: 3;
+        position: absolute;
+        left: -110px;
+        left: -111px\0;
+        display: none;
+    }
+
+    .toolbar-wrap .tbar-tab-cart {
+        background: url("//img.yaofang.cn/pc/rightNav_line.jpg?v=201701") no-repeat center top;
+        padding-top: 5px;
+    }
+
+    .toolbar-wrap .toolbar-tabs {
+        position: absolute;
+        top: 30%;
+        left: 0;
+        margin-top: -190px;
+        *margin-top: -220px;
+        z-index: 2;
+        width: 40px;
+    }
+
+        .toolbar-wrap .toolbar-tabs .message_list {
+            line-height: 16px;
+            margin: 10px 0 10px;
+        }
+
+            .toolbar-wrap .toolbar-tabs .message_list i {
+                font-size: 18px;
+                line-height: 20px;
+                height: 20px;
+            }
+
+            .toolbar-wrap .toolbar-tabs .message_list .txt {
+                width: 16px;
+                display: block;
+                height: 60px;
+                cursor: pointer;
+                color: #fff;
+                text-align: center;
+                margin: 10px auto;
+                font-size: 12px;
+            }
+
+            .toolbar-wrap .toolbar-tabs .message_list .cart_num {
+                width: 21px;
+                height: 20px;
+                display: block;
+                border-radius: 50%;
+                background: #e53b46;
+                text-align: center;
+                line-height: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                cursor: pointer;
+                color: #fff;
+                font-size: 12px;
+            }
+
+        .toolbar-wrap .toolbar-tabs li {
+            position: relative;
+            display: block;
+            left: 0;
+            top: 0;
+        }
+
+            .toolbar-wrap .toolbar-tabs li:hover {
+                background: #e53b46;
+                text-decoration: none;
+            }
+
+    .toolbar-wrap .toolbar-footer {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 38px;
+        background: #4d4d4c;
+        z-index: 1;
+    }
+
+    .toolbar-wrap .toolbar-panels {
+        position: absolute;
+        left: 40px;
+        width: 280px;
+        height: 100%;
+        background: #fff;
+        z-index: 3;
+        top: 0;
+        /*** tbar-panel-recentBrowsing ***/
+        /*** tbar-panel-myAccount ***/
+        /*** tbar-panel-follow ***/
+        /*** shopCart ***/
+    }
+
+        .toolbar-wrap .toolbar-panels .toolbar-panel {
+            width: 280px;
+            height: 100%;
+            position: absolute;
+            background: #fff;
+        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing h1.title, .toolbar-wrap .toolbar-panels .tbar-panel-follow h1.title {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            padding-left: 25px;
+            background: #f5f8fa;
+            border-bottom: 1px solid #f0f0f0;
+            background: #f1f1f1;
+            border-bottom: 0;
+            padding: 0 10px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing h1.title i, .toolbar-wrap .toolbar-panels .tbar-panel-follow h1.title i {
+                display: inline-block;
+                vertical-align: middle;
+                margin: -4px 5px 0 0;
+                margin: -2px 5px 0 0;
+                font-size: 16px;
+            }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing h1.title a, .toolbar-wrap .toolbar-panels .tbar-panel-follow h1.title a {
+                float: right;
+                font-size: 24px;
+                color: #5b5b5b;
+                width: 40px;
+                text-align: center;
+            }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing .overflow, .toolbar-wrap .toolbar-panels .tbar-panel-follow .overflow {
+            max-height: 100%;
+            overflow: auto;
+        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl {
+            *height: 1%;
+            border-bottom: 10px solid #f1f1f1;
+            padding: 15px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl:after, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt {
+                line-height: 30px;
+                border-bottom: 1px solid #f0f0f0;
+                height: 30px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt span, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt span {
+                    font-size: 12px;
+                    float: left;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    -moz-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 185px;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong {
+                    float: right;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong b, .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong a, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong b, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong a {
+                        display: inline-block;
+                        color: #cdcfd2;
+                        margin-left: 10px;
+                        line-height: 30px;
+                        height: 30px;
+                    }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong b.cur, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong b.cur {
+                            color: #e53b46;
+                        }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong .icon-shoucang1.cur, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong .icon-shoucang1.cur {
+                        color: #e53b46;
+                    }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong a, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong a {
+                        font-size: 15px;
+                    }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dt strong a:hover, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dt strong a:hover {
+                            color: #333;
+                        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dd, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dd {
+                margin-top: 10px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dd img, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dd img {
+                    float: left;
+                    width: 70px;
+                    height: 70px;
+                    margin-top: 10px;
+                    margin-right: 26px;
+                    margin-left: 20px;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dd span, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dd span {
+                    float: left;
+                    margin-left: 15px;
+                    margin-top: 15px;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dd span b, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dd span b {
+                        display: block;
+                        color: #e53b46;
+                        font-weight: normal;
+                        line-height: 25px;
+                    }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dd span a, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dd span a {
+                        display: block;
+                        background: #1d8bd7;
+                        width: 92px;
+                        height: 32px;
+                        text-align: center;
+                        color: #fff;
+                        display: inline-block;
+                        line-height: 32px;
+                        font-size: 12px;
+                        width: 85px;
+                        line-height: 25px;
+                        height: 25px;
+                        font-size: 13px;
+                        background: #e53b46;
+                        margin-top: 5px;
+                    }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-recentBrowsing dl dd span a:hover, .toolbar-wrap .toolbar-panels .tbar-panel-follow dl dd span a:hover {
+                            background: #f35d60;
+                        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount h1.title {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            padding-left: 25px;
+            background: #f5f8fa;
+            border-bottom: 1px solid #f0f0f0;
+            background: #f1f1f1;
+            border-bottom: 0;
+            padding: 0 10px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-myAccount h1.title i {
+                display: inline-block;
+                vertical-align: middle;
+                margin: -4px 5px 0 0;
+                margin: -2px 5px 0 0;
+                font-size: 16px;
+            }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-myAccount h1.title a {
+                float: right;
+                font-size: 24px;
+                color: #5b5b5b;
+                width: 40px;
+                text-align: center;
+            }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl {
+            padding: 30px 25px;
+            margin-bottom: 10px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dt {
+                background: #fff;
+                height: 108px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dt img {
+                    width: 104px;
+                    height: 104px;
+                    padding: 2px;
+                    border: 1px solid #e9e9e9;
+                    margin-bottom: 15px;
+                    float: left;
+                    margin-right: 5px;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dt span {
+                    float: left;
+                    line-height: 25px;
+                    margin-top: 5px;
+                }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd {
+                clear: both;
+                line-height: 25px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l1 span {
+                    display: block;
+                    font-size: 12px;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l1 span b {
+                        font-weight: normal;
+                        color: #e53b46;
+                    }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l2 span {
+                    float: left;
+                    display: inline-block;
+                    font-size: 12px;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l2 span.process {
+                        width: 120px;
+                        height: 13px;
+                        border: 1px solid #e9e9e9;
+                        background: #fff;
+                        margin: 5px;
+                    }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l2 span.process i {
+                            background: #71b247;
+                            display: block;
+                            height: 100%;
+                            width: 20%;
+                        }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l2 span.green {
+                        color: #71b247;
+                        margin-left: 5px;
+                    }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount dl dd.l2 a {
+                    color: #5f89c5;
+                    font-weight: bold;
+                    margin-left: 20px;
+                    font-size: 12px;
+                }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul {
+            margin: 0 10px;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 20px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li {
+                float: left;
+                width: 50%;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a {
+                    height: auto;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a i {
+                        width: 45px;
+                        height: 45px;
+                        line-height: 45px;
+                        border-radius: 45px;
+                        display: inline-block;
+                        font-size: 42px;
+                        color: #5f89c5;
+                    }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a i.icon-wodeyouhuiquan {
+                            color: #bc871f;
+                        }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a i.icon-wodeyucunkuan {
+                            color: #f35d60;
+                        }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a i.icon-shequ-in {
+                            color: #fb479a;
+                        }
+
+                        .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a i.icon-yaopin {
+                            color: #32c718;
+                        }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li a b {
+                        display: block;
+                        font-size: 12px;
+                        color: #5b5b5b;
+                        line-height: 25px;
+                        font-weight: normal;
+                    }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-myAccount ul li:hover {
+                    background: none;
+                }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-follow .tab_menu {
+            float: inherit;
+            border-bottom: 4px solid #f1f1f1;
+            height: 40px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-follow .tab_menu ul li {
+                padding: 0;
+                margin: 0;
+                width: 50%;
+                background: none;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-follow .tab_menu ul li a {
+                    color: #5b5b5b;
+                    font-size: 14px;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-follow .tab_menu ul li.on {
+                    border-bottom: 4px solid #e53b46;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-follow .tab_menu ul li.on a {
+                        color: #e53b46;
+                    }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-follow .content dl {
+            padding-top: 10px;
+        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-follow .content p {
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-follow .content p a {
+                color: #5b5b5b;
+                font-size: 12px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-follow .content p a:hover {
+                    color: #4095d4;
+                }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-follow .flagShipStore {
+            display: none;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-follow .flagShipStore .content ol {
+                width: 235px;
+                height: 140px;
+                margin-left: auto;
+                margin-right: auto;
+                background: #f6f6f6;
+                margin-top: 20px;
+                text-align: center;
+                border: 1px solid #f0f0f0;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-follow .flagShipStore .content ol span {
+                    display: block;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #f0f0f0;
+                    background: #fff;
+                    height: 55px;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-follow .flagShipStore .content ol strong {
+                    padding: 10px 0;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-follow .flagShipStore .content ol strong i {
+                        font-size: 12px;
+                        line-height: 30px;
+                    }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-follow .flagShipStore .content ol strong a {
+                        background: #1d8bd7;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        display: block;
+                        color: #fff;
+                        cursor: pointer;
+                        background: #7a6e6e;
+                        font-size: 12px;
+                        height: 20px;
+                        line-height: 20px;
+                        width: 90px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart h1.title {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            padding-left: 25px;
+            background: #f5f8fa;
+            border-bottom: 1px solid #f0f0f0;
+            background: #f1f1f1;
+            border-bottom: 0;
+            padding: 0 10px;
+            position: fixed;
+            width: 100%;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart h1.title i {
+                display: inline-block;
+                vertical-align: middle;
+                margin: -4px 5px 0 0;
+                margin: -2px 5px 0 0;
+                font-size: 16px;
+            }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart h1.title a {
+                float: right;
+                font-size: 24px;
+                color: #5b5b5b;
+                width: 40px;
+                text-align: center;
+                position: absolute;
+                left: 230px;
+            }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .con a {
+            display: block;
+        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl {
+            *height: 1%;
+            border-bottom: 10px solid #f1f1f1;
+            padding: 20px 15px;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dt {
+                float: left;
+                width: 50px;
+                height: 50px;
+                border: 1px solid #e9e9e9;
+                padding: 5px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dt img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dd {
+                float: left;
+                width: 160px;
+                color: #5b5b5b;
+                line-height: 20px;
+                text-align: left;
+                margin-left: 10px;
+                position: relative;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dd span b {
+                    font-weight: normal;
+                    display: block;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    -moz-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dd span i {
+                    font-size: 14px;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    -moz-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dd strong {
+                    display: block;
+                    color: #e53b46;
+                }
+
+                    .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dd strong i {
+                        font-size: 12px;
+                        font-weight: normal;
+                        color: #5b5b5b;
+                        margin-left: 5px;
+                    }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl dd a.icon-iconfontshanchu {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: none;
+                }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .con dl:hover dd a.icon-iconfontshanchu {
+                display: block;
+            }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .con.suit h2 {
+            padding: 20px;
+            font-weight: normal;
+            padding-bottom: 0;
+            position: relative;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .con.suit h2 b {
+                background: #1d8bd7;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                display: block;
+                color: #fff;
+                cursor: pointer;
+                background: #e53b46;
+                display: inline-block;
+                font-weight: normal;
+                padding: 0 10px;
+                line-height: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .con.suit h2 a {
+                float: right;
+                display: none;
+            }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .con.suit dl {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .con.suit:hover h2 a {
+            display: block;
+        }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .count {
+            position: fixed;
+            background: #f1f1f1;
+            bottom: 0;
+            height: 55px;
+            width: 100%;
+        }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .count span {
+                float: left;
+                line-height: 20px;
+                margin: 10px;
+            }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .count span b {
+                    display: block;
+                    font-weight: normal;
+                }
+
+                .toolbar-wrap .toolbar-panels .tbar-panel-cart .count span i {
+                    color: #e53b46;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+            .toolbar-wrap .toolbar-panels .tbar-panel-cart .count a {
+                float: left;
+                width: 124px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 16px;
+                font-weight: normal;
+                margin: 12px 0 0 144px;
+                position: absolute;
+                left: 0;
+                bottom: 8px;
+            }
+
+        .toolbar-wrap .toolbar-panels .tbar-panel-cart .scroll {
+            margin: 40px 0 60px 0;
+            max-height: 86%;
+            overflow: auto;
+        }
+
+    .toolbar-wrap .tbar-tab-click-selected {
+        background: #e53b46;
+    }
+
+    .toolbar-wrap .noRecord {
+        text-align: center;
+        padding-top: 200px;
+        display: none;
+    }
+
+        .toolbar-wrap .noRecord img {
+            margin-bottom: 25px;
+        }
+
+        .toolbar-wrap .noRecord i {
+            font-size: 82px;
+            color: #ccc;
+        }
+
+        .toolbar-wrap .noRecord p {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+            .toolbar-wrap .noRecord p a {
+                display: block;
+                color: #e53b46;
+                font-size: 12px;
+            }
+
+.toolbar-open {
+    right: 280px;
+}
+
+.J-global-toolbar div a {
+    margin: 0;
+    padding: 0;
+}
+
+.toolbar-tab {
+    position: relative;
+    width: 40px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px 0;
+}
+
+    .toolbar-tab .qrcode {
+        width: 140px;
+        height: 145px;
+        left: -141px;
+        top: auto;
+        bottom: 0;
+        background-color: #fff;
+        text-align: center;
+        color: #5b5b5b;
+        border: 1px solid #e9e9e9;
+        border-right: 0;
+        border-radius: 0;
+        position: absolute;
+        display: none;
+    }
+
+        .toolbar-tab .qrcode dl {
+            float: left;
+            padding: 10px 20px;
+        }
+
+            .toolbar-tab .qrcode dl dt {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+
+            .toolbar-tab .qrcode dl dd img {
+                width: 100px;
+            }
+
+    .toolbar-tab .tbar-tab-footer2-hover {
+        left: -240px;
+        background-color: #fff;
+    }
+
+    .toolbar-tab i {
+        color: #fff;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        display: block;
+        width: 40px;
+    }
+
+.tab-text {
+    width: 62px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 40px;
+    top: 0;
+    border-radius: 3px 0 0 3px;
+    background-color: #e53b46;
+    transition: left 0.3s ease-in-out 0.1s;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.footer-tab-text {
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    left: 40px;
+    top: 0;
+    font-size: 12px;
+    background-color: #e53b46;
+    border-radius: 3px 0 0 3px;
+    transition: left 0.3s ease-in-out 0.1s;
+    cursor: pointer;
+}
+
+.tbar-tab-hover {
+    left: -60px;
+    background-color: #e53b46;
+}
+
+.tbar-tab-footer-hover {
+    left: -48px;
+    background-color: #e53b46;
+}
+
+.tbar-tab-selected {
+    background-color: #e53b46;
+}
+
+.tbar-tab-click-selected {
+    background-color: #e53b46;
+}
+
+.toolbar-open {
+    right: 270px;
+}
+
+.list_height, .list_height_view {
+    overflow: auto;
+    max-height: 650px;
+    _height: expression(this.scrollHeight > 650 ? "650px" : "auto");
+    margin-right: 10px;
+    margin-bottom: 56px;
+}
+
+#r_history {
+    max-height: 95%;
+}
+
+.list_height_view {
+    max-height: 630px;
+    _height: expression(this.scrollHeight > 630 ? "630px" : "auto");
+}
+
+/*****  right menu end *****/
+.header {
+    background-color: #fff;
+}
+/*****  footer *****/
+.footer {
+    background-color: #fff;
+    margin-top: 50px;
+}
+
+    .footer .footer_top {
+        background: #4095d4;
+        *height: 1%;
+        color: #fff;
+        /*border-bottom: 1px solid #2382c9;*/
+    }
+
+        .footer .footer_top:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+
+        .footer .footer_top .footer_phone_wrapper {
+            padding: 30px 0;
+            *height: 1%;
+            border-bottom: 1px solid #2382c9;
+        }
+
+            .footer .footer_top .footer_phone_wrapper:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .footer .footer_top .footer_phone_wrapper .footer_phone {
+                margin-left: auto;
+                margin-right: auto;
+                width: 1200px;
+                overflow: hidden;
+            }
+
+                .footer .footer_top .footer_phone_wrapper .footer_phone h1 {
+                    border-right: 1px solid #2382c9;
+                    float: left;
+                    margin-left: 138px;
+                }
+
+                    .footer .footer_top .footer_phone_wrapper .footer_phone h1 i {
+                        font-size: 50px;
+                        float: left;
+                    }
+
+                    .footer .footer_top .footer_phone_wrapper .footer_phone h1 span {
+                        font-size: 22px;
+                        float: left;
+                        padding: 0 20px;
+                    }
+
+                    .footer .footer_top .footer_phone_wrapper .footer_phone h1 a {
+                        color: #e5cb3b;
+                        display: block;
+                    }
+
+                .footer .footer_top .footer_phone_wrapper .footer_phone dl {
+                    float: left;
+                    padding-left: 30px;
+                }
+
+                    .footer .footer_top .footer_phone_wrapper .footer_phone dl dt {
+                        font-size: 22px;
+                        float: left;
+                        margin-right: 10px;
+                        line-height: 58px;
+                    }
+
+                    .footer .footer_top .footer_phone_wrapper .footer_phone dl dd {
+                        float: left;
+                        /*width: 330px;*/
+                    }
+
+                        .footer .footer_top .footer_phone_wrapper .footer_phone dl dd span {
+                            float: left;
+                            /*width: 50%;*/
+                            line-height: 58px;
+                            margin-right: 24px;
+                        }
+
+        .footer .footer_top .footer_link {
+            margin-left: auto;
+            margin-right: auto;
+            width: 1200px;
+            padding: 20px 0;
+            *height: 1%;
+            clear: both;
+        }
+
+            .footer .footer_top .footer_link:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .footer .footer_top .footer_link ul {
+                border-right: 1px solid #2382c9;
+                float: left;
+                height: 200px;
+            }
+
+                .footer .footer_top .footer_link ul li {
+                    float: left;
+                    text-align: center;
+                    padding-right: 70px;
+                    line-height: 30px;
+                }
+
+                .footer .footer_top .footer_link ul img {
+                    margin: 20px 0 10px 0;
+                }
+
+                .footer .footer_top .footer_link ul span {
+                    display: block;
+                }
+
+            .footer .footer_top .footer_link dl {
+                float: left;
+                width: 80px;
+                padding-left: 70px;
+            }
+
+                .footer .footer_top .footer_link dl dt {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+
+                .footer .footer_top .footer_link dl dd a {
+                    display: block;
+                    color: #fff;
+                    line-height: 22px;
+                    font-size: 12px;
+                }
+
+    .footer .footer_bottom {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        line-height: 25px;
+    }
+
+        .footer .footer_bottom ul {
+            height: 75px;
+            line-height: 75px;
+            width: 605px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+            .footer .footer_bottom ul li {
+                color: #bc871f;
+                font-size: 18px;
+                float: left;
+                width: 25%;
+            }
+
+                .footer .footer_bottom ul li i {
+                    font-size: 38px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    *display: inline;
+                    *zoom: 1;
+                    vertical-align: middle;
+                }
+
+        .footer .footer_bottom dl {
+            line-height: 25px;
+        }
+
+            .footer .footer_bottom dl dt {
+                border-top: 1px solid #d1d1d1;
+                padding-top: 10px;
+                font-size: 12px;
+            }
+
+                .footer .footer_bottom dl dt b {
+                    height: 12px;
+                    width: 1px;
+                    display: inline-block;
+                    *display: inline;
+                    *zoom: 1;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                    background: #5b5b5b;
+                }
+
+            .footer .footer_bottom dl dd {
+                font-size: 12px;
+            }
+
+                .footer .footer_bottom dl dd a {
+                    color: #6088c5;
+                    margin-left: 20px;
+                    font-size: 12px;
+                }
+
+                .footer .footer_bottom dl dd img {
+                    display: inline-block;
+                    *display: inline;
+                    *zoom: 1;
+                    vertical-align: middle;
+                    margin: -3px 10px 0 0;
+                }
+
+        .footer .footer_bottom .outherLogo {
+            height: 43px;
+            padding: 20px;
+        }
+
+            .footer .footer_bottom .outherLogo a {
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                vertical-align: middle;
+                width: 111px;
+                height: 43px;
+                background: url("//img.yaofang.cn/pc/outherLogo.jpg?v=201701") no-repeat 0 0;
+                margin-right: 20px;
+            }
+
+            .footer .footer_bottom .outherLogo .outherLogo_2 {
+                background-position: -130px 0;
+                margin-right: 10px;
+            }
+
+            .footer .footer_bottom .outherLogo .outherLogo_3 {
+                background-position: -250px 0;
+                width: 118px;
+            }
+
+            .footer .footer_bottom .outherLogo .outherLogo_4 {
+                background-position: -380px 0;
+                width: 114px;
+                margin-right: 10px;
+            }
+
+            .footer .footer_bottom .outherLogo .outherLogo_5 {
+                background-position: -510px 5px;
+                margin-right: 10px;
+            }
+
+            .footer .footer_bottom .outherLogo .outherLogo_6 {
+                background-position: right 0;
+                width: 116px;
+            }
+
+.sub_footer {
+    margin: 30px 0;
+}
+
+    .sub_footer .footer_bottom dl dt {
+        border-top: 0;
+    }
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    *height: 1%;
+}
+
+    .container:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+.breadcrumb {
+    line-height: 30px;
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+.tab_menu {
+    float: left;
+}
+
+    .tab_menu ul li {
+        padding: 0 30px;
+        float: left;
+        line-height: 40px;
+        height: 40px;
+        background: #f0f0f0;
+        margin-right: 5px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .tab_menu ul li a {
+            font-size: 14px;
+            display: block;
+        }
+
+            .tab_menu ul li a b {
+                font-weight: normal;
+                margin-left: 5px;
+                color: #e53b46;
+            }
+
+        .tab_menu ul li.on {
+            background: #2a7bcc;
+        }
+
+            .tab_menu ul li.on a, .tab_menu ul li.on b {
+                color: #fff;
+            }
+
+.tab_box {
+    clear: both;
+}
+
+/*****  paging *****/
+.paging {
+    text-align: center;
+    padding: 30px 0;
+}
+
+    .paging a {
+        display: inline-block;
+        padding: 0 10px;
+        border: 1px solid #e9e9e9;
+        margin-right: 5px;
+        color: #4095d4;
+        line-height: 25px;
+        height: 25px;
+    }
+
+        .paging a.cur {
+            background: #4095d4;
+            color: #fff;
+            border-color: #4095d4;
+        }
+
+            .paging a.cur:hover {
+                color: #fff;
+            }
+
+        .paging a:hover {
+            color: #e53b46;
+        }
+
+        .paging a.prev, .paging a.next {
+            font-size: 12px;
+        }
+
+            .paging a.prev i, .paging a.next i {
+                display: inline-block;
+                vertical-align: middle;
+                margin: -4px 5px 0 0;
+                font-size: 14px;
+                margin-top: 0;
+                color: #e53b46;
+            }
+
+            .paging a.next i {
+                margin: 0 0 0 5px;
+            }
+
+        .paging a.more {
+            border: 0;
+        }
+
+    .paging span {
+        font-size: 12px;
+    }
+
+/*****  dialog *****/
+.dialog {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+    .dialog .dialog_con {
+        background: #fff;
+        width: 390px;
+        height: 400px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -195px;
+        margin-top: -200px;
+    }
+
+    .dialog .title {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        padding-left: 25px;
+        background: #f5f8fa;
+        border-bottom: 1px solid #f0f0f0;
+        background: #f7f7f7;
+        border-bottom: 1px solid #eae8e8;
+        font-size: 18px;
+        padding: 0 10px 0 20px;
+    }
+
+        .dialog .title img {
+            display: inline-block;
+            vertical-align: middle;
+            margin: -4px 5px 0 0;
+            margin-right: 10px;
+        }
+
+        .dialog .title a {
+            float: right;
+            width: 50px;
+            text-align: right;
+            font-size: 32px;
+            color: #b8b8b8;
+            line-height: 45px;
+        }
+
+    .dialog .dialog_btn {
+        text-align: center;
+        clear: both;
+    }
+
+        .dialog .dialog_btn a {
+            background: #1d8bd7;
+            width: 92px;
+            height: 32px;
+            text-align: center;
+            color: #fff;
+            display: inline-block;
+            line-height: 32px;
+            font-size: 12px;
+            margin-right: 30px;
+            width: auto;
+            padding: 0 30px;
+        }
+
+            .dialog .dialog_btn a.mover {
+                margin-right: 0;
+            }
+
+            .dialog .dialog_btn a:hover {
+                background: #43a7ec;
+            }
+
+            .dialog .dialog_btn a.gray_btn {
+                background: #efefef;
+                color: #999;
+            }
+
+                .dialog .dialog_btn a.gray_btn:hover {
+                    background: #f7f7f7;
+                }
+
+            .dialog .dialog_btn a.last {
+                margin-right: 0;
+            }
+
+/***** login_dialog *****/
+.login_dialog .dialog_con {
+    width: 460px;
+    height: 480px;
+    margin-top: -250px;
+    margin-left: -235px;
+}
+
+    .login_dialog .dialog_con .login {
+        background: none;
+    }
+
+        .login_dialog .dialog_con .login .content {
+            float: inherit;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            height: auto;
+            padding-top: 10px;
+        }
+
+            .login_dialog .dialog_con .login .content .tab_menu ul {
+                width: auto;
+            }
+
+            .login_dialog .dialog_con .login .content .mobileLogin .btn input {
+                margin-bottom: 10px;
+            }
+
+            .login_dialog .dialog_con .login .content .registerLink {
+                padding: 10px 0 0 25px;
+            }
+
+                .login_dialog .dialog_con .login .content .registerLink a {
+                    display: block;
+                }
+
+            .login_dialog .dialog_con .login .content .other_login {
+                margin-top: 10px;
+            }
+
+/*** login ****/
+.register_link {
+    float: right;
+    color: #999;
+    margin-top: 50px;
+}
+
+    .register_link a {
+        color: #4095d4;
+    }
+
+.login {
+    background: url("//img.yaofang.cn/pc/login_bg.jpg?v=201701") no-repeat center top #0e70b3;
+    height: 490px;
+}
+
+    .login .slogan {
+        float: left;
+    }
+
+        .login .slogan img {
+            margin: 25px 0 0 50px;
+        }
+
+    .login .content {
+        float: right;
+        width: 350px;
+        background: #fff;
+        padding: 20px 15px;
+        margin-top: 40px;
+        height: 370px;
+    }
+
+        .login .content .tab_menu {
+            *height: 1%;
+            border-bottom: 2px solid #ccc;
+            margin-bottom: 25px;
+            float: none;
+        }
+
+            .login .content .tab_menu:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .login .content .tab_menu ul {
+                width: 270px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+                .login .content .tab_menu ul li {
+                    margin: 0;
+                    background: none;
+                    text-align: center;
+                    width: 50%;
+                    float: left;
+                    padding: 0;
+                    line-height: 50px;
+                    height: 50px;
+                    margin-bottom: -2px;
+                }
+
+                    .login .content .tab_menu ul li a {
+                        font-size: 18px;
+                    }
+
+                    .login .content .tab_menu ul li.on {
+                        border-bottom: 2px solid #0c69ae;
+                    }
+
+                        .login .content .tab_menu ul li.on a {
+                            color: #0c69ae;
+                        }
+
+        .login .content .list_common {
+            padding: 0 20px;
+        }
+
+            .login .content .list_common dl {
+                position: relative;
+            }
+
+                .login .content .list_common dl dt {
+                    height: 40px;
+                    line-height: 40px;
+                    border: 1px solid #cfcfcf;
+                    margin-bottom: 25px;
+                    position: relative;
+                }
+
+                    .login .content .list_common dl dt i {
+                        font-size: 24px;
+                        margin-left: 10px;
+                        color: #999;
+                        float: left;
+                        width: 25px;
+                    }
+
+                    .login .content .list_common dl dt input {
+                        width: 250px;
+                        float: right;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 10px;
+                    }
+
+                .login .content .list_common dl dd {
+                    margin-bottom: 25px;
+                    *height: 1%;
+                    position: relative;
+                }
+
+                    .login .content .list_common dl dd:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .login .content .list_common dl dd input.text1 {
+                        float: left;
+                        width: 145px;
+                        height: 40px;
+                        line-height: 40px;
+                        border: 1px solid #cfcfcf;
+                    }
+
+                    .login .content .list_common dl dd .smsVer {
+                        background: #1d8bd7;
+                        width: 92px;
+                        height: 32px;
+                        text-align: center;
+                        color: #fff;
+                        display: inline-block;
+                        line-height: 32px;
+                        font-size: 12px;
+                        background: #f7f7f7;
+                        color: #5b5b5b;
+                        height: 42px;
+                        line-height: 42px;
+                        border: 1px solid #cfcfcf;
+                        width: 135px;
+                        cursor: pointer;
+                        font-size: 14px;
+                        float: left;
+                        margin-left: 5px;
+                    }
+
+                        .login .content .list_common dl dd .smsVer:hover {
+                            background: #fff;
+                        }
+
+                    .login .content .list_common dl dd .imgVer {
+                        font-size: 12px;
+                        color: #4095d4;
+                        float: left;
+                        margin-left: 5px;
+                    }
+
+                        .login .content .list_common dl dd .imgVer img {
+                            float: left;
+                            margin-right: 10px;
+                            height: 40px;
+                            width: 90px;
+                        }
+
+                        .login .content .list_common dl dd .imgVer i {
+                            float: left;
+                            line-height: 20px;
+                        }
+
+                    .login .content .list_common dl dd .Validform_checktip {
+                        bottom: -20px;
+                    }
+
+                .login .content .list_common dl .Validform_checktip {
+                    clear: both;
+                    position: absolute;
+                    bottom: -32px;
+                }
+
+            .login .content .list_common .btn input {
+                background: #1d8bd7;
+                width: 92px;
+                height: 32px;
+                text-align: center;
+                color: #fff;
+                display: inline-block;
+                line-height: 32px;
+                font-size: 12px;
+                height: 40px;
+                line-height: 40px;
+                width: 100%;
+                font-size: 18px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+
+                .login .content .list_common .btn input:hover {
+                    background: #43a7ec;
+                }
+
+            .login .content .list_common p {
+                padding: 5px 0;
+            }
+
+        .login .content .userLogin .btn input {
+            margin-bottom: 10px;
+        }
+
+        .login .content .mobileLogin .btn input {
+            margin-top: 0;
+        }
+
+        .login .content .other_login {
+            line-height: 40px;
+            margin-top: 15px;
+            margin-left: 25px;
+        }
+
+            .login .content .other_login span {
+                float: left;
+            }
+
+            .login .content .other_login a {
+                font-size: 32px;
+                margin-right: 15px;
+                color: #ff8813;
+                float: left;
+            }
+
+                .login .content .other_login a.icon-zhifubao {
+                    margin-top: 3px;
+                }
+
+                .login .content .other_login a.icon-qq {
+                    color: #65a3de;
+                }
+
+                .login .content .other_login a.icon-weixin {
+                    color: #08BA06;
+                    font-size: 34px;
+                    margin-top: 2px;
+                }
+
+/*** register ****/
+.register {
+    background: #f8fcff;
+    border: 1px solid #acd4f1;
+    padding: 40px 0 60px 100px;
+}
+
+    .register h1 {
+        padding: 0 30px;
+        border-bottom: 2px solid #ccc;
+        line-height: 40px;
+        height: 40px;
+        margin-bottom: 45px;
+        margin-right: 100px;
+    }
+
+        .register h1 span {
+            color: #0c69ae;
+            font-size: 18px;
+            border-bottom: 2px solid #0c69ae;
+            display: inline-block;
+        }
+
+    .register .valContent ul li {
+        margin-bottom: 20px;
+    }
+
+        .register .valContent ul li span {
+            margin-right: 20px;
+        }
+
+        .register .valContent ul li .text1 {
+            width: 350px;
+            background: #fff;
+            border: 1px solid #e9e9e9;
+            line-height: 40px;
+            height: 40px;
+            border-color: #cfcfcf;
+            float: left;
+        }
+
+        .register .valContent ul li .w125 {
+            width: 125px;
+        }
+
+        .register .valContent ul li .smsVer {
+            line-height: 40px;
+            height: 40px;
+        }
+
+        .register .valContent ul li .imgVer img {
+            margin-top: 0;
+            height: 40px;
+        }
+
+    .register .valContent .btn {
+        margin-top: 30px;
+        margin-left: 150px;
+    }
+
+        .register .valContent .btn input {
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+        }
+
+/*** findPasswordd ****/
+.findPas {
+    padding: 0 0 70px 0;
+}
+
+    .findPas h1 {
+        border-bottom: 0;
+        padding: 15px 30px;
+    }
+
+        .findPas h1 i {
+            font-size: 30px;
+            margin: 0 10px 0 0;
+        }
+
+        .findPas h1 span {
+            border-bottom: 0;
+            font-size: 18px;
+            color: #5b5b5b;
+        }
+
+            .findPas h1 span b {
+                font-weight: normal;
+                color: #999;
+                margin-left: 10px;
+            }
+
+    .findPas .stepflex {
+        float: inherit;
+        width: 735px;
+        margin: 20px auto 50px auto;
+    }
+
+        .findPas .stepflex dl {
+            width: 25%;
+        }
+
+        .findPas .stepflex:before, .findPas .stepflex:after {
+            background: #f8fcff;
+            width: 74px;
+        }
+
+    .findPas form {
+        padding: 60px 0 0 200px;
+    }
+
+    .findPas .valContent p {
+        width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 60px;
+    }
+
+        .findPas .valContent p b {
+            font-weight: normal;
+        }
+
+        .findPas .valContent p a {
+            color: #0c69ae;
+        }
+
+.userBrowse {
+    border: 1px solid #f0f0f0;
+    margin-bottom: 25px;
+    *height: 1%;
+}
+
+    .userBrowse:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .userBrowse .title {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        padding-left: 25px;
+        background: #f5f8fa;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+/*****  productList *****/
+.productList1 dl {
+    float: left;
+    width: 180px;
+    padding: 25px 30px;
+}
+
+    .productList1 dl dt {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .productList1 dl dd span {
+        display: block;
+    }
+
+        .productList1 dl dd span i {
+            font-size: 18px;
+            color: #e53b46;
+            margin-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: -4px 5px 0 0;
+        }
+
+        .productList1 dl dd span b {
+            background: #e53b46;
+            color: #fff;
+            font-weight: normal;
+            padding: 0 4px;
+            margin-left: 2px;
+            font-size: 12px;
+        }
+
+    .productList1 dl dd strong {
+        display: block;
+        line-height: 22px;
+        margin-top: 5px;
+        font-size: 12px;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -webkit-text-overflow: ellipsis;
+        -moz-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        width: 190px;
+    }
+
+        .productList1 dl dd strong b {
+            background: #0c69ae;
+            color: #fff;
+            font-weight: normal;
+            padding: 0 2px;
+            border-radius: 3px;
+            margin: -2px 5px 0 0;
+            font-size: 12px;
+        }
+
+/***** rechargePay ***/
+.recharge_pay {
+    margin: 50px 0 20px 50px;
+}
+
+    .recharge_pay dl {
+        *height: 1%;
+        clear: both;
+    }
+
+        .recharge_pay dl:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+
+        .recharge_pay dl dt {
+            margin-bottom: 20px;
+        }
+
+        .recharge_pay dl dd {
+            margin-left: 20px;
+            *height: 1%;
+        }
+
+            .recharge_pay dl dd:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .recharge_pay dl dd label {
+                width: 170px;
+                margin-right: 40px;
+                margin-bottom: 30px;
+                float: left;
+            }
+
+                .recharge_pay dl dd label input {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: -4px 5px 0 0;
+                    margin: -26px 15px 0 0;
+                }
+
+                .recharge_pay dl dd label span {
+                    display: inline-block;
+                    background: url("//img.yaofang.cn/pc/paymentMethod.jpg?v=201701") no-repeat 0 0;
+                    width: 132px;
+                    height: 40px;
+                }
+
+                    .recharge_pay dl dd label span.weChat {
+                        background-position: -142px 0;
+                    }
+
+                    .recharge_pay dl dd label span.xinyongka {
+                        background-position: 0 -50px;
+                    }
+
+                    .recharge_pay dl dd label span.chuxuka {
+                        background-position: -142px -50px;
+                    }
+
+                    .recharge_pay dl dd label span.jiaotongka {
+                        background-position: -284px -50px;
+                    }
+
+                    .recharge_pay dl dd label span.gosh {
+                        background-position: 0 -100px;
+                    }
+
+                    .recharge_pay dl dd label span.zhsh {
+                        background-position: -142px -100px;
+                    }
+
+                    .recharge_pay dl dd label span.jish {
+                        background-position: -284px -100px;
+                    }
+
+                    .recharge_pay dl dd label span.noye {
+                        background-position: right -100px;
+                    }
+
+                    .recharge_pay dl dd label span.pufa {
+                        background-position: 0 -150px;
+                    }
+
+                    .recharge_pay dl dd label span.xiye {
+                        background-position: -142px -150px;
+                    }
+
+                    .recharge_pay dl dd label span.gudo {
+                        background-position: -284px -150px;
+                    }
+
+                    .recharge_pay dl dd label span.shzh {
+                        background-position: right -150px;
+                    }
+
+                    .recharge_pay dl dd label span.mish {
+                        background-position: 0 -199px;
+                    }
+
+                    .recharge_pay dl dd label span.jito {
+                        background-position: -142px -199px;
+                    }
+
+                    .recharge_pay dl dd label span.zhgu {
+                        background-position: -284px -199px;
+                    }
+
+                    .recharge_pay dl dd label span.kuda {
+                        background-position: right -199px;
+                    }
+
+                    .recharge_pay dl dd label span.hazh {
+                        background-position: 0 bottom;
+                        height: 42px;
+                    }
+
+                    .recharge_pay dl dd label span.shha {
+                        background-position: -142px bottom;
+                        height: 42px;
+                    }
+
+                    .recharge_pay dl dd label span.nibo {
+                        background-position: -284px bottom;
+                        height: 42px;
+                    }
+
+                    .recharge_pay dl dd label span.pian {
+                        background-position: -426px bottom;
+                        height: 42px;
+                    }
+
+            .recharge_pay dl dd#showMore {
+                clear: both;
+                margin-top: 5px;
+            }
+
+                .recharge_pay dl dd#showMore a {
+                    display: block;
+                    width: 120px;
+                }
+
+                .recharge_pay dl dd#showMore span {
+                    display: block;
+                }
+
+                .recharge_pay dl dd#showMore .hide {
+                    background: url("//img.yaofang.cn/pc/arrow_down.png?v=201701") no-repeat right center;
+                    background-size: 15px;
+                }
+
+                .recharge_pay dl dd#showMore .show {
+                    background: url("//img.yaofang.cn/pc/arrow_up.png?v=201701") no-repeat right center;
+                    background-size: 15px;
+                }
+
+/***** calendar ***/
+/**** list ***/
+.hotProductList {
+    border: 1px solid #e9e9e9;
+    margin-bottom: 20px;
+}
+
+    .hotProductList h3 {
+        background: #f7f7f7;
+        height: 40px;
+        line-height: 40px;
+        color: #5b5b5b;
+        font-weight: normal;
+        padding: 0 20px;
+        font-size: 18px;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .hotProductList .hot_pro_list {
+        padding: 40px 15px 0;
+    }
+
+        .hotProductList .hot_pro_list .hot_pro_row {
+            display: block;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+            .hotProductList .hot_pro_list .hot_pro_row .hot_pro_img {
+                width: 165px;
+                height: 90px;
+                overflow: hidden;
+                margin-bottom: 30px;
+            }
+
+                .hotProductList .hot_pro_list .hot_pro_row .hot_pro_img img {
+                    width: 165px;
+                }
+
+            .hotProductList .hot_pro_list .hot_pro_row h4 {
+                font-weight: normal;
+                color: #5b5b5b;
+                overflow: hidden;
+                -ms-text-overflow: ellipsis;
+                -webkit-text-overflow: ellipsis;
+                -moz-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .hotProductList .hot_pro_list .hot_pro_row i {
+                display: block;
+                color: #e53b46;
+                padding: 5px 0;
+            }
+
+.brand_image {
+    margin-bottom: 20px;
+}
+
+.c_drugNews {
+    *height: 1%;
+    margin-top: 60px;
+}
+
+    .c_drugNews:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .c_drugNews .drug_news {
+        float: left;
+        width: 890px;
+    }
+
+        .c_drugNews .drug_news .slideTxtBox {
+            width: 888px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+            .c_drugNews .drug_news .slideTxtBox .hd {
+                height: 44px;
+                line-height: 44px;
+                background: #f7f7f7;
+                border-bottom: 1px solid #ddd;
+                position: relative;
+            }
+
+                .c_drugNews .drug_news .slideTxtBox .hd ul {
+                    float: left;
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                    height: 46px;
+                }
+
+                    .c_drugNews .drug_news .slideTxtBox .hd ul li {
+                        float: left;
+                        padding: 0 25px;
+                        cursor: pointer;
+                        font-size: 16px;
+                    }
+
+                        .c_drugNews .drug_news .slideTxtBox .hd ul li.on {
+                            height: 44px;
+                            background: #fff;
+                            color: #5f89c5;
+                            border-top: 2px solid #5f89c5;
+                            border-bottom: 2px solid #fff;
+                        }
+
+            .c_drugNews .drug_news .slideTxtBox .bd {
+                padding: 15px;
+                zoom: 1;
+            }
+
+                .c_drugNews .drug_news .slideTxtBox .bd .news_div {
+                    display: none;
+                }
+
+                    .c_drugNews .drug_news .slideTxtBox .bd .news_div dl dt a img {
+                        width: 75px;
+                        height: 95px;
+                    }
+
+                .c_drugNews .drug_news .slideTxtBox .bd dl {
+                    *height: 1%;
+                }
+
+                    .c_drugNews .drug_news .slideTxtBox .bd dl:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .c_drugNews .drug_news .slideTxtBox .bd dl dt {
+                        float: left;
+                        width: 75px;
+                        margin-right: 35px;
+                        margin-left: 10px;
+                    }
+
+                    .c_drugNews .drug_news .slideTxtBox .bd dl dd {
+                        float: left;
+                        width: 700px;
+                        font-size: 14px;
+                        color: #5b5b5b;
+                    }
+
+                        .c_drugNews .drug_news .slideTxtBox .bd dl dd h4 {
+                            font-size: 18px;
+                        }
+
+                        .c_drugNews .drug_news .slideTxtBox .bd dl dd p {
+                            text-indent: 2em;
+                            margin-top: 10px;
+                            line-height: 25px;
+                        }
+
+                .c_drugNews .drug_news .slideTxtBox .bd .news_ul_list {
+                    *height: 1%;
+                    margin: 10px 0;
+                    font-size: 12px;
+                }
+
+                    .c_drugNews .drug_news .slideTxtBox .bd .news_ul_list:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .c_drugNews .drug_news .slideTxtBox .bd .news_ul_list ul {
+                        float: left;
+                        width: 255px;
+                        margin-right: 25px;
+                    }
+
+                        .c_drugNews .drug_news .slideTxtBox .bd .news_ul_list ul li {
+                            height: 25px;
+                            line-height: 25px;
+                            overflow: hidden;
+                            -ms-text-overflow: ellipsis;
+                            -webkit-text-overflow: ellipsis;
+                            -moz-text-overflow: ellipsis;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                            .c_drugNews .drug_news .slideTxtBox .bd .news_ul_list ul li :before {
+                                width: 1px;
+                                height: 2px;
+                                background: #5b5b5b;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-top: -3px;
+                                content: " ";
+                            }
+
+                            .c_drugNews .drug_news .slideTxtBox .bd .news_ul_list ul li .channel {
+                                color: #5f89c5;
+                            }
+
+    .c_drugNews .media_report {
+        float: right;
+        width: 280px;
+        background: #f7f7f7;
+        border: 1px solid #ddd;
+    }
+
+        .c_drugNews .media_report h4 {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 15px;
+        }
+
+            .c_drugNews .media_report h4 span {
+                position: absolute;
+                right: 20px;
+                top: 0;
+            }
+
+        .c_drugNews .media_report .text_mediaReport {
+            padding: 0 10px 10px;
+        }
+
+            .c_drugNews .media_report .text_mediaReport .m_picScroll {
+                width: 250px;
+                height: 165px;
+                margin-bottom: 5px;
+            }
+
+                .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox {
+                    width: 250px;
+                    height: 165px;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                    .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .bd {
+                        position: relative;
+                        height: 100%;
+                        z-index: 0;
+                    }
+
+                        .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .bd li {
+                            position: relative;
+                            zoom: 1;
+                            vertical-align: middle;
+                        }
+
+                            .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .bd li .des_picScr .des_picBg {
+                                z-index: 9;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 27px;
+                                background: #000;
+                                filter: alpha(opacity=50);
+                                opacity: 0.5;
+                            }
+
+                            .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .bd li .des_picScr .des_picText {
+                                z-index: 10;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                padding: 0 10px;
+                                text-align: center;
+                                color: #fff;
+                                font-size: 14px;
+                                height: 27px;
+                                line-height: 27px;
+                                overflow: hidden;
+                            }
+
+                            .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .bd li img {
+                                width: 250px;
+                                height: 165px;
+                                display: block;
+                            }
+
+                    .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .next, .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .prev {
+                        right: 0;
+                        position: absolute;
+                        z-index: 9999;
+                        display: block;
+                        top: 65px;
+                        filter: alpha(opacity=50);
+                        opacity: 0.5;
+                    }
+
+                        .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .next i, .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .prev i {
+                            color: #fff;
+                            font-size: 30px;
+                        }
+
+                    .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .prev {
+                        right: inherit;
+                        left: 0;
+                    }
+
+                        .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .prev:hover, .c_drugNews .media_report .text_mediaReport .m_picScroll .slideBox .next:hover {
+                            filter: alpha(opacity=100);
+                            opacity: 1;
+                        }
+
+            .c_drugNews .media_report .text_mediaReport .m_textReport ul {
+                float: left;
+                width: 250px;
+                padding-bottom: 8px;
+                font-size: 12px;
+            }
+
+                .c_drugNews .media_report .text_mediaReport .m_textReport ul li {
+                    height: 25px;
+                    line-height: 25px;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    -moz-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                    .c_drugNews .media_report .text_mediaReport .m_textReport ul li em {
+                        width: 3px;
+                        height: 2px;
+                        background: #5b5b5b;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-top: -3px;
+                        margin-right: 10px;
+                    }
+
+/**** list ***/
+.friendship_links {
+    margin-top: 45px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    *height: 1%;
+}
+
+    .friendship_links:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .friendship_links dl {
+        line-height: 25px;
+        font-size: 12px;
+    }
+
+        .friendship_links dl dt {
+            float: left;
+            margin-right: 10px;
+            font-size: 12px;
+        }
+
+        .friendship_links dl dd {
+            float: left;
+            overflow: hidden;
+            width: 1080px;
+            font-size: 12px;
+        }
+
+            .friendship_links dl dd a {
+                margin-right: 10px;
+                display: inline-block;
+            }
+
+        .friendship_links dl a.arrow_down {
+            background: url("//img.yaofang.cn/pc/arrow_down.png?v=201701") no-repeat center center;
+            background-size: 12px;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+        }
+
+        .friendship_links dl a.arrow_up {
+            background: url("//img.yaofang.cn/pc/arrow_up.png?v=201701") no-repeat center center;
+            background-size: 12px;
+        }
+
+/**** delete dialog *******/
+.delete_style1 .dialog_con, .grabCoupons .dialog_con {
+    width: 500px;
+    height: 270px;
+    margin-top: -135px;
+    margin-left: -250px;
+}
+
+    .delete_style1 .dialog_con dl, .grabCoupons .dialog_con dl {
+        padding: 30px 50px;
+        *height: 1%;
+    }
+
+        .delete_style1 .dialog_con dl:after, .grabCoupons .dialog_con dl:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+
+        .delete_style1 .dialog_con dl dt, .grabCoupons .dialog_con dl dt {
+            float: left;
+            font-size: 60px;
+            color: #cfa54f;
+            margin-right: 15px;
+        }
+
+        .delete_style1 .dialog_con dl dd, .grabCoupons .dialog_con dl dd {
+            float: left;
+            margin-top: 10px;
+        }
+
+            .delete_style1 .dialog_con dl dd span, .grabCoupons .dialog_con dl dd span {
+                display: block;
+                font-size: 24px;
+            }
+
+            .delete_style1 .dialog_con dl dd strong, .grabCoupons .dialog_con dl dd strong {
+                line-height: 30px;
+            }
+
+        /**** graCoupons *******/
+        .grabCoupons .dialog_con dl dt {
+            color: #99bb11;
+        }
+
+    .grabCoupons .dialog_con p {
+        padding: 35px 0 0 15px;
+        color: #999;
+    }
+
+/**** step *****/
+.stepflex {
+    display: block;
+    border-top: 5px solid #ccc;
+    text-align: center;
+    margin: 45px 0 0;
+    float: right;
+    position: relative;
+}
+
+    .stepflex dl {
+        float: left;
+        position: relative;
+        width: 130px;
+        top: -7px;
+        border-top: 7px solid #dadbdc;
+    }
+
+        .stepflex dl.doing {
+            border-top-color: #d9b772;
+        }
+
+            .stepflex dl.doing .s-num {
+                background-position: -44px 0;
+            }
+
+            .stepflex dl.doing .s-text {
+                color: #cfa54f;
+            }
+
+        .stepflex dl.done {
+            border-top-color: #ecdbb8;
+        }
+
+            .stepflex dl.done .s-text {
+                color: #ecdbb8;
+            }
+
+            .stepflex dl.done .s-num {
+                background-position: 0 0;
+            }
+
+    .stepflex .s-num {
+        position: relative;
+        margin: -20px auto 0;
+        color: #fff;
+        font-weight: 700;
+        width: 35px;
+        height: 35px;
+        background-image: url("//img.yaofang.cn/pc/step.png?v=201701");
+        background-position: right 0;
+        line-height: 35px;
+    }
+
+    .stepflex .s-text {
+        color: #666;
+        line-height: 40px;
+        font-size: 16px;
+    }
+
+    .stepflex .doing.last .s-num {
+        background-position: -91px 0;
+    }
+
+    .stepflex:before, .stepflex:after {
+        background: #fff;
+        width: 48px;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        content: " ";
+        display: block;
+        top: -10px;
+        z-index: 2;
+    }
+
+    .stepflex:after {
+        left: inherit;
+        right: 0;
+        width: 47px;
+    }
+
+/****  address dialog*****/
+.address_dialog .dialog_con {
+    width: 720px;
+    height: 480px;
+    margin-left: -360px;
+    margin-top: -240px;
+}
+
+    .address_dialog .dialog_con .title {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        padding-left: 25px;
+        background: #f5f8fa;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 18px;
+        background: #f7f7f7;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+        .address_dialog .dialog_con .title a {
+            float: right;
+        }
+
+    .address_dialog .dialog_con .con {
+        padding: 40px 0;
+    }
+
+        .address_dialog .dialog_con .con h2 {
+            text-align: center;
+        }
+
+            .address_dialog .dialog_con .con h2 button {
+                background: #1d8bd7;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                display: block;
+                color: #fff;
+                cursor: pointer;
+                display: inline-block;
+                margin: 25px;
+                font-weight: normal;
+                width: 120px;
+                font-size: 12px;
+            }
+
+                .address_dialog .dialog_con .con h2 button:hover {
+                    background: #43a7ec;
+                }
+
+        .address_dialog .dialog_con .con ul li {
+            line-height: 30px;
+            margin-bottom: 15px;
+            clear: both;
+            height: 30px;
+        }
+
+            .address_dialog .dialog_con .con ul li span {
+                float: left;
+                margin-right: 10px;
+                width: 130px;
+                text-align: right;
+                height: 30px;
+            }
+
+            .address_dialog .dialog_con .con ul li strong {
+                float: left;
+            }
+
+                .address_dialog .dialog_con .con ul li strong b {
+                    font-weight: normal;
+                    font-size: 12px;
+                    margin-left: 10px;
+                }
+
+                .address_dialog .dialog_con .con ul li strong.city select {
+                    margin-right: 10px;
+                }
+
+                .address_dialog .dialog_con .con ul li strong.city #s_county {
+                    margin-right: 0;
+                }
+
+            .address_dialog .dialog_con .con ul li .red {
+                color: #e53b46;
+                margin-left: 5px;
+                float: left;
+            }
+
+            .address_dialog .dialog_con .con ul li .text1 {
+                width: 250px;
+                float: left;
+            }
+
+            .address_dialog .dialog_con .con ul li.gray {
+                color: #999;
+                font-size: 12px;
+                margin-left: 140px;
+            }
+
+/****  address *****/
+.consignee .con dl {
+    *height: 1%;
+    margin: 30px 0;
+}
+
+    .consignee .con dl:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .consignee .con dl dt {
+        float: left;
+        width: 140px;
+        font-size: 18px;
+        line-height: 50px;
+    }
+
+    .consignee .con dl dd {
+        float: left;
+        width: 950px;
+    }
+
+        .consignee .con dl dd .existingAddress {
+            *height: 1%;
+        }
+
+            .consignee .con dl dd .existingAddress:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .consignee .con dl dd .existingAddress .list {
+                border: 1px solid #e9e9e9;
+                border-width: 2px;
+                width: 250px;
+                height: 100px;
+                padding: 20px;
+                margin: 0 20px 20px 0;
+                float: left;
+                cursor: pointer;
+                position: relative;
+            }
+
+                .consignee .con dl dd .existingAddress .list h1 span {
+                    float: right;
+                    color: #4095d4;
+                    display: none;
+                }
+
+                    .consignee .con dl dd .existingAddress .list h1 span a {
+                        color: #0c69ae;
+                    }
+
+                    .consignee .con dl dd .existingAddress .list h1 span i {
+                        margin: 0 5px;
+                    }
+
+                .consignee .con dl dd .existingAddress .list p {
+                    font-size: 12px;
+                    height: 40px;
+                    line-height: 20px;
+                    overflow: hidden;
+                    padding: 10px 0;
+                }
+
+                .consignee .con dl dd .existingAddress .list h2 {
+                    font-weight: bold;
+                }
+
+                .consignee .con dl dd .existingAddress .list.cur {
+                    border-color: #addcfc;
+                    color: #0c69ae;
+                }
+
+                    .consignee .con dl dd .existingAddress .list.cur h1 span {
+                        display: block;
+                    }
+
+                    .consignee .con dl dd .existingAddress .list.cur:before {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background: url("//img.yaofang.cn/pc/check.png?v=201701") no-repeat 0 0;
+                        content: " ";
+                        display: block;
+                        width: 28px;
+                        height: 24px;
+                    }
+
+        .consignee .con dl dd .newAdd_btn {
+            width: 130px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            background: #f2f9fe;
+            border: 1px solid #d1e9f8;
+            color: #0c69ae;
+            display: inline-block;
+        }
+
+            .consignee .con dl dd .newAdd_btn i {
+                display: inline-block;
+                vertical-align: middle;
+                margin: -4px 5px 0 0;
+                margin-top: 0;
+            }
+
+            .consignee .con dl dd .newAdd_btn:hover {
+                background: #fff;
+            }
+
+        .consignee .con dl dd .check a {
+            float: left;
+            padding: 15px 30px;
+            border: 1px solid #e9e9e9;
+            margin-right: 20px;
+            width: 130px;
+            text-align: center;
+            border-width: 2px;
+            position: relative;
+        }
+
+            .consignee .con dl dd .check a.cur {
+                border-color: #addcfc;
+                color: #0c69ae;
+            }
+
+                .consignee .con dl dd .check a.cur:before {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background: url("//img.yaofang.cn/pc/check.png?v=201701") no-repeat 0 0;
+                    content: " ";
+                    display: block;
+                    width: 28px;
+                    height: 24px;
+                }
+
+        .consignee .con dl dd .payMet {
+            line-height: 35px;
+        }
+
+            .consignee .con dl dd .payMet p a {
+                color: #4095d4;
+            }
+
+            .consignee .con dl dd .payMet p .red {
+                color: #e53b46;
+            }
+
+            .consignee .con dl dd .payMet p .modify {
+                margin-left: 30px;
+            }
+
+            .consignee .con dl dd .payMet dl {
+                margin: 0;
+            }
+
+                .consignee .con dl dd .payMet dl dt {
+                    width: auto;
+                    line-height: 35px;
+                    margin-right: 20px;
+                }
+
+                    .consignee .con dl dd .payMet dl dt a {
+                        font-size: 14px;
+                        color: #4095d4;
+                    }
+
+                .consignee .con dl dd .payMet dl dd {
+                    position: relative;
+                    width: auto;
+                }
+
+                    .consignee .con dl dd .payMet dl dd span i {
+                        font-size: 24px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: -4px 5px 0 0;
+                        margin-top: -1px;
+                    }
+
+                    .consignee .con dl dd .payMet dl dd .tips {
+                        background: #fcf5e6;
+                        border: 1px solid #cfa54f;
+                        font-size: 12px;
+                        padding: 15px;
+                        position: absolute;
+                        line-height: 25px;
+                        width: 300px;
+                        top: -180px;
+                        display: none;
+                    }
+
+/****  register and user phone Verification *****/
+.valContent ul li {
+    *height: 1%;
+    clear: both;
+    line-height: 35px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+    .valContent ul li:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .valContent ul li span {
+        width: 130px;
+        margin-right: 10px;
+        float: left;
+        text-align: right;
+    }
+
+    .valContent ul li strong {
+        float: left;
+    }
+
+    .valContent ul li input.text1 {
+        float: left;
+        width: 250px;
+    }
+
+    .valContent ul li .smsVer {
+        background: #1d8bd7;
+        width: 92px;
+        height: 32px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        line-height: 32px;
+        font-size: 12px;
+        background: #f7f7f7;
+        color: #5b5b5b;
+        border: 1px solid #cfcfcf;
+        padding: 0 10px;
+        width: auto;
+        cursor: pointer;
+        font-size: 14px;
+        margin-right: 20px;
+        float: left;
+        margin-left: 20px;
+    }
+
+        .valContent ul li .smsVer:hover {
+            background: #fff;
+        }
+
+    .valContent ul li .imgVer {
+        font-size: 12px;
+        color: #4095d4;
+        float: left;
+        margin-left: 20px;
+    }
+
+        .valContent ul li .imgVer img {
+            display: inline-block;
+            vertical-align: middle;
+            margin: -4px 5px 0 0;
+            margin-right: 10px;
+            width: 115px;
+            height: 35px;
+        }
+
+.valContent .btn {
+    margin: 50px 0 0 140px;
+}
+
+    .valContent .btn input, .valContent .btn a {
+        background: #1d8bd7;
+        width: 92px;
+        height: 32px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        line-height: 32px;
+        font-size: 12px;
+        margin-right: 60px;
+    }
+
+        .valContent .btn input:hover, .valContent .btn a:hover {
+            background: #43a7ec;
+            cursor: pointer;
+        }
+
+.valContent p {
+    *height: 1%;
+    clear: both;
+    padding: 20px 0 0 60px;
+}
+
+    .valContent p:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .valContent p i {
+        float: left;
+        font-size: 70px;
+        color: #99bb11;
+        margin-right: 30px;
+    }
+
+    .valContent p span {
+        float: left;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+        .valContent p span b {
+            color: #999;
+            font-size: 14px;
+            display: block;
+        }
+
+/*index*/
+.top_picScroll {
+    position: relative;
+    height: 424px;
+    background: #8ddcfb;
+    margin-bottom: 20px;
+}
+
+    .top_picScroll .banner_picScroll .focusBox {
+        position: relative;
+        width: 100%;
+        height: 424px;
+        overflow: hidden;
+    }
+
+        .top_picScroll .banner_picScroll .focusBox .pic a {
+            width: 100%;
+            height: 424px;
+            display: block;
+            background-position: center top;
+        }
+
+        .top_picScroll .banner_picScroll .focusBox .hd {
+            overflow: hidden;
+            zoom: 1;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 250px;
+            margin-left: -75px;
+            z-index: 1;
+        }
+
+            .top_picScroll .banner_picScroll .focusBox .hd li {
+                float: left;
+                text-align: center;
+                width: 12px;
+                margin-left: 13px;
+                height: 12px;
+                cursor: pointer;
+                overflow: hidden;
+                background: #8a8882;
+                filter: alpha(opacity=80);
+                opacity: .8;
+                -webkit-transition: All .5s ease;
+                -moz-transition: All .5s ease;
+                -o-transition: All .5s ease;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+            }
+
+            .top_picScroll .banner_picScroll .focusBox .hd .on {
+                background: #0674b3;
+                filter: alpha(opacity=100);
+                opacity: 1;
+            }
+
+    .top_picScroll .container {
+        position: relative;
+    }
+
+        .top_picScroll .container .top_service {
+            position: absolute;
+            right: 0;
+            top: -424px;
+            width: 210px;
+            padding: 10px;
+            background: #fff;
+        }
+
+            .top_picScroll .container .top_service .slideTxtBox {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 18px;
+            }
+
+                .top_picScroll .container .top_service .slideTxtBox .hd {
+                    position: relative;
+                    height: 32px;
+                    border-bottom: 1px solid #5b5b5b;
+                }
+
+                    .top_picScroll .container .top_service .slideTxtBox .hd ul {
+                        *height: 1%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 1px;
+                    }
+
+                        .top_picScroll .container .top_service .slideTxtBox .hd ul:after {
+                            clear: both;
+                            content: '.';
+                            display: block;
+                            height: 0;
+                            line-height: 0;
+                            overflow: hidden;
+                        }
+
+                        .top_picScroll .container .top_service .slideTxtBox .hd ul li {
+                            float: left;
+                            width: 105px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            cursor: pointer;
+                            color: #5b5b5b;
+                            font-size: 14px;
+                        }
+
+                            .top_picScroll .container .top_service .slideTxtBox .hd ul li span {
+                                font-weight: bold;
+                                padding: 0 15px;
+                                display: inline-block;
+                            }
+
+                            .top_picScroll .container .top_service .slideTxtBox .hd ul li.on span {
+                                height: 30px;
+                                border-bottom: 2px solid #bc8720;
+                                color: #bc8720;
+                                padding: 0 15px;
+                                display: inline-block;
+                            }
+
+                .top_picScroll .container .top_service .slideTxtBox .bd .news_div {
+                    display: none;
+                }
+
+                .top_picScroll .container .top_service .slideTxtBox .bd .news_ul_list {
+                    *height: 1%;
+                    height: 131px;
+                    font-size: 12px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 18px;
+                }
+
+                    .top_picScroll .container .top_service .slideTxtBox .bd .news_ul_list:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .top_picScroll .container .top_service .slideTxtBox .bd .news_ul_list ul li {
+                        height: 25px;
+                        line-height: 25px;
+                        overflow: hidden;
+                        -ms-text-overflow: ellipsis;
+                        -webkit-text-overflow: ellipsis;
+                        -moz-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                        .top_picScroll .container .top_service .slideTxtBox .bd .news_ul_list ul li a:hover {
+                            color: #f35d60;
+                        }
+
+                .top_picScroll .container .top_service .slideTxtBox .bd .goodService {
+                    *height: 1%;
+                    padding-top: 21px;
+                }
+
+                    .top_picScroll .container .top_service .slideTxtBox .bd .goodService:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .top_picScroll .container .top_service .slideTxtBox .bd .goodService li {
+                        float: left;
+                        width: 50%;
+                        margin: 10px 0;
+                    }
+
+                        .top_picScroll .container .top_service .slideTxtBox .bd .goodService li i {
+                            float: left;
+                            color: #cfa54f;
+                            padding: 0 10px 0 20px;
+                            font-size: 36px;
+                        }
+
+                        .top_picScroll .container .top_service .slideTxtBox .bd .goodService li span {
+                            display: block;
+                            float: left;
+                            color: #cfa54f;
+                        }
+
+            .top_picScroll .container .top_service .iMoreService {
+                border-top: 1px solid #e9e9e9;
+            }
+
+                .top_picScroll .container .top_service .iMoreService h4 {
+                    margin: 20px 0;
+                }
+
+                .top_picScroll .container .top_service .iMoreService .iMService_list {
+                    *height: 1%;
+                }
+
+                    .top_picScroll .container .top_service .iMoreService .iMService_list:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .top_picScroll .container .top_service .iMoreService .iMService_list dl {
+                        float: left;
+                        color: #5f89c5;
+                        width: 70px;
+                        text-align: center;
+                        margin-bottom: 15px;
+                    }
+
+                        .top_picScroll .container .top_service .iMoreService .iMService_list dl dt {
+                            margin-bottom: 5px;
+                        }
+
+                            .top_picScroll .container .top_service .iMoreService .iMService_list dl dt i {
+                                font-size: 30px;
+                            }
+
+                        .top_picScroll .container .top_service .iMoreService .iMService_list dl.iMService_hui {
+                            color: #999;
+                        }
+
+/*top_picScroll end*/
+.index_getCoupon {
+    *height: 1%;
+    margin-bottom: 30px;
+}
+
+    .index_getCoupon:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .index_getCoupon dt {
+        float: left;
+        width: 285px;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+        .index_getCoupon dt h4 {
+            color: #5b5b5b;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .index_getCoupon dt .perGet_border {
+            border-top: 1px solid #5b5b5b;
+            width: 160px;
+            margin: 0 auto;
+        }
+
+            .index_getCoupon dt .perGet_border span {
+                display: inline-block;
+                width: 100px;
+                background: #fff;
+                color: #e53b46;
+                font-size: 16px;
+                margin-top: -15px;
+                text-align: center;
+            }
+
+    .index_getCoupon dd {
+        float: left;
+        width: 215px;
+        margin-right: 10px;
+    }
+
+        .index_getCoupon dd a {
+            display: block;
+            position: relative;
+        }
+
+            .index_getCoupon dd a img {
+                width: 213px;
+                height: 120px;
+            }
+
+            .index_getCoupon dd a .ling {
+                width: 42px;
+                height: 42px;
+                position: absolute;
+                z-index: 99;
+                right: 0;
+                bottom: 24px;
+            }
+
+        .index_getCoupon dd .hasBrought {
+            display: none;
+        }
+
+.index_grayBg {
+    background: #f8f8f8;
+}
+
+.iTab_drugNews {
+    background: #fff;
+    margin-bottom: 40px;
+}
+
+    .iTab_drugNews .slideTxtBox {
+        width: 100%;
+        text-align: left;
+    }
+
+        .iTab_drugNews .slideTxtBox .hd {
+            position: relative;
+            height: 57px;
+            line-height: 57px;
+            background: #f7f7f7;
+            border-top: 2px solid #5b5b5b;
+            margin-bottom: 30px;
+        }
+
+            .iTab_drugNews .slideTxtBox .hd ul {
+                float: left;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 59px;
+            }
+
+                .iTab_drugNews .slideTxtBox .hd ul li {
+                    float: left;
+                    width: 400px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #000;
+                    font-size: 24px;
+                }
+
+                    .iTab_drugNews .slideTxtBox .hd ul li i {
+                        font-size: 30px;
+                        vertical-align: middle;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .hd ul li span {
+                        margin-left: -10px;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .hd ul li em {
+                        padding-left: 10px;
+                        vertical-align: middle;
+                    }
+
+                        .iTab_drugNews .slideTxtBox .hd ul li em img {
+                            width: 122px;
+                            height: 24px;
+                        }
+
+                    .iTab_drugNews .slideTxtBox .hd ul li strong {
+                        display: inline-block;
+                        width: 142px;
+                        height: 29px;
+                    }
+
+                        .iTab_drugNews .slideTxtBox .hd ul li strong b {
+                            background: url("//img.yaofang.cn/pc/index_tag.png?v=201701") no-repeat right top;
+                            width: 36px;
+                            height: 29px;
+                            line-height: 29px;
+                            margin-left: 10px;
+                            display: inline-block;
+                            color: #fff;
+                            font-size: 20px;
+                            text-align: center;
+                            font-weight: normal;
+                        }
+
+                    .iTab_drugNews .slideTxtBox .hd ul li.on {
+                        height: 57px;
+                        background: #fff;
+                        border-bottom: 2px solid #fff;
+                    }
+
+        .iTab_drugNews .slideTxtBox .bd .news_div {
+            display: none;
+        }
+
+        .iTab_drugNews .slideTxtBox .bd .bd_news_dl {
+            *height: 1%;
+            margin-bottom: 20px;
+        }
+
+            .iTab_drugNews .slideTxtBox .bd .bd_news_dl:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl {
+                float: left;
+                *height: 1%;
+                width: 565px;
+                margin-left: 30px;
+                height: 165px;
+                overflow: hidden;
+                border-right: 1px solid #e9e9e9;
+            }
+
+                .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl:after {
+                    clear: both;
+                    content: '.';
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    overflow: hidden;
+                }
+
+                .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dt {
+                    float: left;
+                    width: 200px;
+                    margin-right: 25px;
+                }
+
+                    .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dt a img {
+                        width: 206px;
+                        height: 162px;
+                    }
+
+                .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dd {
+                    float: left;
+                    width: 310px;
+                    font-size: 14px;
+                    color: #5b5b5b;
+                }
+
+                    .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dd h4 {
+                        font-weight: bold;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dd p {
+                        text-indent: 2em;
+                        margin-top: 10px;
+                        line-height: 25px;
+                        height: 128px;
+                        overflow: hidden;
+                        overflow: hidden;
+                        -ms-text-overflow: ellipsis;
+                        -webkit-text-overflow: ellipsis;
+                        -moz-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 5;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dd a:hover h4, .iTab_drugNews .slideTxtBox .bd .bd_news_dl dl dd a:hover p {
+                        color: #000;
+                    }
+
+        .iTab_drugNews .slideTxtBox .bd .news_ul_list {
+            *height: 1%;
+            font-size: 12px;
+            border-top: 1px solid #e9e9e9;
+            width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 20px;
+        }
+
+            .iTab_drugNews .slideTxtBox .bd .news_ul_list:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .iTab_drugNews .slideTxtBox .bd .news_ul_list ul {
+                float: left;
+                width: 255px;
+                margin: 0 15px;
+            }
+
+                .iTab_drugNews .slideTxtBox .bd .news_ul_list ul li {
+                    height: 25px;
+                    line-height: 25px;
+                    overflow: hidden;
+                    -ms-text-overflow: ellipsis;
+                    -webkit-text-overflow: ellipsis;
+                    -moz-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-bottom: 7px;
+                }
+
+                    .iTab_drugNews .slideTxtBox .bd .news_ul_list ul li em {
+                        width: 3px;
+                        height: 2px;
+                        background: #5b5b5b;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-top: -3px;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .bd .news_ul_list ul li .channel {
+                        background: #e53b46;
+                        color: #fff;
+                        display: inline-block;
+                        padding: 0 5px;
+                        margin-right: 10px;
+                    }
+
+        .iTab_drugNews .slideTxtBox .bd .medBen {
+            *height: 1%;
+            background: #fff;
+            padding: 10px 0 30px 0;
+        }
+
+            .iTab_drugNews .slideTxtBox .bd .medBen:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .iTab_drugNews .slideTxtBox .bd .medBen dl {
+                float: left;
+                text-align: center;
+                border-right: 1px solid #f0f0f0;
+                padding: 10px 14.5px;
+                padding-top: 0;
+                width: 210px;
+            }
+
+                .iTab_drugNews .slideTxtBox .bd .medBen dl:last-child {
+                    border-right: 1px solid #ffffff;
+                }
+
+                .iTab_drugNews .slideTxtBox .bd .medBen dl dt {
+                    position: relative;
+                }
+
+                    .iTab_drugNews .slideTxtBox .bd .medBen dl dt img {
+                        max-width: 100%;
+                        width: 210px;
+                        height: 210px;
+                        position: relative;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .bd .medBen dl dt b {
+                        background: url("//img.yaofang.cn/pc/index_tag.png?v=201701") no-repeat -129px 0;
+                        display: block;
+                        position: absolute;
+                        width: 30px;
+                        height: 40px;
+                        color: #fff;
+                        left: 0;
+                        top: 0;
+                        line-height: 16px;
+                        padding-top: 2px;
+                    }
+
+                .iTab_drugNews .slideTxtBox .bd .medBen dl dd {
+                    line-height: 25px;
+                    margin-top: 10px;
+                }
+
+                    .iTab_drugNews .slideTxtBox .bd .medBen dl dd span {
+                        display: block;
+                        overflow: hidden;
+                        -ms-text-overflow: ellipsis;
+                        -webkit-text-overflow: ellipsis;
+                        -moz-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .bd .medBen dl dd strong b {
+                        color: #e53b46;
+                        font-size: 18px;
+                        margin-right: 15px;
+                    }
+
+                    .iTab_drugNews .slideTxtBox .bd .medBen dl dd strong i {
+                        text-decoration: line-through;
+                        color: #999;
+                    }
+
+                .iTab_drugNews .slideTxtBox .bd .medBen dl.last {
+                    border-right: 0;
+                }
+
+.featured h2 {
+    position: relative;
+    width: 710px;
+    height: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 17px;
+}
+
+    .featured h2 .fea_line {
+        border-top: 1px solid #e9e9e9;
+    }
+
+    .featured h2 b {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 300px;
+        margin-left: -150px;
+        display: inline-block;
+        text-align: center;
+        color: #000;
+        font-size: 24px;
+        background: #f8f8f8;
+    }
+
+        .featured h2 b em {
+            display: inline-block;
+            vertical-align: middle;
+            margin: -18px 5px 0;
+            color: #ccc;
+        }
+
+.featured .brands_drug_picScroll {
+    *height: 1%;
+    height: 340px;
+    margin-bottom: 40px;
+}
+
+    .featured .brands_drug_picScroll:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .featured .brands_drug_picScroll .brands_img, .featured .brands_drug_picScroll .brands_floatR {
+        float: left;
+        *height: 1%;
+        width: 420px;
+    }
+
+        .featured .brands_drug_picScroll .brands_img:after, .featured .brands_drug_picScroll .brands_floatR:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+
+        .featured .brands_drug_picScroll .brands_img a, .featured .brands_drug_picScroll .brands_floatR a {
+            float: left;
+            width: 208px;
+            height: 112px;
+            display: block;
+            cursor: pointer;
+            border: 1px solid #e9e9e9;
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+            .featured .brands_drug_picScroll .brands_img a img, .featured .brands_drug_picScroll .brands_floatR a img {
+                width: 208px;
+                height: 112px;
+            }
+
+            .featured .brands_drug_picScroll .brands_img a.rig_b0, .featured .brands_drug_picScroll .brands_floatR a.rig_b0 {
+                border-right: 1px solid #fff;
+            }
+
+            .featured .brands_drug_picScroll .brands_img a.bHover, .featured .brands_drug_picScroll .brands_floatR a.bHover {
+                border: 1px solid #f35d60;
+            }
+
+    .featured .brands_drug_picScroll .drug_picScroll {
+        width: 360px;
+        height: 340px;
+        margin-left: 420px;
+        margin-right: 420px;
+    }
+
+        .featured .brands_drug_picScroll .drug_picScroll .focusBox {
+            position: relative;
+            width: 360px;
+            height: 340px;
+            overflow: hidden;
+        }
+
+            .featured .brands_drug_picScroll .drug_picScroll .focusBox .pic img {
+                width: 360px;
+                height: 340px;
+                display: block;
+            }
+
+            .featured .brands_drug_picScroll .drug_picScroll .focusBox .hd {
+                overflow: hidden;
+                zoom: 1;
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                width: 165px;
+                margin-left: -80px;
+                z-index: 3;
+            }
+
+                .featured .brands_drug_picScroll .drug_picScroll .focusBox .hd li {
+                    float: left;
+                    text-align: center;
+                    width: 40px;
+                    margin-left: 15px;
+                    height: 6px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    background: #fff;
+                    filter: alpha(opacity=80);
+                    opacity: .8;
+                    -webkit-transition: All .5s ease;
+                    -moz-transition: All .5s ease;
+                    -o-transition: All .5s ease;
+                    -moz-border-radius: 7px;
+                    -webkit-border-radius: 7px;
+                    border-radius: 7px;
+                }
+
+                .featured .brands_drug_picScroll .drug_picScroll .focusBox .hd .on {
+                    background: #036dbb;
+                    filter: alpha(opacity=100);
+                    opacity: 1;
+                }
+
+    .featured .brands_drug_picScroll .brands_floatR {
+        float: right;
+    }
+
+        .featured .brands_drug_picScroll .brands_floatR a {
+            border: 1px solid #e9e9e9;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+            .featured .brands_drug_picScroll .brands_floatR a.left_b0 {
+                border-left: 1px solid #fff;
+            }
+
+.drug_floor {
+    margin-bottom: 40px;
+}
+
+    .drug_floor h3 {
+        position: relative;
+        width: 1200px;
+    }
+
+        .drug_floor h3 span {
+            display: inline-block;
+            width: 190px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+        }
+
+            .drug_floor h3 span em {
+                margin-left: 10px;
+            }
+
+        .drug_floor h3 .dFloor_keyWord {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+            height: 20px;
+            color: #ccc;
+        }
+
+            .drug_floor h3 .dFloor_keyWord a {
+                padding: 0 10px;
+                color: #5b5b5b;
+            }
+
+                .drug_floor h3 .dFloor_keyWord a:hover {
+                    color: #4095d4;
+                }
+
+        .drug_floor h3.dFloor1 {
+            border-bottom: 2px solid #63c19f;
+        }
+
+            .drug_floor h3.dFloor1 span {
+                background: #63c19f;
+            }
+
+        .drug_floor h3.dFloor2 {
+            border-bottom: 2px solid #fb375b;
+        }
+
+            .drug_floor h3.dFloor2 span {
+                background: #fb375b;
+            }
+
+        .drug_floor h3.dFloor3 {
+            border-bottom: 2px solid #373cfb;
+        }
+
+            .drug_floor h3.dFloor3 span {
+                background: #373cfb;
+            }
+
+        .drug_floor h3.dFloor4 {
+            border-bottom: 2px solid #fb9337;
+        }
+
+            .drug_floor h3.dFloor4 span {
+                background: #fb9337;
+            }
+
+        .drug_floor h3.dFloor5 {
+            border-bottom: 2px solid #b46b0c;
+        }
+
+            .drug_floor h3.dFloor5 span {
+                background: #f8f8f8;
+                color: #000;
+                text-align: left;
+            }
+
+        .drug_floor h3.dFloor6 {
+            border-bottom: 2px solid #16afad;
+        }
+
+            .drug_floor h3.dFloor6 span {
+                background: #f8f8f8;
+                color: #000;
+                text-align: left;
+            }
+
+    .drug_floor .drug_main {
+        *height: 1%;
+    }
+
+        .drug_floor .drug_main:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+
+        .drug_floor .drug_main .drug_mLeft {
+            *height: 1%;
+            float: left;
+            width: 190px;
+            border-right: 1px solid #e9e9e9;
+            background: #fff;
+        }
+
+            .drug_floor .drug_main .drug_mLeft:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .drug_floor .drug_main .drug_mLeft a {
+                float: left;
+                text-align: center;
+                width: 94px;
+                height: 52px;
+                line-height: 52px;
+                border-bottom: 1px solid #e9e9e9;
+                border-left: 1px solid #e9e9e9;
+                color: #5b5b5b;
+            }
+
+                .drug_floor .drug_main .drug_mLeft a img {
+                    width: 94px;
+                    height: 52px;
+                }
+
+                .drug_floor .drug_main .drug_mLeft a:hover {
+                    color: #4095d4;
+                }
+
+        .drug_floor .drug_main .drug_mRig {
+            float: left;
+        }
+
+            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug {
+                *height: 1%;
+                background: #f2f2f2;
+            }
+
+                .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug:after {
+                    clear: both;
+                    content: '.';
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    overflow: hidden;
+                }
+
+                .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_picScroll {
+                    float: left;
+                    width: 605px;
+                    height: 280px;
+                }
+
+                    .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_picScroll .focusBox {
+                        position: relative;
+                        width: 605px;
+                        height: 280px;
+                        overflow: hidden;
+                    }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_picScroll .focusBox .pic img {
+                            width: 605px;
+                            height: 280px;
+                            display: block;
+                        }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_picScroll .focusBox .hd {
+                            overflow: hidden;
+                            zoom: 1;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 50%;
+                            width: 120px;
+                            margin-left: -30px;
+                            z-index: 3;
+                        }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_picScroll .focusBox .hd li {
+                                float: left;
+                                text-align: center;
+                                width: 10px;
+                                margin-left: 10px;
+                                height: 10px;
+                                cursor: pointer;
+                                overflow: hidden;
+                                background: #fff;
+                                filter: alpha(opacity=80);
+                                opacity: .8;
+                                -webkit-transition: All .5s ease;
+                                -moz-transition: All .5s ease;
+                                -o-transition: All .5s ease;
+                                -moz-border-radius: 7px;
+                                -webkit-border-radius: 7px;
+                                border-radius: 7px;
+                            }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_picScroll .focusBox .hd .on {
+                                background: #5b5b5b;
+                                filter: alpha(opacity=100);
+                                opacity: 1;
+                            }
+
+                .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug {
+                    *height: 1%;
+                    float: right;
+                    width: 400px;
+                    height: 219px;
+                    padding-top: 35px;
+                    background: #f2f2f2;
+                    padding-bottom: 20px;
+                }
+
+                    .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl {
+                        float: left;
+                        width: 165px;
+                        margin-left: 20px;
+                    }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dt {
+                            text-align: center;
+                            margin-bottom: 20px;
+                            font-size: 15px;
+                        }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dt span {
+                                display: block;
+                                color: #e53b46;
+                                font-size: 14px;
+                                padding-top: 5px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dd {
+                            position: relative;
+                        }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dd:before {
+                                clear: both;
+                                content: '.';
+                                display: block;
+                                height: 0;
+                                line-height: 0;
+                                overflow: hidden;
+                            }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dd em {
+                                position: absolute;
+                                bottom: 15px;
+                                left: 10px;
+                                font-size: 12px;
+                                color: #fff;
+                                text-align: center;
+                                background: url("//img.yaofang.cn/pc/index_tag.png?v=201701");
+                                width: 64px;
+                                height: 64px;
+                                line-height: 64px;
+                            }
+
+                                .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dd em b {
+                                    font-size: 21px;
+                                }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_picScroll_drug .dRig_drug dl dd img {
+                                width: 165px;
+                                height: 155px;
+                                position: relative;
+                            }
+
+            .drug_floor .drug_main .drug_mRig .dRig_drugList {
+                *height: 1%;
+                background: #fff;
+            }
+
+                .drug_floor .drug_main .drug_mRig .dRig_drugList:after {
+                    clear: both;
+                    content: '.';
+                    display: block;
+                    height: 0;
+                    line-height: 0;
+                    overflow: hidden;
+                }
+
+                .drug_floor .drug_main .drug_mRig .dRig_drugList dl {
+                    float: left;
+                    width: 180px;
+                    text-align: center;
+                    padding: 10px;
+                    border-right: 1px solid #e9e9e9;
+                }
+
+                    .drug_floor .drug_main .drug_mRig .dRig_drugList dl dt {
+                        position: relative;
+                        margin-bottom: 15px;
+                        padding-top: 15px;
+                        height: 100px;
+                    }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_drugList dl dt span {
+                            position: absolute;
+                            top: 10px;
+                            right: 30px;
+                            display: inline-block;
+                            font-size: 12px;
+                            background: url("//img.yaofang.cn/pc/index_tag.png?v=201701") no-repeat -73px 0;
+                            width: 46px;
+                            height: 46px;
+                            padding-top: 5px;
+                            color: #fde102;
+                            z-index: 2;
+                        }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_drugList dl dt span b {
+                                color: #fff;
+                            }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_drugList dl dt img {
+                            width: 100px;
+                            height: 100px;
+                            position: relative;
+                        }
+
+                    .drug_floor .drug_main .drug_mRig .dRig_drugList dl dd {
+                        padding-bottom: 5px;
+                    }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_drugList dl dd h4 {
+                            font-weight: bold;
+                            color: #5b5b5b;
+                            font-size: 12px;
+                            overflow: hidden;
+                            -ms-text-overflow: ellipsis;
+                            -webkit-text-overflow: ellipsis;
+                            -moz-text-overflow: ellipsis;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            margin-bottom: 5px;
+                        }
+
+                        .drug_floor .drug_main .drug_mRig .dRig_drugList dl dd span {
+                            color: #e53b46;
+                            font-size: 16px;
+                        }
+
+                            .drug_floor .drug_main .drug_mRig .dRig_drugList dl dd span em {
+                                font-size: 12px;
+                            }
+
+                    .drug_floor .drug_main .drug_mRig .dRig_drugList dl a:hover dd h4 {
+                        color: #e53b46;
+                    }
+
+    .drug_floor .dRig_drugItem dl a:hover dt, .drug_floor .dRig_drug dl a:hover dt {
+        color: #5b5b5b;
+    }
+
+    .drug_floor .drug_main_other {
+        *height: 1%;
+        background: #fff;
+    }
+
+        .drug_floor .drug_main_other:after {
+            clear: both;
+            content: '.';
+            display: block;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+
+        .drug_floor .drug_main_other .drug_mLeft, .drug_floor .drug_main_other .drug_mLeft6 {
+            float: left;
+            width: 115px;
+            background: #b16502;
+            padding: 10px 0;
+        }
+
+            .drug_floor .drug_main_other .drug_mLeft .drug_mItem, .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem {
+                margin-bottom: 16px;
+                text-align: center;
+            }
+
+                .drug_floor .drug_main_other .drug_mLeft .drug_mItem a, .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem a {
+                    padding: 0 15px;
+                    height: 35px;
+                    line-height: 35px;
+                    color: #fff;
+                    display: block;
+                }
+
+                    .drug_floor .drug_main_other .drug_mLeft .drug_mItem a img, .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem a img {
+                        width: 94px;
+                        height: 53px;
+                    }
+
+                    .drug_floor .drug_main_other .drug_mLeft .drug_mItem a:hover, .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem a:hover {
+                        color: #fddea4;
+                    }
+
+            .drug_floor .drug_main_other .drug_mLeft .drug_mItem_img, .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem_img {
+                text-align: center;
+            }
+
+                .drug_floor .drug_main_other .drug_mLeft .drug_mItem_img img, .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem_img img {
+                    width: 105px;
+                    height: 200px;
+                }
+
+        .drug_floor .drug_main_other .drug_mLeft6 {
+            background: #0cacaa;
+        }
+
+            .drug_floor .drug_main_other .drug_mLeft6 .drug_mItem6 a:hover {
+                color: #b3feff;
+            }
+
+        .drug_floor .drug_main_other .drug_mRig {
+            *height: 1%;
+            float: left;
+            width: 1085px;
+        }
+
+            .drug_floor .drug_main_other .drug_mRig:after {
+                clear: both;
+                content: '.';
+                display: block;
+                height: 0;
+                line-height: 0;
+                overflow: hidden;
+            }
+
+            .drug_floor .drug_main_other .drug_mRig .dRig_picScroll {
+                float: left;
+                width: 480px;
+                position: relative;
+            }
+
+                .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_pic5 img {
+                    width: 480px;
+                    height: 350px;
+                }
+
+                .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_bImage {
+                    *height: 1%;
+                    width: 480px;
+                    height: 130px;
+                    border-left: 1px solid #e9e9e9;
+                }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_bImage:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_bImage a {
+                        float: left;
+                        width: 33.3%;
+                        box-sizing: border-box;
+                        height: 66px;
+                        line-height: 66px;
+                        border: 1px solid #e9e9e9;
+                        text-align: center;
+                        border: 0;
+                        border-bottom: 1px solid #e9e9e9;
+                        border-right: 1px solid #e9e9e9;
+                        font-size: 24px;
+                    }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_bImage a img {
+                            width: 158px;
+                            height: 64px;
+                        }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_bImage a:hover {
+                            border: 1px solid #b16502;
+                        }
+
+                .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .dRig_bImage6 a:hover {
+                    border: 1px solid #0cacaa;
+                    color: #0cacaa;
+                }
+
+                .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .hd {
+                    overflow: hidden;
+                    zoom: 1;
+                    position: absolute;
+                    bottom: 140px;
+                    left: 50%;
+                    width: 60px;
+                    margin-left: -30px;
+                    z-index: 3;
+                }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .hd li {
+                        float: left;
+                        text-align: center;
+                        width: 10px;
+                        margin-left: 10px;
+                        height: 10px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        background: #fff;
+                        filter: alpha(opacity=80);
+                        opacity: .8;
+                        -webkit-transition: All .5s ease;
+                        -moz-transition: All .5s ease;
+                        -o-transition: All .5s ease;
+                        -moz-border-radius: 7px;
+                        -webkit-border-radius: 7px;
+                        border-radius: 7px;
+                    }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_picScroll .hd .on {
+                        background: #5b5b5b;
+                        filter: alpha(opacity=100);
+                        opacity: 1;
+                    }
+
+            .drug_floor .drug_main_other .drug_mRig .dRig_drug {
+                float: left;
+                width: 605px;
+                padding-top: 35px;
+                background: #f2f2f2;
+            }
+
+                .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem {
+                    *height: 1%;
+                    padding-bottom: 14px;
+                }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl {
+                        float: left;
+                        width: 200px;
+                    }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl dt {
+                            text-align: center;
+                            margin-bottom: 20px;
+                            font-size: 15px;
+                        }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl dt span {
+                                display: block;
+                                color: #e53b46;
+                                font-size: 14px;
+                                padding-top: 5px;
+                            }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl dd {
+                            text-align: center;
+                            position: relative;
+                        }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl dd em {
+                                position: absolute;
+                                bottom: 15px;
+                                left: 20px;
+                                font-size: 12px;
+                                color: #fff;
+                                text-align: center;
+                                background: url("//img.yaofang.cn/pc/index_tag.png?v=201701");
+                                width: 64px;
+                                height: 64px;
+                                line-height: 64px;
+                            }
+
+                                .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl dd em b {
+                                    font-size: 21px;
+                                }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugItem dl dd img {
+                                width: 165px;
+                                height: 155px;
+                                position: relative;
+                                display: block !important;
+                                margin: 0 auto;
+                            }
+
+                .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList {
+                    *height: 1%;
+                    background: #fff;
+                }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList:after {
+                        clear: both;
+                        content: '.';
+                        display: block;
+                        height: 0;
+                        line-height: 0;
+                        overflow: hidden;
+                    }
+
+                    .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl {
+                        float: left;
+                        width: 175px;
+                        text-align: center;
+                        padding: 10px;
+                        padding-top: 14px;
+                        border-right: 1px solid #e9e9e9;
+                        height: 190px;
+                    }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dt {
+                            position: relative;
+                            margin-bottom: 15px;
+                            padding-top: 15px;
+                        }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dt span {
+                                position: absolute;
+                                top: 10px;
+                                right: 30px;
+                                display: inline-block;
+                                font-size: 12px;
+                                background: url("//img.yaofang.cn/pc/index_tag.png?v=201701") no-repeat -73px 0;
+                                width: 46px;
+                                height: 46px;
+                                padding-top: 5px;
+                                color: #fde102;
+                                z-index: 2;
+                            }
+
+                                .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dt span b {
+                                    color: #fff;
+                                }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dt img {
+                                width: 100px;
+                                height: 100px;
+                                position: relative;
+                            }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dd {
+                            padding-bottom: 5px;
+                        }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dd h4 {
+                                font-weight: bold;
+                                color: #5b5b5b;
+                                font-size: 12px;
+                                overflow: hidden;
+                                -ms-text-overflow: ellipsis;
+                                -webkit-text-overflow: ellipsis;
+                                -moz-text-overflow: ellipsis;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                margin-bottom: 5px;
+                            }
+
+                            .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dd span {
+                                color: #e53b46;
+                                font-size: 16px;
+                            }
+
+                                .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl dd span em {
+                                    font-size: 12px;
+                                }
+
+                        .drug_floor .drug_main_other .drug_mRig .dRig_drug .dRig_drugList dl a:hover h4 {
+                            color: #e53b46;
+                        }
+
+.indexBanner {
+    height: 90px;
+    margin-bottom: 40px;
+}
+
+    .indexBanner a img {
+        width: 1200px;
+        height: 90px;
+    }
+
+.c_drugNews {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+    .c_drugNews .drug_news .slideTxtBox {
+        border: 0;
+    }
+
+        .c_drugNews .drug_news .slideTxtBox .hd {
+            background: #f7f7f7;
+            border-bottom: 2px solid #5f89c5;
+        }
+
+            .c_drugNews .drug_news .slideTxtBox .hd ul li.on {
+                height: 44px;
+                background: #fff;
+                color: #5f89c5;
+                border: 2px solid #5f89c5;
+                border-bottom: 2px solid #fff;
+            }
+
+        .c_drugNews .drug_news .slideTxtBox .bd {
+            border: 1px solid #ddd;
+            border-top: 0;
+            background: #fff;
+        }
+
+    .c_drugNews .media_report {
+        background: #fff;
+    }
+
+.noLogin {
+    margin-top: 42px;
+    padding: 6px 5px;
+    border: 1px solid #edd28b;
+    background: #fffdee;
+    text-align: center;
+}
+
+    .noLogin > a {
+        display: inline-block;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 5px;
+        margin-left: 5px;
+        color: #fff;
+        vertical-align: middle;
+        background: #c81623;
+    }
+
+.toolbar-panels #ajaxCarts {
+    background: #eceaea;
+}
+
+    .toolbar-panels #ajaxCarts .suit {
+        background: #fff;
+        padding-bottom: 19px;
+        margin-bottom: 10px;
+    }
+
+        .toolbar-panels #ajaxCarts .suit dl {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eceaea;
+            padding-top: 10px;
+            margin-top: 6px;
+            /*border-top: 1px solid #eceaea;*/
+        }
+
+        .toolbar-panels #ajaxCarts .suit .mendian {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px !important;
+        }
+/*index end*/
+
+/*# sourceMappingURL=index.css.map */
+
+
+/*é¡¶éƒ¨ä¸Šä¸‹è½®æ’­*/
+.txtMarquee-top {
+    width: 370px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .txtMarquee-top .infoList li .date {
+        float: right;
+        color: #999;
+    }
+
+/*é¡¶éƒ¨å¹¿å‘Š*/
+.top_ad {
+    width: 100%;
+}
+
+    .top_ad img {
+        width: 100%;
+        height: 90px;
+    }

@@ -4,472 +4,384 @@
     Layout = "~/Views/Shared/_LayoutPage_Pan.cshtml";
 }
 <!--引用样式-->
-<link type="text/css" rel="stylesheet" href="~/Content/PMain/jquery.mCustomScrollbar.css" />
-<link type="text/css" href="~/Content/PMain/page.css" rel="stylesheet" />
-<link type="text/css" href="~/Content/PMain/slick.css" rel="stylesheet" />
-<script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
-<script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
-<script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
-<script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
+    <div class="body_box">
+        <!--疫情可视化图-->
+        @Html.Partial("nCovMap")
+        <!--患者界面-->
+        <div class="wrap">
+            <!--患者就医-->
+            <ul class="index_2 cf">
+                <li class="li_1" style="    background: url(../image/门诊.jpg) no-repeat center;" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
+                    <a href="/visitinfo.html" target="_blank" class="a">
+                        <div class="ico"><img src="~/image/门诊icon.png" /></div>
+                        <h3>门诊出诊表</h3>
 
-<div class="body_box">
-    <!--疫情可视化-->
-    <div class="ind_banner cf ">
-        <div id="container" style="height: 650% ; width:80%; margin:0px auto;"></div>
-        <script src="~/Content/EpidMap/echarts.min.js"></script>
-        <script src="~/Content/EpidMap/jquery-3.4.1.min.js"></script>
-        <script src="~/Content/EpidMap/china.js"></script>
-        <script type="text/javascript">
-            var dom = document.getElementById("container");
-            var myChart = echarts.init(document.getElementById("container"));
-            var data = [
-                { name: '海门', value: 9 },
-                { name: '鄂尔多斯', value: 12 },
-            ];
-
-            var geoCoordMap = {
-                '海门': [121.15, 31.89],
-                '鄂尔多斯': [109.781327, 39.608266],
-            };
-
-            //函数用于将数据保存成ehcarts地图需要的数据格式  [name:'地点',value:[地图坐标,数据]]   [121.48, 31.22, "2239"]
-            var convertData = function (data) {
-                var res = [];
-                for (var i = 0; i < data.length; i++) {
-                    var geoCoord = geoCoordMap[data[i].name];
-                    if (geoCoord) {
-                        res.push({   //push是添加数组后面的长度，以及内容
-                            name: data[i].name,
-                            value: geoCoord.concat(data[i].value) //concat是连接数组的意思
-                        });
-                    }
-                }
-                return res;
-            };
-            mapOption = {
-                title: {
-                    text: '中国疫情,关系你我',
-                    x: 'center',
-                    //modified 0523
-                    textStyle: {
-                        //文字颜色
-                        color: '#f30008',
-                        //字体风格,'normal','italic','oblique'
-                        // fontStyle:'oblique',
-                        fontStyle: 'italic',
-                        //字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
-                        fontWeight: 'bold',
-                        //字体系列
-                        fontFamily: 'FangSong'
-                        //fontFamily: 'KaiTi'
-                        //字体大小
-                        //fontSize:18
-                    }
-
-                    //modiefied end
-                },
-                tooltip: {
-                    //       trigger: 'item',
-                    formatter: function (params) {      // 鼠标移动到地图  显示： 地点：数值
-                        return params.name + ' : ' + params.value[2];
-                    }
-                },
-                visualMap: {
-                    min: 0,
-                    max: 100,          //设置热力图的最小最大热力值
-                    calculable: true,  //设置热力图的滑动图示器
-                },
-                geo: {
-                    map: 'china',
-                },
-                series: [
-                    {
-                        type: 'scatter',
-                        coordinateSystem: 'geo',    //加载地图参数
-                        data: convertData(data)
-                    }
-                ]
-            };
-            myChart.setOption(mapOption);
-        </script>
-    </div>
-
-    <!--患者界面-->
-    <div class="wrap">
-        <!--患者就医-->
-        <ul class="index_2 cf">
-            <li class="li_1" style="    background: url(../image/门诊.jpg) no-repeat center;" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
-                <a href="/visitinfo.html" target="_blank" class="a">
-                    <div class="ico"><img src="~/image/门诊icon.png" /></div>
-                    <h3>门诊出诊表</h3>
-
-                </a>
-            </li>
-            <li class="li_2" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
-                <a href="/medical_notice.html" target="_blank" class="a">
-                    <div class="ico"><img src="~/image/就医须知.png"></div>
-                    <h3>就医须知</h3>
-                </a>
-            </li>
-            <li class="li_3" style="    background: url(../image/医院地址.jpg) no-repeat center;" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
-                <a href="/nosocomial.html" target="_blank" class="a">
-                    <div class="ico"><img src="~/image/医院地址.png"></div>
-                    <h3>快速提问</h3>
-                </a>
-            </li>
-            <li class="li_4" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
-                <a href="/characteristic.html#part3" target="_blank" class="a">
-                    <div class="ico"><img src="~/image/专科专病.png"></div>
-                    <h3>名院专家</h3>
-                </a>
-            </li>
-        </ul>
-        <!--医院新闻-->
-        <div class="index_3 cf">
-            <div class="li">
-                <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
-                    <div class="img">
-                        <a href="javascript:void(0);" class="tran_scale">
-                            <img title="1" alt="1" src="~/image/医院公告.jpg">
-                        </a>
-                    </div>
-                </div>	            				<div class="con">
-                    <div class="tit">
-                        <h3><a href="/pnotice.html" class="fr">查看更多</a>医院公告</h3>
-                        <ul>
-                            <li><a target="_blank" href="/detail/23485.html" class="ellipsis">关于东单院区新楼地下车库修缮的通知</a></li>
-                            <li><a target="_blank" href="/detail/23459.html" class="ellipsis">睿E（睿意）急诊医学研究专项基金关于推迟2020年度项目申请截止时间的通知</a></li>
-                            <li><a target="_blank" href="/detail/23432.html" class="ellipsis">去氧胆酸注射液注射治疗颏下脂肪堆积患者招募</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="li">
-                <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
-                    <div class="img">
-                        <a href="javascript:void(0);" class="tran_scale">
-                            <img title="" alt="" src="~/image/重大新闻.jpg">
-                        </a>
-                    </div>
-                </div>								<div class="con">
-                    <div class="tit">
-                        <h3><a href="/bignews.html" class="fr">查看更多</a>重大新闻</h3>
-                        <ul>
-                            <li><a target="_blank" href="/detail/23479.html" class="ellipsis">《抗击新冠肺炎疫情的中国行动》白皮书（全文）</a></li>
-                            <li><a target="_blank" href="/detail/23478.html" class="ellipsis">爱眼日 | 还协和逆行天使天朗月清，协和眼科为援鄂队员公益摘镜 </a></li>
-                            <li><a target="_blank" href="/detail/23473.html" class="ellipsis">王直中：医生要一身正气，把病人放在首位 </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="li">
-                <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
-                    <div class="img">
-                        <a href="javascript:void(0);" class="tran_scale">
-                            <img title="" alt="" src="~/image/十安医院说.png">
-                        </a>
-                    </div>
-                </div>	            				<div class="con">
-                    <div class="tit">
-                        <h3><a href="/popular.html" class="fr">查看更多</a>协和医生说</h3>
-                        <ul>
-                            <li><a target="_blank" href="/detail/23476.html" class="ellipsis">爱眼日 | 协和眼科专家送给青少年的一份护眼攻略 </a></li>
-                            <li><a target="_blank" href="/detail/23465.html" class="ellipsis">健康饮食 | 喝汤和喝水，哪个对吃饭更有利？协和专家来点津</a></li>
-                            <li><a target="_blank" href="/detail/23453.html" class="ellipsis">健康过六一 | 协和儿科专家带来“干货满满”的婴儿早期运动发育与训练宝典</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--科室导航-->
-        <div class="index_4">
-            <h2 class="title_h2">科室导航</h2>
-            <div class="ind_4_cont cf">
-                <div class="img ratio-img" data-ratio="0.735">
-                    <img src="~/image/科室导航.jpg" />
-                    <div class="tit">
-                        <div class="con">
-                            <h2></h2>
-                            <p></p>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-
-                <div class="r">
-                    <div class="tabClick cf">
-                        <a href="javascript:;" class="a1">非手术科室<i></i></a>
-                        <a href="javascript:;" class="a2">手术科室<i></i></a>
-                        <a href="javascript:;" class="a3">诊断相关科室<i></i></a>
-                        <a target="_blank" href="/department.html" class="a4">更多科室介绍</a>
-                    </div>
-                    <div class="i4-list">
-                        <div class="child cf">
-                            <ul>
-                                <li>
-                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_neikxx.html" data-title="" data-alt="" data-h="内科学系" data-p="北京协和医院内科学系自1921年建院之初即成立。经过近百年的传承及发展，目前内科学系下属包括了心脏内科、呼吸内..."><i></i>内科学系</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xinnk.html" data-title="心内科" data-alt="心内科" data-h="心内科" data-p="      协和医院心内科具有悠久的历史。早在中华人民共和国成立初期，由黄宛教授和方圻教授组建了协和医院内科心..."><i></i>心内科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_huxnk.html" data-title="呼吸内科" data-alt="" data-h="呼吸与危重症医学科" data-p="      北京协和医院呼吸内科是由我国已故著名呼吸病学专家——朱贵卿教授创建的、具有悠久历史的学科专业。作为..."><i></i>呼吸与危重症医学科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xiaohnk.html" data-title="" data-alt="" data-h="消化内科" data-p="      消化内科是北京协和医院成立最早的专科之一，由我国现代内科学泰斗张孝骞教授和著名消化病专家陈敏章教授..."><i></i>消化内科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_shennk.html" data-title="" data-alt="" data-h="肾内科" data-p="      1979年，肾脏病学在中国作为一个崭新的学科才刚刚起步,毕增祺教授有远见的创立了北京协和医院内科肾..."><i></i>肾内科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xueynk.html" data-title="2016年血液内科全科合影" data-alt="" data-h="血液内科" data-p="      北京协和医院血液科具有悠久的历史，是我国现代血液学的先驱者，也是我国培养血液学专业人才的最早基地。..."><i></i>血液内科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_fengsmyk.html" data-title="" data-alt="" data-h="风湿免疫科" data-p="      北京协和医院风湿免疫科作为我国风湿学病专业发展与人才培养的最早基地之一，自1980年建科历经三十七..."><i></i>风湿免疫科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_ganrnk.html" data-title="" data-alt="" data-h="感染内科" data-p="      北京协和医院感染科是北京协和医院最早成立的科室之一，在老一批传染病专家的传承带领下，感染科历届主任..."><i></i>感染内科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_putnk.html" data-title="" data-alt="" data-h="全科医学科（普通内科）" data-p="      北京协和医院全科医学科（普通内科）的建立起始于美国纽约中华医学基金会项目“面向21世纪建设高质量、..."><i></i>全科医学科（普通内科）</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_zhonglnk.html" data-title="科室医生合影" data-alt="" data-h="肿瘤内科" data-p="      北京协和医院肿瘤内科是国家卫计委临床重点专科建设项目科室。现有教授2名、副教授6名、主治医师8名、..."><i></i>肿瘤内科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_micu.html" data-title="" data-alt="" data-h="MICU" data-p="      北京协和医院MICU成立于2005年，隶属于协和医院内科，为一个主要收治各种内科重症患者的综合性I..."><i></i>MICU</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2019/03/20/s5c91e0571370a_402_295_0_28.jpg" href="/department_laonsfbf.html" data-title="" data-alt="" data-h="老年医学科" data-p="　　老年医学科隶属于大内科，其临床医生均有7年以上的临床经验，均完成了内科各专业组和急诊的轮转学习。现有主任医..."><i></i>老年医学科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a37904d93891.jpg" href="/department_neifmk.html" data-title="" data-alt="" data-h="内分泌科" data-p="      北京协和医院内分泌科的发展是伴随着北京协和医院的历史脚步而前行的。1921年，北京协和医院正式落成..."><i></i>内分泌科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a375655a9399.jpg" href="/department_zhongzylk.html" data-title="2017年重症医学科合影" data-alt="" data-h="重症医学科（ICU）" data-p="                      千锤百炼始成钢，百炼成钢绕指柔
-                ..."><i></i>重症医学科（ICU）</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b22891ca6d.jpg" href="/department_erk.html" data-title="" data-alt="" data-h="儿科" data-p="　　北京协和医院儿科成立于北京协和医院建院之初的1921年，孕育了中国儿科发展的奠基人和多位儿科大家，是中国现..."><i></i>儿科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b231177054.jpg" href="/department_shenjk.html" data-title="" data-alt="" data-h="神经科" data-p="　　北京协和医院神经科成立于1921年，历经90余载风雨，已经成为全国久负盛名的神经专科，是国内最早的神经病学..."><i></i>神经科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b23694eb32.jpg" href="/department_xinlyxk.html" data-title="" data-alt="" data-h="心理医学科" data-p="　　北京协和医院心理医学科是在北京协和医院心理生理中心的基础上重组成立的。科室重组成立于2006年5月。我科采..."><i></i>心理医学科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2ba9b5d86.jpg" href="/department_pifk.html" data-title="" data-alt="" data-h="皮肤科" data-p="　　北京协和医院皮肤科成立于1924年，是我国最早的皮肤性病学科之一。首任主任Dr. Chester N. F..."><i></i>皮肤科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b23b030188.jpg" href="/department_biantfyk.html" data-title="" data-alt="" data-h="变态反应科" data-p="　　北京协和医院变态反应科是中国临床变态反应学的发源地和摇篮。
-　　1938年，我院张庆松教授赴美深造，在学..."><i></i>变态反应科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/11/s5a2e99b45e1f8.jpg" href="/department_jizk.html" data-title="" data-alt="" data-h="急诊科" data-p="      北京协和医院急诊科承担着院内急诊与急救服务重任，从1983年建科以来，经过30余年的建设与发展，急..."><i></i>急诊科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b23e6ba3c8.jpg" href="/department_zhongyk.html" data-title="" data-alt="" data-h="中医科" data-p="　　北京协和医院中医办公室成立于1955年，1961年正式命名中医科，当时由著名中西医结合专家史济招教授担任科..."><i></i>中医科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/14/s5a3215efa0b00.jpg" href="/department_wulyxkfk.html" data-title="" data-alt="" data-h="物理医学康复科" data-p="　　1921年，北京协和医院成立，同年，时任神经科主任的美国人Andrew H Woods教授创立了理疗室，开..."><i></i>物理医学康复科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/19/s5a38842e45a4a.JPG" href="/department_yingyb.html" data-title="" data-alt="" data-h="临床营养科" data-p="        北京协和医院临床营养科由原营养科和肠外肠内营养科合并组成。
-	北京协和医院营养科具有悠久历史..."><i></i>临床营养科</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="child cf">
-                            <ul>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2c6b24ef9.jpg" href="/department_waikxx.html" data-title="" data-alt="" data-h="外科学系" data-p="　　北京协和医院外科学系成立于协和建校之初，历经90余年，涌现出包括黄家驷、吴英恺、曾宪九等在内的众多医学大家..."><i></i>外科学系</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2ca50ba70.gif" href="/department_jibwk.html" data-title="" data-alt="" data-h="基本外科" data-p="　　北京协和医院基本外科在我国医学史上有着辉煌的业绩，涌现出很多全国甚至国际闻名的医学专家，比如曾宪九、朱预、..."><i></i>基本外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/14/s5a32680741f49.jpg" href="/department_guk.html" data-title="骨科" data-alt="骨科" data-h="骨科" data-p="　　北京协和医院骨科的前身是北平协和医学院骨科，创立于20世纪20年代，是我国一流的骨科学临床和研究中心，我国..."><i></i>骨科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2cf91b3ae.jpg" href="/department_xinwk.html" data-title="" data-alt="" data-h="心外科" data-p="　　北京协和医院心外科的前身是我国著名外科学家吴英恺创建于1952年的胸外科，有着十分辉煌的历史。1994年，..."><i></i>心外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/06/s5a275b526772d.jpg" href="/department_xiongwk.html" data-title="" data-alt="" data-h="胸外科" data-p="　　二十世纪30年代起北京协和医院先后成功实施了国内第一例肺叶、全肺及左开胸贲门癌切除手术，这标志着协和胸外科..."><i></i>胸外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/07/s5a28a4e810852.jpg" href="/department_minwk.html" data-title="" data-alt="" data-h="泌尿外科" data-p="　　北京协和医院泌尿外科始建于二十世纪四十年代。50年代由老一辈医学家虞松庭、吴阶平、施锡恩创建了一定规模的专..."><i></i>泌尿外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2dc42e5e4.jpg" href="/department_shenjwk.html" data-title="" data-alt="" data-h="神经外科" data-p="　　北京协和医院神经外科历史悠久，是国内最早开展神经外科工作的科室之一。早在20世纪30年代，我国神经外科的先..."><i></i>神经外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2e0d003b3.JPG" href="/department_xuegwk.html" data-title="" data-alt="" data-h="血管外科" data-p="      北京协和医院血管外科是国际知名、国内领先的血管疾病诊治中心，也是中国最早开展血管外科工作的单位之一..."><i></i>血管外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2e53aa0a5.jpg" href="/department_zhengxmrwk.html" data-title="" data-alt="" data-h="整形美容外科" data-p="　　北京协和医院整形外科始建于1952年，由中国整形外科创始人之一的宋儒耀教授担任主任。1957年整形外科脱离..."><i></i>整形美容外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2fed0d91b83.JPG" href="/department_ruxwk.html" data-title="" data-alt="" data-h="乳腺外科" data-p="　　乳腺疾病是妇女中的常见病，乳腺癌在我国城市地区已占女性各类肿瘤发病率的首位，是严重危害广大妇女健康及生命的..."><i></i>乳腺外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a30c87a069f1_387_284_34_30.jpg" href="/department_ganzwk.html" data-title="" data-alt="" data-h="肝脏外科" data-p="　　北京协和医院外科在老一辈外科学家曾宪九教授和钟守先教授等的领导和努力下，早在上个世纪的50年代就开展了肝脏..."><i></i>肝脏外科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2f40abc1950.jpg" href="/department_mazk.html" data-title="" data-alt="" data-h="麻醉科" data-p="　　北京协和医院成立于1921年，1951年开始任命赵俊、罗来葵教授等设立麻醉专业，是国内最早成立独立麻醉科室..."><i></i>麻醉科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/07/s5a28c2b265aae.jpg" href="/department_fuchank.html" data-title="" data-alt="" data-h="妇产科" data-p="　　中国协和医科大学妇产科学系（北京协和医院妇产科）是国家卫生部命名的林巧稚妇产科研究中心，国家级重点学科，全..."><i></i>妇产科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a37cd699863a.jpg" href="/department_yank.html" data-title="" data-alt="" data-h="眼科" data-p="　　北京协和医院眼科成立于1920年，是我国最早成立的眼科。成立后许多国际一流的眼科学家曾在这里主持工作，被誉..."><i></i>眼科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2ec2e5b25.jpg" href="/department_erbhk.html" data-title="" data-alt="" data-h="耳鼻喉科" data-p="　　从北京协和医院建院伊始，耳鼻咽喉科已独立建科，96年来，北京协和医院耳鼻咽喉科培养了一代又一代耳鼻咽喉头颈..."><i></i>耳鼻喉科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b1e9d6970e.jpg" href="/department_kouqk.html" data-title="" data-alt="" data-h="口腔科" data-p="　　1953年宋儒耀教授和王巧璋教授夫妇在原有的牙病治疗室的基础上组建了独立的口腔科，此后随着赖钦声、钱雪君、..."><i></i>口腔科</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="child cf">
-                            <ul>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2fbae43fa8c.jpg" href="/department_chaoszdk.html" data-title="" data-alt="" data-h="超声医学科" data-p="　　北京协和医院于1972年建立超声诊断专业组，1986年正式成立超声医学科，是中国最早建立的超声医学科之一。..."><i></i>超声医学科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2f5f78985.jpg" href="/department_binglk.html" data-title="" data-alt="" data-h="病理科" data-p="　　北京协和医院是一所全国大型综合性医院，是全国疑难重症诊治中心。已有80多年的历史。每天有全国各地8000多..."><i></i>病理科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a30b0eae6a0b.jpg" href="/department_jianyk.html" data-title="" data-alt="" data-h="检验科" data-p="　　北京协和医院检验科成立于1958年，是中国医学科学院·北京协和医学院检验学系所在地。现科下设微生物专业组、..."><i></i>检验科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2f287447f39.jpg" href="/department_fangsk.html" data-title="" data-alt="" data-h="放射科" data-p="　　北京协和医院放射科已形成种类齐全、设备先进、人员梯队合理的现代医学影像学体系，自2014年以来连续3年蝉联..."><i></i>放射科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2fb1dd807.jpg" href="/department_fangszlk.html" data-title="" data-alt="" data-h="放射治疗科" data-p="　　北京协和医院的放射治疗工作开始于上世纪二十年代，是国内最早开始应用放射线治疗肿瘤的医院。上世纪五十年代，我..."><i></i>放射治疗科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b3022d73eb.jpg" href="/department_heyxk.html" data-title="" data-alt="" data-h="核医学科" data-p="　　北京协和医院核医学科创立于1958年，是我国最早成立的临床核医学科之一。五十年来，经过以王世真院士、周前教..."><i></i>核医学科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a308ddb71664_489_358_61_50.jpg" href="/department_shuxk.html" data-title="" data-alt="" data-h="输血科" data-p="　　输血医学不但涉及内、外、妇、儿以及重症医学等临床输血治疗，还涉及到血清学、免疫学、病毒学、分子生物学、移植..."><i></i>输血科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/07/s5a28ea1d9f027.jpg" href="/department_yaojk.html" data-title="" data-alt="" data-h="药剂科" data-p="　　北京协和医院药剂科是集药学服务、科研、教学和管理为一体的平台科室，负责药品的供应、调剂、合理用药及信息咨询..."><i></i>药剂科</a>
-                                </li>
-                                <li>
-                                    <a class="ellipsis" data-src="/Uploads/Picture/2017/12/11/s5a2e1e6f0dd0a.jpg" href="/department_bingakjbflzx.html" data-title="病案科&amp;世界卫生组织国际分类家族中国合作中心" data-alt="" data-h="病案科" data-p="　　北京协和医院在1921年建院之初即组建了病案科-中国医院中第一个病案科，中国病案管理创始人王贤星教授担任协..."><i></i>病案科</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--便民举措-->
-        <ul class="index_5 cf">
-            <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
-                <a href="/department_ims.html" target="_blank" class="tran_scale">
-                    <img title="国际医疗部1" alt="国际医疗部2" src="~/image/ln3-1.jpg">
-                    <h2>国际医疗部</h2>
-                </a>
-            </li>
-            <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
-                <a href="/department_tijzx.html" target="_blank" class="tran_scale">
-                    <img title="健康医学部（体检中心）" alt="健康医学部（体检中心）" src="~/image/ln3-2.jpg">
-                    <h2>健康医学部（体检中心）</h2>
-                </a>
-            </li>
-            <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
-                <a href="/department_lincylzx.html" target="_blank" class="tran_scale">
-                    <img title="临床药理中心" alt="临床药理中心" src="~/image/ln3-3.png">
-                    <h2>临床药理中心</h2>
-                </a>
-            </li>
-        </ul>
-        <!--软件特色-->
-        <div class="index_6">
-            <h2 class="title_h2" edit_params="title1Show%3D1%26title1Max%3D15">特色诊疗</h2>			<ul class="list cf">
-                <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
-                    <a href="/characteristic.html#1" target="_blank">
-                        <img src="~/image/ln4-1.jpg">
-                        <div class="tit">
-                            <h3>
-                                中国医院最佳专科<br />
-                                声誉排行榜
-                            </h3>
-                            <i></i>
-                            <span>查看更多</span>
-                        </div>
                     </a>
                 </li>
-                <li class="li_2" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
-                    <a href="/characteristic.html#2" target="_blank">
-                        <img src="~/image/ln4-2.jpg">
-                        <div class="tit">
-                            <h3>
-                                国家重点学科及重点<br />
-                                培养学科
-                            </h3>
-                            <i></i>
-                            <span>查看更多</span>
-                        </div>
+                <li class="li_2" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
+                    <a href="/medical_notice.html" target="_blank" class="a">
+                        <div class="ico"><img src="~/image/就医须知.png"></div>
+                        <h3>就医须知</h3>
                     </a>
                 </li>
-                <li class="li_1 li_3" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
-                    <a href="/characteristic.html#3" target="_blank">
-                        <img src="~/image/ln4-3.jpg">
-                        <div class="tit">
-                            <h3>
-                                国家卫生健康委<br />
-                                临床重点专科
-                            </h3>
-                            <i></i>
-                            <span>查看更多</span>
-                        </div>
+                <li class="li_3" style="    background: url(../image/医院地址.jpg) no-repeat center;" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
+                    <a href="/nosocomial.html" target="_blank" class="a">
+                        <div class="ico"><img src="~/image/医院地址.png"></div>
+                        <h3>快速提问</h3>
                     </a>
                 </li>
-                <li class="li_1 li_4 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="" alt="" src="~/image/ln4-4.jpg"></a></li>
-                <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="2" alt="22" src="~/image/ln4-5.jpg"></a></li>
-                <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1%26descriptionShow%3D1%26descriptionMax%3D160%26showLink%3D1">
-                    <a href="" target="_blank">
-                        <img src="~/image/ln4-6.jpg">
-                        <div class="tit">
-                            <h3>远程医学中心</h3>
-                            <i></i>
-                            <span>查看更多</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
-                    <a href="/characteristic.html#4" target="_blank">
-                        <img src="~/image/ln4-7.jpg">
-                        <div class="tit">
-                            <h3>
-                                国家级省部级<br />
-                                质控中心
-                            </h3>
-                            <i></i>
-                            <span>查看更多</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
-                    <a href="/characteristic.html#5" target="_blank">
-                        <img src="~/image/ln4-8.jpg">
-                        <div class="tit">
-                            <h3>
-                                北京市<br />
-                                重点学科
-                            </h3>
-                            <i></i>
-                            <span>查看更多</span>
-                        </div>
+                <li class="li_4" edit_params="width%3D80%26height%3D65%26showLink%3D1%26title1Show%3D1%26title1Max%3D8%26backgroundColor%3D1">
+                    <a href="/characteristic.html#part3" target="_blank" class="a">
+                        <div class="ico"><img src="~/image/专科专病.png"></div>
+                        <h3>名院专家</h3>
                     </a>
                 </li>
             </ul>
+            <!--医院新闻-->
+            <div class="index_3 cf">
+                <div class="li">
+                    <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
+                        <div class="img">
+                            <a href="javascript:void(0);" class="tran_scale">
+                                <img title="1" alt="1" src="~/image/医院公告.jpg">
+                            </a>
+                        </div>
+                    </div>	            				<div class="con">
+                        <div class="tit">
+                            <h3><a href="/pnotice.html" class="fr">查看更多</a>医院公告</h3>
+                            <ul>
+                                <li><a target="_blank" href="/detail/23485.html" class="ellipsis">关于东单院区新楼地下车库修缮的通知</a></li>
+                                <li><a target="_blank" href="/detail/23459.html" class="ellipsis">睿E（睿意）急诊医学研究专项基金关于推迟2020年度项目申请截止时间的通知</a></li>
+                                <li><a target="_blank" href="/detail/23432.html" class="ellipsis">去氧胆酸注射液注射治疗颏下脂肪堆积患者招募</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="li">
+                    <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
+                        <div class="img">
+                            <a href="javascript:void(0);" class="tran_scale">
+                                <img title="" alt="" src="~/image/重大新闻.jpg">
+                            </a>
+                        </div>
+                    </div>								<div class="con">
+                        <div class="tit">
+                            <h3><a href="/bignews.html" class="fr">查看更多</a>重大新闻</h3>
+                            <ul>
+                                <li><a target="_blank" href="/detail/23479.html" class="ellipsis">《抗击新冠肺炎疫情的中国行动》白皮书（全文）</a></li>
+                                <li><a target="_blank" href="/detail/23478.html" class="ellipsis">爱眼日 | 还协和逆行天使天朗月清，协和眼科为援鄂队员公益摘镜 </a></li>
+                                <li><a target="_blank" href="/detail/23473.html" class="ellipsis">王直中：医生要一身正气，把病人放在首位 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="li">
+                    <div edit_params="width%3D397%26height%3D226%26showAlt%3D1%26showLink%3D1">
+                        <div class="img">
+                            <a href="javascript:void(0);" class="tran_scale">
+                                <img title="" alt="" src="~/image/十安医院说.png">
+                            </a>
+                        </div>
+                    </div>	            				<div class="con">
+                        <div class="tit">
+                            <h3><a href="/popular.html" class="fr">查看更多</a>协和医生说</h3>
+                            <ul>
+                                <li><a target="_blank" href="/detail/23476.html" class="ellipsis">爱眼日 | 协和眼科专家送给青少年的一份护眼攻略 </a></li>
+                                <li><a target="_blank" href="/detail/23465.html" class="ellipsis">健康饮食 | 喝汤和喝水，哪个对吃饭更有利？协和专家来点津</a></li>
+                                <li><a target="_blank" href="/detail/23453.html" class="ellipsis">健康过六一 | 协和儿科专家带来“干货满满”的婴儿早期运动发育与训练宝典</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--科室导航-->
+            <div class="index_4">
+                <h2 class="title_h2">科室导航</h2>
+                <div class="ind_4_cont cf">
+                    <div class="img ratio-img" data-ratio="0.735">
+                        <img src="~/image/科室导航.jpg" />
+                        <div class="tit">
+                            <div class="con">
+                                <h2></h2>
+                                <p></p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="r">
+                        <div class="tabClick cf">
+                            <a href="javascript:;" class="a1">非手术科室<i></i></a>
+                            <a href="javascript:;" class="a2">手术科室<i></i></a>
+                            <a href="javascript:;" class="a3">诊断相关科室<i></i></a>
+                            <a target="_blank" href="/department.html" class="a4">更多科室介绍</a>
+                        </div>
+                        <div class="i4-list">
+                            <div class="child cf">
+                                <ul>
+                                    <li>
+                                        <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_neikxx.html" data-title="" data-alt="" data-h="内科学系" data-p="北京协和医院内科学系自1921年建院之初即成立。经过近百年的传承及发展，目前内科学系下属包括了心脏内科、呼吸内..."><i></i>内科学系</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xinnk.html" data-title="心内科" data-alt="心内科" data-h="心内科" data-p="      协和医院心内科具有悠久的历史。早在中华人民共和国成立初期，由黄宛教授和方圻教授组建了协和医院内科心..."><i></i>心内科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_huxnk.html" data-title="呼吸内科" data-alt="" data-h="呼吸与危重症医学科" data-p="      北京协和医院呼吸内科是由我国已故著名呼吸病学专家——朱贵卿教授创建的、具有悠久历史的学科专业。作为..."><i></i>呼吸与危重症医学科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xiaohnk.html" data-title="" data-alt="" data-h="消化内科" data-p="      消化内科是北京协和医院成立最早的专科之一，由我国现代内科学泰斗张孝骞教授和著名消化病专家陈敏章教授..."><i></i>消化内科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_shennk.html" data-title="" data-alt="" data-h="肾内科" data-p="      1979年，肾脏病学在中国作为一个崭新的学科才刚刚起步,毕增祺教授有远见的创立了北京协和医院内科肾..."><i></i>肾内科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="../../image/科室导航.jpg" href="/department_xueynk.html" data-title="2016年血液内科全科合影" data-alt="" data-h="血液内科" data-p="      北京协和医院血液科具有悠久的历史，是我国现代血液学的先驱者，也是我国培养血液学专业人才的最早基地。..."><i></i>血液内科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_fengsmyk.html" data-title="" data-alt="" data-h="风湿免疫科" data-p="      北京协和医院风湿免疫科作为我国风湿学病专业发展与人才培养的最早基地之一，自1980年建科历经三十七..."><i></i>风湿免疫科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_ganrnk.html" data-title="" data-alt="" data-h="感染内科" data-p="      北京协和医院感染科是北京协和医院最早成立的科室之一，在老一批传染病专家的传承带领下，感染科历届主任..."><i></i>感染内科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_putnk.html" data-title="" data-alt="" data-h="全科医学科（普通内科）" data-p="      北京协和医院全科医学科（普通内科）的建立起始于美国纽约中华医学基金会项目“面向21世纪建设高质量、..."><i></i>全科医学科（普通内科）</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_zhonglnk.html" data-title="科室医生合影" data-alt="" data-h="肿瘤内科" data-p="      北京协和医院肿瘤内科是国家卫计委临床重点专科建设项目科室。现有教授2名、副教授6名、主治医师8名、..."><i></i>肿瘤内科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="~/image/科室导航.jpg" href="/department_micu.html" data-title="" data-alt="" data-h="MICU" data-p="      北京协和医院MICU成立于2005年，隶属于协和医院内科，为一个主要收治各种内科重症患者的综合性I..."><i></i>MICU</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2019/03/20/s5c91e0571370a_402_295_0_28.jpg" href="/department_laonsfbf.html" data-title="" data-alt="" data-h="老年医学科" data-p="　　老年医学科隶属于大内科，其临床医生均有7年以上的临床经验，均完成了内科各专业组和急诊的轮转学习。现有主任医..."><i></i>老年医学科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a37904d93891.jpg" href="/department_neifmk.html" data-title="" data-alt="" data-h="内分泌科" data-p="      北京协和医院内分泌科的发展是伴随着北京协和医院的历史脚步而前行的。1921年，北京协和医院正式落成..."><i></i>内分泌科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a375655a9399.jpg" href="/department_zhongzylk.html" data-title="2017年重症医学科合影" data-alt="" data-h="重症医学科（ICU）" data-p="                      千锤百炼始成钢，百炼成钢绕指柔
+                ..."><i></i>重症医学科（ICU）</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b22891ca6d.jpg" href="/department_erk.html" data-title="" data-alt="" data-h="儿科" data-p="　　北京协和医院儿科成立于北京协和医院建院之初的1921年，孕育了中国儿科发展的奠基人和多位儿科大家，是中国现..."><i></i>儿科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b231177054.jpg" href="/department_shenjk.html" data-title="" data-alt="" data-h="神经科" data-p="　　北京协和医院神经科成立于1921年，历经90余载风雨，已经成为全国久负盛名的神经专科，是国内最早的神经病学..."><i></i>神经科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b23694eb32.jpg" href="/department_xinlyxk.html" data-title="" data-alt="" data-h="心理医学科" data-p="　　北京协和医院心理医学科是在北京协和医院心理生理中心的基础上重组成立的。科室重组成立于2006年5月。我科采..."><i></i>心理医学科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2ba9b5d86.jpg" href="/department_pifk.html" data-title="" data-alt="" data-h="皮肤科" data-p="　　北京协和医院皮肤科成立于1924年，是我国最早的皮肤性病学科之一。首任主任Dr. Chester N. F..."><i></i>皮肤科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b23b030188.jpg" href="/department_biantfyk.html" data-title="" data-alt="" data-h="变态反应科" data-p="　　北京协和医院变态反应科是中国临床变态反应学的发源地和摇篮。
+　　1938年，我院张庆松教授赴美深造，在学..."><i></i>变态反应科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/11/s5a2e99b45e1f8.jpg" href="/department_jizk.html" data-title="" data-alt="" data-h="急诊科" data-p="      北京协和医院急诊科承担着院内急诊与急救服务重任，从1983年建科以来，经过30余年的建设与发展，急..."><i></i>急诊科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b23e6ba3c8.jpg" href="/department_zhongyk.html" data-title="" data-alt="" data-h="中医科" data-p="　　北京协和医院中医办公室成立于1955年，1961年正式命名中医科，当时由著名中西医结合专家史济招教授担任科..."><i></i>中医科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/14/s5a3215efa0b00.jpg" href="/department_wulyxkfk.html" data-title="" data-alt="" data-h="物理医学康复科" data-p="　　1921年，北京协和医院成立，同年，时任神经科主任的美国人Andrew H Woods教授创立了理疗室，开..."><i></i>物理医学康复科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/19/s5a38842e45a4a.JPG" href="/department_yingyb.html" data-title="" data-alt="" data-h="临床营养科" data-p="        北京协和医院临床营养科由原营养科和肠外肠内营养科合并组成。
+	北京协和医院营养科具有悠久历史..."><i></i>临床营养科</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="child cf">
+                                <ul>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2c6b24ef9.jpg" href="/department_waikxx.html" data-title="" data-alt="" data-h="外科学系" data-p="　　北京协和医院外科学系成立于协和建校之初，历经90余年，涌现出包括黄家驷、吴英恺、曾宪九等在内的众多医学大家..."><i></i>外科学系</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2ca50ba70.gif" href="/department_jibwk.html" data-title="" data-alt="" data-h="基本外科" data-p="　　北京协和医院基本外科在我国医学史上有着辉煌的业绩，涌现出很多全国甚至国际闻名的医学专家，比如曾宪九、朱预、..."><i></i>基本外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/14/s5a32680741f49.jpg" href="/department_guk.html" data-title="骨科" data-alt="骨科" data-h="骨科" data-p="　　北京协和医院骨科的前身是北平协和医学院骨科，创立于20世纪20年代，是我国一流的骨科学临床和研究中心，我国..."><i></i>骨科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2cf91b3ae.jpg" href="/department_xinwk.html" data-title="" data-alt="" data-h="心外科" data-p="　　北京协和医院心外科的前身是我国著名外科学家吴英恺创建于1952年的胸外科，有着十分辉煌的历史。1994年，..."><i></i>心外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/06/s5a275b526772d.jpg" href="/department_xiongwk.html" data-title="" data-alt="" data-h="胸外科" data-p="　　二十世纪30年代起北京协和医院先后成功实施了国内第一例肺叶、全肺及左开胸贲门癌切除手术，这标志着协和胸外科..."><i></i>胸外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/07/s5a28a4e810852.jpg" href="/department_minwk.html" data-title="" data-alt="" data-h="泌尿外科" data-p="　　北京协和医院泌尿外科始建于二十世纪四十年代。50年代由老一辈医学家虞松庭、吴阶平、施锡恩创建了一定规模的专..."><i></i>泌尿外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2dc42e5e4.jpg" href="/department_shenjwk.html" data-title="" data-alt="" data-h="神经外科" data-p="　　北京协和医院神经外科历史悠久，是国内最早开展神经外科工作的科室之一。早在20世纪30年代，我国神经外科的先..."><i></i>神经外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2e0d003b3.JPG" href="/department_xuegwk.html" data-title="" data-alt="" data-h="血管外科" data-p="      北京协和医院血管外科是国际知名、国内领先的血管疾病诊治中心，也是中国最早开展血管外科工作的单位之一..."><i></i>血管外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2e53aa0a5.jpg" href="/department_zhengxmrwk.html" data-title="" data-alt="" data-h="整形美容外科" data-p="　　北京协和医院整形外科始建于1952年，由中国整形外科创始人之一的宋儒耀教授担任主任。1957年整形外科脱离..."><i></i>整形美容外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2fed0d91b83.JPG" href="/department_ruxwk.html" data-title="" data-alt="" data-h="乳腺外科" data-p="　　乳腺疾病是妇女中的常见病，乳腺癌在我国城市地区已占女性各类肿瘤发病率的首位，是严重危害广大妇女健康及生命的..."><i></i>乳腺外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a30c87a069f1_387_284_34_30.jpg" href="/department_ganzwk.html" data-title="" data-alt="" data-h="肝脏外科" data-p="　　北京协和医院外科在老一辈外科学家曾宪九教授和钟守先教授等的领导和努力下，早在上个世纪的50年代就开展了肝脏..."><i></i>肝脏外科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2f40abc1950.jpg" href="/department_mazk.html" data-title="" data-alt="" data-h="麻醉科" data-p="　　北京协和医院成立于1921年，1951年开始任命赵俊、罗来葵教授等设立麻醉专业，是国内最早成立独立麻醉科室..."><i></i>麻醉科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/07/s5a28c2b265aae.jpg" href="/department_fuchank.html" data-title="" data-alt="" data-h="妇产科" data-p="　　中国协和医科大学妇产科学系（北京协和医院妇产科）是国家卫生部命名的林巧稚妇产科研究中心，国家级重点学科，全..."><i></i>妇产科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/18/s5a37cd699863a.jpg" href="/department_yank.html" data-title="" data-alt="" data-h="眼科" data-p="　　北京协和医院眼科成立于1920年，是我国最早成立的眼科。成立后许多国际一流的眼科学家曾在这里主持工作，被誉..."><i></i>眼科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2ec2e5b25.jpg" href="/department_erbhk.html" data-title="" data-alt="" data-h="耳鼻喉科" data-p="　　从北京协和医院建院伊始，耳鼻咽喉科已独立建科，96年来，北京协和医院耳鼻咽喉科培养了一代又一代耳鼻咽喉头颈..."><i></i>耳鼻喉科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b1e9d6970e.jpg" href="/department_kouqk.html" data-title="" data-alt="" data-h="口腔科" data-p="　　1953年宋儒耀教授和王巧璋教授夫妇在原有的牙病治疗室的基础上组建了独立的口腔科，此后随着赖钦声、钱雪君、..."><i></i>口腔科</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="child cf">
+                                <ul>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2fbae43fa8c.jpg" href="/department_chaoszdk.html" data-title="" data-alt="" data-h="超声医学科" data-p="　　北京协和医院于1972年建立超声诊断专业组，1986年正式成立超声医学科，是中国最早建立的超声医学科之一。..."><i></i>超声医学科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2f5f78985.jpg" href="/department_binglk.html" data-title="" data-alt="" data-h="病理科" data-p="　　北京协和医院是一所全国大型综合性医院，是全国疑难重症诊治中心。已有80多年的历史。每天有全国各地8000多..."><i></i>病理科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a30b0eae6a0b.jpg" href="/department_jianyk.html" data-title="" data-alt="" data-h="检验科" data-p="　　北京协和医院检验科成立于1958年，是中国医学科学院·北京协和医学院检验学系所在地。现科下设微生物专业组、..."><i></i>检验科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/12/s5a2f287447f39.jpg" href="/department_fangsk.html" data-title="" data-alt="" data-h="放射科" data-p="　　北京协和医院放射科已形成种类齐全、设备先进、人员梯队合理的现代医学影像学体系，自2014年以来连续3年蝉联..."><i></i>放射科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b2fb1dd807.jpg" href="/department_fangszlk.html" data-title="" data-alt="" data-h="放射治疗科" data-p="　　北京协和医院的放射治疗工作开始于上世纪二十年代，是国内最早开始应用放射线治疗肿瘤的医院。上世纪五十年代，我..."><i></i>放射治疗科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/21/s5a3b3022d73eb.jpg" href="/department_heyxk.html" data-title="" data-alt="" data-h="核医学科" data-p="　　北京协和医院核医学科创立于1958年，是我国最早成立的临床核医学科之一。五十年来，经过以王世真院士、周前教..."><i></i>核医学科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/13/s5a308ddb71664_489_358_61_50.jpg" href="/department_shuxk.html" data-title="" data-alt="" data-h="输血科" data-p="　　输血医学不但涉及内、外、妇、儿以及重症医学等临床输血治疗，还涉及到血清学、免疫学、病毒学、分子生物学、移植..."><i></i>输血科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/07/s5a28ea1d9f027.jpg" href="/department_yaojk.html" data-title="" data-alt="" data-h="药剂科" data-p="　　北京协和医院药剂科是集药学服务、科研、教学和管理为一体的平台科室，负责药品的供应、调剂、合理用药及信息咨询..."><i></i>药剂科</a>
+                                    </li>
+                                    <li>
+                                        <a class="ellipsis" data-src="/Uploads/Picture/2017/12/11/s5a2e1e6f0dd0a.jpg" href="/department_bingakjbflzx.html" data-title="病案科&amp;世界卫生组织国际分类家族中国合作中心" data-alt="" data-h="病案科" data-p="　　北京协和医院在1921年建院之初即组建了病案科-中国医院中第一个病案科，中国病案管理创始人王贤星教授担任协..."><i></i>病案科</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--便民举措-->
+            <ul class="index_5 cf">
+                <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
+                    <a href="/department_ims.html" target="_blank" class="tran_scale">
+                        <img title="国际医疗部1" alt="国际医疗部2" src="~/image/ln3-1.jpg">
+                        <h2>国际医疗部</h2>
+                    </a>
+                </li>
+                <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
+                    <a href="/department_tijzx.html" target="_blank" class="tran_scale">
+                        <img title="健康医学部（体检中心）" alt="健康医学部（体检中心）" src="~/image/ln3-2.jpg">
+                        <h2>健康医学部（体检中心）</h2>
+                    </a>
+                </li>
+                <li class="ratio-img" edit_params="width%3D397%26height%3D180%26showAlt%3D1%26title1Show%3D1%26title1Max%3D14%26showLink%3D1">
+                    <a href="/department_lincylzx.html" target="_blank" class="tran_scale">
+                        <img title="临床药理中心" alt="临床药理中心" src="~/image/ln3-3.png">
+                        <h2>临床药理中心</h2>
+                    </a>
+                </li>
+            </ul>
+            <!--软件特色-->
+            <div class="index_6">
+                <h2 class="title_h2" edit_params="title1Show%3D1%26title1Max%3D15">特色诊疗</h2>			<ul class="list cf">
+                    <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
+                        <a href="/characteristic.html#1" target="_blank">
+                            <img src="~/image/ln4-1.jpg">
+                            <div class="tit">
+                                <h3>
+                                    中国医院最佳专科<br />
+                                    声誉排行榜
+                                </h3>
+                                <i></i>
+                                <span>查看更多</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li_2" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
+                        <a href="/characteristic.html#2" target="_blank">
+                            <img src="~/image/ln4-2.jpg">
+                            <div class="tit">
+                                <h3>
+                                    国家重点学科及重点<br />
+                                    培养学科
+                                </h3>
+                                <i></i>
+                                <span>查看更多</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li_1 li_3" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
+                        <a href="/characteristic.html#3" target="_blank">
+                            <img src="~/image/ln4-3.jpg">
+                            <div class="tit">
+                                <h3>
+                                    国家卫生健康委<br />
+                                    临床重点专科
+                                </h3>
+                                <i></i>
+                                <span>查看更多</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li_1 li_4 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="" alt="" src="~/image/ln4-4.jpg"></a></li>
+                    <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1"><a><img title="2" alt="22" src="~/image/ln4-5.jpg"></a></li>
+                    <li class="li_1 tran_scale" edit_params="width%3D308%26height%3D272%26showAlt%3D1%26descriptionShow%3D1%26descriptionMax%3D160%26showLink%3D1">
+                        <a href="" target="_blank">
+                            <img src="~/image/ln4-6.jpg">
+                            <div class="tit">
+                                <h3>远程医学中心</h3>
+                                <i></i>
+                                <span>查看更多</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
+                        <a href="/characteristic.html#4" target="_blank">
+                            <img src="~/image/ln4-7.jpg">
+                            <div class="tit">
+                                <h3>
+                                    国家级省部级<br />
+                                    质控中心
+                                </h3>
+                                <i></i>
+                                <span>查看更多</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="li_1" edit_params="width%3D308%26height%3D272%26descriptionShow%3D1%26descriptionMax%3D16%26showLink%3D1">
+                        <a href="/characteristic.html#5" target="_blank">
+                            <img src="~/image/ln4-8.jpg">
+                            <div class="tit">
+                                <h3>
+                                    北京市<br />
+                                    重点学科
+                                </h3>
+                                <i></i>
+                                <span>查看更多</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>

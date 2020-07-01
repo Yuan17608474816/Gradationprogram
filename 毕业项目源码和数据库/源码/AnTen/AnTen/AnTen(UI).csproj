@@ -148,6 +148,9 @@
     <Content Include="Content\EpidMap\echarts.min.js" />
     <Content Include="Content\EpidMap\jquery-3.4.1.min.js" />
     <Content Include="Content\LayoutPage\page.css" />
+    <Content Include="Content\Pharmacy\index_slad.css" />
+    <Content Include="Content\Pharmacy\reset.css" />
+    <Content Include="Content\Pharmacy\XOpopup.min.css" />
     <Content Include="Content\PMain\rain\base_aio.css" />
     <Content Include="Content\LayoutPage\global.css" />
     <Content Include="Content\PMain\rain\index_355.css" />
@@ -172,12 +175,30 @@
     <Content Include="Content\SelDia\main_d80.css" />
     <Content Include="Content\SelSym\Selmain.css" />
     <Content Include="Content\SelSym\supporbtn.css" />
+    <Content Include="Content\Visro\china.js" />
+    <Content Include="Content\Visro\echarts.js" />
+    <Content Include="Content\Visro\echarts.min.js" />
+    <Content Include="Content\Visro\epidemic.css" />
+    <Content Include="Content\Visro\index.js" />
+    <Content Include="Content\Visro\main_28fc.js" />
+    <Content Include="Content\Visro\main_4e4e.js" />
+    <Content Include="Content\Visro\main_60ab.js" />
+    <Content Include="Content\Visro\main_65da.js" />
+    <Content Include="Content\Visro\mian_2020063011.js" />
+    <Content Include="Content\Visro\preact.umd.js" />
+    <Content Include="Content\Visro\trace_2020063011.js" />
+    <Content Include="Content\Visro\transform.js" />
+    <Content Include="Content\Visro\vr_share.css" />
+    <Content Include="Content\Visro\world.js" />
+    <Content Include="Content\Visro\wxshare.css" />
+    <Content Include="Content\Visro\zepto.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="image\Appicon.png" />
     <Content Include="image\bg.jpg" />
     <Content Include="image\body.png" />
+    <Content Include="image\China.png" />
     <Content Include="image\head_sea.png" />
     <Content Include="image\hosicon.png" />
     <Content Include="image\icon1.png" />
@@ -193,10 +214,9 @@
     <Content Include="image\ln4-5.jpg" />
     <Content Include="image\ln4-6.jpg" />
     <Content Include="image\ln4-8.jpg" />
-    <Content Include="image\logo.png" />
-    <Content Include="image\logo2.png" />
     <Content Include="image\Logo3.png" />
     <Content Include="image\man_bm.png" />
+    <Content Include="image\png2.png" />
     <Content Include="image\png3.png" />
     <Content Include="image\png4.png" />
     <Content Include="image\png5.png" />
@@ -257,6 +277,7 @@
     <Content Include="Scripts\common\mCustomScrollbar.js" />
     <Content Include="Scripts\common\mousewheel.js" />
     <Content Include="Scripts\common\slick.js" />
+    <Content Include="Scripts\Pharmacy\sub_public.js" />
     <Content Include="Scripts\PMain\jquery.mCustomScrollbar.min.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
@@ -269,6 +290,7 @@
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Content\LayoutPage\jquery.mCustomScrollbar.css" />
     <Content Include="Content\SelDia\app_1292.css" />
+    <Content Include="Content\Pharmacy\sub_public.scss" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
@@ -411,6 +433,9 @@
     <Content Include="Views\AT_PMain\PatQueAnR.cshtml" />
     <Content Include="Views\AT_PMain\PoScHe.cshtml" />
     <Content Include="Views\AT_PMain\AppReg.cshtml" />
+    <Content Include="Views\AT_PMain\pharmacy.cshtml" />
+    <Content Include="Views\AT_PMain\Default.cshtml" />
+    <Content Include="Views\Shared\nCovMap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

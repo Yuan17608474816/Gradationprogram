@@ -1984,7 +1984,7 @@
 /*	2017.12.05 - lyc	start*/
 
 .header .nav .logo {
-    margin-top: -45px;
+    margin-top: -10px;
     margin-left: -30px;
     padding-right: 10px;
 }
@@ -2031,28 +2031,28 @@
     .index_2 li {
         transition: 0.8s;
         -webkit-transition: 0.8s;
-        opacity: 0;
+        opacity: 1;
     }
 
-        .index_2 li:nth-child(1) {
-            transform: translateX(-30px);
-            -webkit-transform: translateX(-30px);
+        /*.index_2 li:nth-child(1) {
+            transform: translatex(-30px);
+            -webkit-transform: translatex(-30px);
         }
 
         .index_2 li:nth-child(2) {
-            transform: translateX(-80px);
-            -webkit-transform: translateX(-80px);
+            transform: translatex(-80px);
+            -webkit-transform: translatex(-80px);
         }
 
         .index_2 li:nth-child(3) {
-            transform: translateX(-130px);
-            -webkit-transform: translateX(-130px);
+            transform: translatex(-130px);
+            -webkit-transform: translatex(-130px);
         }
 
         .index_2 li:nth-child(4) {
-            transform: translateX(-180px);
-            -webkit-transform: translateX(-180px);
-        }
+            transform: translatex(-180px);
+            -webkit-transform: translatex(-180px);
+        }*/
 
     .index_2.show li {
         opacity: 1 !important;

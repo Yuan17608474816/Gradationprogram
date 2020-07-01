@@ -9,7 +9,6 @@
  * 
  * Requires: 1.2.2+
  */
-
 (function ($) {
 
     var types = ['DOMMouseScroll', 'mousewheel'];

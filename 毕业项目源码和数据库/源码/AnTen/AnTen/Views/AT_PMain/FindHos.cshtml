@@ -5,447 +5,458 @@
 }
     <link href="~/Content/SeaDoc/base.css" rel="stylesheet" />
     <link href="~/Content/SeaDoc/FinHos.css" rel="stylesheet" />
-<div class="ui-grid ui-main clearfix" style="display: flex;">
-    <section class="flex1">
-        <div class="top-nav">
-            <!-- 这个点了以后跳转问题-->
-            <!--面包屑导航-->
-            <ul class="bread-crumb">
-                <li class="item"><a href="/pc/hospitallist/0/0/">找医院</a></li> &gt;
-                <!-- 大区code 0-->
-                <!-- 遍历列表页面的大区code -->
-                <li class="item"><a href="/pc/hospitallist/0/0">全国</a></li>
+    <div class="ui-grid ui-main clearfix" style="display: flex;">
+        @*<div class="position">
+            <div class="block">
+                您现在的位置：
+                <a href="/AT_PMain/PanMain">首页</a>
+                &gt; <a href="/AT_PMain/FindHos">找医院</a>
+            </div>
+        </div>*@
+        <section class="flex1">
+            <div class="top-nav">
+                <!-- 这个点了以后跳转问题-->
+                <!--面包屑导航-->
+                <ul class="bread-crumb">
+                    <li class="item">
+                        您现在的位置：
+                        <a href="/AT_PMain/PanMain">首页</a>
+                        &gt; <a href="/AT_PMain/FindHos">找医院</a>
+                    </li> &gt;
+                    <!-- 大区code 0-->
+                    <!-- 遍历列表页面的大区code -->
+                    <li class="item"><a href="/pc/hospitallist/0/0">全国</a></li>
 
-            </ul>
-        </div>
-        <div class="select-option">
-            <div class="select-option-item">
-                <div class="select-option-title">
-                    地区：
+                </ul>
+            </div>
+            <div class="select-option">
+                <div class="select-option-item">
+                    <div class="select-option-title">
+                        地区：
+                    </div>
+                    <div class="select-option-con">
+                        <ul class="list j-tab-wrap">
+
+                            <li class="tab-item  cur ">
+                                <a href="/pc/hospitallist/0/0">全国</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/1/0">东北</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/2/0">华中</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/3/0">西南</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/4/0">西北</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/5/0">华东</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/6/0">华北</a>
+                            </li>
+
+                            <li class="tab-item ">
+                                <a href="/pc/hospitallist/7/0">华南</a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-                <div class="select-option-con">
-                    <ul class="list j-tab-wrap">
 
-                        <li class="tab-item  cur ">
-                            <a href="/pc/hospitallist/0/0">全国</a>
-                        </li>
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/1/0">东北</a>
-                        </li>
+                <div class="select-option-item">
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/2/0">华中</a>
-                        </li>
+                    <!--科室筛选项  此处关键在于 query info-->
+                    <div class="select-wrap">
+                        <label class="title select-option-title">科室：</label>
+                        <select name="" class="province-select clinic-select"
+                                onchange="window.location=this.value">
+                            <!-- 进行属性添加  没有选择一级科室 -->
+                            <!-- 进行循环渲染 -->
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/3/0">西南</a>
-                        </li>
+                            <option value="/pc/hospitallist/0/1/">
+                                妇科
+                            </option>
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/4/0">西北</a>
-                        </li>
+                            <option value="/pc/hospitallist/0/fa/">
+                                儿科
+                            </option>
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/5/0">华东</a>
-                        </li>
+                            <option value="/pc/hospitallist/0/ha/">
+                                皮肤性病科
+                            </option>
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/6/0">华北</a>
-                        </li>
+                            <option value="/pc/hospitallist/0/aa/">
+                                内科
+                            </option>
 
-                        <li class="tab-item ">
-                            <a href="/pc/hospitallist/7/0">华南</a>
-                        </li>
+                            <option value="/pc/hospitallist/0/8/">
+                                男科
+                            </option>
 
-                    </ul>
+                            <option value="/pc/hospitallist/0/21/">
+                                产科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/ba/">
+                                外科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/oa/">
+                                中医科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/ca/">
+                                骨伤科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/na/">
+                                精神心理科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/13/">
+                                口腔颌面科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/15/">
+                                眼科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/ja/">
+                                耳鼻咽喉科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/ma/">
+                                肿瘤及防治科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/16/">
+                                整形美容科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/qa/">
+                                报告解读科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/6/">
+                                营养科
+                            </option>
+
+                            <option value="/pc/hospitallist/0/0/"
+                                    selected="selected">
+                                综合
+                            </option>
+
+                        </select>
+                        <!-- 二级科室 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
                 </div>
             </div>
 
 
-            <div class="select-option-item">
-
-                <!--科室筛选项  此处关键在于 query info-->
-                <div class="select-wrap">
-                    <label class="title select-option-title">科室：</label>
-                    <select name="" class="province-select clinic-select"
-                            onchange="window.location=this.value">
-                        <!-- 进行属性添加  没有选择一级科室 -->
-                        <!-- 进行循环渲染 -->
-
-                        <option value="/pc/hospitallist/0/1/">
-                            妇科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/fa/">
-                            儿科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/ha/">
-                            皮肤性病科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/aa/">
-                            内科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/8/">
-                            男科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/21/">
-                            产科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/ba/">
-                            外科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/oa/">
-                            中医科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/ca/">
-                            骨伤科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/na/">
-                            精神心理科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/13/">
-                            口腔颌面科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/15/">
-                            眼科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/ja/">
-                            耳鼻咽喉科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/ma/">
-                            肿瘤及防治科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/16/">
-                            整形美容科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/qa/">
-                            报告解读科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/6/">
-                            营养科
-                        </option>
-
-                        <option value="/pc/hospitallist/0/0/"
-                                selected="selected">
-                            综合
-                        </option>
-
-                    </select>
-                    <!-- 二级科室 -->
+            <div class="content-title">
+                全国综合医院排名
+            </div>
+            <div class="content">
 
 
+                <a href="/pc/hospital/1f4a9d4915cffa55/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-1">
+
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                北京协和医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第1&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 北京114预约挂号挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            北京市 <span class="municipality-hospital" data-province="北京市" data-county="东城区">北京市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/aa5a73312004b72a/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-2">
+
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                四川大学华西医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第2&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 四川大学华西医院挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            四川省 <span class="municipality-hospital" data-province="四川省" data-county="">成都市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/0ffa82b555c3b892/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-3">
+
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                解放军总医院（301医院）
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第3&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 解放军总医院301医院、北京114预约挂号挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            北京市 <span class="municipality-hospital" data-province="北京市" data-county="海淀区">北京市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/2a26821d40864487/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common">
 
 
+                            04
 
 
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                上海瑞金医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第4&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 上海瑞金医院挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            上海市 <span class="municipality-hospital" data-province="上海市" data-county="嘉定区">上海市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/jfjxjyy/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common">
 
 
+                            05
 
 
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                空军军医大学西京医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第5&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 西京医院挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            陕西省 <span class="municipality-hospital" data-province="陕西省" data-county="">西安市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/01204da6eca0ab13/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common">
 
 
+                            06
 
 
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                复旦大学附属中山医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第6&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 复旦大学附属中山医院挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            上海市 <span class="municipality-hospital" data-province="上海市" data-county="徐汇区">上海市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/15f79de2c09ed0e9/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common">
 
 
+                            07
 
 
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                中山大学附属第一医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第7&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 中山一院、广州健康通挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            广东省 <span class="municipality-hospital" data-province="广东省" data-county="">广州市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/f6175af4f04e802b/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common">
 
 
+                            08
 
 
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                华中科技大学附属同济医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第8&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 华中科技大学同济医院、健康湖北挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            湖北省 <span class="municipality-hospital" data-province="湖北省" data-county="">武汉市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/ac00f9b2a2ad5d4e/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common">
 
 
+                            09
 
 
+                        </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                复旦大学附属华山医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第9&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 复旦大学附属华山医院门诊服务号挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            上海市 <span class="municipality-hospital" data-province="上海市" data-county="静安区">上海市</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/pc/hospital/f0158d48cd797047/">
+                    <div class="content-item">
+                        <div class="content-item-left-icon rank-common"> 10 </div>
+                        <div class="content-item-right">
+                            <div class="top-title">
+                                北京大学第三医院
+                            </div>
+                            <div class="sub-title">
+                                全国综合排名第10&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 北医三院服务号、北京114预约挂号挂号
+                            </div>
+                        </div>
+                        <div class="right-position">
+                            北京市 <span class="municipality-hospital" data-province="北京市" data-county="海淀区">北京市</span>
+                        </div>
+                    </div>
+                </a>
 
 
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+            <div class="rank-tips-c">
+                <div class="rank-tips-title">
+                    排名依据
+                    <img class="depend-icon"
+                         src="//staff.chunyu.mobi//media/images/2019/06/18/bc41/4ff2a963a9ce_w22_h24_.png"
+                         mode="aspectFit">
+                </div>
+                <div class="rank-tips-detail not-display" id="tip-detail">
+                    <div class="triangle"></div>
+                    <div>医院排名依次参考如下资料：</div>
+                    <div>(1) 复旦大学医院管理研究所《中国医院及专科声誉排行榜》</div>
+                    <div>(2) 政府卫生部门评定的临床重点专科和教育部门评定的重点学科分布</div>
+                    <div>(3) 医院对应科室的高级职称人数</div>
+                    <div>(4) 医院对应科室的床位数</div>
                 </div>
             </div>
-        </div>
+        </section>
 
-
-        <div class="content-title">
-            全国综合医院排名
-        </div>
-        <div class="content">
-
-
-            <a href="/pc/hospital/1f4a9d4915cffa55/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-1">
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            北京协和医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第1&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 北京114预约挂号挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        北京市 <span class="municipality-hospital" data-province="北京市" data-county="东城区">北京市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/aa5a73312004b72a/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-2">
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            四川大学华西医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第2&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 四川大学华西医院挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        四川省 <span class="municipality-hospital" data-province="四川省" data-county="">成都市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/0ffa82b555c3b892/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-3">
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            解放军总医院（301医院）
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第3&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 解放军总医院301医院、北京114预约挂号挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        北京市 <span class="municipality-hospital" data-province="北京市" data-county="海淀区">北京市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/2a26821d40864487/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common">
-
-
-                        04
-
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            上海瑞金医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第4&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 上海瑞金医院挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        上海市 <span class="municipality-hospital" data-province="上海市" data-county="嘉定区">上海市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/jfjxjyy/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common">
-
-
-                        05
-
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            空军军医大学西京医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第5&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 西京医院挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        陕西省 <span class="municipality-hospital" data-province="陕西省" data-county="">西安市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/01204da6eca0ab13/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common">
-
-
-                        06
-
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            复旦大学附属中山医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第6&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 复旦大学附属中山医院挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        上海市 <span class="municipality-hospital" data-province="上海市" data-county="徐汇区">上海市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/15f79de2c09ed0e9/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common">
-
-
-                        07
-
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            中山大学附属第一医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第7&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 中山一院、广州健康通挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        广东省 <span class="municipality-hospital" data-province="广东省" data-county="">广州市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/f6175af4f04e802b/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common">
-
-
-                        08
-
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            华中科技大学附属同济医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第8&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 华中科技大学同济医院、健康湖北挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        湖北省 <span class="municipality-hospital" data-province="湖北省" data-county="">武汉市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/ac00f9b2a2ad5d4e/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common">
-
-
-                        09
-
-
-                    </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            复旦大学附属华山医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第9&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 复旦大学附属华山医院门诊服务号挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        上海市 <span class="municipality-hospital" data-province="上海市" data-county="静安区">上海市</span>
-                    </div>
-                </div>
-            </a>
-
-            <a href="/pc/hospital/f0158d48cd797047/">
-                <div class="content-item">
-                    <div class="content-item-left-icon rank-common"> 10 </div>
-                    <div class="content-item-right">
-                        <div class="top-title">
-                            北京大学第三医院
-                        </div>
-                        <div class="sub-title">
-                            全国综合排名第10&nbsp;&nbsp;<span class="line"></span>&nbsp;&nbsp;可通过微信公众号 北医三院服务号、北京114预约挂号挂号
-                        </div>
-                    </div>
-                    <div class="right-position">
-                        北京市 <span class="municipality-hospital" data-province="北京市" data-county="海淀区">北京市</span>
-                    </div>
-                </div>
-            </a>
-
-
-        </div>
-        <div class="rank-tips-c">
-            <div class="rank-tips-title">
-                排名依据
-                <img class="depend-icon"
-                     src="//staff.chunyu.mobi//media/images/2019/06/18/bc41/4ff2a963a9ce_w22_h24_.png"
-                     mode="aspectFit">
+        <section class="right-content">
+            <div class="right-title">
+                相关文章
             </div>
-            <div class="rank-tips-detail not-display" id="tip-detail">
-                <div class="triangle"></div>
-                <div>医院排名依次参考如下资料：</div>
-                <div>(1) 复旦大学医院管理研究所《中国医院及专科声誉排行榜》</div>
-                <div>(2) 政府卫生部门评定的临床重点专科和教育部门评定的重点学科分布</div>
-                <div>(3) 医院对应科室的高级职称人数</div>
-                <div>(4) 医院对应科室的床位数</div>
-            </div>
-        </div>
-    </section>
 
-    <section class="right-content">
-        <div class="right-title">
-            相关文章
-        </div>
-
-        <a href="/pc/zhidaodetail/?article_id=246" target="_blank">
-            <div class="right-article-title">
-                全国顶级医院名单，专科排名、挂号方式都在这里了！
-                <div class="time">
-                    2019-09-03 10:25:20
+            <a href="/pc/zhidaodetail/?article_id=246" target="_blank">
+                <div class="right-article-title">
+                    全国顶级医院名单，专科排名、挂号方式都在这里了！
+                    <div class="time">
+                        2019-09-03 10:25:20
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-    </section>
+        </section>
 
 
-</div>
+    </div>
 

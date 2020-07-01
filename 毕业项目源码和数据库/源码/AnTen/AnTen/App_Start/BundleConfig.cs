@@ -8,6 +8,7 @@ namespace AnTen
         // 有关捆绑的详细信息，请访问 https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = false;
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -25,6 +26,21 @@ namespace AnTen
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //_LayoutPage_Pan所需样式与js
+            bundles.Add(new StyleBundle("~/AnTen/css").Include(
+
+                    "~/Content/LayoutPage/global.css",
+                    "~/Content/LayoutPage/lyc.css",
+                        "~/Content/PMain/slick.css",
+                    "~/Content/LayoutPage/page.css",
+                        "~/Scripts/PMain/jquery.min.js",
+                    "~/Scripts/PMain/global.js",
+                        "~/Scripts/PMain/jquery.mousewheel.js",
+                    "~/Content/LayoutPage/jquery.mCustomScrollbar.css",
+                     "~/scripts/selsym/cityswitch.js",
+                        "~/Scripts/PMain/jquery.mCustomScrollbar.min.js",
+                    "~/Scripts/PMain/slick.js"
+                    ));
         }
     }
 }

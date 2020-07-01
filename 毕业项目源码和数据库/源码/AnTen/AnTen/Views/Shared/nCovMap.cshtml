@@ -1,0 +1,340 @@
+﻿<!--疫情可视化-->
+<script crossorigin="anonymous" src="//hhyfeed.sogoucdn.com/new-weball/static/js/polyfill/main_4e4e70b.js"></script>
+<link href="~/Content/Visro/epidemic.css" rel="stylesheet" />
+<link href="//hhyfeed.sogoucdn.com/new-weball/static/ued/css/epidemic/vr-share_90f8173.css" rel="stylesheet" type="text/css">
+<link href="//hhyfeed.sogoucdn.com/new-weball/static/ued/css/epidemic/wxshare_1d908b0.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+    .re-select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    }
+
+    .js-domesticFixed,
+    .js-overseasFixed {
+        position: fixed;
+        top: 45px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 2;
+        width: 100%;
+        max-width: 870px;
+    }
+
+    .links-special-wrap .link-special .tag {
+        position: absolute;
+        right: 2px;
+        top: 0px;
+        width: 19px;
+        height: 17px;
+        background: url(//hhyfeed.sogoucdn.com/new-weball/static/js/pages/epidemic/hot_ic_facbb6e.png) no-repeat center;
+        background-size: 100% 100%;
+        font-size: 0;
+    }
+
+    .chinamapLegend2 {
+        position: absolute;
+        width: 72px;
+        height: 106px;
+        bottom: -16px;
+        right: 20px;
+    }
+
+        .chinamapLegend2 img {
+            width: 52px;
+            height: 84px;
+        }
+
+    .sansha {
+        position: absolute;
+        display: none;
+        border-style: solid;
+        white-space: nowrap;
+        z-index: 9999999;
+        transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+        background-color: rgba(50, 50, 50, 0.7);
+        border-width: 0px;
+        border-color: rgb(51, 51, 51);
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        padding: 5px;
+        right: 102px;
+        bottom: 80px;
+        pointer-events: none;
+        font-size: 8px;
+    }
+
+    .black-mask {
+        -webkit-filter: grey;
+        filter: gray;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        -o-filter: grayscale(1)
+    }
+</style>
+<script charset="utf-8" src="//hhyfeed.sogoucdn.com/new-weball/static/js/pages/epidemic/share_ed31d81.js"></script>
+<script charset="utf-8" src="//hhyfeed.sogoucdn.com/new-weball/static/js/pages/epidemic/drawMap_8dbe633.js"></script>
+<script charset="utf-8" src="//hhyfeed.sogoucdn.com/new-weball/static/js/pages/epidemic/drawWorld_251d652.js"></script>
+
+
+<div class="">
+    <!--疫情详情-->
+    <div class="epidemic-box" style="margin:280px 15px 0 150px;width:80%;">
+        <div class="epidemic-data" style="box-shadow: 0px -2px 10px rgba(0,0,0,0.1);">
+            <div class="tab-internal-oversea">
+                <a href="javascript:void(0);" class="cur">国内疫情</a>
+                <a href="javascript:void(0);" class="">国外疫情</a>
+            </div>
+            <div class="title-box">
+                <h3>实时疫情</h3>
+                <div class="city-select">
+                    <div class="select-common select-common-arrow ">
+                        <select name="" class="default-select re-select">
+                            <option value="item">全国</option>
+                            <option value="item">湖北</option>
+                            <option value="item">广东</option>
+                            <option value="item">浙江</option>
+                            <option value="item">河南</option>
+                            <option value="item">重庆</option>
+                            <option value="item">湖南</option>
+                            <option value="item">山东</option>
+                            <option value="item">安徽</option>
+                            <option value="item">四川</option>
+                            <option value="item">北京</option>
+                            <option value="item">福建</option>
+                            <option value="item">上海</option>
+                            <option value="item">江西</option>
+                            <option value="item">江苏</option>
+                            <option value="item">广西</option>
+                            <option value="item">海南</option>
+                            <option value="item">辽宁</option>
+                            <option value="item">黑龙江</option>
+                            <option value="item">云南</option>
+                            <option value="item">河北</option>
+                            <option value="item">天津</option>
+                            <option value="item">山西</option>
+                            <option value="item">内蒙古</option>
+                            <option value="item">贵州</option>
+                            <option value="item">吉林</option>
+                            <option value="item">陕西</option>
+                            <option value="item">甘肃</option>
+                            <option value="item">青海</option>
+                            <option value="item">宁夏</option>
+                            <option value="item">新疆</option>
+                            <option value="item">香港</option>
+                            <option value="item">澳门</option>
+                            <option value="item">台湾</option>
+                            <option value="item">西藏</option>
+                        </select>
+                    </div><a id="jSelectBtn" class="select-btn" style="display: none;">查询</a>
+                </div>
+            </div>
+            <div class="ai-video-wrap" id="videoWrap" style="display: none;">
+                <video controls="" src="https://hhyfeed.sogoucdn.com/2019ncov/videos/ai-host-06-30-08-46" webkit-playsinline="" playsinline="" x5-playsinline="" x5-video-player-fullscreen="false" id="videoId">
+                </video>
+                <i class="ai-video-close"></i>
+            </div>
+            <ul class="data-list">
+                <li class="fz-crimson confirm"><span class="yesterday">昨日<strong><i class="rise"></i><span>23</span></strong></span><em>85227</em><span>累计确诊</span></li>
+                <li class="fz-green heal"><span class="yesterday">昨日<strong><i class="rise"></i><span>10</span></strong></span><em>80054</em><span>累计治愈</span></li>
+                <li class="fz-yellow suspect"><span class="yesterday">昨日<strong><i class="rise"></i><span>1</span></strong></span><em>7</em><span>现有疑似</span></li>
+                <li class="fz-gray dead"><span class="yesterday">昨日<strong><i class="fair" style="display: none;"></i><span>0</span></strong></span><em>4648</em><span>累计死亡</span></li>
+                <li class="fz-red noConfirm"><span class="yesterday">昨日<strong><i class="rise"></i><span>10</span></strong></span><em>525</em><span>现有确诊</span></li>
+                <li class="fz-red noInfect"><span class="yesterday">昨日<strong><i class="rise"></i><span>4</span></strong></span><em>99</em><span>无症状感染者</span></li>
+                <li class="fz-crimson importedCase"><span class="yesterday">昨日<strong><i class="rise"></i><span>11</span></strong></span><em>1918</em><p id="suspectedTips"><span>境外输入</span></p></li>
+                <li class="fz-purple nowSevere"><span class="yesterday">昨日<strong><i class="decline"></i><span>1</span></strong></span><em>7</em><span>现有重症</span></li>
+            </ul><p class="update-time">截至6月30日11时30分<a href="javascript:;" class="tip-link">数据说明</a></p>
+        </div>
+        <ul class="links-list negative">
+            <li class="outpatient"><p>核酸检测</p></li>
+            <li class="ai"><p>AI自测</p></li>
+            <li class="qa"><p>智能问答</p></li>
+            <li class="protection"><p>防护知识</p></li>
+            <li class="doctor"><p>在线问医</p></li>
+        </ul>
+    </div>
+    <!--疫情地图-->
+    <div class="map-option-wrap" style="margin:0 15px 0 150px;width:78.7%;"><span class="item cur">现存确诊</span><span class="item">累计确诊</span></div>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 5px 15px 0 150px;
+            background-color: #F0F5F9;
+        }
+
+        #myEcharts {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://www.echartsjs.com/examples/vendors/jquery/jquery.js"></script>
+    <!-- 引入 echarts.js -->
+    <script src="https://www.echartsjs.com/examples/vendors/echarts/echarts.min.js?_v_=1578305236132"></script>
+    <!--引入中国的地图数据js文件，引入后会自动注册地图名字和数据-->
+    <script src="https://www.echartsjs.com/examples/vendors/echarts/map/js/china.js?_v_=1578305236132"></script>
+
+
+
+    <div class="container">
+        <!--为echarts准备一个dom容器-->
+        <div id="myEcharts"></div>
+    </div>
+
+    <script>
+        //初始化echarts实例
+        var myChart = echarts.init(document.getElementById('myEcharts'));
+        // 指定图表的配置项和数据
+        option = {
+            title: {
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 'left',
+                data: ['中国疫情图']
+            },
+            visualMap: {
+                type: 'piecewise',
+                pieces: [
+                    { min: 1000, max: 1000000, label: '大于等于1000人', color: '#372a28' },
+                    { min: 500, max: 999, label: '确诊500-999人', color: '#4e160f' },
+                    { min: 100, max: 499, label: '确诊100-499人', color: '#974236' },
+                    { min: 10, max: 99, label: '确诊10-99人', color: '#ee7263' },
+                    { min: 1, max: 9, label: '确诊1-9人', color: '#f5bba7' },
+                ],
+                color: ['#E0022B', '#E09107', '#A3E00B']
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            roamController: {
+                show: true,
+                left: 'right',
+                mapTypeControl: {
+                    'china': true
+                }
+            },
+            series: [
+                {
+                    name: '现确诊数',
+                    type: 'map',
+                    mapType: 'china',
+                    roam: false,
+                    label: {
+                        show: true,
+                        color: 'rgb(249, 249, 249)'
+                    },
+                    data: []
+                }
+            ]
+        };
+
+        //使用指定的配置项和数据显示图表
+        myChart.setOption(option);
+
+        //获取数据
+        function getData() {
+            $.ajax({
+                url: "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5",
+                dataType: "jsonp",
+                success: function (data) {
+                    //  console.log(data.data)
+                    var res = data.data || "";
+                    res = JSON.parse(res);
+                    var newArr = [];
+                    //newArr的数据格式为：
+                    // [{
+                    //   name: '北京11',
+                    //   value: 212
+                    // }, {
+                    //   name: '天津',
+                    //   value: 60
+                    // }]
+                    if (res) {
+                        //获取到各个省份的数据
+                        var province = res.areaTree[0].children;
+                        for (var i = 0; i < province.length; i++) {
+                            var json = {
+                                name: province[i].name,
+                                value: province[i].total.nowConfirm
+                            }
+                            newArr.push(json)
+                        }
+                        //较昨日4
+                       //数据更新
+                        $(".data-list .confirm em").html(res.chinaTotal.confirm);//感染
+                        $(".data-list .heal em").html(res.chinaTotal.heal);//治愈
+                        $(".data-list .suspect em").html(res.chinaTotal.suspect);//疑似
+                        $(".data-list .dead em").html(res.chinaTotal.dead);//死亡
+                          $(".data-list .noConfirm em").html(res.chinaTotal.nowConfirm);//现在确诊
+                        $(".data-list .noInfect em").html(res.chinaTotal.noInfect);//无症状感染者
+                        $(".data-list .importedCase em").html(res.chinaTotal.importedCase);//境外输入
+                        $(".data-list .nowSevere em").html(res.chinaTotal.nowSevere);//重症
+                        $(".update-time").html("截止"+res.lastUpdateTime);//日期
+
+                        console.log(newArr)
+                        console.log(JSON.stringify(newArr))
+                        //使用指定的配置项和数据显示图表
+                        myChart.setOption({
+                            series: [
+                                {
+                                    name: '确诊数',
+                                    type: 'map',
+                                    mapType: 'china',
+                                    roam: false,
+                                    label: {
+                                        show: true,
+                                        color: 'rgb(249, 249, 249)'
+                                    },
+                                    data: newArr
+                                }
+                            ]
+                        });
+                    }
+                }
+
+            })
+        }
+        getData();
+
+    </script>
+</div>
+<!--身边疫情-->
+<div id="tab-pane-column_2" class="_paneColumn column negative " style="margin:20px 15px 0 150px;width:80%;">
+    <h4 id="title-sub border-left">
+        <span style="font-size:18px">身边疫情</span>
+    </h4>
+    <iframe id="villageIf" style="border: none; width: 100%; height: 500px;" src="https://map.sogou.com/m/shouji4/page/emap/?_=0.9231788125662126"></iframe>
+    <img src="//hhyfeed.sogoucdn.com/new-weball/static/js/pages/epidemic/copyright_sgmap_70b9e66.png" alt="" class="copyright-sgmap">
+</div>
+<script crossorigin="anonymous" src="//hhy.sogoucdn.com/js/lib/zepto/1.2.0/zepto.min.js"></script>
+<script src="//hhyfeed.sogoucdn.com/js/lib/preact/10.3.4/preact.umd.js"></script>
+<script crossorigin="anonymous" src="//hhyfeed.sogoucdn.com/new-weball/static/js/common/main_65da252.js"></script>
+<script crossorigin="anonymous" src="//hhyfeed.sogoucdn.com/new-weball/static/js/lib/main_60ab66c.js"></script>
+<script type="text/javascript">
+    window.showIncrease = "true" === "true"
+    window.showAiHost = "true" === "true"</script>
+
+<script src="https://hhyfeed.sogoucdn.com/js/lib/alloytouch/0.3.0/index.js"></script>
+<script src="https://hhyfeed.sogoucdn.com/js/lib/alloytouch/0.3.0/transform.js"></script>
+<script crossorigin="anonymous" src="//hhyfeed.sogoucdn.com/new-weball/static/js/pages/epidemic/main_28fc152.js"></script>
+<script src="//hhyfeed.sogoucdn.com/js/common/epidemic-search-js/main_2020063011.js"></script><!-- renderok -->
+<script async="" src="https://dlweb.sogoucdn.com/hhytrace/trace_2020063011.js"></script>
+

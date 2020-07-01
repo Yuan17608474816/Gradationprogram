@@ -21,6 +21,7 @@
     <link type="text/css" rel="stylesheet" href="~/Content/PMain/slick.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/page.css" />
     <script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
+
     <script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
     <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/jquery.mCustomScrollbar.css" />
@@ -28,6 +29,7 @@
     <script type="text/javascript" src="~/scripts/selsym/cityswitch.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
+   
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
@@ -109,7 +111,7 @@
             </li>
 
         </ul>
-    </div><div class="header">
+    </div><div class="header" id="header">
 
         <a href="#" class="menu_h"><span>Menu</span></a>
         <div class="top">
@@ -120,17 +122,23 @@
                 <p class="cityset">[切换城市]</p>
                 <ul class="citynew" style="display: none;">
                     <div class="citylist">
-                        <li id="2">天津</li>
+                        <li id="2">长沙</li>
                     </div>
                 </ul>
             </div>
-            <div class="wrap">
-                <a href="#" class="en ">我的</a>            <a href="#">医院版</a>            <a href="#">游客版</a>            <a href="#" class="on">患者版</a>
+            <div class="wrap" >
+                <a href="#" class="en" >我的</a>
+
+                <div class="enNav" id="enNav">
+                    <a href="/AT_PMain/SeaDoc">我的预约</a><a href="/AT_PMain/SeaDocL">个人资料</a><a href="/AT_PMain/SeaDocH">购物记录</a><a href="/AT_PMain/SeaDocH">我的提问</a><a href="/AT_PMain/SeaDocH">退出登录</a>
+                </div>
+                <a href="#">医院版</a>            <a href="#">游客版</a>            <a href="#" class="on">患者版</a>
             </div>
+          
         </div>
         <div class="nav">
             <div class="wrap cf">
-                <div class="logo" edit_params="width%3D102%26height%3D86%26showAlt%3D1">
+                <div class="logo">
                     <a href="#">
                         <img title="十安医生" src="~/image/Logo3.png"/>
                     </a>
@@ -151,7 +159,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/department.html" class="one">快速购药</a>
+                            <a href="/AT_PMain/pharmacy" class="one">十安药房</a>
                         </li>
                         <li>
                             <a href="/AT_PMain/OutVisFor" class="one">就医指南<span class="open">+</span></a>

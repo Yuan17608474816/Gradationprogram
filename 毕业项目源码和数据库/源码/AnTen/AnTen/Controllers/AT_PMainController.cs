@@ -13,6 +13,10 @@ namespace AnTen.Controllers
         {
             return View();
         }
+        public ActionResult Default()
+        {
+            return View();
+        }
         /// <summary>
         /// 患者首页
         /// </summary>
@@ -82,6 +86,14 @@ namespace AnTen.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult DisKnDa()
+        {
+            return View();
+        }
+        /// <summary>
+        /// 十安药房
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult pharmacy()
         {
             return View();
         }

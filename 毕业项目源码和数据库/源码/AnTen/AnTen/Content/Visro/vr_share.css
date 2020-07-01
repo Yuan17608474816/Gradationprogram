@@ -1,0 +1,121 @@
+﻿.vr-share li .share-copy-ico span, .vr-share li .share-fr-ico span, .vr-share li .share-qq-ico span, .vr-share li .share-qz-ico span, .vr-share li .share-wb-ico span, .vr-share li .share-wx-ico span {
+    background-image: url(//hhyfeed.sogoucdn.com/new-weball/static/ued/images/epidemic/sprite_share_c992e1f.png);
+    background-image: -webkit-image-set(url("//hhyfeed.sogoucdn.com/new-weball/static/ued/images/epidemic/sprite_share_c992e1f.png") 1x, url("//hhyfeed.sogoucdn.com/new-weball/static/ued/images/epidemic/sprite_share@2x_30b133f.png") 2x);
+    background-size: 142px 93px
+}
+
+.vr-mask-bg {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0
+}
+
+.vr-share {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 6px 6px 0 0
+}
+
+    .vr-share ul {
+        overflow: hidden;
+        zoom: 1;
+        margin: 8px 0 17px
+    }
+
+    .vr-share li {
+        float: left;
+        width: 25%;
+        text-align: center;
+        margin-top: 12px
+    }
+
+        .vr-share li a {
+            display: block
+        }
+
+            .vr-share li a span {
+                width: 42px;
+                height: 42px;
+                overflow: hidden;
+                margin: 0 auto;
+                display: block;
+                border-radius: 50%
+            }
+
+        .vr-share li .share-wx-ico span {
+            background-position: -50px -51px
+        }
+
+        .vr-share li .share-fr-ico span {
+            background-position: -50px 0
+        }
+
+        .vr-share li .share-qq-ico span {
+            background-position: -100px 0
+        }
+
+        .vr-share li .share-wb-ico span {
+            background-position: -100px -51px
+        }
+
+        .vr-share li .share-qz-ico span {
+            background-position: 0 -51px
+        }
+
+        .vr-share li .share-copy-ico span {
+            background-position: 0 0
+        }
+
+    .vr-share .share-btn {
+        display: block;
+        font-size: 16px;
+        border-top: solid 1px #f5f5f5;
+        height: 48px;
+        line-height: 48px;
+        text-align: center
+    }
+
+    .vr-share .pop-right {
+        text-align: center;
+        margin: 57px 40px
+    }
+
+        .vr-share .pop-right span {
+            display: inline-block;
+            -webkit-animation: popRight .5s steps(7) forwards;
+            animation: popRight .5s steps(7) forwards;
+            width: 28px;
+            height: 28px;
+            background: url(//hhyfeed.sogoucdn.com/new-weball/static/ued/images/epidemic/pop_right_3c15b00.png) no-repeat;
+            background-size: 28px;
+            margin-bottom: 8px
+        }
+
+@-webkit-keyframes popRight {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 0 -196px
+    }
+}
+
+@keyframes popRight {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 0 -196px
+    }
+}

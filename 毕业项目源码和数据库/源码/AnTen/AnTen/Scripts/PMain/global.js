@@ -6,6 +6,28 @@ $(function () {
 		$(".body_box").css({ "minHeight": $(window).height() - $(".footer").innerHeight() - $(".header").innerHeight() });
 	});
 
+	$("#enNav").mouseover(function () {
+		$("#enNav").show();
+	}).mouseout(function () {
+			$("#enNav").hide();
+	});
+	$(".en").mouseover(function () {
+		$("#enNav").show();
+	}).mouseout(function () {
+		$("#enNav").hide();
+	});
+
+	$(".cityset").mouseover(function () {
+		$(".citynew").show();
+	}).mouseout(function () {
+		$(".citynew").hide();
+	});
+	$(".citylist").mouseover(function () {
+		$(".citynew").show();
+	}).mouseout(function () {
+		$(".citynew").hide();
+	});
+
 
 	$(".menu_h").click(function () {
 		$("body").toggleClass("menu-open");
