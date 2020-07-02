@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <meta name="referrer" content="no-referrer" />
     <title>十安医生</title>
-   <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/global.css" />
+    <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/global.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/lyc.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/PMain/slick.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/page.css" />
@@ -29,7 +29,8 @@
     <script type="text/javascript" src="~/scripts/selsym/cityswitch.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
-   
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 
@@ -67,12 +68,22 @@
             $('#myalert, #myalert-shadow').hide();
         }
     </script>
+    <script type="text/javascript">
+        jQuery(document).ready(
+            function ($) {
+                $('.el-backtop').click(
+                    function () {
+                        $('html,body').animate({ scrollTop: '0px' }, 800);
+                    });
+            });
+    </script>
     <div class="rightNav">
+        <div class="el-backtop" style="right: 33px; top: 110px;"><span class="iconfont"></span></div>
         <ul>
             <li>
-                <a href="/register.html" target="_blank">
+                <a href="/AT_PMain/AppReg" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_1.png" >
+                        <img title="" src="~/image/Rlist_1.png">
                     </span>
                     <span class="s2">预约挂号</span>
                 </a>
@@ -88,7 +99,7 @@
             <li>
                 <a href="#" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_3.png" >
+                        <img title="" src="~/image/Rlist_3.png">
                     </span>
                     <span class="s2">快速购药</span>
                 </a>
@@ -96,7 +107,7 @@
             <li>
                 <a href="#" target="_blank">
                     <span class="s1">
-                        <img title="" src="~/image/Rlist_4.png" >
+                        <img title="" src="~/image/Rlist_4.png">
                     </span>
                     <span class="s2">远程医学</span>
                 </a>
@@ -126,27 +137,26 @@
                     </div>
                 </ul>
             </div>
-            <div class="wrap" >
-                <a href="#" class="en" >我的</a>
+            <div class="wrap">
+                <a href="#" class="en">我的</a>
 
                 <div class="enNav" id="enNav">
                     <a href="/AT_PMain/SeaDoc">我的预约</a><a href="/AT_PMain/SeaDocL">个人资料</a><a href="/AT_PMain/SeaDocH">购物记录</a><a href="/AT_PMain/SeaDocH">我的提问</a><a href="/AT_PMain/SeaDocH">退出登录</a>
                 </div>
                 <a href="#">医院版</a>            <a href="#">游客版</a>            <a href="#" class="on">患者版</a>
             </div>
-          
+
         </div>
         <div class="nav">
             <div class="wrap cf">
                 <div class="logo">
                     <a href="#">
-                        <img title="十安医生" src="~/image/Logo3.png"/>
+                        <img title="十安医生" src="~/image/Logo3.png" />
                     </a>
                 </div>        <div class="navList">
                     <ul class="cf">
                         <li>
-                            <a href="/AT_PMain/AppReg" class="one">预约挂号<span class="open">+</span></a>
-
+                            <a href="/AT_PMain/AppReg" class="one" data-toggle="modal" data-target="#AppReg">预约挂号<span class="open">+</span></a>
                         </li>
                         <li>
                             <a href="/AT_PMain/SelDiaOfSym" class="one">症状自诊<span class="open">+</span></a>
@@ -239,6 +249,8 @@
 
     <div>
         @RenderBody()
+        <!-- 模态框（Modal） -->
+        @Html.Partial("_AppRegModalPartial");
     </div>
 
     <script>

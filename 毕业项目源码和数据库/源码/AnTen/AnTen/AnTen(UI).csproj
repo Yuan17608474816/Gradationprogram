@@ -129,6 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AppRegController.cs" />
     <Compile Include="Controllers\AT_LoginController.cs" />
     <Compile Include="Controllers\AT_PMainController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -138,6 +139,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AppReg\app_e29.css" />
+    <Content Include="Content\AppReg\chunkVe.css" />
+    <Content Include="Content\AppReg\hosper.css" />
+    <Content Include="Content\AppReg\hospital.css" />
+    <Content Include="Content\AppReg\iconcss.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -151,6 +157,7 @@
     <Content Include="Content\Pharmacy\index_slad.css" />
     <Content Include="Content\Pharmacy\reset.css" />
     <Content Include="Content\Pharmacy\XOpopup.min.css" />
+    <Content Include="Content\PMain\modal.css" />
     <Content Include="Content\PMain\rain\base_aio.css" />
     <Content Include="Content\LayoutPage\global.css" />
     <Content Include="Content\PMain\rain\index_355.css" />
@@ -225,6 +232,7 @@
     <Content Include="image\Rlist_3.png" />
     <Content Include="image\Rlist_4.png" />
     <Content Include="image\Rlist_5.png" />
+    <Content Include="image\tips.png" />
     <Content Include="image\usebg.png" />
     <Content Include="image\usericon.png" />
     <Content Include="image\weixinicon.png" />
@@ -436,6 +444,12 @@
     <Content Include="Views\AT_PMain\pharmacy.cshtml" />
     <Content Include="Views\AT_PMain\Default.cshtml" />
     <Content Include="Views\Shared\nCovMap.cshtml" />
+    <Content Include="Views\Shared\_AppRegModalPartial.cshtml" />
+    <Content Include="Views\AppReg\HosReg.cshtml" />
+    <Content Include="Views\Shared\HosRePar.cshtml" />
+    <Content Include="Views\Shared\HosDetail.cshtml" />
+    <Content Include="Views\Shared\HRegKnow.cshtml" />
+    <Content Include="Views\Shared\HSReg.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
