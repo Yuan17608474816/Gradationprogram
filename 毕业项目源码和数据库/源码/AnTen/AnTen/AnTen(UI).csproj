@@ -141,15 +141,24 @@
   <ItemGroup>
     <Content Include="Content\AppReg\app_e29.css" />
     <Content Include="Content\AppReg\chunkVe.css" />
+    <Content Include="Content\AppReg\HosDep\HD_artLogin.css" />
+    <Content Include="Content\AppReg\HosDep\HD_comment.css" />
+    <Content Include="Content\AppReg\HosDep\HD_global.css" />
+    <Content Include="Content\AppReg\HosDoc\areahome.css" />
+    <Content Include="Content\AppReg\HosDoc\expert_v2.css" />
+    <Content Include="Content\AppReg\HosDoc\por.base.min.css" />
     <Content Include="Content\AppReg\hosper.css" />
     <Content Include="Content\AppReg\hospital.css" />
+    <Content Include="Content\AppReg\hospital.js" />
     <Content Include="Content\AppReg\iconcss.css" />
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\SelSym\expert.js" />
+    <Content Include="Content\SelSym\jquery.ui.datepicker.js" />
+    <Content Include="Content\System\bootstrap-grid.css" />
+    <Content Include="Content\System\bootstrap-grid.min.css" />
+    <Content Include="Content\System\bootstrap-reboot.css" />
+    <Content Include="Content\System\bootstrap-reboot.min.css" />
+    <Content Include="Content\System\bootstrap.css" />
+    <Content Include="Content\System\bootstrap.min.css" />
     <Content Include="Content\EpidMap\china.js" />
     <Content Include="Content\EpidMap\echarts.min.js" />
     <Content Include="Content\EpidMap\jquery-3.4.1.min.js" />
@@ -201,11 +210,18 @@
     <Content Include="Content\Visro\zepto.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\System\Site.css" />
     <Content Include="image\Appicon.png" />
     <Content Include="image\bg.jpg" />
     <Content Include="image\body.png" />
     <Content Include="image\China.png" />
+    <Content Include="image\HD_hospital.png" />
+    <Content Include="image\HD_impress.png" />
+    <Content Include="image\HD_love.png" />
+    <Content Include="image\HD_source.png" />
+    <Content Include="image\HD_sprite20170112.png" />
+    <Content Include="image\HD_stars.png" />
+    <Content Include="image\HD_tyranny.png" />
     <Content Include="image\head_sea.png" />
     <Content Include="image\hosicon.png" />
     <Content Include="image\icon1.png" />
@@ -223,6 +239,7 @@
     <Content Include="image\ln4-8.jpg" />
     <Content Include="image\Logo3.png" />
     <Content Include="image\man_bm.png" />
+    <Content Include="image\map_gray_pc.8227b13.png" />
     <Content Include="image\png2.png" />
     <Content Include="image\png3.png" />
     <Content Include="image\png4.png" />
@@ -250,6 +267,7 @@
     <Content Include="image\医院地址2.png" />
     <Content Include="image\十安医院说.png" />
     <Content Include="image\合理膳食.jpg" />
+    <Content Include="image\地址icon.png" />
     <Content Include="image\就医须知.png" />
     <Content Include="image\患者.png" />
     <Content Include="image\ln4-7.jpg" />
@@ -274,12 +292,12 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\System\bootstrap.min.css.map" />
+    <Content Include="Content\System\bootstrap.css.map" />
+    <Content Include="Content\System\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\System\bootstrap-reboot.css.map" />
+    <Content Include="Content\System\bootstrap-grid.min.css.map" />
+    <Content Include="Content\System\bootstrap-grid.css.map" />
     <Content Include="Scripts\common\global.js" />
     <Content Include="Scripts\common\jquery.js" />
     <Content Include="Scripts\common\mCustomScrollbar.js" />
@@ -450,6 +468,8 @@
     <Content Include="Views\Shared\HosDetail.cshtml" />
     <Content Include="Views\Shared\HRegKnow.cshtml" />
     <Content Include="Views\Shared\HSReg.cshtml" />
+    <Content Include="Views\AppReg\HosDep.cshtml" />
+    <Content Include="Views\AppReg\DocMetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

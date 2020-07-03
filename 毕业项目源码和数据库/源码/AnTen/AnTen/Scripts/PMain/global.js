@@ -6,6 +6,18 @@ $(function () {
 		$(".body_box").css({ "minHeight": $(window).height() - $(".footer").innerHeight() - $(".header").innerHeight() });
 	});
 
+	$(".fix-clear .schedules-item").mouseover(function () {
+		$("#schedules-list .detail").addClass("active");
+           }).mouseout(function () {
+			   $("#schedules-list .detail").removeClass("active");
+		   });
+
+	$("#schedules-list .detail").mouseover(function () {
+		$("#schedules-list .detail").addClass("active");
+	}).mouseout(function () {
+		$("#schedules-list .detail").removeClass("active");
+	});
+                                                 
 	$("#enNav").mouseover(function () {
 		$("#enNav").show();
 	}).mouseout(function () {

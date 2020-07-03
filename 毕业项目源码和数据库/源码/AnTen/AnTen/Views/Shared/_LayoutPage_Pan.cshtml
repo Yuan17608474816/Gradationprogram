@@ -21,11 +21,10 @@
     <link type="text/css" rel="stylesheet" href="~/Content/PMain/slick.css" />
     <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/page.css" />
     <script type="text/javascript" src="~/Scripts/PMain/jquery.min.js"></script>
-
     <script type="text/javascript" src="~/Scripts/PMain/global.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mousewheel.js"></script>
     <link type="text/css" rel="stylesheet" href="~/Content/LayoutPage/jquery.mCustomScrollbar.css" />
-
+    @*<link href="~/Content/AppReg/HosDep/HD_global.css" rel="stylesheet" />*@
     <script type="text/javascript" src="~/scripts/selsym/cityswitch.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/jquery.mCustomScrollbar.min.js"></script>
     <script type="text/javascript" src="~/Scripts/PMain/slick.js"></script>
@@ -209,17 +208,6 @@
                         </div>
                         <a href="javascript:;" class="btn_sea"></a>
                     </div>
-                    <a href="javascript:;" class="shareBtn" title="分享"></a>
-                    <div class="share_w">
-                        <div class="bdsharebuttonbox">
-                            <a href="#" title="分享到微信" class="popup_wx" data-cmd="weixin"></a>
-                            <a href="#" title="分享到qq好友" class="popup_sqq" data-cmd="sqq"></a>
-                            <a href="#" title="分享到新浪微博" class="bds_tsina" data-cmd="tsina"></a>
-                            <a href="#" title="分享到qq空间" class="popup_qzone" data-cmd="qzone"></a>
-                            <a href="#" title="分享到腾讯微博" class="popup_tqf" data-cmd="tqf"></a>
-                        </div>
-                    </div>
-
                     <script>
                         $(function () {
                             $('.btn_sea').on('click', function () {
@@ -252,6 +240,11 @@
         <!-- 模态框（Modal） -->
         @Html.Partial("_AppRegModalPartial");
     </div>
+
+    <script type="text/javascript">
+        document.write('<script src="\/\/assets-cdn.kf5.com\/supportbox\/main.js?' + (new Date).getDay() + '" id="kf5-provide-supportBox" kf5-domain="eztcn.kf5.com" charset="utf-8"><\/script>');
+    </script>
+    
 
     <script>
         $(function () {
@@ -331,7 +324,9 @@
             <div class="wrap cf">
                 <span class="l">友情链接：</span>
                 <div class="a">
-                    <a href="#" target="_blank">中华人民共和国国家卫生健康委员会</a><a href="#" target="_blank">北京市卫生健康委员会</a><a href="#" target="_blank">中国医学科学院</a><a href="#" target="_blank">北京协和医学基金会</a><a href="#" target="_blank">协和科技开发有限责任公司</a><a class="last" href="#" target="_blank">协和化妆品</a>
+                    <a href="#" target="_blank">中华人民共和国国家卫生健康委员会</a><a href="#" target="_blank">北京市卫生健康委员会</a><a href="#" target="_blank">中国医学科学院</a><a href="#" target="_blank">北京协和医学院</a><a href="#" target="_blank">协和科技开发有限责任公司</a>
+                    <a class="last" href="#" target="_blank">深圳市腾讯计算机系统有限公司&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="last" href="#" target="_blank">北京搜狗科技发展有限公司</a>
                 </div>
             </div>
         </div>    <div class="copy">
