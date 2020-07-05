@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TA_DoctorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TA_DoctorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Adm_Offs">
           <Key>
             <PropertyRef Name="AOID" />
@@ -121,6 +121,11 @@
           <Property Name="ProID" Type="int" Nullable="false" />
           <Property Name="CityID" Type="int" Nullable="false" />
           <Property Name="CouID" Type="int" Nullable="false" />
+          <Property Name="H_icon" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="H_AppReg" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="H_RegRule" Type="varchar" MaxLength="400" />
+          <Property Name="H_BusLink" Type="varchar" MaxLength="400" />
+          <Property Name="H_Rank" Type="varchar" MaxLength="40" />
           <Property Name="H_Name" Type="varchar" MaxLength="40" Nullable="false" />
           <Property Name="H_rate" Type="int" />
           <Property Name="H_Remark" Type="varchar" MaxLength="400" Nullable="false" />
@@ -837,8 +842,7 @@
             <End Role="VisitTime" EntitySet="VisitTime" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TA_DoctorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -992,6 +996,11 @@
           <NavigationProperty Name="InterRecord" Relationship="Self.FK_IR_Hos" FromRole="Hospitals" ToRole="InterRecord" />
           <NavigationProperty Name="MedRecordes" Relationship="Self.FK_Med_Hos" FromRole="Hospitals" ToRole="MedRecordes" />
           <NavigationProperty Name="ProQualif" Relationship="Self.FK_PQ_Hos" FromRole="Hospitals" ToRole="ProQualif" />
+          <Property Name="H_icon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="H_AppReg" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="H_RegRule" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="H_BusLink" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+          <Property Name="H_Rank" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="illness">
           <Key>
@@ -1866,6 +1875,11 @@
           <EntitySetMapping Name="Hospitals">
             <EntityTypeMapping TypeName="TA_DoctorModel.Hospitals">
               <MappingFragment StoreEntitySet="Hospitals">
+                <ScalarProperty Name="H_Rank" ColumnName="H_Rank" />
+                <ScalarProperty Name="H_BusLink" ColumnName="H_BusLink" />
+                <ScalarProperty Name="H_RegRule" ColumnName="H_RegRule" />
+                <ScalarProperty Name="H_AppReg" ColumnName="H_AppReg" />
+                <ScalarProperty Name="H_icon" ColumnName="H_icon" />
                 <ScalarProperty Name="HID" ColumnName="HID" />
                 <ScalarProperty Name="ProID" ColumnName="ProID" />
                 <ScalarProperty Name="CityID" ColumnName="CityID" />

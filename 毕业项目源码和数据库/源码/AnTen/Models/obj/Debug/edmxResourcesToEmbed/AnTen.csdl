@@ -150,6 +150,11 @@
     <NavigationProperty Name="InterRecord" Relationship="Self.FK_IR_Hos" FromRole="Hospitals" ToRole="InterRecord" />
     <NavigationProperty Name="MedRecordes" Relationship="Self.FK_Med_Hos" FromRole="Hospitals" ToRole="MedRecordes" />
     <NavigationProperty Name="ProQualif" Relationship="Self.FK_PQ_Hos" FromRole="Hospitals" ToRole="ProQualif" />
+    <Property Name="H_icon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="H_AppReg" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="H_RegRule" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="H_BusLink" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="H_Rank" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="illness">
     <Key>

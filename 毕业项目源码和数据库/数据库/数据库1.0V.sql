@@ -41,11 +41,22 @@ constraint FK_Cou_City foreign key(CityID) references City(CityID)
 on delete cascade on update cascade
 --医院
 ----医院信息表
+select
+ fk.name,fk.object_id,OBJECT_NAME(fk.parent_object_id) as referenceTableName
+from sys.foreign_keys as fk
+join sys.objects as o on fk.referenced_object_id=o.object_id
+where o.name='Hospitals'
+go
 create table Hospitals(
 HID int primary key identity(1,1),
 ProID int not null,
 CityID  int not null,
 CouID int not null,
+H_icon varchar(100) not null,
+H_AppReg varchar(20) not null,
+H_RegRule varchar(400),
+H_BusLink varchar(400),
+H_Rank varchar(40),
 H_Name varchar(40) not null,
 H_rate int,
 H_Remark varchar(400) not null

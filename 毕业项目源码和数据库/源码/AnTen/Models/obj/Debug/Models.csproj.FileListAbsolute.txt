@@ -50,3 +50,4 @@ E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\Models\bin\Deb
 E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\Models\obj\Debug\Models.csproj.CopyComplete
 E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\Models\obj\Debug\Models.dll
 E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\Models\obj\Debug\Models.pdb
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\Models\obj\Debug\Models.csprojAssemblyReference.cache

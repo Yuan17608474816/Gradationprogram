@@ -31,6 +31,11 @@ namespace Models
         public string H_Name { get; set; }
         public Nullable<int> H_rate { get; set; }
         public string H_Remark { get; set; }
+        public string H_icon { get; set; }
+        public string H_AppReg { get; set; }
+        public string H_RegRule { get; set; }
+        public string H_BusLink { get; set; }
+        public string H_Rank { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Adm_Offs> Adm_Offs { get; set; }

@@ -123,6 +123,11 @@
     <EntitySetMapping Name="Hospitals">
       <EntityTypeMapping TypeName="TA_DoctorModel.Hospitals">
         <MappingFragment StoreEntitySet="Hospitals">
+          <ScalarProperty Name="H_Rank" ColumnName="H_Rank" />
+          <ScalarProperty Name="H_BusLink" ColumnName="H_BusLink" />
+          <ScalarProperty Name="H_RegRule" ColumnName="H_RegRule" />
+          <ScalarProperty Name="H_AppReg" ColumnName="H_AppReg" />
+          <ScalarProperty Name="H_icon" ColumnName="H_icon" />
           <ScalarProperty Name="HID" ColumnName="HID" />
           <ScalarProperty Name="ProID" ColumnName="ProID" />
           <ScalarProperty Name="CityID" ColumnName="CityID" />

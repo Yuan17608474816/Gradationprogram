@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AppRegController.cs" />
     <Compile Include="Controllers\AT_LoginController.cs" />
     <Compile Include="Controllers\AT_PMainController.cs" />
+    <Compile Include="Controllers\DataManag\HosManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -151,6 +152,15 @@
     <Content Include="Content\AppReg\hospital.css" />
     <Content Include="Content\AppReg\hospital.js" />
     <Content Include="Content\AppReg\iconcss.css" />
+    <Content Include="Content\AppReg\Regred\portal.base.css" />
+    <Content Include="Content\AppReg\Regred\portal.cont.css" />
+    <Content Include="Content\AppReg\Regred\reservation.css" />
+    <Content Include="Content\AppReg\Regred\vendor.css" />
+    <Content Include="Content\DataManag\LayoutData\global.css" />
+    <Content Include="Content\DataManag\LayoutData\global.js" />
+    <Content Include="Content\DataManag\LayoutData\jquery.min.js" />
+    <Content Include="Content\DataManag\LayoutData\lyc.css" />
+    <Content Include="Content\DataManag\LayoutData\page.css" />
     <Content Include="Content\SelSym\expert.js" />
     <Content Include="Content\SelSym\jquery.ui.datepicker.js" />
     <Content Include="Content\System\bootstrap-grid.css" />
@@ -238,6 +248,7 @@
     <Content Include="image\ln4-6.jpg" />
     <Content Include="image\ln4-8.jpg" />
     <Content Include="image\Logo3.png" />
+    <Content Include="image\Logo_white.png" />
     <Content Include="image\man_bm.png" />
     <Content Include="image\map_gray_pc.8227b13.png" />
     <Content Include="image\png2.png" />
@@ -260,6 +271,7 @@
     <Content Include="image\价格公示.png" />
     <Content Include="image\健康饮食.jpg" />
     <Content Include="image\北京协和.png" />
+    <Content Include="image\北京协和icon.png" />
     <Content Include="image\医保指南.png" />
     <Content Include="image\医院公告.jpg" />
     <Content Include="image\医院地址.jpg" />
@@ -470,6 +482,12 @@
     <Content Include="Views\Shared\HSReg.cshtml" />
     <Content Include="Views\AppReg\HosDep.cshtml" />
     <Content Include="Views\AppReg\DocMetail.cshtml" />
+    <Content Include="Views\Shared\PayRegFee.cshtml" />
+    <Content Include="Views\AppReg\RegConfig.cshtml" />
+    <Content Include="Views\Shared\_LayoutDataManag.cshtml" />
+    <Content Include="Views\HosManage\Index.cshtml" />
+    <Content Include="Views\HosManage\HosMain.cshtml" />
+    <Content Include="Views\Shared\AddHos_BR.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
