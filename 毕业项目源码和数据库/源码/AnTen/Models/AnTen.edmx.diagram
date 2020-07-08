@@ -4,33 +4,34 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2b7a50e016634352b6def256387393c2" Name="Diagram1" ZoomLevel="42">
+      <Diagram DiagramId="178ad466d2f349cd8613c7f750f26709" Name="Diagram1" ZoomLevel="55">
         <EntityTypeShape EntityType="TA_DoctorModel.Adm_Offs" Width="1.5" PointX="9.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.AdvRea" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.AdvRea" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.Audit" Width="1.5" PointX="14.25" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.AvaDate" Width="1.5" PointX="5.25" PointY="18.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.BodyParts" Width="1.5" PointX="16.75" PointY="16" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.City" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.Contrain" Width="1.5" PointX="5.25" PointY="20.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.County" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.DrugDuc" Width="1.5" PointX="5.25" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.AvaDate" Width="1.5" PointX="5.25" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.BodyParts" Width="1.5" PointX="16.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.City" Width="1.5" PointX="3" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.Contrain" Width="1.5" PointX="5.25" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.District" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.DrugDuc" Width="1.5" PointX="5.25" PointY="24.25" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.HosDoctors" Width="1.5" PointX="12" PointY="7.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.HosEquipments" Width="1.5" PointX="9.75" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.Hospitals" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.illness" Width="1.5" PointX="23.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.Hospitals" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.illness" Width="1.5" PointX="23.5" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.InterRecord" Width="1.5" PointX="9.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.MatNeetAt" Width="1.5" PointX="5.25" PointY="26.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.Medicines" Width="1.5" PointX="3" PointY="21.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.MedRecordes" Width="1.5" PointX="14.25" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.MedType" Width="1.5" PointX="0.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.MatNeetAt" Width="1.5" PointX="5.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.Medicines" Width="1.5" PointX="3" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.MedRecordes" Width="1.5" PointX="14.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.MedType" Width="1.5" PointX="0.75" PointY="23.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.OutPatientDep" Width="1.5" PointX="12" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.Patients" Width="1.5" PointX="7.5" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.ProQualif" Width="1.5" PointX="17.25" PointY="9.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.Province" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.SpeSite" Width="1.5" PointX="19" PointY="14.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.SymDes" Width="1.5" PointX="21.25" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.Symptom" Width="1.5" PointX="19" PointY="17" IsExpanded="true" />
-        <EntityTypeShape EntityType="TA_DoctorModel.UserCrowd" Width="1.5" PointX="5.25" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.ProQualif" Width="1.5" PointX="17.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.Province" Width="1.5" PointX="0.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.SpeSite" Width="1.5" PointX="19" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.SymDes" Width="1.5" PointX="21.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.Symptom" Width="1.5" PointX="19" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TA_DoctorModel.UserCrowd" Width="1.5" PointX="5.25" PointY="30.375" IsExpanded="true" />
         <EntityTypeShape EntityType="TA_DoctorModel.VisitTime" Width="1.5" PointX="14.25" PointY="18.25" IsExpanded="true" />
         <AssociationConnector Association="TA_DoctorModel.FK_Adm_Hos" ManuallyRouted="false" />
         <AssociationConnector Association="TA_DoctorModel.FK_Doc_Adm" ManuallyRouted="false" />
@@ -46,7 +47,7 @@
         <AssociationConnector Association="TA_DoctorModel.FK_Cou_City" ManuallyRouted="false" />
         <AssociationConnector Association="TA_DoctorModel.FK_Hos_City" ManuallyRouted="false" />
         <AssociationConnector Association="TA_DoctorModel.FK_CT_MD" ManuallyRouted="false" />
-        <AssociationConnector Association="TA_DoctorModel.FK_Hos_Cou" ManuallyRouted="false" />
+        <AssociationConnector Association="TA_DoctorModel.FK_Hos_Dis" ManuallyRouted="false" />
         <AssociationConnector Association="TA_DoctorModel.FK_DD_MD" ManuallyRouted="false" />
         <AssociationConnector Association="TA_DoctorModel.FK_Med_Doc" ManuallyRouted="false" />
         <AssociationConnector Association="TA_DoctorModel.FK_PQ_Doc" ManuallyRouted="false" />

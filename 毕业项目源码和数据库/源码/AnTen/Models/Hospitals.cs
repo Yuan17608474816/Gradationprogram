@@ -27,20 +27,20 @@ namespace Models
         public int HID { get; set; }
         public int ProID { get; set; }
         public int CityID { get; set; }
-        public int CouID { get; set; }
-        public string H_Name { get; set; }
-        public Nullable<int> H_rate { get; set; }
-        public string H_Remark { get; set; }
+        public int DisId { get; set; }
         public string H_icon { get; set; }
         public string H_AppReg { get; set; }
         public string H_RegRule { get; set; }
         public string H_BusLink { get; set; }
         public string H_Rank { get; set; }
+        public string H_Name { get; set; }
+        public Nullable<int> H_rate { get; set; }
+        public string H_Remark { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Adm_Offs> Adm_Offs { get; set; }
         public virtual City City { get; set; }
-        public virtual County County { get; set; }
+        public virtual District District { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HosEquipments> HosEquipments { get; set; }
         public virtual Province Province { get; set; }

@@ -87,7 +87,7 @@
     <Compile Include="Contrain.cs">
       <DependentUpon>AnTen.tt</DependentUpon>
     </Compile>
-    <Compile Include="County.cs">
+    <Compile Include="District.cs">
       <DependentUpon>AnTen.tt</DependentUpon>
     </Compile>
     <Compile Include="DrugDuc.cs">
@@ -142,6 +142,9 @@
     <Compile Include="Symptom.cs">
       <DependentUpon>AnTen.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>AnTen.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserCrowd.cs">
       <DependentUpon>AnTen.tt</DependentUpon>
     </Compile>
@@ -154,8 +157,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AnTen.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="AnTen.edmx.diagram">
       <DependentUpon>AnTen.edmx</DependentUpon>
     </None>
@@ -192,8 +193,8 @@
   <ItemGroup>
     <Content Include="AnTen.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AnTen.Context.cs</LastGenOutput>
       <DependentUpon>AnTen.edmx</DependentUpon>
+      <LastGenOutput>AnTen.Context.cs</LastGenOutput>
     </Content>
     <Content Include="AnTen.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

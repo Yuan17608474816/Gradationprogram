@@ -13,10 +13,10 @@ namespace Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TA_DoctorEntities : DbContext
+    public partial class TA_DoctorEntities1 : DbContext
     {
-        public TA_DoctorEntities()
-            : base("name=TA_DoctorEntities")
+        public TA_DoctorEntities1()
+            : base("name=TA_DoctorEntities1")
         {
         }
     
@@ -32,7 +32,7 @@ namespace Models
         public virtual DbSet<BodyParts> BodyParts { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Contrain> Contrain { get; set; }
-        public virtual DbSet<County> County { get; set; }
+        public virtual DbSet<District> District { get; set; }
         public virtual DbSet<DrugDuc> DrugDuc { get; set; }
         public virtual DbSet<HosDoctors> HosDoctors { get; set; }
         public virtual DbSet<HosEquipments> HosEquipments { get; set; }
@@ -50,6 +50,7 @@ namespace Models
         public virtual DbSet<SpeSite> SpeSite { get; set; }
         public virtual DbSet<SymDes> SymDes { get; set; }
         public virtual DbSet<Symptom> Symptom { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<UserCrowd> UserCrowd { get; set; }
         public virtual DbSet<VisitTime> VisitTime { get; set; }
     }

@@ -132,8 +132,8 @@
     <Compile Include="Controllers\AppRegController.cs" />
     <Compile Include="Controllers\AT_LoginController.cs" />
     <Compile Include="Controllers\AT_PMainController.cs" />
-    <Compile Include="Controllers\DataManag\HosManageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HosManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +234,7 @@
     <Content Include="image\HD_tyranny.png" />
     <Content Include="image\head_sea.png" />
     <Content Include="image\hosicon.png" />
+    <Content Include="image\Hos_icon\Logo3.png" />
     <Content Include="image\icon1.png" />
     <Content Include="image\lb4.jpg" />
     <Content Include="image\Left-img2.png" />
@@ -423,6 +424,7 @@
     <Content Include="Scripts\src\utils\setAttributes.js" />
     <Content Include="Scripts\src\utils\setStyles.js" />
     <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\test\JavaScript.js" />
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />

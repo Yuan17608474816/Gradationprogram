@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TA_DoctorModelStoreContainer" CdmEntityContainer="TA_DoctorEntities">
+  <EntityContainerMapping StorageEntityContainer="TA_DoctorModelStoreContainer" CdmEntityContainer="TA_DoctorEntities1">
     <EntitySetMapping Name="Adm_Offs">
       <EntityTypeMapping TypeName="TA_DoctorModel.Adm_Offs">
         <MappingFragment StoreEntitySet="Adm_Offs">
@@ -56,6 +56,7 @@
         <MappingFragment StoreEntitySet="City">
           <ScalarProperty Name="CityID" ColumnName="CityID" />
           <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="City_Sort" ColumnName="City_Sort" />
           <ScalarProperty Name="City_Name" ColumnName="City_Name" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -69,12 +70,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="County">
-      <EntityTypeMapping TypeName="TA_DoctorModel.County">
-        <MappingFragment StoreEntitySet="County">
-          <ScalarProperty Name="CouID" ColumnName="CouID" />
+    <EntitySetMapping Name="District">
+      <EntityTypeMapping TypeName="TA_DoctorModel.District">
+        <MappingFragment StoreEntitySet="District">
+          <ScalarProperty Name="DisId" ColumnName="DisId" />
           <ScalarProperty Name="CityID" ColumnName="CityID" />
-          <ScalarProperty Name="Cou_Name" ColumnName="Cou_Name" />
+          <ScalarProperty Name="Dis_Name" ColumnName="Dis_Name" />
+          <ScalarProperty Name="Dis_Sort" ColumnName="Dis_Sort" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -123,15 +125,15 @@
     <EntitySetMapping Name="Hospitals">
       <EntityTypeMapping TypeName="TA_DoctorModel.Hospitals">
         <MappingFragment StoreEntitySet="Hospitals">
-          <ScalarProperty Name="H_Rank" ColumnName="H_Rank" />
-          <ScalarProperty Name="H_BusLink" ColumnName="H_BusLink" />
-          <ScalarProperty Name="H_RegRule" ColumnName="H_RegRule" />
-          <ScalarProperty Name="H_AppReg" ColumnName="H_AppReg" />
-          <ScalarProperty Name="H_icon" ColumnName="H_icon" />
           <ScalarProperty Name="HID" ColumnName="HID" />
           <ScalarProperty Name="ProID" ColumnName="ProID" />
           <ScalarProperty Name="CityID" ColumnName="CityID" />
-          <ScalarProperty Name="CouID" ColumnName="CouID" />
+          <ScalarProperty Name="DisId" ColumnName="DisId" />
+          <ScalarProperty Name="H_icon" ColumnName="H_icon" />
+          <ScalarProperty Name="H_AppReg" ColumnName="H_AppReg" />
+          <ScalarProperty Name="H_RegRule" ColumnName="H_RegRule" />
+          <ScalarProperty Name="H_BusLink" ColumnName="H_BusLink" />
+          <ScalarProperty Name="H_Rank" ColumnName="H_Rank" />
           <ScalarProperty Name="H_Name" ColumnName="H_Name" />
           <ScalarProperty Name="H_rate" ColumnName="H_rate" />
           <ScalarProperty Name="H_Remark" ColumnName="H_Remark" />
@@ -239,6 +241,8 @@
         <MappingFragment StoreEntitySet="Province">
           <ScalarProperty Name="ProID" ColumnName="ProID" />
           <ScalarProperty Name="Pro_Name" ColumnName="Pro_Name" />
+          <ScalarProperty Name="Pro_Sort" ColumnName="Pro_Sort" />
+          <ScalarProperty Name="Pro_Remark" ColumnName="Pro_Remark" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -266,6 +270,17 @@
           <ScalarProperty Name="SymID" ColumnName="SymID" />
           <ScalarProperty Name="BPID" ColumnName="BPID" />
           <ScalarProperty Name="Sym_Remark" ColumnName="Sym_Remark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TA_DoctorModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

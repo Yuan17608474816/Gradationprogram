@@ -61,9 +61,10 @@
     </Key>
     <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProID" Type="Int32" Nullable="false" />
+    <Property Name="City_Sort" Type="Int32" />
     <Property Name="City_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Province" Relationship="Self.FK_City_Pro" FromRole="City" ToRole="Province" />
-    <NavigationProperty Name="County" Relationship="Self.FK_Cou_City" FromRole="City" ToRole="County" />
+    <NavigationProperty Name="District" Relationship="Self.FK_Cou_City" FromRole="City" ToRole="District" />
     <NavigationProperty Name="Hospitals" Relationship="Self.FK_Hos_City" FromRole="City" ToRole="Hospitals" />
   </EntityType>
   <EntityType Name="Contrain">
@@ -75,15 +76,16 @@
     <Property Name="CT_Remark" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Medicines" Relationship="Self.FK_CT_MD" FromRole="Contrain" ToRole="Medicines" />
   </EntityType>
-  <EntityType Name="County">
+  <EntityType Name="District">
     <Key>
-      <PropertyRef Name="CouID" />
+      <PropertyRef Name="DisId" />
     </Key>
-    <Property Name="CouID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DisId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CityID" Type="Int32" Nullable="false" />
-    <Property Name="Cou_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="City" Relationship="Self.FK_Cou_City" FromRole="County" ToRole="City" />
-    <NavigationProperty Name="Hospitals" Relationship="Self.FK_Hos_Cou" FromRole="County" ToRole="Hospitals" />
+    <Property Name="Dis_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dis_Sort" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="Self.FK_Cou_City" FromRole="District" ToRole="City" />
+    <NavigationProperty Name="Hospitals" Relationship="Self.FK_Hos_Dis" FromRole="District" ToRole="Hospitals" />
   </EntityType>
   <EntityType Name="DrugDuc">
     <Key>
@@ -138,23 +140,23 @@
     <Property Name="HID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ProID" Type="Int32" Nullable="false" />
     <Property Name="CityID" Type="Int32" Nullable="false" />
-    <Property Name="CouID" Type="Int32" Nullable="false" />
+    <Property Name="DisId" Type="Int32" Nullable="false" />
+    <Property Name="H_icon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="H_AppReg" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="H_RegRule" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="H_BusLink" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="H_Rank" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <Property Name="H_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="H_rate" Type="Int32" />
     <Property Name="H_Remark" Type="String" MaxLength="400" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Adm_Offs" Relationship="Self.FK_Adm_Hos" FromRole="Hospitals" ToRole="Adm_Offs" />
     <NavigationProperty Name="City" Relationship="Self.FK_Hos_City" FromRole="Hospitals" ToRole="City" />
-    <NavigationProperty Name="County" Relationship="Self.FK_Hos_Cou" FromRole="Hospitals" ToRole="County" />
+    <NavigationProperty Name="District" Relationship="Self.FK_Hos_Dis" FromRole="Hospitals" ToRole="District" />
     <NavigationProperty Name="HosEquipments" Relationship="Self.FK_He_Hos" FromRole="Hospitals" ToRole="HosEquipments" />
     <NavigationProperty Name="Province" Relationship="Self.FK_Hos_Pro" FromRole="Hospitals" ToRole="Province" />
     <NavigationProperty Name="InterRecord" Relationship="Self.FK_IR_Hos" FromRole="Hospitals" ToRole="InterRecord" />
     <NavigationProperty Name="MedRecordes" Relationship="Self.FK_Med_Hos" FromRole="Hospitals" ToRole="MedRecordes" />
     <NavigationProperty Name="ProQualif" Relationship="Self.FK_PQ_Hos" FromRole="Hospitals" ToRole="ProQualif" />
-    <Property Name="H_icon" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="H_AppReg" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="H_RegRule" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
-    <Property Name="H_BusLink" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
-    <Property Name="H_Rank" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="illness">
     <Key>
@@ -272,6 +274,8 @@
     </Key>
     <Property Name="ProID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Pro_Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pro_Sort" Type="Int32" />
+    <Property Name="Pro_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="City" Relationship="Self.FK_City_Pro" FromRole="Province" ToRole="City" />
     <NavigationProperty Name="Hospitals" Relationship="Self.FK_Hos_Pro" FromRole="Province" ToRole="Hospitals" />
   </EntityType>
@@ -304,6 +308,16 @@
     <NavigationProperty Name="BodyParts" Relationship="Self.FK_Sym_BP" FromRole="Symptom" ToRole="BodyParts" />
     <NavigationProperty Name="illness" Relationship="Self.FK_ill_Sym" FromRole="Symptom" ToRole="illness" />
     <NavigationProperty Name="SymDes" Relationship="Self.FK_SD_Sym" FromRole="Symptom" ToRole="SymDes" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="UserCrowd">
     <Key>
@@ -476,12 +490,12 @@
     <End Role="City" Type="Self.City" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="County" Type="Self.County" Multiplicity="*" />
+    <End Role="District" Type="Self.District" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="City">
         <PropertyRef Name="CityID" />
       </Principal>
-      <Dependent Role="County">
+      <Dependent Role="District">
         <PropertyRef Name="CityID" />
       </Dependent>
     </ReferentialConstraint>
@@ -512,15 +526,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Hos_Cou">
-    <End Role="County" Type="Self.County" Multiplicity="1" />
+  <Association Name="FK_Hos_Dis">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
     <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="County">
-        <PropertyRef Name="CouID" />
+      <Principal Role="District">
+        <PropertyRef Name="DisId" />
       </Principal>
       <Dependent Role="Hospitals">
-        <PropertyRef Name="CouID" />
+        <PropertyRef Name="DisId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -744,7 +758,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TA_DoctorEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="TA_DoctorEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Adm_Offs" EntityType="Self.Adm_Offs" />
     <EntitySet Name="AdvRea" EntityType="Self.AdvRea" />
     <EntitySet Name="Audit" EntityType="Self.Audit" />
@@ -752,7 +766,7 @@
     <EntitySet Name="BodyParts" EntityType="Self.BodyParts" />
     <EntitySet Name="City" EntityType="Self.City" />
     <EntitySet Name="Contrain" EntityType="Self.Contrain" />
-    <EntitySet Name="County" EntityType="Self.County" />
+    <EntitySet Name="District" EntityType="Self.District" />
     <EntitySet Name="DrugDuc" EntityType="Self.DrugDuc" />
     <EntitySet Name="HosDoctors" EntityType="Self.HosDoctors" />
     <EntitySet Name="HosEquipments" EntityType="Self.HosEquipments" />
@@ -770,6 +784,7 @@
     <EntitySet Name="SpeSite" EntityType="Self.SpeSite" />
     <EntitySet Name="SymDes" EntityType="Self.SymDes" />
     <EntitySet Name="Symptom" EntityType="Self.Symptom" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="UserCrowd" EntityType="Self.UserCrowd" />
     <EntitySet Name="VisitTime" EntityType="Self.VisitTime" />
     <AssociationSet Name="FK_Adm_Hos" Association="Self.FK_Adm_Hos">
@@ -818,7 +833,7 @@
     </AssociationSet>
     <AssociationSet Name="FK_Cou_City" Association="Self.FK_Cou_City">
       <End Role="City" EntitySet="City" />
-      <End Role="County" EntitySet="County" />
+      <End Role="District" EntitySet="District" />
     </AssociationSet>
     <AssociationSet Name="FK_Hos_City" Association="Self.FK_Hos_City">
       <End Role="City" EntitySet="City" />
@@ -828,8 +843,8 @@
       <End Role="Medicines" EntitySet="Medicines" />
       <End Role="Contrain" EntitySet="Contrain" />
     </AssociationSet>
-    <AssociationSet Name="FK_Hos_Cou" Association="Self.FK_Hos_Cou">
-      <End Role="County" EntitySet="County" />
+    <AssociationSet Name="FK_Hos_Dis" Association="Self.FK_Hos_Dis">
+      <End Role="District" EntitySet="District" />
       <End Role="Hospitals" EntitySet="Hospitals" />
     </AssociationSet>
     <AssociationSet Name="FK_DD_MD" Association="Self.FK_DD_MD">

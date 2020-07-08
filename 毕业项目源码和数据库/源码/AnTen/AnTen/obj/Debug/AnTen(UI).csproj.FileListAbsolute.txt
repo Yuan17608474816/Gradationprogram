@@ -475,3 +475,6 @@ E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\obj\Debu
 E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\obj\Debug\AnTen(UI).csproj.CopyComplete
 E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\obj\Debug\AnTen.dll
 E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\obj\Debug\AnTen.pdb
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\bin\DAL.dll
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\bin\DAL.pdb
+E:\十安医生项目\毕业项目源码和数据库\源码\AnTen\AnTen\bin\DAL.dll.config

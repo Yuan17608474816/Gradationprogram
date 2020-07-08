@@ -51,6 +51,7 @@
     </Key>
     <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ProID" Type="int" Nullable="false" />
+    <Property Name="City_Sort" Type="int" />
     <Property Name="City_Name" Type="varchar" MaxLength="40" Nullable="false" />
   </EntityType>
   <EntityType Name="Contrain">
@@ -61,13 +62,14 @@
     <Property Name="MID" Type="int" Nullable="false" />
     <Property Name="CT_Remark" Type="varchar" MaxLength="400" Nullable="false" />
   </EntityType>
-  <EntityType Name="County">
+  <EntityType Name="District">
     <Key>
-      <PropertyRef Name="CouID" />
+      <PropertyRef Name="DisId" />
     </Key>
-    <Property Name="CouID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DisId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CityID" Type="int" Nullable="false" />
-    <Property Name="Cou_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Dis_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Dis_Sort" Type="int" />
   </EntityType>
   <EntityType Name="DrugDuc">
     <Key>
@@ -115,7 +117,7 @@
     <Property Name="HID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ProID" Type="int" Nullable="false" />
     <Property Name="CityID" Type="int" Nullable="false" />
-    <Property Name="CouID" Type="int" Nullable="false" />
+    <Property Name="DisId" Type="int" Nullable="false" />
     <Property Name="H_icon" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="H_AppReg" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="H_RegRule" Type="varchar" MaxLength="400" />
@@ -218,6 +220,8 @@
     </Key>
     <Property Name="ProID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Pro_Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Pro_Sort" Type="int" />
+    <Property Name="Pro_Remark" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="SpeSite">
     <Key>
@@ -242,6 +246,16 @@
     <Property Name="SymID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BPID" Type="int" Nullable="false" />
     <Property Name="Sym_Remark" Type="varchar" MaxLength="400" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="UserCrowd">
     <Key>
@@ -346,12 +360,12 @@
     <End Role="City" Type="Self.City" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Role="County" Type="Self.County" Multiplicity="*" />
+    <End Role="District" Type="Self.District" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="City">
         <PropertyRef Name="CityID" />
       </Principal>
-      <Dependent Role="County">
+      <Dependent Role="District">
         <PropertyRef Name="CityID" />
       </Dependent>
     </ReferentialConstraint>
@@ -424,15 +438,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Hos_Cou">
-    <End Role="County" Type="Self.County" Multiplicity="1" />
+  <Association Name="FK_Hos_Dis">
+    <End Role="District" Type="Self.District" Multiplicity="1" />
     <End Role="Hospitals" Type="Self.Hospitals" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="County">
-        <PropertyRef Name="CouID" />
+      <Principal Role="District">
+        <PropertyRef Name="DisId" />
       </Principal>
       <Dependent Role="Hospitals">
-        <PropertyRef Name="CouID" />
+        <PropertyRef Name="DisId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -688,7 +702,7 @@
     <EntitySet Name="BodyParts" EntityType="Self.BodyParts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Contrain" EntityType="Self.Contrain" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="County" EntityType="Self.County" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="District" EntityType="Self.District" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DrugDuc" EntityType="Self.DrugDuc" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HosDoctors" EntityType="Self.HosDoctors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HosEquipments" EntityType="Self.HosEquipments" Schema="dbo" store:Type="Tables" />
@@ -706,6 +720,7 @@
     <EntitySet Name="SpeSite" EntityType="Self.SpeSite" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SymDes" EntityType="Self.SymDes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Symptom" EntityType="Self.Symptom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserCrowd" EntityType="Self.UserCrowd" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="VisitTime" EntityType="Self.VisitTime" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_AD_MD" Association="Self.FK_AD_MD">
@@ -734,7 +749,7 @@
     </AssociationSet>
     <AssociationSet Name="FK_Cou_City" Association="Self.FK_Cou_City">
       <End Role="City" EntitySet="City" />
-      <End Role="County" EntitySet="County" />
+      <End Role="District" EntitySet="District" />
     </AssociationSet>
     <AssociationSet Name="FK_CT_MD" Association="Self.FK_CT_MD">
       <End Role="Medicines" EntitySet="Medicines" />
@@ -756,8 +771,8 @@
       <End Role="City" EntitySet="City" />
       <End Role="Hospitals" EntitySet="Hospitals" />
     </AssociationSet>
-    <AssociationSet Name="FK_Hos_Cou" Association="Self.FK_Hos_Cou">
-      <End Role="County" EntitySet="County" />
+    <AssociationSet Name="FK_Hos_Dis" Association="Self.FK_Hos_Dis">
+      <End Role="District" EntitySet="District" />
       <End Role="Hospitals" EntitySet="Hospitals" />
     </AssociationSet>
     <AssociationSet Name="FK_Hos_Pro" Association="Self.FK_Hos_Pro">

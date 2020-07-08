@@ -17,17 +17,18 @@ namespace Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public City()
         {
-            this.County = new HashSet<County>();
+            this.District = new HashSet<District>();
             this.Hospitals = new HashSet<Hospitals>();
         }
     
         public int CityID { get; set; }
         public int ProID { get; set; }
+        public Nullable<int> City_Sort { get; set; }
         public string City_Name { get; set; }
     
         public virtual Province Province { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<County> County { get; set; }
+        public virtual ICollection<District> District { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hospitals> Hospitals { get; set; }
     }
